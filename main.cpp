@@ -52,7 +52,6 @@ char __thiscall sub_402300(float* self, float* a2, int* a3, int* a4);
 float* __thiscall sub_402430(float* self, float* a2, float* a3);
 int __stdcall sub_402470(int a1);
 char __thiscall sub_402480(_BYTE* self, char a2);
-void __stdcall nullsub_4(int);
 _DWORD* __thiscall sub_4024C0(_DWORD* self);
 int __thiscall sub_402530(_DWORD* self);
 char __thiscall sub_402540(int self, int a2);
@@ -183,7 +182,6 @@ int __thiscall sub_408A30(_DWORD* self, _DWORD* a2);
 _DWORD* __thiscall sub_408A50(_DWORD* self);
 void __thiscall sub_408B70(void* self);
 char __thiscall sub_408D20(int self);
-void __thiscall sub_408EE0(_DWORD* self);
 int __thiscall sub_408EF0(int self, int a2);
 int __thiscall sub_408F30(_DWORD* self);
 int __stdcall sub_408F40(int a1);
@@ -267,8 +265,6 @@ float* __thiscall sub_40E530(float* self, float* a2);
 void __thiscall sub_40E550(float* self, float a2);
 float* __thiscall sub_40E570(float* self, float* a2, float* a3);
 double __thiscall sub_40E5D0(float* self);
-void __thiscall sub_40E5F0(void*); // idb
-void __thiscall sub_40E620(void*); // idb
 long double __thiscall sub_40E640(int self, float a2, int a3, int a4);
 long double __thiscall sub_40E6D0(int* self, float a2);
 //char __thiscall sub_40E780(LPvoid, FILE);
@@ -704,7 +700,6 @@ void __thiscall sub_42A840(_DWORD* self);
 int __thiscall sub_42A860(int self);
 void __thiscall sub_42A9D0(LPVOID* self);
 int __fastcall sub_42AA30(int a1, int a2, char* k);
-void __thiscall sub_42CA00(void*); // idb
 int __fastcall sub_42CA20(int a1);
 char __thiscall sub_42CB00(void* self);
 char __thiscall sub_42CB20(_DWORD* self, int a2);
