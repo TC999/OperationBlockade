@@ -14,6 +14,7 @@
 #include <CommCtrl.h>
 #include <float.h>
 #pragma comment(lib, "Comctl32.lib")
+#include <WinDef.h>
 #define snwprintf _snwprintf
 #define wtol _wtol
 #define __usercall
@@ -35,28 +36,28 @@ double __cdecl sub_401100(float* a1, float* a2);
 double __cdecl sub_401170(float* a1, float* a2);
 double __cdecl sub_4011F0(int a1);
 BOOL __cdecl sub_401200(float* a1);
-int __thiscall sub_401270(int this);
+int __thiscall sub_401270(int self);
 int __stdcall sub_4013C0(int a1, int a2, int a3, int(__thiscall* a4)(int));
-int __thiscall sub_4013F0(_DWORD* this);
-int __thiscall sub_401450(_DWORD* this);
-void __thiscall sub_401480(float* this, float a2, float a3, float a4);
-void __thiscall sub_4014C0(float* this, float a2, float a3, float a4);
-int __thiscall sub_401550(float* this);
-float* __thiscall sub_401600(float* this);
-int __thiscall sub_401EC0(float* this);
-char __thiscall sub_402110(float* this, float* a2, float a3);
-char __thiscall sub_402170(float* this, float a2, float a3, float a4, float a5, float a6, float a7);
-double __thiscall sub_4022C0(float* this, float a2, float a3, float a4);
-char __thiscall sub_402300(float* this, float* a2, int* a3, int* a4);
-float* __thiscall sub_402430(float* this, float* a2, float* a3);
+int __thiscall sub_4013F0(_DWORD* self);
+int __thiscall sub_401450(_DWORD* self);
+void __thiscall sub_401480(float* self, float a2, float a3, float a4);
+void __thiscall sub_4014C0(float* self, float a2, float a3, float a4);
+int __thiscall sub_401550(float* self);
+float* __thiscall sub_401600(float* self);
+int __thiscall sub_401EC0(float* self);
+char __thiscall sub_402110(float* self, float* a2, float a3);
+char __thiscall sub_402170(float* self, float a2, float a3, float a4, float a5, float a6, float a7);
+double __thiscall sub_4022C0(float* self, float a2, float a3, float a4);
+char __thiscall sub_402300(float* self, float* a2, int* a3, int* a4);
+float* __thiscall sub_402430(float* self, float* a2, float* a3);
 int __stdcall sub_402470(int a1);
-char __thiscall sub_402480(_BYTE* this, char a2);
+char __thiscall sub_402480(_BYTE* self, char a2);
 void __stdcall nullsub_4(int);
-_DWORD* __thiscall sub_4024C0(_DWORD* this);
-int __thiscall sub_402530(_DWORD* this);
-char __thiscall sub_402540(int this, int a2);
-int __thiscall sub_402670(_DWORD* this, int a2, int a3);
-int __thiscall sub_402690(_DWORD* this, int a2, int a3, int a4);
+_DWORD* __thiscall sub_4024C0(_DWORD* self);
+int __thiscall sub_402530(_DWORD* self);
+char __thiscall sub_402540(int self, int a2);
+int __thiscall sub_402670(_DWORD* self, int a2, int a3);
+int __thiscall sub_402690(_DWORD* self, int a2, int a3, int a4);
 HRESULT __cdecl sub_4026C0(LPCCH lpMultiByteStr);
 BOOL __cdecl sub_402710(int a1);
 int __stdcall sub_4027C0(int, int, int, int); // weak
@@ -66,191 +67,191 @@ BOOL sub_402960();
 int __cdecl sub_402990(LPCCH lpMultiByteStr); // idb
 int sub_402B90();
 char* __thiscall sub_402C60(char* Destination, char* Source);
-void __thiscall sub_402CB0(int this);
-void __thiscall sub_402DA0(int this, float a2);
-int __thiscall sub_402FC0(int this);
-int __thiscall sub_4030B0(_DWORD* this, int a2, char* String2, int a4);
-_DWORD* __thiscall sub_403180(_DWORD* this);
-void __thiscall sub_403220(void* this);
-int __thiscall sub_4033A0(int this);
-char* __thiscall sub_403620(_DWORD* this, char* String2);
-char __thiscall sub_4036D0(_DWORD* this, int a2);
-int __thiscall sub_403710(_DWORD* this, char* String2);
-void __thiscall sub_403760(int this);
-void __thiscall sub_4037E0(int this);
-void* __thiscall sub_403860(void* this, char a2);
-void __thiscall sub_403880(int this);
-void __thiscall sub_403920(int this);
+void __thiscall sub_402CB0(int self);
+void __thiscall sub_402DA0(int self, float a2);
+int __thiscall sub_402FC0(int self);
+int __thiscall sub_4030B0(_DWORD* self, int a2, char* String2, int a4);
+_DWORD* __thiscall sub_403180(_DWORD* self);
+void __thiscall sub_403220(void* self);
+int __thiscall sub_4033A0(int self);
+char* __thiscall sub_403620(_DWORD* self, char* String2);
+char __thiscall sub_4036D0(_DWORD* self, int a2);
+int __thiscall sub_403710(_DWORD* self, char* String2);
+void __thiscall sub_403760(int self);
+void __thiscall sub_4037E0(int self);
+void* __thiscall sub_403860(void* self, char a2);
+void __thiscall sub_403880(int self);
+void __thiscall sub_403920(int self);
 _DWORD* sub_403A30(_DWORD* a1, int a2, char* Format, ...);
-void __thiscall sub_403A90(void* this); // idb
-void __thiscall sub_403AE0(void* this); // idb
-_DWORD* __thiscall sub_403B10(_DWORD* this);
-void __thiscall sub_403B60(_DWORD* this);
-void __thiscall sub_403B70(_DWORD* this);
-bool __thiscall sub_403BB0(_DWORD* this, int a2, const char* a3);
-int __thiscall sub_403C80(_DWORD* this, int a2, char a3);
-int __thiscall sub_403CB0(_DWORD* this, int a2);
-void __thiscall sub_403CE0(_DWORD* this);
-char* __thiscall sub_403D90(char* this, const char* a2);
+void __thiscall sub_403A90(void* self); // idb
+void __thiscall sub_403AE0(void* self); // idb
+_DWORD* __thiscall sub_403B10(_DWORD* self);
+void __thiscall sub_403B60(_DWORD* self);
+void __thiscall sub_403B70(_DWORD* self);
+bool __thiscall sub_403BB0(_DWORD* self, int a2, const char* a3);
+int __thiscall sub_403C80(_DWORD* self, int a2, char a3);
+int __thiscall sub_403CB0(_DWORD* self, int a2);
+void __thiscall sub_403CE0(_DWORD* self);
+char* __thiscall sub_403D90(char* self, const char* a2);
 // char __usercall sub_403E30@<al>(int a1@<ecx>, int a2@<ebp>);
 // int __userpurge sub_403E80@<eax>(int a1@<ecx>, int a2@<ebp>, char *ArgList);
 // char __userpurge sub_403EC0@<al>(int a1@<ecx>, int a2@<ebp>, int a3@<edi>, char *FileName);
-int __thiscall sub_403F40(_DWORD* this);
-bool __thiscall sub_403F50(int this);
-char __thiscall sub_403FE0(FILE** this);
-_DWORD* __thiscall sub_4044D0(_DWORD* this, int a2);
-bool __thiscall sub_404510(int this);
+int __thiscall sub_403F40(_DWORD* self);
+bool __thiscall sub_403F50(int self);
+char __thiscall sub_403FE0(FILE** self);
+_DWORD* __thiscall sub_4044D0(_DWORD* self, int a2);
+bool __thiscall sub_404510(int self);
 void __thiscall sub_4046A0(void*); // idb
-bool __thiscall sub_4046C0(FILE** this, int a2, int ArgList);
-bool __thiscall sub_404950(int this, int a2);
-_BYTE* __thiscall sub_404F60(_DWORD* this, int a2, void* a3, float* a4);
-int __thiscall sub_4050B0(_DWORD* this);
+bool __thiscall sub_4046C0(FILE** self, int a2, int ArgList);
+bool __thiscall sub_404950(int self, int a2);
+_BYTE* __thiscall sub_404F60(_DWORD* self, int a2, void* a3, float* a4);
+int __thiscall sub_4050B0(_DWORD* self);
 // int __usercall sub_4051C0@<eax>(_DWORD *a1@<ecx>, int a2@<ebp>, int a3@<edi>);
-bool __thiscall sub_405770(FILE** this, unsigned int Buffer);
-BOOL __thiscall sub_4057E0(FILE** this, void* Buffer);
-BOOL __thiscall sub_405800(FILE** this, void* Buffer);
-BOOL __thiscall sub_405820(FILE** this, FILE** a2);
-char __thiscall sub_405850(int this, int Buffer);
-bool __thiscall sub_4059A0(FILE** this, unsigned int Buffer);
-int __thiscall sub_4059D0(_DWORD* this, int a2);
-int __thiscall sub_4059F0(_DWORD* this, int a2, int a3);
-int __thiscall sub_405A30(_DWORD* this, char* String1, int a3, char a4);
-int __thiscall sub_405BB0(_DWORD* this, int a2);
-char __thiscall sub_405BE0(_DWORD* this, int a2);
-char __thiscall sub_405C00(_DWORD* this, int a2);
-int __thiscall sub_405C20(_DWORD* this, int a2);
+bool __thiscall sub_405770(FILE** self, unsigned int Buffer);
+BOOL __thiscall sub_4057E0(FILE** self, void* Buffer);
+BOOL __thiscall sub_405800(FILE** self, void* Buffer);
+BOOL __thiscall sub_405820(FILE** self, FILE** a2);
+char __thiscall sub_405850(int self, int Buffer);
+bool __thiscall sub_4059A0(FILE** self, unsigned int Buffer);
+int __thiscall sub_4059D0(_DWORD* self, int a2);
+int __thiscall sub_4059F0(_DWORD* self, int a2, int a3);
+int __thiscall sub_405A30(_DWORD* self, char* String1, int a3, char a4);
+int __thiscall sub_405BB0(_DWORD* self, int a2);
+char __thiscall sub_405BE0(_DWORD* self, int a2);
+char __thiscall sub_405C00(_DWORD* self, int a2);
+int __thiscall sub_405C20(_DWORD* self, int a2);
 int __stdcall sub_405C40(int a1, int a2, int a3);
-int __thiscall sub_405DF0(void* this, _DWORD* a2, int a3);
+int __thiscall sub_405DF0(void* self, _DWORD* a2, int a3);
 int __stdcall sub_405E20(int a1, int a2, int a3, int a4);
 int __stdcall sub_406000(_DWORD* a1, int a2);
 // int __userpurge sub_406110@<eax>(_DWORD *a1@<ecx>, int a2@<esi>, int a3, float *a4, int a5, char a6);
-float* __thiscall sub_4063E0(_DWORD* this, int a2, void* a3, float* a4, float a5, int a6);
-int __thiscall sub_406620(_DWORD* this, int a2, _BYTE* a3, float* a4, float a5, int a6);
+float* __thiscall sub_4063E0(_DWORD* self, int a2, void* a3, float* a4, float a5, int a6);
+int __thiscall sub_406620(_DWORD* self, int a2, _BYTE* a3, float* a4, float a5, int a6);
 // float *__userpurge sub_4066C0@<eax>(_DWORD *a1@<ecx>, int a2@<esi>, _DWORD *a3, float *a4, float *a5, float *a6, float *a7, float *a8);
-_DWORD* __thiscall sub_4068D0(_DWORD* this);
-int __thiscall sub_406980(_DWORD* this);
+_DWORD* __thiscall sub_4068D0(_DWORD* self);
+int __thiscall sub_406980(_DWORD* self);
 // char *__userpurge sub_4069C0@<eax>(int a1@<ecx>, int a2@<ebp>, char *String1);
-int __thiscall sub_406A50(_DWORD* this, int a2);
+int __thiscall sub_406A50(_DWORD* self, int a2);
 _DWORD* __cdecl sub_406A90(int a1, char a2);
-_DWORD* __thiscall sub_406B00(_DWORD* this, int a2, char a3);
+_DWORD* __thiscall sub_406B00(_DWORD* self, int a2, char a3);
 _DWORD* __cdecl sub_406BE0(_DWORD* a1);
-void __thiscall sub_406C20(void* this);
-int __thiscall sub_406CB0(int this, int a2);
-int __thiscall sub_406CF0(int this, float a2);
-void __thiscall sub_406D30(int this, float a2);
-int __thiscall sub_406DF0(int this, int a2);
-char __thiscall sub_406F00(float* this, int a2);
-int __thiscall sub_407120(_DWORD* this, int a2);
-void* __thiscall sub_407190(_DWORD* this, int a2, char a3);
-int __thiscall sub_407250(_DWORD* this);
-char __thiscall sub_4072A0(_DWORD* this, int a2, int a3, char a4);
-double __thiscall sub_407320(_DWORD* this, int a2);
-char __thiscall sub_407350(_DWORD* this, int a2);
-int __thiscall sub_407390(_DWORD* this, int a2, char a3);
-int __thiscall sub_4073C0(_DWORD* this, int a2, char a3);
-int __thiscall sub_4073F0(_DWORD* this, int a2, const void* a3);
-char* __thiscall sub_407430(_DWORD* this, int a2, char* a3);
-int __thiscall sub_407460(_DWORD* this, int a2);
-int __thiscall sub_4074B0(_DWORD* this, int a2);
-int __thiscall sub_407510(_DWORD* this, int a2, float a3);
-int __thiscall sub_407560(_DWORD* this, int a2, float a3);
-int __thiscall sub_4075B0(_DWORD* this, int a2, float a3);
-int __thiscall sub_407600(_DWORD* this, int a2, int a3, int a4, int a5);
-_BYTE* __thiscall sub_407650(_DWORD* this, int a2, char a3);
-_BYTE* __thiscall sub_407670(_DWORD* this, int a2, char a3);
-int __thiscall sub_407690(int this, int a2, _DWORD* a3);
-char __thiscall sub_407710(float* this, int a2, int a3, int a4, int a5, int a6, int a7, int* a8, float* a9);
+void __thiscall sub_406C20(void* self);
+int __thiscall sub_406CB0(int self, int a2);
+int __thiscall sub_406CF0(int self, float a2);
+void __thiscall sub_406D30(int self, float a2);
+int __thiscall sub_406DF0(int self, int a2);
+char __thiscall sub_406F00(float* self, int a2);
+int __thiscall sub_407120(_DWORD* self, int a2);
+void* __thiscall sub_407190(_DWORD* self, int a2, char a3);
+int __thiscall sub_407250(_DWORD* self);
+char __thiscall sub_4072A0(_DWORD* self, int a2, int a3, char a4);
+double __thiscall sub_407320(_DWORD* self, int a2);
+char __thiscall sub_407350(_DWORD* self, int a2);
+int __thiscall sub_407390(_DWORD* self, int a2, char a3);
+int __thiscall sub_4073C0(_DWORD* self, int a2, char a3);
+int __thiscall sub_4073F0(_DWORD* self, int a2, const void* a3);
+char* __thiscall sub_407430(_DWORD* self, int a2, char* a3);
+int __thiscall sub_407460(_DWORD* self, int a2);
+int __thiscall sub_4074B0(_DWORD* self, int a2);
+int __thiscall sub_407510(_DWORD* self, int a2, float a3);
+int __thiscall sub_407560(_DWORD* self, int a2, float a3);
+int __thiscall sub_4075B0(_DWORD* self, int a2, float a3);
+int __thiscall sub_407600(_DWORD* self, int a2, int a3, int a4, int a5);
+_BYTE* __thiscall sub_407650(_DWORD* self, int a2, char a3);
+_BYTE* __thiscall sub_407670(_DWORD* self, int a2, char a3);
+int __thiscall sub_407690(int self, int a2, _DWORD* a3);
+char __thiscall sub_407710(float* self, int a2, int a3, int a4, int a5, int a6, int a7, int* a8, float* a9);
 // BOOL __userpurge sub_407A90@<eax>(int a1@<ecx>, int a2@<ebx>, int a3@<esi>, int a4, int a5, int a6, int a7, int a8, int a9, int *a10, _DWORD *a11, int a12, float *a13);
-bool __thiscall sub_407F00(int this, int a2, int* a3, float a4, int* a5, float* a6);
-double __thiscall sub_4081A0(int this, int a2, float a3, float a4);
-int __thiscall sub_408540(_DWORD* this, int a2);
-int __thiscall sub_408580(_DWORD* this, int a2, int a3);
-float* __thiscall sub_4085B0(int this, int a2, int a3);
-_DWORD* __thiscall sub_4085F0(int this, int a2, _DWORD* a3, _DWORD* a4);
-int __thiscall sub_408640(_DWORD* this, int a2, char a3);
-bool __thiscall sub_408660(_DWORD* this, int a2);
-char __thiscall sub_408680(int this, int a2, float* a3, float* a4, float* a5, float* a6, float* a7, float* a8);
-int __thiscall sub_408860(_DWORD* this, int a2);
-int __thiscall sub_408880(_DWORD* this);
-int __thiscall sub_408890(_DWORD** this);
-BOOL __thiscall sub_4088A0(int this);
-BOOL __thiscall sub_4088E0(int this);
-double __thiscall sub_408920(int this);
-int __thiscall sub_408960(_DWORD* this, float a2);
-int __thiscall sub_4089D0(_DWORD* this, int a2, int a3);
-int __thiscall sub_408A30(_DWORD* this, _DWORD* a2);
-_DWORD* __thiscall sub_408A50(_DWORD* this);
-void __thiscall sub_408B70(void* this);
-char __thiscall sub_408D20(int this);
-void __thiscall sub_408EE0(_DWORD* this);
-int __thiscall sub_408EF0(int this, int a2);
-int __thiscall sub_408F30(_DWORD* this);
+bool __thiscall sub_407F00(int self, int a2, int* a3, float a4, int* a5, float* a6);
+double __thiscall sub_4081A0(int self, int a2, float a3, float a4);
+int __thiscall sub_408540(_DWORD* self, int a2);
+int __thiscall sub_408580(_DWORD* self, int a2, int a3);
+float* __thiscall sub_4085B0(int self, int a2, int a3);
+_DWORD* __thiscall sub_4085F0(int self, int a2, _DWORD* a3, _DWORD* a4);
+int __thiscall sub_408640(_DWORD* self, int a2, char a3);
+bool __thiscall sub_408660(_DWORD* self, int a2);
+char __thiscall sub_408680(int self, int a2, float* a3, float* a4, float* a5, float* a6, float* a7, float* a8);
+int __thiscall sub_408860(_DWORD* self, int a2);
+int __thiscall sub_408880(_DWORD* self);
+int __thiscall sub_408890(_DWORD** self);
+BOOL __thiscall sub_4088A0(int self);
+BOOL __thiscall sub_4088E0(int self);
+double __thiscall sub_408920(int self);
+int __thiscall sub_408960(_DWORD* self, float a2);
+int __thiscall sub_4089D0(_DWORD* self, int a2, int a3);
+int __thiscall sub_408A30(_DWORD* self, _DWORD* a2);
+_DWORD* __thiscall sub_408A50(_DWORD* self);
+void __thiscall sub_408B70(void* self);
+char __thiscall sub_408D20(int self);
+void __thiscall sub_408EE0(_DWORD* self);
+int __thiscall sub_408EF0(int self, int a2);
+int __thiscall sub_408F30(_DWORD* self);
 int __stdcall sub_408F40(int a1);
 char __stdcall sub_408F60(int a1);
-double __thiscall sub_408F80(float* this, int a2);
-float* __thiscall sub_408FB0(float* this);
-int __thiscall sub_4090F0(int this);
+double __thiscall sub_408F80(float* self, int a2);
+float* __thiscall sub_408FB0(float* self);
+int __thiscall sub_4090F0(int self);
 int __cdecl sub_4096B0(int* a1, int* a2);
-int __thiscall sub_409850(int this, int** a2);
-_DWORD* __thiscall sub_409960(_DWORD* this, int a2);
-int __thiscall sub_409A00(int this, void* a2);
-_BYTE* __thiscall sub_409AD0(int* this, int a2, unsigned int a3);
-_DWORD* __thiscall sub_409AF0(_DWORD** this, char* String1, char a3);
-_DWORD* __thiscall sub_409B10(_DWORD* this);
-int __thiscall sub_409B70(_DWORD* this);
+int __thiscall sub_409850(int self, int** a2);
+_DWORD* __thiscall sub_409960(_DWORD* self, int a2);
+int __thiscall sub_409A00(int self, void* a2);
+_BYTE* __thiscall sub_409AD0(int* self, int a2, unsigned int a3);
+_DWORD* __thiscall sub_409AF0(_DWORD** self, char* String1, char a3);
+_DWORD* __thiscall sub_409B10(_DWORD* self);
+int __thiscall sub_409B70(_DWORD* self);
 // char __userpurge sub_409BE0@<al>(int a1@<ecx>, int a2@<ebx>, int a3@<ebp>, int a4@<edi>, int a5@<esi>, float a6, float a7, float a8, float a9, float a10, int a11, float a12, float a13, int a14);
-int __thiscall sub_409EF0(_DWORD* this, int a2);
+int __thiscall sub_409EF0(_DWORD* self, int a2);
 void sub_40A050();
 char* sub_40A060();
 char sub_40A0F0();
 char sub_40A120(char a1, char* Format, ...);
-int __thiscall sub_40A1D0(int this, char* FileName);
-int __thiscall sub_40A800(int this);
-int __thiscall sub_40A830(int this);
-int __thiscall sub_40A980(_DWORD* this);
-char __thiscall sub_40A9B0(int this, unsigned int a2);
-int __thiscall sub_40AA00(_DWORD* this, int a2);
-int __thiscall sub_40AA20(_DWORD* this, int a2);
-int __thiscall sub_40AA40(int this, char* String2);
-bool __thiscall sub_40AAF0(_DWORD* this, char* String2, char a3);
-bool __thiscall sub_40ABC0(_DWORD* this, char* String2, char a3);
-char __thiscall sub_40ACC0(_DWORD* this, char* String2, char* a3);
-bool __thiscall sub_40AD80(void* this, char* String2);
-unsigned int __thiscall sub_40ADB0(_DWORD* this);
-int __thiscall sub_40AE00(_DWORD* this, char* String2);
-char __thiscall sub_40AE70(_DWORD* this, char* String2);
-char* __thiscall sub_40AF00(const char* this, char* ArgList, char** a3);
-float* __thiscall sub_40AF60(const char* this, char* ArgList, float* a3);
-int __thiscall sub_40AFC0(void* this, char* String2, _DWORD* a3);
-char* __thiscall sub_40AFE0(void* this, char* String2, char** a3);
-char __thiscall sub_40B030(char* this, char* ArgList, float* a3);
-char __thiscall sub_40B130(const char* this, char* ArgList, _BYTE* a3);
-void __thiscall sub_40B1B0(const char* this, char* ArgList, float* a3);
-void __thiscall sub_40B1D0(const char* this, char* ArgList, float* a3, float* a4);
-void __thiscall sub_40B1F0(const char* this, char* ArgList, float* a3, float* a4);
-char __thiscall sub_40B310(const char* this, char* ArgList, _DWORD* a3, const char** a4);
-char __thiscall sub_40B420(const char* this, char* ArgList, float* a3, const char** a4);
-char __thiscall sub_40B530(const char* this, char* ArgList, _DWORD* a3, _DWORD* a4, const char** a5);
-int __thiscall sub_40B6E0(int this, char* String2, char a3);
-int __thiscall sub_40B800(int* this);
-unsigned int __thiscall sub_40B840(_DWORD* this, int a2, unsigned int a3, int a4);
-_DWORD* __thiscall sub_40BB60(_DWORD* this, _DWORD* a2, int a3);
+int __thiscall sub_40A1D0(int self, char* FileName);
+int __thiscall sub_40A800(int self);
+int __thiscall sub_40A830(int self);
+int __thiscall sub_40A980(_DWORD* self);
+char __thiscall sub_40A9B0(int self, unsigned int a2);
+int __thiscall sub_40AA00(_DWORD* self, int a2);
+int __thiscall sub_40AA20(_DWORD* self, int a2);
+int __thiscall sub_40AA40(int self, char* String2);
+bool __thiscall sub_40AAF0(_DWORD* self, char* String2, char a3);
+bool __thiscall sub_40ABC0(_DWORD* self, char* String2, char a3);
+char __thiscall sub_40ACC0(_DWORD* self, char* String2, char* a3);
+bool __thiscall sub_40AD80(void* self, char* String2);
+unsigned int __thiscall sub_40ADB0(_DWORD* self);
+int __thiscall sub_40AE00(_DWORD* self, char* String2);
+char __thiscall sub_40AE70(_DWORD* self, char* String2);
+char* __thiscall sub_40AF00(const char* self, char* ArgList, char** a3);
+float* __thiscall sub_40AF60(const char* self, char* ArgList, float* a3);
+int __thiscall sub_40AFC0(void* self, char* String2, _DWORD* a3);
+char* __thiscall sub_40AFE0(void* self, char* String2, char** a3);
+char __thiscall sub_40B030(char* self, char* ArgList, float* a3);
+char __thiscall sub_40B130(const char* self, char* ArgList, _BYTE* a3);
+void __thiscall sub_40B1B0(const char* self, char* ArgList, float* a3);
+void __thiscall sub_40B1D0(const char* self, char* ArgList, float* a3, float* a4);
+void __thiscall sub_40B1F0(const char* self, char* ArgList, float* a3, float* a4);
+char __thiscall sub_40B310(const char* self, char* ArgList, _DWORD* a3, const char** a4);
+char __thiscall sub_40B420(const char* self, char* ArgList, float* a3, const char** a4);
+char __thiscall sub_40B530(const char* self, char* ArgList, _DWORD* a3, _DWORD* a4, const char** a5);
+int __thiscall sub_40B6E0(int self, char* String2, char a3);
+int __thiscall sub_40B800(int* self);
+unsigned int __thiscall sub_40B840(_DWORD* self, int a2, unsigned int a3, int a4);
+_DWORD* __thiscall sub_40BB60(_DWORD* self, _DWORD* a2, int a3);
 void __cdecl sub_40BBF0(int a1, int a2);
-int* __thiscall sub_40BCC0(int* this, int* a2);
+int* __thiscall sub_40BCC0(int* self, int* a2);
 int sub_40BF40();
 _DWORD* sub_40BF50();
 void __cdecl sub_40BF70(); // idb
-_DWORD* __thiscall sub_40BF80(_DWORD* this);
+_DWORD* __thiscall sub_40BF80(_DWORD* self);
 int __thiscall sub_40BFD0(_DWORD); // weak
-_DWORD* __thiscall sub_40BFE0(int this, _DWORD* a2, int a3, int a4, char a5);
-_DWORD* __thiscall sub_40C130(_DWORD** this, _DWORD* a2, int a3, char a4);
-_DWORD* __thiscall sub_40C1F0(int this, _DWORD* a2, int a3, char a4);
-_DWORD* __thiscall sub_40C2B0(int this, _DWORD* a2);
-_DWORD* __thiscall sub_40C310(_DWORD* this, _DWORD* a2);
-_DWORD* __thiscall sub_40C4C0(_DWORD* this, _DWORD* a2);
-_DWORD* __thiscall sub_40C630(_DWORD* this, int a2, int a3);
-_DWORD* __thiscall sub_40C660(_DWORD* this, int a2, int a3);
-int __thiscall sub_40C690(_DWORD* this);
+_DWORD* __thiscall sub_40BFE0(int self, _DWORD* a2, int a3, int a4, char a5);
+_DWORD* __thiscall sub_40C130(_DWORD** self, _DWORD* a2, int a3, char a4);
+_DWORD* __thiscall sub_40C1F0(int self, _DWORD* a2, int a3, char a4);
+_DWORD* __thiscall sub_40C2B0(int self, _DWORD* a2);
+_DWORD* __thiscall sub_40C310(_DWORD* self, _DWORD* a2);
+_DWORD* __thiscall sub_40C4C0(_DWORD* self, _DWORD* a2);
+_DWORD* __thiscall sub_40C630(_DWORD* self, int a2, int a3);
+_DWORD* __thiscall sub_40C660(_DWORD* self, int a2, int a3);
+int __thiscall sub_40C690(_DWORD* self);
 bool __cdecl sub_40C6F0(float* a1, float* a2, float* a3);
 char __cdecl sub_40C910(float* a1, float* a2, float* a3, float* a4, float* a5, float* a6);
 char __cdecl sub_40C9E0(float* a1, float* a2, float* a3, float* a4, float* a5, float* a6);
@@ -261,147 +262,147 @@ bool __cdecl sub_40D330(float* a1, float* a2, float* a3, float* a4, float* a5, f
 bool __cdecl sub_40D900(float* a1, float a2, float* a3, float* a4, float* a5);
 double __cdecl sub_40DD90(float* a1, float* a2, float* a3, float* a4);
 double __cdecl sub_40E420(float* a1, float* a2, float* a3);
-float* __thiscall sub_40E510(float* this, float* a2);
-float* __thiscall sub_40E530(float* this, float* a2);
-void __thiscall sub_40E550(float* this, float a2);
-float* __thiscall sub_40E570(float* this, float* a2, float* a3);
-double __thiscall sub_40E5D0(float* this);
+float* __thiscall sub_40E510(float* self, float* a2);
+float* __thiscall sub_40E530(float* self, float* a2);
+void __thiscall sub_40E550(float* self, float a2);
+float* __thiscall sub_40E570(float* self, float* a2, float* a3);
+double __thiscall sub_40E5D0(float* self);
 void __thiscall sub_40E5F0(void*); // idb
 void __thiscall sub_40E620(void*); // idb
-long double __thiscall sub_40E640(int this, float a2, int a3, int a4);
-long double __thiscall sub_40E6D0(int* this, float a2);
-char __thiscall sub_40E780(LPVOID* this, FILE* Stream);
-_BYTE* __thiscall sub_40E850(_BYTE* this, float a2);
-_BYTE* __thiscall sub_40E880(_BYTE* this, int a2, int a3, int a4);
-_BYTE* __thiscall sub_40E8B0(_BYTE* this, int a2, int a3, int a4);
+long double __thiscall sub_40E640(int self, float a2, int a3, int a4);
+long double __thiscall sub_40E6D0(int* self, float a2);
+//char __thiscall sub_40E780(LPvoid, FILE);
+_BYTE* __thiscall sub_40E850(_BYTE* self, float a2);
+_BYTE* __thiscall sub_40E880(_BYTE* self, int a2, int a3, int a4);
+_BYTE* __thiscall sub_40E8B0(_BYTE* self, int a2, int a3, int a4);
 int* __cdecl sub_40E8E0(int a1);
 int* __cdecl sub_40E910(int a1);
 unsigned int* __cdecl sub_40EA70(unsigned int* a1);
 void __cdecl sub_40EB70(unsigned int* a1);
 int sub_40EBA0();
 void sub_40EC30();
-int __thiscall sub_40EC60(int this);
-int __thiscall sub_40ED60(_DWORD* this);
-int __thiscall sub_40ED70(_DWORD* this, int a2, int a3, int a4, int a5, int a6);
-char __thiscall sub_40EDB0(int this, int a2);
-char __thiscall sub_40F460(_BYTE* this, int a2, char a3);
-_DWORD* __thiscall sub_40F4A0(_DWORD* this, int a2, int a3, int a4);
-int* __thiscall sub_40F4C0(_DWORD* this, int a2, unsigned int a3, _WORD* a4);
-char* __thiscall sub_40F510(char* this);
-void __thiscall sub_40F620(char* this);
-// bool __thiscall std::codecvt_base::do_always_noconv(std::codecvt_base *__hidden this); idb
-_DWORD* __thiscall sub_40F7B0(int this, _DWORD* a2);
-FILE* __thiscall sub_40FC90(struct _RTL_CRITICAL_SECTION* this);
-int __thiscall sub_40FD50(struct _RTL_CRITICAL_SECTION* this, char** a2, int a3);
-_DWORD* __thiscall sub_40FDD0(int this, _DWORD* a2, char* String2);
-_DWORD* __thiscall sub_40FEE0(int this, _DWORD* a2);
-_DWORD* __thiscall sub_4102F0(int this, _DWORD* a2, const CHAR* lpMultiByteStr, int a4);
+int __thiscall sub_40EC60(int self);
+int __thiscall sub_40ED60(_DWORD* self);
+int __thiscall sub_40ED70(_DWORD* self, int a2, int a3, int a4, int a5, int a6);
+char __thiscall sub_40EDB0(int self, int a2);
+char __thiscall sub_40F460(_BYTE* self, int a2, char a3);
+_DWORD* __thiscall sub_40F4A0(_DWORD* self, int a2, int a3, int a4);
+int* __thiscall sub_40F4C0(_DWORD* self, int a2, unsigned int a3, _WORD* a4);
+char* __thiscall sub_40F510(char* self);
+void __thiscall sub_40F620(char* self);
+// bool __thiscall std::codecvt_base::do_always_noconv(std::codecvt_base *__hidden self); idb
+_DWORD* __thiscall sub_40F7B0(int self, _DWORD* a2);
+FILE* __thiscall sub_40FC90(struct _RTL_CRITICAL_SECTION* self);
+int __thiscall sub_40FD50(struct _RTL_CRITICAL_SECTION* self, char** a2, int a3);
+_DWORD* __thiscall sub_40FDD0(int self, _DWORD* a2, char* String2);
+_DWORD* __thiscall sub_40FEE0(int self, _DWORD* a2);
+_DWORD* __thiscall sub_4102F0(int self, _DWORD* a2, const CHAR* lpMultiByteStr, int a4);
 int __stdcall sub_410A90(int a1, unsigned int a2, float a3);
-int __thiscall sub_410AB0(int this, unsigned int a2, float a3);
+int __thiscall sub_410AB0(int self, unsigned int a2, float a3);
 void __stdcall sub_4113D0(int a1);
-_BYTE* __thiscall sub_4113F0(_DWORD* this, int a2, __int16 a3, __int16 a4, char a5);
-_DWORD* __thiscall sub_411430(_DWORD* this, int a2);
-bool __thiscall sub_411480(_DWORD* this, int** a2, int a3, _WORD* a4, int a5, int a6, int a7);
-bool __thiscall sub_4117A0(_DWORD* this, int** a2, _WORD* a3, int a4, int a5, int a6);
-bool __thiscall sub_4117D0(int this, int** a2, _WORD* a3, int a4, int a5, int a6);
-char __thiscall sub_411820(int this, __int16 a2, int a3, unsigned int a4);
-int __thiscall sub_4118C0(int this, _DWORD* a2, int a3);
-void __thiscall sub_411920(int this, int** a2, int a3);
-void __thiscall sub_4119F0(int this);
-_DWORD* __thiscall sub_411B60(int this, int a2);
-void __thiscall sub_411BB0(int this, int a2);
-FILE* __thiscall sub_411C50(int this);
-int __thiscall sub_411D20(_DWORD* this);
-void __thiscall sub_411DE0(int this, char* a2);
+_BYTE* __thiscall sub_4113F0(_DWORD* self, int a2, __int16 a3, __int16 a4, char a5);
+_DWORD* __thiscall sub_411430(_DWORD* self, int a2);
+bool __thiscall sub_411480(_DWORD* self, int** a2, int a3, _WORD* a4, int a5, int a6, int a7);
+bool __thiscall sub_4117A0(_DWORD* self, int** a2, _WORD* a3, int a4, int a5, int a6);
+bool __thiscall sub_4117D0(int self, int** a2, _WORD* a3, int a4, int a5, int a6);
+char __thiscall sub_411820(int self, __int16 a2, int a3, unsigned int a4);
+int __thiscall sub_4118C0(int self, _DWORD* a2, int a3);
+void __thiscall sub_411920(int self, int** a2, int a3);
+void __thiscall sub_4119F0(int self);
+_DWORD* __thiscall sub_411B60(int self, int a2);
+void __thiscall sub_411BB0(int self, int a2);
+FILE* __thiscall sub_411C50(int self);
+int __thiscall sub_411D20(_DWORD* self);
+void __thiscall sub_411DE0(int self, char* a2);
 int sub_411E30();
 int sub_411E40();
 void __cdecl sub_411E70(); // idb
-int __thiscall sub_411EE0(int this, _DWORD* a2, _DWORD* a3, _DWORD* a4);
+int __thiscall sub_411EE0(int self, _DWORD* a2, _DWORD* a3, _DWORD* a4);
 int __cdecl sub_412120(const char** a1, const char** a2);
 int __stdcall sub_412140(const char* a1, const char* a2);
-char __thiscall sub_4122F0(int this, int a2);
-void __thiscall sub_412620(_DWORD* this, int a2);
-void __thiscall sub_4129B0(_DWORD* this, int a2);
-void __thiscall sub_412A30(char* this);
-_DWORD* __thiscall sub_412AB0(_DWORD* this);
-int __thiscall sub_412CC0(int this, int a2);
+char __thiscall sub_4122F0(int self, int a2);
+void __thiscall sub_412620(_DWORD* self, int a2);
+void __thiscall sub_4129B0(_DWORD* self, int a2);
+void __thiscall sub_412A30(char* self);
+_DWORD* __thiscall sub_412AB0(_DWORD* self);
+int __thiscall sub_412CC0(int self, int a2);
 // int __userpurge sub_412DB0@<eax>(int a1@<ecx>, int a2@<edi>, int a3);
-void __thiscall sub_413090(int this, float a2, float a3, float a4, float a5);
-int __thiscall sub_413100(int this, int a2, int a3, int a4);
-int __thiscall sub_413120(int this, int a2);
-int __thiscall sub_413130(int this, int a2, int a3, int a4, int a5);
-int __thiscall sub_413160(int this, int a2, int a3, int a4);
-char __thiscall sub_413180(int this, int a2, char a3);
-_DWORD* __thiscall sub_4131B0(_DWORD* this, _DWORD* a2);
-float* __thiscall sub_4131D0(float* this, float* a2, float* a3);
-int __thiscall sub_413240(_DWORD* this, int a2, int a3, int a4, int a5);
-void __thiscall sub_413270(float* this, int);
-void __thiscall sub_413290(int this, int);
-_DWORD* __thiscall sub_4132B0(_DWORD* this);
-void __thiscall sub_413300(LPVOID* this);
-char __thiscall sub_4133C0(_DWORD* this);
-int __thiscall sub_4134A0(_DWORD* this);
-void __thiscall sub_4134F0(_DWORD* this);
-void __thiscall sub_413550(int this);
-_DWORD* __thiscall sub_413780(_DWORD* this);
-int __thiscall sub_413830(_DWORD* this, char* String1);
-_DWORD* __thiscall sub_413870(_DWORD* this, int a2);
+void __thiscall sub_413090(int self, float a2, float a3, float a4, float a5);
+int __thiscall sub_413100(int self, int a2, int a3, int a4);
+int __thiscall sub_413120(int self, int a2);
+int __thiscall sub_413130(int self, int a2, int a3, int a4, int a5);
+int __thiscall sub_413160(int self, int a2, int a3, int a4);
+char __thiscall sub_413180(int self, int a2, char a3);
+_DWORD* __thiscall sub_4131B0(_DWORD* self, _DWORD* a2);
+float* __thiscall sub_4131D0(float* self, float* a2, float* a3);
+int __thiscall sub_413240(_DWORD* self, int a2, int a3, int a4, int a5);
+void __thiscall sub_413270(float* self, int);
+void __thiscall sub_413290(int self, int);
+_DWORD* __thiscall sub_4132B0(_DWORD* self);
+void __thiscall sub_413300(LPVOID* self);
+char __thiscall sub_4133C0(_DWORD* self);
+int __thiscall sub_4134A0(_DWORD* self);
+void __thiscall sub_4134F0(_DWORD* self);
+void __thiscall sub_413550(int self);
+_DWORD* __thiscall sub_413780(_DWORD* self);
+int __thiscall sub_413830(_DWORD* self, char* String1);
+_DWORD* __thiscall sub_413870(_DWORD* self, int a2);
 char __stdcall sub_413990(_BYTE* a1);
-char __thiscall sub_4139B0(_DWORD* this);
-char __thiscall sub_4139F0(_DWORD* this, int a2);
-char __thiscall sub_414C80(_DWORD* this, int a2);
-int __thiscall sub_414CE0(void* this);
+char __thiscall sub_4139B0(_DWORD* self);
+char __thiscall sub_4139F0(_DWORD* self, int a2);
+char __thiscall sub_414C80(_DWORD* self, int a2);
+int __thiscall sub_414CE0(void* self);
 int __fastcall sub_414CF0(int a1);
-void __thiscall sub_414D70(LPVOID* this);
-char __thiscall sub_414E60(int this);
-void __thiscall sub_4151F0(int this);
-_DWORD* __thiscall sub_415270(int this, int a2);
-void __thiscall sub_415330(int this, void* a2);
-char __thiscall sub_4153B0(_DWORD* this, int a2);
-char __thiscall sub_415430(_DWORD* this, int a2);
-// Iostream_init *__thiscall Iostream_init::Iostream_init(Iostream_init *__hidden this); idb
-_DWORD* __thiscall sub_415660(_DWORD* this, int a2);
+void __thiscall sub_414D70(LPVOID* self);
+char __thiscall sub_414E60(int self);
+void __thiscall sub_4151F0(int self);
+_DWORD* __thiscall sub_415270(int self, int a2);
+void __thiscall sub_415330(int self, void* a2);
+char __thiscall sub_4153B0(_DWORD* self, int a2);
+char __thiscall sub_415430(_DWORD* self, int a2);
+// Iostream_init *__thiscall Iostream_init::Iostream_init(Iostream_init *__hidden self); idb
+_DWORD* __thiscall sub_415660(_DWORD* self, int a2);
 int __thiscall nullsub_1(_DWORD); // weak
-int __thiscall sub_415770(int this, float* a2, float* a3, int a4, int a5);
-void __thiscall sub_415910(void* this);
-void __thiscall sub_415930(int this, int a2, float a3);
-void __thiscall sub_4159B0(int this, float a2, _DWORD* a3, _DWORD* a4, float* a5, int a6, float* a7);
-float* __thiscall sub_416260(float* this, float* a2);
-float* __thiscall sub_416290(float* this, float a2);
-float* __thiscall sub_4162C0(float* this, float* a2, float* a3);
-float* __thiscall sub_4162F0(float* this, float* a2, float a3);
-float* __thiscall sub_416320(float* this, float* a2, float a3);
-char __thiscall sub_416350(int this, _DWORD* a2, char a3);
-void __thiscall sub_4164A0(int this, int a2);
-void __thiscall sub_4164D0(float* this);
-int __thiscall sub_416570(float* this);
-int __thiscall sub_416EE0(int this, int a2);
-char __thiscall sub_416F80(_DWORD* this, char a2);
-int __thiscall sub_417120(void* this, int a2);
-int __thiscall sub_417140(_DWORD* this, int a2);
-int __thiscall sub_417160(_DWORD* this);
-char* __thiscall sub_417180(char* this);
-char __thiscall sub_417190(int this, int a2, _DWORD* a3, unsigned __int8 a4);
-void __thiscall sub_417260(float* this);
-char __thiscall sub_4176E0(_DWORD* this, _DWORD* a2, _DWORD* a3, _BYTE* a4, int a5);
-int __thiscall sub_417770(float* this);
-char __thiscall sub_4183A0(int this, int a2, float a3);
-char __thiscall sub_418420(int this, int a2, float a3, float* a4, float* a5, _DWORD* a6);
-float* __thiscall sub_418E20(float* this, float* a2);
-bool __thiscall sub_418E50(int this, char a2, float a3);
+int __thiscall sub_415770(int self, float* a2, float* a3, int a4, int a5);
+void __thiscall sub_415910(void* self);
+void __thiscall sub_415930(int self, int a2, float a3);
+void __thiscall sub_4159B0(int self, float a2, _DWORD* a3, _DWORD* a4, float* a5, int a6, float* a7);
+float* __thiscall sub_416260(float* self, float* a2);
+float* __thiscall sub_416290(float* self, float a2);
+float* __thiscall sub_4162C0(float* self, float* a2, float* a3);
+float* __thiscall sub_4162F0(float* self, float* a2, float a3);
+float* __thiscall sub_416320(float* self, float* a2, float a3);
+char __thiscall sub_416350(int self, _DWORD* a2, char a3);
+void __thiscall sub_4164A0(int self, int a2);
+void __thiscall sub_4164D0(float* self);
+int __thiscall sub_416570(float* self);
+int __thiscall sub_416EE0(int self, int a2);
+char __thiscall sub_416F80(_DWORD* self, char a2);
+int __thiscall sub_417120(void* self, int a2);
+int __thiscall sub_417140(_DWORD* self, int a2);
+int __thiscall sub_417160(_DWORD* self);
+char* __thiscall sub_417180(char* self);
+char __thiscall sub_417190(int self, int a2, _DWORD* a3, unsigned __int8 a4);
+void __thiscall sub_417260(float* self);
+char __thiscall sub_4176E0(_DWORD* self, _DWORD* a2, _DWORD* a3, _BYTE* a4, int a5);
+int __thiscall sub_417770(float* self);
+char __thiscall sub_4183A0(int self, int a2, float a3);
+char __thiscall sub_418420(int self, int a2, float a3, float* a4, float* a5, _DWORD* a6);
+float* __thiscall sub_418E20(float* self, float* a2);
+bool __thiscall sub_418E50(int self, char a2, float a3);
 double __cdecl sub_419640(float* a1);
 double __cdecl sub_419670(float* a1, float* a2);
 float* __cdecl sub_419690(float* a1, float* a2, float* a3);
-bool __thiscall sub_4196F0(int this, float* a2, float a3, float a4, char a5, char a6);
-bool __thiscall sub_4198A0(_DWORD* this, float* a2, float a3, float a4, char a5, char a6);
-bool __thiscall sub_419910(int this, float a2, float a3, float a4, char a5, char a6);
-char __thiscall sub_419A30(_DWORD* this, float a2, float a3, float a4);
-char __thiscall sub_419BC0(_DWORD* this, int a2);
-bool __thiscall sub_419C40(int this, float* a2);
-int __thiscall sub_419CC0(_DWORD* this);
-char* __thiscall sub_419CF0(char* this, char* a2, unsigned int a3, _DWORD* a4);
-int __thiscall sub_41A000(_DWORD* this, char* a2, unsigned int a3, const void* a4);
-char* __thiscall sub_41A300(_DWORD* this, char* a2, char* a3);
+bool __thiscall sub_4196F0(int self, float* a2, float a3, float a4, char a5, char a6);
+bool __thiscall sub_4198A0(_DWORD* self, float* a2, float a3, float a4, char a5, char a6);
+bool __thiscall sub_419910(int self, float a2, float a3, float a4, char a5, char a6);
+char __thiscall sub_419A30(_DWORD* self, float a2, float a3, float a4);
+char __thiscall sub_419BC0(_DWORD* self, int a2);
+bool __thiscall sub_419C40(int self, float* a2);
+int __thiscall sub_419CC0(_DWORD* self);
+char* __thiscall sub_419CF0(char* self, char* a2, unsigned int a3, _DWORD* a4);
+int __thiscall sub_41A000(_DWORD* self, char* a2, unsigned int a3, const void* a4);
+char* __thiscall sub_41A300(_DWORD* self, char* a2, char* a3);
 bool __cdecl sub_41A360(char a1);
 LRESULT sub_41A390();
 INT_PTR __stdcall DialogFunc(HWND hDlg, UINT a2, WPARAM a3, LPARAM a4); // idb
@@ -409,82 +410,82 @@ int sub_41B030();
 int __cdecl CompareFunction(_DWORD* a1, _DWORD* a2);
 int __cdecl sub_41B760(int a1, int a2);
 int __cdecl sub_41B970(int a1, int a2, int a3, _DWORD* a4);
-_DWORD* __thiscall sub_41BB80(_DWORD* this);
-int __thiscall sub_41BB90(_DWORD* this);
-int __thiscall sub_41BC00(_DWORD* this, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
-int __thiscall sub_41BEF0(_DWORD* this, int a2, int a3, int a4, int a5);
-int __thiscall sub_41C050(_DWORD* this);
-int __thiscall sub_41C060(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_41C090(_DWORD* this, int a2, int a3);
-void __thiscall sub_41C0B0(int this, float a2);
-void __thiscall sub_41C0E0(float* this);
-void __thiscall sub_41C150(int this);
-void __thiscall sub_41C190(int this);
-double __thiscall sub_41C200(float* this, float a2);
-// Iostream_init *__thiscall Iostream_init::Iostream_init(Iostream_init *__hidden this); idb
+_DWORD* __thiscall sub_41BB80(_DWORD* self);
+int __thiscall sub_41BB90(_DWORD* self);
+int __thiscall sub_41BC00(_DWORD* self, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+int __thiscall sub_41BEF0(_DWORD* self, int a2, int a3, int a4, int a5);
+int __thiscall sub_41C050(_DWORD* self);
+int __thiscall sub_41C060(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_41C090(_DWORD* self, int a2, int a3);
+void __thiscall sub_41C0B0(int self, float a2);
+void __thiscall sub_41C0E0(float* self);
+void __thiscall sub_41C150(int self);
+void __thiscall sub_41C190(int self);
+double __thiscall sub_41C200(float* self, float a2);
+// Iostream_init *__thiscall Iostream_init::Iostream_init(Iostream_init *__hidden self); idb
 double __stdcall sub_41C2A0(float a1);
-double __thiscall sub_41C2F0(float* this, float a2);
-BOOL __thiscall sub_41C310(int this, float a2, float a3);
-BOOL __thiscall sub_41C380(float* this, float a2);
-void __thiscall sub_41C3C0(int this, float, float, int);
-void __thiscall sub_41C4E0(float* this);
+double __thiscall sub_41C2F0(float* self, float a2);
+BOOL __thiscall sub_41C310(int self, float a2, float a3);
+BOOL __thiscall sub_41C380(float* self, float a2);
+void __thiscall sub_41C3C0(int self, float, float, int);
+void __thiscall sub_41C4E0(float* self);
 char __cdecl sub_41C550(HWND a1, int a2, LPCGUID pcGuidDevice);
-LPDIRECTSOUND sub_41C680();
-_DWORD* __thiscall sub_41C6A0(_DWORD* this);
-FILE* __thiscall sub_41C700(int this);
-char __thiscall sub_41C740(int this);
-unsigned int __thiscall sub_41C760(int this, const char* a2);
-char __thiscall sub_41C7A0(int this, char a2);
-char __thiscall sub_41C7E0(_BYTE* this, char a2);
-char __thiscall sub_41C810(int this);
-char __thiscall sub_41C940(int this);
-char __thiscall sub_41C9A0(char* this, char* a2);
-char __thiscall sub_41CA40(int this);
-char __thiscall sub_41CD90(int this);
+//LPDIRECTSOUND sub_41C680();
+_DWORD* __thiscall sub_41C6A0(_DWORD* self);
+FILE* __thiscall sub_41C700(int self);
+char __thiscall sub_41C740(int self);
+unsigned int __thiscall sub_41C760(int self, const char* a2);
+char __thiscall sub_41C7A0(int self, char a2);
+char __thiscall sub_41C7E0(_BYTE* self, char a2);
+char __thiscall sub_41C810(int self);
+char __thiscall sub_41C940(int self);
+char __thiscall sub_41C9A0(char* self, char* a2);
+char __thiscall sub_41CA40(int self);
+char __thiscall sub_41CD90(int self);
 // char __usercall sub_41CE60@<al>(int a1@<ebx>, unsigned int a2);
-char __thiscall sub_41CF00(int this);
-int __thiscall sub_41CF50(int this);
-int __thiscall sub_41CF80(int this, float a2);
-int __thiscall sub_41CFD0(int this, float a2);
-char __thiscall sub_41D010(_DWORD* this, float a2);
+char __thiscall sub_41CF00(int self);
+int __thiscall sub_41CF50(int self);
+int __thiscall sub_41CF80(int self, float a2);
+int __thiscall sub_41CFD0(int self, float a2);
+char __thiscall sub_41D010(_DWORD* self, float a2);
 char __fastcall sub_41D090(int a1);
 // char __userpurge sub_41D0C0@<al>(int a1@<ecx>, int a2@<ebp>, float a3);
-char __thiscall sub_41D1A0(char* this);
+char __thiscall sub_41D1A0(char* self);
 // char __usercall sub_41D4F0@<al>(int a1@<ecx>, int a2@<ebp>);
-void __thiscall sub_41D700(_DWORD* this);
-void __thiscall sub_41D790(_DWORD* this);
-void __thiscall sub_41D7A0(_DWORD* this);
-char __thiscall sub_41D840(int this);
-char __thiscall sub_41D860(int this);
-char __thiscall sub_41D8A0(_BYTE* this, char a2);
-int __thiscall sub_41D8B0(_DWORD* this, int a2, int a3, int a4, int a5, int a6, int a7);
-int __thiscall sub_41D8E0(int this, char a2, int a3);
-int __thiscall sub_41D900(_DWORD* this, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
-int __thiscall sub_41D940(_DWORD* this, int a2, int a3);
-int __thiscall sub_41D960(_DWORD* this, _DWORD* a2, _DWORD* a3);
-int __thiscall sub_41D9A0(int this);
-_DWORD* __thiscall sub_41D9C0(_DWORD* this);
-void __thiscall sub_41DB10(_DWORD* this);
-char* __thiscall sub_41DE10(_DWORD* this, char* String2, int a3, char a4, char a5, char a6, char a7);
-int __thiscall sub_41E250(_DWORD* this, char* String2);
-int __thiscall sub_41E2D0(_DWORD* this, _DWORD* a2, char a3, char a4);
+void __thiscall sub_41D700(_DWORD* self);
+void __thiscall sub_41D790(_DWORD* self);
+void __thiscall sub_41D7A0(_DWORD* self);
+char __thiscall sub_41D840(int self);
+char __thiscall sub_41D860(int self);
+char __thiscall sub_41D8A0(_BYTE* self, char a2);
+int __thiscall sub_41D8B0(_DWORD* self, int a2, int a3, int a4, int a5, int a6, int a7);
+int __thiscall sub_41D8E0(int self, char a2, int a3);
+int __thiscall sub_41D900(_DWORD* self, int a2, int a3, int a4, int a5, int a6, int a7, int a8);
+int __thiscall sub_41D940(_DWORD* self, int a2, int a3);
+int __thiscall sub_41D960(_DWORD* self, _DWORD* a2, _DWORD* a3);
+int __thiscall sub_41D9A0(int self);
+_DWORD* __thiscall sub_41D9C0(_DWORD* self);
+void __thiscall sub_41DB10(_DWORD* self);
+char* __thiscall sub_41DE10(_DWORD* self, char* String2, int a3, char a4, char a5, char a6, char a7);
+int __thiscall sub_41E250(_DWORD* self, char* String2);
+int __thiscall sub_41E2D0(_DWORD* self, _DWORD* a2, char a3, char a4);
 char __stdcall sub_41E3D0(int a1);
-char __thiscall sub_41E410(_DWORD* this, int a2);
+char __thiscall sub_41E410(_DWORD* self, int a2);
 unsigned int __cdecl sub_41E920(int* a1, int* a2);
-void __thiscall sub_41EA30(float* this, int a2, int a3);
-int __thiscall sub_41EFE0(float* this, int a2);
-int __thiscall sub_41F0F0(_DWORD* this);
-void __thiscall sub_41F120(int this);
-void __thiscall sub_41F1A0(int this, char a2);
-void __thiscall sub_41F220(int this, char a2);
-int __thiscall sub_41F2A0(void** this);
+void __thiscall sub_41EA30(float* self, int a2, int a3);
+int __thiscall sub_41EFE0(float* self, int a2);
+int __thiscall sub_41F0F0(_DWORD* self);
+void __thiscall sub_41F120(int self);
+void __thiscall sub_41F1A0(int self, char a2);
+void __thiscall sub_41F220(int self, char a2);
+int __thiscall sub_41F2A0(void** self);
 // char __usercall sub_41F2F0@<al>(int a1@<ecx>, void *a2@<esi>);
 int sub_41F390();
 int __cdecl sub_41F3D0(float a1, float a2, float a3, float a4, float a5, float a6, float a7, int a8);
-int __thiscall sub_41F5B0(int this, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
-int __thiscall sub_41F6C0(int this, float a2);
-int __thiscall sub_41F790(int this, int a2);
-int __thiscall sub_41F860(void** this);
+int __thiscall sub_41F5B0(int self, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9);
+int __thiscall sub_41F6C0(int self, float a2);
+int __thiscall sub_41F790(int self, int a2);
+int __thiscall sub_41F860(void** self);
 // char __usercall sub_41F8F0@<al>(int a1@<ecx>, int a2@<edi>);
 int sub_41F9E0();
 int __cdecl sub_41FA20(int a1, char a2);
@@ -494,45 +495,45 @@ int sub_4204A0();
 int sub_4204C0();
 bool __cdecl sub_420600(float* a1, float* a2, int a3, int a4, int a5, float a6, float a7, float* a8, float a9, float a10, float a11, float a12);
 bool __cdecl sub_420B50(float* a1, float a2, int a3, int a4, int a5, float a6, float a7, float* a8, float* a9, float a10, float a11, float a12, float a13);
-float* __thiscall sub_4210B0(float* this, float* a2);
-float* __thiscall sub_4210D0(float* this, float* a2, float* a3);
-float* __thiscall sub_421100(float* this, float* a2);
-char __thiscall sub_421110(int this, const char* a2);
+float* __thiscall sub_4210B0(float* self, float* a2);
+float* __thiscall sub_4210D0(float* self, float* a2, float* a3);
+float* __thiscall sub_421100(float* self, float* a2);
+char __thiscall sub_421110(int self, const char* a2);
 char sub_421190(int a1, char* Format, ...);
-char __thiscall sub_4211E0(int this, char a2);
-char __thiscall sub_421280(int this);
-_DWORD* __thiscall sub_4212C0(int this, int a2);
-_DWORD* __thiscall sub_421300(int this, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4, int a5);
-_DWORD* __thiscall sub_421350(int this, int a2);
-int __thiscall sub_421370(_DWORD* this, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4, int a5);
-void __thiscall sub_4213B0(int this);
-int __thiscall sub_421430(_DWORD* this, int a2, int a3, int a4, int a5);
-void __thiscall sub_421460(int this, int a2);
-_DWORD* __thiscall sub_421540(void** this);
-_DWORD* __thiscall sub_4215C0(_DWORD* this);
-void __thiscall sub_4216E0(void* this);
-int __thiscall sub_421810(int this, const char* a2, int a3, int a4);
-_BYTE* __thiscall sub_421980(int this, int a2, unsigned int a3);
+char __thiscall sub_4211E0(int self, char a2);
+char __thiscall sub_421280(int self);
+_DWORD* __thiscall sub_4212C0(int self, int a2);
+_DWORD* __thiscall sub_421300(int self, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4, int a5);
+_DWORD* __thiscall sub_421350(int self, int a2);
+int __thiscall sub_421370(_DWORD* self, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4, int a5);
+void __thiscall sub_4213B0(int self);
+int __thiscall sub_421430(_DWORD* self, int a2, int a3, int a4, int a5);
+void __thiscall sub_421460(int self, int a2);
+_DWORD* __thiscall sub_421540(void** self);
+_DWORD* __thiscall sub_4215C0(_DWORD* self);
+void __thiscall sub_4216E0(void* self);
+int __thiscall sub_421810(int self, const char* a2, int a3, int a4);
+_BYTE* __thiscall sub_421980(int self, int a2, unsigned int a3);
 char __stdcall sub_421AB0(int a1, char* a2, float* a3, _DWORD* a4);
-int __thiscall sub_421B20(_DWORD* this, int a2);
-void __thiscall sub_421B40(_DWORD* this, int a2);
-int __thiscall sub_421B70(int this, int a2);
+int __thiscall sub_421B20(_DWORD* self, int a2);
+void __thiscall sub_421B40(_DWORD* self, int a2);
+int __thiscall sub_421B70(int self, int a2);
 char* __stdcall sub_421DB0(int a1, char a2);
 double __stdcall sub_421DE0(int a1, char a2, char a3);
-int __thiscall sub_421E30(_DWORD** this, float a2, float a3, float a4, int a5, float* a6);
-void __thiscall sub_422000(int this);
+int __thiscall sub_421E30(_DWORD** self, float a2, float a3, float a4, int a5, float* a6);
+void __thiscall sub_422000(int self);
 int __cdecl sub_422080(char* FileName, _DWORD* Buffer);
-_DWORD* __thiscall sub_4221E0(_DWORD* this);
-void __thiscall sub_422200(int this);
-void __thiscall sub_422230(int* this);
-int __thiscall sub_422270(int this, int a2);
-int __thiscall sub_422290(int this);
-int __thiscall sub_4223D0(_DWORD* this);
-_DWORD* __thiscall sub_422400(_DWORD* this, char* String1, char a3);
-_DWORD* __thiscall sub_4226E0(_DWORD* this, _DWORD* a2);
-int __thiscall sub_422740(_DWORD* this, int a2);
-int __thiscall sub_422760(_DWORD* this, _DWORD* a2, _DWORD* a3, _DWORD* a4, _DWORD* a5);
-FILE* __thiscall sub_4227C0(_DWORD* this);
+_DWORD* __thiscall sub_4221E0(_DWORD* self);
+void __thiscall sub_422200(int self);
+void __thiscall sub_422230(int* self);
+int __thiscall sub_422270(int self, int a2);
+int __thiscall sub_422290(int self);
+int __thiscall sub_4223D0(_DWORD* self);
+_DWORD* __thiscall sub_422400(_DWORD* self, char* String1, char a3);
+_DWORD* __thiscall sub_4226E0(_DWORD* self, _DWORD* a2);
+int __thiscall sub_422740(_DWORD* self, int a2);
+int __thiscall sub_422760(_DWORD* self, _DWORD* a2, _DWORD* a3, _DWORD* a4, _DWORD* a5);
+FILE* __thiscall sub_4227C0(_DWORD* self);
 double __cdecl sub_422830(float a1, float a2);
 char* __cdecl sub_4228F0(char* Str);
 unsigned int __cdecl sub_422950(const char* a1);
@@ -547,9 +548,9 @@ int __cdecl sub_422DC0(HKEY hKey, LPCSTR lpValueName, int Data);
 int __cdecl sub_422E60(CHAR* lpAppName, LPCSTR lpKeyName, LPCSTR lpString);
 bool __cdecl sub_422EF0(LPCSTR lpFileName);
 char __cdecl sub_422F40(const char* a1);
-const void* __thiscall sub_423060(_DWORD* this, int a2);
-double __thiscall sub_4230F0(_DWORD* this);
-double __thiscall sub_423120(int* this);
+const void* __thiscall sub_423060(_DWORD* self, int a2);
+double __thiscall sub_4230F0(_DWORD* self);
+double __thiscall sub_423120(int* self);
 void* sub_4231A0();
 int __cdecl sub_4231C0(int a1);
 int sub_423230();
@@ -557,32 +558,32 @@ int __cdecl sub_423260(unsigned __int8* a1, int a2, unsigned int a3);
 int sub_4232B0();
 int __cdecl sub_423310(unsigned int a1, char a2);
 FILE* __cdecl sub_423340(char* FileName, unsigned int a2);
-int __thiscall sub_4233C0(int this, int a2, const char* a3);
-void __thiscall sub_4234A0(void* this);
-char __thiscall sub_423520(int this, char a2);
-char __thiscall sub_423600(_DWORD* this);
-const char* __thiscall sub_4242F0(_DWORD** this, char* String2);
-const char* __thiscall sub_424300(_DWORD** this, int a2, int a3, char* String2, char a5);
-const char* __thiscall sub_424350(_DWORD* this, char* String2);
-int __thiscall sub_424390(_DWORD* this, int a2);
-_DWORD* __thiscall sub_4243A0(_DWORD* this);
-void __thiscall sub_424520(int this);
-char __thiscall sub_424630(int* this);
-void __thiscall sub_4246F0(int* this);
-char __thiscall sub_424730(_DWORD* this, int a2);
-void __thiscall sub_424C80(_DWORD* this, int a2);
-char __thiscall sub_424E30(_DWORD* this, int a2);
-char __thiscall sub_425030(_DWORD* this, int ArgList, int a3);
-int __thiscall sub_425140(int this);
-int __thiscall sub_425F60(int this);
-const char* __thiscall sub_426000(_DWORD* this, char* String2);
-const char* __thiscall sub_426040(_DWORD* this, char* String2);
-char __thiscall sub_426060(int this, int a2, int ArgList);
-char __thiscall sub_4261C0(_DWORD* this, char* String2, char a3);
-int __thiscall sub_4262D0(int* this);
+int __thiscall sub_4233C0(int self, int a2, const char* a3);
+void __thiscall sub_4234A0(void* self);
+char __thiscall sub_423520(int self, char a2);
+char __thiscall sub_423600(_DWORD* self);
+const char* __thiscall sub_4242F0(_DWORD** self, char* String2);
+const char* __thiscall sub_424300(_DWORD** self, int a2, int a3, char* String2, char a5);
+const char* __thiscall sub_424350(_DWORD* self, char* String2);
+int __thiscall sub_424390(_DWORD* self, int a2);
+_DWORD* __thiscall sub_4243A0(_DWORD* self);
+void __thiscall sub_424520(int self);
+char __thiscall sub_424630(int* self);
+void __thiscall sub_4246F0(int* self);
+char __thiscall sub_424730(_DWORD* self, int a2);
+void __thiscall sub_424C80(_DWORD* self, int a2);
+char __thiscall sub_424E30(_DWORD* self, int a2);
+char __thiscall sub_425030(_DWORD* self, int ArgList, int a3);
+int __thiscall sub_425140(int self);
+int __thiscall sub_425F60(int self);
+const char* __thiscall sub_426000(_DWORD* self, char* String2);
+const char* __thiscall sub_426040(_DWORD* self, char* String2);
+char __thiscall sub_426060(int self, int a2, int ArgList);
+char __thiscall sub_4261C0(_DWORD* self, char* String2, char a3);
+int __thiscall sub_4262D0(int* self);
 char __stdcall sub_4263C0(int a1, int a2);
 char __stdcall sub_4263D0(int a1, int a2, int a3);
-_DWORD* __thiscall sub_4263E0(_DWORD* this, int a2);
+_DWORD* __thiscall sub_4263E0(_DWORD* self, int a2);
 int sub_426580();
 // int unknown_libname_1(); weak
 // void __cdecl unknown_libname_2(); idb
@@ -640,617 +641,617 @@ bool __cdecl sub_427EB0(int* a1);
 void __noreturn sub_4281B0(char* Format, ...);
 char sub_4282E0(char a1, char* Format, ...);
 void sub_428420();
-void __thiscall sub_428580(void* this);
-char __thiscall sub_428590(_DWORD* this, int a2, int a3);
-char __thiscall sub_4285C0(_DWORD* this, int a2);
-char __thiscall sub_4285F0(_DWORD* this, int a2, int a3);
-char __thiscall sub_428620(_DWORD* this, int a2);
-char __thiscall sub_428650(int this);
-int __thiscall sub_428680(_DWORD* this, int a2);
-int __thiscall sub_4286C0(_DWORD* this, int a2);
-void __thiscall sub_428720(_DWORD* this);
+void __thiscall sub_428580(void* self);
+char __thiscall sub_428590(_DWORD* self, int a2, int a3);
+char __thiscall sub_4285C0(_DWORD* self, int a2);
+char __thiscall sub_4285F0(_DWORD* self, int a2, int a3);
+char __thiscall sub_428620(_DWORD* self, int a2);
+char __thiscall sub_428650(int self);
+int __thiscall sub_428680(_DWORD* self, int a2);
+int __thiscall sub_4286C0(_DWORD* self, int a2);
+void __thiscall sub_428720(_DWORD* self);
 int __cdecl sub_428780(LPWSTR lpWideCharStr, LPCCH lpMultiByteStr, unsigned int a3);
 void __cdecl sub_4287D0(LPSTR lpMultiByteStr, wchar_t* String, size_t a3);
 LPCCH __cdecl sub_428820(LPWSTR lpWideCharStr, LPCCH lpMultiByteStr, unsigned int a3);
 void __cdecl sub_428840(LPSTR lpMultiByteStr, wchar_t* String, size_t a3);
-int** __thiscall sub_428860(int** this, char* FileName);
-int __thiscall sub_428C90(_DWORD* this);
-bool __thiscall sub_428CD0(_DWORD* this);
-int __thiscall sub_428D50(_DWORD* this, const char* a2);
-char __thiscall sub_428DE0(_DWORD* this, char a2);
-void __thiscall sub_428E30(int* this);
-void __thiscall sub_428E50(int this);
-int __thiscall sub_428EB0(void* this);
-int __thiscall sub_428EC0(void* this, int a2);
-int __thiscall sub_428EE0(void* this, int a2);
-int __thiscall sub_428F00(void* this);
-int __thiscall sub_428F10(void* this);
-int __thiscall sub_428F20(int* this);
-int __thiscall sub_428F60(int* this);
-int __thiscall sub_428F80(void* this, int a2);
+int** __thiscall sub_428860(int** self, char* FileName);
+int __thiscall sub_428C90(_DWORD* self);
+bool __thiscall sub_428CD0(_DWORD* self);
+int __thiscall sub_428D50(_DWORD* self, const char* a2);
+char __thiscall sub_428DE0(_DWORD* self, char a2);
+void __thiscall sub_428E30(int* self);
+void __thiscall sub_428E50(int self);
+int __thiscall sub_428EB0(void* self);
+int __thiscall sub_428EC0(void* self, int a2);
+int __thiscall sub_428EE0(void* self, int a2);
+int __thiscall sub_428F00(void* self);
+int __thiscall sub_428F10(void* self);
+int __thiscall sub_428F20(int* self);
+int __thiscall sub_428F60(int* self);
+int __thiscall sub_428F80(void* self, int a2);
 int __cdecl sub_429090(LPSTR lpFilename, int a2); // idb
-int __thiscall sub_4291F0(_DWORD* this, const void* a2);
-void __thiscall sub_429240(int this, int a2);
+int __thiscall sub_4291F0(_DWORD* self, const void* a2);
+void __thiscall sub_429240(int self, int a2);
 unsigned int __cdecl sub_429310(char* a1, char* a2);
 unsigned int __cdecl sub_429820(_DWORD* a1, _DWORD* a2);
-// _DWORD __thiscall Concurrency::details::TaskStack::TaskStack(Concurrency::details::TaskStack *__hidden this); idb
-void* __thiscall sub_429A90(void* this, int a2, int a3, int a4, char* Source);
-int __thiscall sub_429AD0(void* this);
-int __thiscall sub_429AE0(_DWORD* this);
-int __thiscall sub_429AF0(_DWORD* this);
-char* __thiscall sub_429B00(char* this);
-bool __thiscall sub_429B10(_DWORD* this, _DWORD* a2);
+// _DWORD __thiscall Concurrency::details::TaskStack::TaskStack(Concurrency::details::TaskStack *__hidden self); idb
+void* __thiscall sub_429A90(void* self, int a2, int a3, int a4, char* Source);
+int __thiscall sub_429AD0(void* self);
+int __thiscall sub_429AE0(_DWORD* self);
+int __thiscall sub_429AF0(_DWORD* self);
+char* __thiscall sub_429B00(char* self);
+bool __thiscall sub_429B10(_DWORD* self, _DWORD* a2);
 int __cdecl sub_429B40(void** a1, int a2, int a3, int a4, char* a5, int a6);
 int sub_429DD0();
-_DWORD* __thiscall sub_429DE0(_DWORD* this, char* FileName);
-void __thiscall sub_429E40(FILE*** this);
-bool __thiscall sub_429E70(_DWORD* this, _BYTE* a2, int a3);
-char __thiscall sub_42A010(void* this, _BYTE* a2);
-void __thiscall sub_42A070(_DWORD* this);
-int __thiscall sub_42A0E0(_DWORD* this);
-char __thiscall sub_42A370(_DWORD* this);
-char __thiscall sub_42A390(void* this, _BYTE* a2);
-bool __thiscall sub_42A400(_DWORD* this);
-char __thiscall sub_42A4F0(_DWORD* this, _BYTE* a2);
-char __thiscall sub_42A560(_DWORD* this, _BYTE* a2);
-int __thiscall sub_42A5C0(void* this);
-float* __thiscall sub_42A5F0(float* this, char* a2);
-int __thiscall sub_42A770(void* this);
+_DWORD* __thiscall sub_429DE0(_DWORD* self, char* FileName);
+void __thiscall sub_429E40(FILE*** self);
+bool __thiscall sub_429E70(_DWORD* self, _BYTE* a2, int a3);
+char __thiscall sub_42A010(void* self, _BYTE* a2);
+void __thiscall sub_42A070(_DWORD* self);
+int __thiscall sub_42A0E0(_DWORD* self);
+char __thiscall sub_42A370(_DWORD* self);
+char __thiscall sub_42A390(void* self, _BYTE* a2);
+bool __thiscall sub_42A400(_DWORD* self);
+char __thiscall sub_42A4F0(_DWORD* self, _BYTE* a2);
+char __thiscall sub_42A560(_DWORD* self, _BYTE* a2);
+int __thiscall sub_42A5C0(void* self);
+float* __thiscall sub_42A5F0(float* self, char* a2);
+int __thiscall sub_42A770(void* self);
 // int __usercall sub_42A780@<eax>(_DWORD *a1@<ecx>, int a2@<ebp>);
-int __thiscall sub_42A7A0(_DWORD* this);
+int __thiscall sub_42A7A0(_DWORD* self);
 // int __usercall sub_42A7C0@<eax>(int a1@<ecx>, int a2@<ebp>);
-void __thiscall sub_42A840(_DWORD* this);
-int __thiscall sub_42A860(int this);
-void __thiscall sub_42A9D0(LPVOID* this);
+void __thiscall sub_42A840(_DWORD* self);
+int __thiscall sub_42A860(int self);
+void __thiscall sub_42A9D0(LPVOID* self);
 int __fastcall sub_42AA30(int a1, int a2, char* k);
 void __thiscall sub_42CA00(void*); // idb
 int __fastcall sub_42CA20(int a1);
-char __thiscall sub_42CB00(void* this);
-char __thiscall sub_42CB20(_DWORD* this, int a2);
-void __thiscall sub_42CB30(_DWORD* this, int ArgList, int a3);
-void __thiscall sub_42E480(_DWORD* this, int ArgList, int a3, void* a4);
-void __thiscall sub_42EF80(_DWORD* this, int ArgList, int a3, float* a4);
-void __thiscall sub_42F620(_DWORD* this, int ArgList, int a3);
-int __thiscall sub_42FB40(_DWORD* this, int* a2, int* a3, int a4, float* a5);
-int __thiscall sub_42FBB0(_DWORD* this, int* a2, float a3, float a4, int a5, int a6);
-unsigned int __thiscall sub_42FC10(_DWORD* this, int a2);
-int __thiscall sub_42FCC0(_DWORD* this, float a2, float a3, int a4);
-int __thiscall sub_42FDD0(_DWORD* this);
-char __thiscall sub_42FE50(_DWORD* this);
-int __thiscall sub_42FEB0(int this, float a2, float a3);
-int __thiscall sub_430A90(int this);
-int __thiscall sub_430BC0(int this, int* a2, int* a3, int a4, float* a5);
-char __thiscall sub_430DC0(int this, int* a2, float a3, float a4, int a5, int a6);
-char __thiscall sub_430F00(int this, int a2, int* a3, float a4, int a5);
-char __thiscall sub_431040(int this, int a2);
-int __thiscall sub_4317B0(_DWORD* this, int a2);
-char __thiscall sub_4318B0(_DWORD* this);
-char __thiscall sub_431A70(int this, int a2);
-int __thiscall sub_433360(int this, int a2);
-char __thiscall sub_4333C0(int this, int a2);
+char __thiscall sub_42CB00(void* self);
+char __thiscall sub_42CB20(_DWORD* self, int a2);
+void __thiscall sub_42CB30(_DWORD* self, int ArgList, int a3);
+void __thiscall sub_42E480(_DWORD* self, int ArgList, int a3, void* a4);
+void __thiscall sub_42EF80(_DWORD* self, int ArgList, int a3, float* a4);
+void __thiscall sub_42F620(_DWORD* self, int ArgList, int a3);
+int __thiscall sub_42FB40(_DWORD* self, int* a2, int* a3, int a4, float* a5);
+int __thiscall sub_42FBB0(_DWORD* self, int* a2, float a3, float a4, int a5, int a6);
+unsigned int __thiscall sub_42FC10(_DWORD* self, int a2);
+int __thiscall sub_42FCC0(_DWORD* self, float a2, float a3, int a4);
+int __thiscall sub_42FDD0(_DWORD* self);
+char __thiscall sub_42FE50(_DWORD* self);
+int __thiscall sub_42FEB0(int self, float a2, float a3);
+int __thiscall sub_430A90(int self);
+int __thiscall sub_430BC0(int self, int* a2, int* a3, int a4, float* a5);
+char __thiscall sub_430DC0(int self, int* a2, float a3, float a4, int a5, int a6);
+char __thiscall sub_430F00(int self, int a2, int* a3, float a4, int a5);
+char __thiscall sub_431040(int self, int a2);
+int __thiscall sub_4317B0(_DWORD* self, int a2);
+char __thiscall sub_4318B0(_DWORD* self);
+char __thiscall sub_431A70(int self, int a2);
+int __thiscall sub_433360(int self, int a2);
+char __thiscall sub_4333C0(int self, int a2);
 char __stdcall sub_4334A0(int a1, char a2);
-void __thiscall sub_4334E0(int this, float a2);
+void __thiscall sub_4334E0(int self, float a2);
 char __cdecl sub_433790(int a1);
-void __thiscall sub_433EF0(int this);
-char* __thiscall sub_433F70(_DWORD* this, char* a2, unsigned int a3, const void* a4);
-char* __thiscall sub_434200(_DWORD* this, char* a2, char* a3);
+void __thiscall sub_433EF0(int self);
+char* __thiscall sub_433F70(_DWORD* self, char* a2, unsigned int a3, const void* a4);
+char* __thiscall sub_434200(_DWORD* self, char* a2, char* a3);
 void sub_434250();
-int __thiscall sub_434270(int this);
-void __thiscall sub_435880(LPVOID* this);
-char __thiscall sub_4359A0(int this, int a2);
-int __thiscall sub_436A40(int this, int a2);
-int __thiscall sub_436A90(int this);
-int __thiscall sub_436D70(_DWORD* this);
-int __thiscall sub_436DD0(_DWORD* this);
-_BYTE* __thiscall sub_436E20(char* this);
-int __thiscall sub_436E40(char* this, const char* a2);
-unsigned int __thiscall sub_436EC0(_DWORD* this, unsigned int a2, int a3, int ArgList);
-int __thiscall sub_436FA0(int this, int a2, float a3);
-int __thiscall sub_436FD0(int this, int a2, float a3);
-BOOL __thiscall sub_437000(float* this);
-void __thiscall sub_437020(float* this, float a2, float a3);
-char __thiscall sub_437180(_DWORD* this, int a2, int a3);
-char __thiscall sub_4371A0(int this, char a2);
-_DWORD* __thiscall sub_437450(int this, char a2);
-int __thiscall sub_437540(_DWORD* this, int a2);
-char __thiscall sub_4375C0(void* this, char* String1);
-_DWORD* __thiscall sub_4376B0(_DWORD* this, int a2);
-int __thiscall sub_4379D0(int* this, int a2, int a3, int a4);
-char* __thiscall sub_437AA0(char* this, int a2, int a3);
-_DWORD* __thiscall sub_437AE0(_DWORD* this);
-_DWORD* __thiscall sub_437B10(_DWORD* this);
-int __thiscall sub_437B40(_DWORD* this);
+int __thiscall sub_434270(int self);
+void __thiscall sub_435880(LPVOID* self);
+char __thiscall sub_4359A0(int self, int a2);
+int __thiscall sub_436A40(int self, int a2);
+int __thiscall sub_436A90(int self);
+int __thiscall sub_436D70(_DWORD* self);
+int __thiscall sub_436DD0(_DWORD* self);
+_BYTE* __thiscall sub_436E20(char* self);
+int __thiscall sub_436E40(char* self, const char* a2);
+unsigned int __thiscall sub_436EC0(_DWORD* self, unsigned int a2, int a3, int ArgList);
+int __thiscall sub_436FA0(int self, int a2, float a3);
+int __thiscall sub_436FD0(int self, int a2, float a3);
+BOOL __thiscall sub_437000(float* self);
+void __thiscall sub_437020(float* self, float a2, float a3);
+char __thiscall sub_437180(_DWORD* self, int a2, int a3);
+char __thiscall sub_4371A0(int self, char a2);
+_DWORD* __thiscall sub_437450(int self, char a2);
+int __thiscall sub_437540(_DWORD* self, int a2);
+char __thiscall sub_4375C0(void* self, char* String1);
+_DWORD* __thiscall sub_4376B0(_DWORD* self, int a2);
+int __thiscall sub_4379D0(int* self, int a2, int a3, int a4);
+char* __thiscall sub_437AA0(char* self, int a2, int a3);
+_DWORD* __thiscall sub_437AE0(_DWORD* self);
+_DWORD* __thiscall sub_437B10(_DWORD* self);
+int __thiscall sub_437B40(_DWORD* self);
 // void __userpurge sub_437B70(int a1@<ecx>, int a2@<ebp>, float a3);
-_DWORD* __thiscall sub_4383D0(_DWORD** this, int a2);
-char* __thiscall sub_438430(char* this, int a2, int a3, int a4, int a5);
-int __thiscall sub_438460(_DWORD** this, int a2, float a3, float a4, float a5);
-_DWORD* __thiscall sub_4385C0(_DWORD* this);
-int __thiscall sub_438730(int this);
-BOOL __thiscall sub_438840(_DWORD* this);
-void __thiscall sub_4389A0(_DWORD* this);
-void __thiscall sub_4389F0(int this, char a2);
-char __thiscall sub_438A70(int this);
-char* __thiscall sub_438B40(int this);
-int __thiscall sub_438D00(int* this);
-char __thiscall sub_438DC0(int* this);
-int __thiscall sub_438FF0(_DWORD* this);
-int __thiscall sub_439020(int this, int a2);
-char __thiscall sub_439070(int this, int a2);
-char __thiscall sub_43A080(_DWORD* this, int a2, int a3);
-int __thiscall sub_43A120(int this, int a2);
-_DWORD* __thiscall sub_43A180(_DWORD* this);
-void __thiscall sub_43A1D0(_DWORD* this);
-int __thiscall sub_43A1E0(int* this);
-void __thiscall sub_43A230(int* this, int ArgList);
-char __thiscall sub_43A460(_DWORD* this, int a2, char a3);
-char __thiscall sub_43A480(int this, int a2, char a3);
-int __thiscall sub_43A4A0(_DWORD* this);
-int __thiscall sub_43A520(int* this);
+_DWORD* __thiscall sub_4383D0(_DWORD** self, int a2);
+char* __thiscall sub_438430(char* self, int a2, int a3, int a4, int a5);
+int __thiscall sub_438460(_DWORD** self, int a2, float a3, float a4, float a5);
+_DWORD* __thiscall sub_4385C0(_DWORD* self);
+int __thiscall sub_438730(int self);
+BOOL __thiscall sub_438840(_DWORD* self);
+void __thiscall sub_4389A0(_DWORD* self);
+void __thiscall sub_4389F0(int self, char a2);
+char __thiscall sub_438A70(int self);
+char* __thiscall sub_438B40(int self);
+int __thiscall sub_438D00(int* self);
+char __thiscall sub_438DC0(int* self);
+int __thiscall sub_438FF0(_DWORD* self);
+int __thiscall sub_439020(int self, int a2);
+char __thiscall sub_439070(int self, int a2);
+char __thiscall sub_43A080(_DWORD* self, int a2, int a3);
+int __thiscall sub_43A120(int self, int a2);
+_DWORD* __thiscall sub_43A180(_DWORD* self);
+void __thiscall sub_43A1D0(_DWORD* self);
+int __thiscall sub_43A1E0(int* self);
+void __thiscall sub_43A230(int* self, int ArgList);
+char __thiscall sub_43A460(_DWORD* self, int a2, char a3);
+char __thiscall sub_43A480(int self, int a2, char a3);
+int __thiscall sub_43A4A0(_DWORD* self);
+int __thiscall sub_43A520(int* self);
 // char __userpurge sub_43A540@<al>(int a1@<ecx>, int a2@<ebp>, int a3);
-_DWORD* __thiscall sub_43A740(_DWORD* this, int a2);
-char __thiscall sub_43A760(_DWORD** this, char* String1, int a3);
-char __thiscall sub_43A840(int** this);
-_DWORD* __thiscall sub_43A850(_DWORD* this, int a2);
-char __thiscall sub_43A950(int this);
-void __thiscall sub_43AAC0(int* this);
-int __thiscall sub_43AB00(_DWORD* this);
-char __thiscall sub_43AC00(int this, char* String1, int a3);
-_DWORD* __thiscall sub_43AE80(_DWORD* this, int a2);
-bool __thiscall sub_43AEF0(int this);
-char __thiscall sub_43AF30(int this, char* String1, int a3);
+_DWORD* __thiscall sub_43A740(_DWORD* self, int a2);
+char __thiscall sub_43A760(_DWORD** self, char* String1, int a3);
+char __thiscall sub_43A840(int** self);
+_DWORD* __thiscall sub_43A850(_DWORD* self, int a2);
+char __thiscall sub_43A950(int self);
+void __thiscall sub_43AAC0(int* self);
+int __thiscall sub_43AB00(_DWORD* self);
+char __thiscall sub_43AC00(int self, char* String1, int a3);
+_DWORD* __thiscall sub_43AE80(_DWORD* self, int a2);
+bool __thiscall sub_43AEF0(int self);
+char __thiscall sub_43AF30(int self, char* String1, int a3);
 char __stdcall sub_43B150(int a1, int a2, int a3);
-void __thiscall sub_43B160(int this);
-int __thiscall sub_43B180(_DWORD* this);
-char __thiscall sub_43B2F0(_DWORD* this, int a2, int a3, int a4, int a5);
-bool __thiscall sub_43B330(_DWORD* this);
-_DWORD* __thiscall sub_43B390(_DWORD* this, int a2);
-char __thiscall sub_43B440(int this, char* String1, int a3);
-_DWORD* __thiscall sub_43B6C0(_DWORD* this, int a2);
-char __thiscall sub_43B6E0(_DWORD* this, int a2, int a3, int a4);
-bool __thiscall sub_43B730(int this);
-char __thiscall sub_43B870(int this, char* String1, int a3);
+void __thiscall sub_43B160(int self);
+int __thiscall sub_43B180(_DWORD* self);
+char __thiscall sub_43B2F0(_DWORD* self, int a2, int a3, int a4, int a5);
+bool __thiscall sub_43B330(_DWORD* self);
+_DWORD* __thiscall sub_43B390(_DWORD* self, int a2);
+char __thiscall sub_43B440(int self, char* String1, int a3);
+_DWORD* __thiscall sub_43B6C0(_DWORD* self, int a2);
+char __thiscall sub_43B6E0(_DWORD* self, int a2, int a3, int a4);
+bool __thiscall sub_43B730(int self);
+char __thiscall sub_43B870(int self, char* String1, int a3);
 FILE* __stdcall sub_43B9A0(int a1, int ArgList, int a3, int a4);
-bool __thiscall sub_43B9E0(_DWORD* this);
-_DWORD* __thiscall sub_43BA40(_DWORD* this, int a2);
-char __thiscall sub_43BA60(_DWORD** this, char* String1, int a3);
-char __thiscall sub_43BAF0(_DWORD* this, char* String1);
-_DWORD* __thiscall sub_43BB70(_DWORD* this, int a2);
-char __thiscall sub_43BB90(int this);
-char __thiscall sub_43BBE0(_DWORD* this);
-char __thiscall sub_43BD20(int this, char* String1, int a3);
-_DWORD* __thiscall sub_43BDB0(_DWORD* this, int a2);
-void __thiscall sub_43BE50(LPVOID* this);
-void __thiscall sub_43BE80(int this);
+bool __thiscall sub_43B9E0(_DWORD* self);
+_DWORD* __thiscall sub_43BA40(_DWORD* self, int a2);
+char __thiscall sub_43BA60(_DWORD** self, char* String1, int a3);
+char __thiscall sub_43BAF0(_DWORD* self, char* String1);
+_DWORD* __thiscall sub_43BB70(_DWORD* self, int a2);
+char __thiscall sub_43BB90(int self);
+char __thiscall sub_43BBE0(_DWORD* self);
+char __thiscall sub_43BD20(int self, char* String1, int a3);
+_DWORD* __thiscall sub_43BDB0(_DWORD* self, int a2);
+void __thiscall sub_43BE50(LPVOID* self);
+void __thiscall sub_43BE80(int self);
 FILE* sub_43BFA0();
-char __thiscall sub_43BFC0(int this, char* String1, int a3);
-char __thiscall sub_43C290(int this, int a2);
-char __thiscall sub_43C3A0(_DWORD* this, int a2, int a3, int a4, int a5);
-_DWORD* __thiscall sub_43C3D0(_DWORD* this, int a2);
-char __thiscall sub_43C470(int this);
-char __thiscall sub_43C4D0(int this, char* String1, int a3);
-_DWORD* __thiscall sub_43C730(_DWORD* this, int a2);
-char __thiscall sub_43C760(int* this);
-void __thiscall sub_43C820(int* this);
-char __thiscall sub_43C860(int this, int a2, int a3);
-char __thiscall sub_43C8A0(int this, int a2, int a3);
+char __thiscall sub_43BFC0(int self, char* String1, int a3);
+char __thiscall sub_43C290(int self, int a2);
+char __thiscall sub_43C3A0(_DWORD* self, int a2, int a3, int a4, int a5);
+_DWORD* __thiscall sub_43C3D0(_DWORD* self, int a2);
+char __thiscall sub_43C470(int self);
+char __thiscall sub_43C4D0(int self, char* String1, int a3);
+_DWORD* __thiscall sub_43C730(_DWORD* self, int a2);
+char __thiscall sub_43C760(int* self);
+void __thiscall sub_43C820(int* self);
+char __thiscall sub_43C860(int self, int a2, int a3);
+char __thiscall sub_43C8A0(int self, int a2, int a3);
 // char __userpurge sub_43C8E0@<al>(int a1@<ecx>, int a2@<ebp>, int a3);
-char __thiscall sub_43C930(int** this);
-int __thiscall sub_43C990(int this, int a2);
-void __thiscall sub_43CA50(int this);
-char __thiscall sub_43CAC0(_DWORD* this, int a2, int a3, int a4, int a5);
-int __thiscall sub_43CB00(_DWORD* this);
+char __thiscall sub_43C930(int** self);
+int __thiscall sub_43C990(int self, int a2);
+void __thiscall sub_43CA50(int self);
+char __thiscall sub_43CAC0(_DWORD* self, int a2, int a3, int a4, int a5);
+int __thiscall sub_43CB00(_DWORD* self);
 // char __userpurge sub_43CDB0@<al>(_DWORD *a1@<ecx>, int a2@<ebp>, int a3);
-int __thiscall sub_43CDE0(int this);
-void __thiscall sub_43CF70(_DWORD* this);
-char __thiscall sub_43D010(int** this, char* String1, int a3);
-_DWORD* __thiscall sub_43D040(_DWORD* this, int a2);
-char __thiscall sub_43D060(_DWORD* this);
-char __thiscall sub_43D0A0(int** this, char* String1, int a3);
-_DWORD* __thiscall sub_43D0D0(_DWORD* this, int a2);
-char __thiscall sub_43D0F0(int this);
-char __thiscall sub_43D140(_DWORD** this, char* String1, int a3);
-_DWORD* __thiscall sub_43D1D0(_DWORD* this, int a2);
-char __thiscall sub_43D1F0(int this);
-char __thiscall sub_43D240(_DWORD** this, char* String1, int a3);
-_DWORD* __thiscall sub_43D280(_DWORD* this, int a2);
-char __thiscall sub_43D2F0(_DWORD** this, char* String1, int a3);
-char __thiscall sub_43D340(int this, int a2);
-_DWORD* __thiscall sub_43D450(_DWORD* this, int a2);
-const char* __thiscall sub_43D480(int this);
-char __thiscall sub_43D4D0(int** this, char* String1, int a3);
-_DWORD* __thiscall sub_43D580(_DWORD* this, int a2);
-void __thiscall sub_43D5A0(_BYTE* this);
-char __thiscall sub_43D5B0(int this, int a2);
-char __thiscall sub_43D5D0(int this, char* String1, int a3);
-const char** __thiscall sub_43D7C0(const char** this, int a2);
+int __thiscall sub_43CDE0(int self);
+void __thiscall sub_43CF70(_DWORD* self);
+char __thiscall sub_43D010(int** self, char* String1, int a3);
+_DWORD* __thiscall sub_43D040(_DWORD* self, int a2);
+char __thiscall sub_43D060(_DWORD* self);
+char __thiscall sub_43D0A0(int** self, char* String1, int a3);
+_DWORD* __thiscall sub_43D0D0(_DWORD* self, int a2);
+char __thiscall sub_43D0F0(int self);
+char __thiscall sub_43D140(_DWORD** self, char* String1, int a3);
+_DWORD* __thiscall sub_43D1D0(_DWORD* self, int a2);
+char __thiscall sub_43D1F0(int self);
+char __thiscall sub_43D240(_DWORD** self, char* String1, int a3);
+_DWORD* __thiscall sub_43D280(_DWORD* self, int a2);
+char __thiscall sub_43D2F0(_DWORD** self, char* String1, int a3);
+char __thiscall sub_43D340(int self, int a2);
+_DWORD* __thiscall sub_43D450(_DWORD* self, int a2);
+const char* __thiscall sub_43D480(int self);
+char __thiscall sub_43D4D0(int** self, char* String1, int a3);
+_DWORD* __thiscall sub_43D580(_DWORD* self, int a2);
+void __thiscall sub_43D5A0(_BYTE* self);
+char __thiscall sub_43D5B0(int self, int a2);
+char __thiscall sub_43D5D0(int self, char* String1, int a3);
+const char** __thiscall sub_43D7C0(const char** self, int a2);
 // char __userpurge sub_43D8A0@<al>(_DWORD *a1@<ecx>, int a2@<ebp>, int a3);
-char __thiscall sub_43D8D0(_DWORD* this);
-char __thiscall sub_43DA70(int this);
-const char* __thiscall sub_43DC50(_DWORD* this);
-char __thiscall sub_43DC90(_DWORD* this);
-void __thiscall sub_43DD80(int* this);
-char __thiscall sub_43DDF0(int this, char* String1, int a3);
-_DWORD* __thiscall sub_43DE90(_DWORD* this, int a2);
-void __thiscall sub_43E040(LPVOID* this);
-bool __thiscall sub_43E0C0(_DWORD* this);
-char __thiscall sub_43E100(int this, char* String1, int a3);
-char __thiscall sub_43E540(int this, int a2);
-_DWORD* __thiscall sub_43E670(_DWORD* this, _DWORD* a2, int a3, int a4, int a5);
-bool __thiscall sub_43E720(int this);
+char __thiscall sub_43D8D0(_DWORD* self);
+char __thiscall sub_43DA70(int self);
+const char* __thiscall sub_43DC50(_DWORD* self);
+char __thiscall sub_43DC90(_DWORD* self);
+void __thiscall sub_43DD80(int* self);
+char __thiscall sub_43DDF0(int self, char* String1, int a3);
+_DWORD* __thiscall sub_43DE90(_DWORD* self, int a2);
+void __thiscall sub_43E040(LPVOID* self);
+bool __thiscall sub_43E0C0(_DWORD* self);
+char __thiscall sub_43E100(int self, char* String1, int a3);
+char __thiscall sub_43E540(int self, int a2);
+_DWORD* __thiscall sub_43E670(_DWORD* self, _DWORD* a2, int a3, int a4, int a5);
+bool __thiscall sub_43E720(int self);
 int sub_43E8D0();
-char __thiscall sub_43E8F0(_DWORD* this, int a2, int a3);
-int __thiscall sub_43E9B0(_DWORD* this);
-int __thiscall sub_43EA00(_DWORD* this, const char* a2, int a3, int a4, char a5);
-char __thiscall sub_43EB00(int this, int a2);
-_DWORD* __thiscall sub_43EF90(void* this, _DWORD* a2, int a3);
-_DWORD* __thiscall sub_43EFC0(void* this, _DWORD* a2, const CHAR* a3, int a4);
-_DWORD* __thiscall sub_43EFF0(_DWORD* this, _DWORD* a2);
-float* __thiscall sub_43F030(float* this, char* a2);
-int __thiscall sub_43F320(void* this);
+char __thiscall sub_43E8F0(_DWORD* self, int a2, int a3);
+int __thiscall sub_43E9B0(_DWORD* self);
+int __thiscall sub_43EA00(_DWORD* self, const char* a2, int a3, int a4, char a5);
+char __thiscall sub_43EB00(int self, int a2);
+_DWORD* __thiscall sub_43EF90(void* self, _DWORD* a2, int a3);
+_DWORD* __thiscall sub_43EFC0(void* self, _DWORD* a2, const CHAR* a3, int a4);
+_DWORD* __thiscall sub_43EFF0(_DWORD* self, _DWORD* a2);
+float* __thiscall sub_43F030(float* self, char* a2);
+int __thiscall sub_43F320(void* self);
 // int __usercall sub_43F330@<eax>(_DWORD *a1@<ecx>, int a2@<ebp>);
 // unsigned int __usercall sub_43F350@<eax>(int a1@<ecx>, int a2@<ebp>);
-int __thiscall sub_43F3E0(int this);
-_DWORD* __thiscall sub_43F560(_DWORD* this, int a2);
+int __thiscall sub_43F3E0(int self);
+_DWORD* __thiscall sub_43F560(_DWORD* self, int a2);
 int __fastcall sub_442440(int a1);
-char __thiscall sub_442520(int this);
-int __thiscall sub_4426B0(_DWORD* this, int ArgList, int a3);
-int __thiscall sub_442EE0(_DWORD* this, int* a2, int* a3, int a4, _DWORD* a5);
-int __thiscall sub_442F30(_DWORD* this, int* a2, float a3, float a4, int a5, int a6);
-_WORD* __thiscall sub_442F80(_DWORD* this, _WORD* a2);
-int __thiscall sub_443080(_DWORD* this);
-char __thiscall sub_443130(_DWORD* this);
-__int16 __thiscall sub_443180(_DWORD* this, int a2);
-int __thiscall sub_4431F0(_DWORD* this, int a2, int a3);
-int __thiscall sub_443210(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_443250(int this, int a2, int ArgList);
-int __thiscall sub_443590(int this);
-int __thiscall sub_4436D0(int* this, int a2);
-BOOL __thiscall sub_4438C0(float* this);
-double __thiscall sub_4438E0(float* this);
-char __thiscall sub_443910(float** this, int* a2, int* a3);
+char __thiscall sub_442520(int self);
+int __thiscall sub_4426B0(_DWORD* self, int ArgList, int a3);
+int __thiscall sub_442EE0(_DWORD* self, int* a2, int* a3, int a4, _DWORD* a5);
+int __thiscall sub_442F30(_DWORD* self, int* a2, float a3, float a4, int a5, int a6);
+_WORD* __thiscall sub_442F80(_DWORD* self, _WORD* a2);
+int __thiscall sub_443080(_DWORD* self);
+char __thiscall sub_443130(_DWORD* self);
+__int16 __thiscall sub_443180(_DWORD* self, int a2);
+int __thiscall sub_4431F0(_DWORD* self, int a2, int a3);
+int __thiscall sub_443210(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_443250(int self, int a2, int ArgList);
+int __thiscall sub_443590(int self);
+int __thiscall sub_4436D0(int* self, int a2);
+BOOL __thiscall sub_4438C0(float* self);
+double __thiscall sub_4438E0(float* self);
+char __thiscall sub_443910(float** self, int* a2, int* a3);
 // int __userpurge sub_443950@<eax>(_DWORD *a1@<ecx>, int a2@<ebx>, int *a3, int *a4, int a5, _DWORD *a6);
-unsigned int __thiscall sub_443B50(int this, int* a2, float a3, float a4, float a5, int a6);
-bool __thiscall sub_443CD0(int this, int a2, int a3, float a4, float a5);
-char __thiscall sub_444030(_DWORD* this, char a2);
-char __thiscall sub_4440B0(int this, char a2);
-char __thiscall sub_4442A0(int this);
+unsigned int __thiscall sub_443B50(int self, int* a2, float a3, float a4, float a5, int a6);
+bool __thiscall sub_443CD0(int self, int a2, int a3, float a4, float a5);
+char __thiscall sub_444030(_DWORD* self, char a2);
+char __thiscall sub_4440B0(int self, char a2);
+char __thiscall sub_4442A0(int self);
 void sub_444A90();
-char __thiscall sub_444AA0(int this, int a2);
-int __thiscall sub_4476E0(int* this, int a2, int a3);
-int __thiscall sub_447720(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_447750(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_4477A0(int this, int a2);
-int __thiscall sub_4477F0(int this, int a2);
-void __thiscall sub_447AA0(_DWORD* this, float a2);
+char __thiscall sub_444AA0(int self, int a2);
+int __thiscall sub_4476E0(int* self, int a2, int a3);
+int __thiscall sub_447720(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_447750(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_4477A0(int self, int a2);
+int __thiscall sub_4477F0(int self, int a2);
+void __thiscall sub_447AA0(_DWORD* self, float a2);
 char __cdecl sub_447D70(int a1);
-char __thiscall sub_447D80(int this);
-int __thiscall sub_4481C0(_DWORD* this);
-int __thiscall sub_4481E0(_DWORD* this);
-void __thiscall sub_448210(int this);
-int __thiscall sub_448290(int this);
-int __thiscall sub_4482D0(_DWORD* this);
-_DWORD* __thiscall sub_448300(_DWORD* this, _DWORD* a2, int* a3);
+char __thiscall sub_447D80(int self);
+int __thiscall sub_4481C0(_DWORD* self);
+int __thiscall sub_4481E0(_DWORD* self);
+void __thiscall sub_448210(int self);
+int __thiscall sub_448290(int self);
+int __thiscall sub_4482D0(_DWORD* self);
+_DWORD* __thiscall sub_448300(_DWORD* self, _DWORD* a2, int* a3);
 void __stdcall nullsub_8(int, int);
-int __thiscall sub_448350(_DWORD* this, int a2);
-int __thiscall sub_448390(_DWORD* this, char* a2, unsigned int a3, const void* a4);
-char* __thiscall sub_4486E0(_DWORD* this, char* a2, char* a3);
-int __thiscall sub_448730(_DWORD* this);
-_DWORD* __thiscall sub_448750(_DWORD* this, _DWORD* a2, _DWORD* a3);
-unsigned int __thiscall sub_4487A0(_DWORD* this, char* a2, unsigned int a3, const void* a4);
-char* __thiscall sub_448B20(_DWORD* this, char* a2, char* a3);
+int __thiscall sub_448350(_DWORD* self, int a2);
+int __thiscall sub_448390(_DWORD* self, char* a2, unsigned int a3, const void* a4);
+char* __thiscall sub_4486E0(_DWORD* self, char* a2, char* a3);
+int __thiscall sub_448730(_DWORD* self);
+_DWORD* __thiscall sub_448750(_DWORD* self, _DWORD* a2, _DWORD* a3);
+unsigned int __thiscall sub_4487A0(_DWORD* self, char* a2, unsigned int a3, const void* a4);
+char* __thiscall sub_448B20(_DWORD* self, char* a2, char* a3);
 _DWORD* __stdcall sub_448B80(_DWORD* a1, _DWORD* a2, _DWORD* a3);
 _DWORD* __cdecl sub_448BB0(int* a1, int* a2, _DWORD* a3);
 _DWORD* __cdecl sub_448BE0(_DWORD* a1, _DWORD* a2);
-void* __thiscall sub_448C00(void* this, char a2);
-int __thiscall sub_448C20(int this);
-_DWORD* __thiscall sub_448C90(_DWORD* this, char* a2);
-int __thiscall sub_448F60(void* this);
+void* __thiscall sub_448C00(void* self, char a2);
+int __thiscall sub_448C20(int self);
+_DWORD* __thiscall sub_448C90(_DWORD* self, char* a2);
+int __thiscall sub_448F60(void* self);
 _DWORD* __fastcall sub_448F70(_DWORD* a1, int a2, char* String1, char a4);
-int __thiscall sub_449660(int** this);
-int __thiscall sub_4496E0(void* this, char* a2);
-int __thiscall sub_449AA0(LPVOID* this);
-_DWORD* __thiscall sub_449AE0(_DWORD* this);
-_DWORD* __thiscall sub_449B20(_DWORD* this);
-char __thiscall sub_449B70(_DWORD* this);
-int __thiscall sub_449C10(char* this);
-char __thiscall sub_449C40(char* this, int a2, _DWORD* a3, _DWORD* a4, char a5, char a6, float a7, int a8);
-char __thiscall sub_44A1D0(char* this, int a2, float* a3, float* a4, float a5, char a6, char a7, float a8, int a9);
+int __thiscall sub_449660(int** self);
+int __thiscall sub_4496E0(void* self, char* a2);
+int __thiscall sub_449AA0(LPVOID* self);
+_DWORD* __thiscall sub_449AE0(_DWORD* self);
+_DWORD* __thiscall sub_449B20(_DWORD* self);
+char __thiscall sub_449B70(_DWORD* self);
+int __thiscall sub_449C10(char* self);
+char __thiscall sub_449C40(char* self, int a2, _DWORD* a3, _DWORD* a4, char a5, char a6, float a7, int a8);
+char __thiscall sub_44A1D0(char* self, int a2, float* a3, float* a4, float a5, char a6, char a7, float a8, int a9);
 float* __cdecl sub_44A250(int a1, float* a2, float* a3, float* a4, float* a5, float a6, float* a7);
 double __cdecl sub_44A3E0(float* a1, float* a2, float a3, float a4);
-char __thiscall sub_44A440(char* this, int a2, _DWORD* a3, _DWORD* a4, char a5, char a6);
-int __thiscall sub_44A490(char* this, int a2, _DWORD* a3, float* a4, char a5, char a6);
-char __thiscall sub_44A730(int this, int a2);
+char __thiscall sub_44A440(char* self, int a2, _DWORD* a3, _DWORD* a4, char a5, char a6);
+int __thiscall sub_44A490(char* self, int a2, _DWORD* a3, float* a4, char a5, char a6);
+char __thiscall sub_44A730(int self, int a2);
 void __stdcall sub_44AE60(int* a1, int a2, float a3, int a4, int a5);
 int __stdcall sub_44AF10(int a1);
 int __stdcall sub_44AF40(int a1);
-char __thiscall sub_44B390(char* this, int a2);
-int __thiscall sub_44B3F0(_DWORD* this);
-int __thiscall sub_44B460(_DWORD** this);
-int __thiscall sub_44B470(_DWORD** this);
+char __thiscall sub_44B390(char* self, int a2);
+int __thiscall sub_44B3F0(_DWORD* self);
+int __thiscall sub_44B460(_DWORD** self);
+int __thiscall sub_44B470(_DWORD** self);
 _DWORD* __stdcall sub_44B480(_DWORD* a1, _DWORD* a2, _DWORD* a3);
-_DWORD* __thiscall sub_44B4B0(_DWORD* this, char* ArgList);
-int __thiscall sub_44B5E0(LPVOID* this);
-int __thiscall sub_44B620(int this);
-int __thiscall sub_44B7A0(_DWORD* this);
-float* __thiscall sub_44B870(float* this, char* a2);
-int __thiscall sub_44C220(int this);
-int __thiscall sub_44C250(_DWORD* this);
-float* __thiscall sub_44C330(float* this, char* a2);
-int __thiscall sub_44C460(void* this);
-_DWORD* __thiscall sub_44C470(_DWORD* this, char* a2);
-int __thiscall sub_44C610(void* this);
-float* __thiscall sub_44C620(float* this, char* String1);
-int __thiscall sub_44C710(void* this);
-_DWORD* __thiscall sub_44C720(_DWORD* this, char* a2);
-int __thiscall sub_44C990(LPVOID* this);
-_DWORD* __thiscall sub_44C9D0(_DWORD* this);
-_DWORD* __thiscall sub_44CA40(_DWORD* this, char a2);
-FILE* __thiscall sub_44CA60(_DWORD* this);
-char __thiscall sub_44CB20(int this);
-_DWORD* __thiscall sub_44CD90(_DWORD* this, float* a2);
+_DWORD* __thiscall sub_44B4B0(_DWORD* self, char* ArgList);
+int __thiscall sub_44B5E0(LPVOID* self);
+int __thiscall sub_44B620(int self);
+int __thiscall sub_44B7A0(_DWORD* self);
+float* __thiscall sub_44B870(float* self, char* a2);
+int __thiscall sub_44C220(int self);
+int __thiscall sub_44C250(_DWORD* self);
+float* __thiscall sub_44C330(float* self, char* a2);
+int __thiscall sub_44C460(void* self);
+_DWORD* __thiscall sub_44C470(_DWORD* self, char* a2);
+int __thiscall sub_44C610(void* self);
+float* __thiscall sub_44C620(float* self, char* String1);
+int __thiscall sub_44C710(void* self);
+_DWORD* __thiscall sub_44C720(_DWORD* self, char* a2);
+int __thiscall sub_44C990(LPVOID* self);
+_DWORD* __thiscall sub_44C9D0(_DWORD* self);
+_DWORD* __thiscall sub_44CA40(_DWORD* self, char a2);
+FILE* __thiscall sub_44CA60(_DWORD* self);
+char __thiscall sub_44CB20(int self);
+_DWORD* __thiscall sub_44CD90(_DWORD* self, float* a2);
 // char __userpurge sub_44CDD0@<al>(int a1@<ecx>, int a2@<ebp>, int a3);
-int __thiscall sub_44D3B0(_DWORD* this, int a2);
-int __thiscall sub_44D740(_DWORD* this);
-int __thiscall sub_44D770(_DWORD* this, int a2);
-int __thiscall sub_44D7B0(_DWORD* this);
+int __thiscall sub_44D3B0(_DWORD* self, int a2);
+int __thiscall sub_44D740(_DWORD* self);
+int __thiscall sub_44D770(_DWORD* self, int a2);
+int __thiscall sub_44D7B0(_DWORD* self);
 int __stdcall sub_44D7C0(int a1, int* a2, _DWORD* a3);
 void __stdcall sub_44D850(int a1, float* a2, _DWORD* a3, _DWORD* a4);
 _DWORD* __stdcall sub_44DAD0(int* a1, float* a2, int a3, int a4);
-void __thiscall sub_44DBF0(char* this, int a2, float* a3, int a4);
-void __thiscall sub_44DD20(char* this, float* a2, _DWORD* a3);
-void __thiscall sub_44DF20(char* this, float a2, float a3, float* a4);
-int __thiscall sub_44E040(char* this, int a2, int a3, int a4, float a5, int* a6);
-int __thiscall sub_44E3D0(char* this, int a2, const void* a3);
-int __thiscall sub_44E6F0(_DWORD* this, int a2, const void* a3, _DWORD* a4);
-char __thiscall sub_44E7B0(_DWORD* this, int a2);
-char __thiscall sub_44E7D0(_DWORD* this, int a2);
-char __thiscall sub_44E870(_DWORD* this);
-int __thiscall sub_44E8F0(_DWORD** this);
-int __thiscall sub_44E900(_DWORD** this);
-int __thiscall sub_44E910(_DWORD* this);
-int __thiscall sub_44E940(int* this);
-int __thiscall sub_44E980(_DWORD* this);
-void __thiscall sub_44E9B0(LPVOID* this);
-unsigned int __thiscall sub_44E9E0(_DWORD* this, char* a2, unsigned int a3, const void* a4);
-char* __thiscall sub_44ED10(_DWORD* this, char* a2, char* a3);
-unsigned int __thiscall sub_44ED60(_DWORD* this, char* a2, unsigned int a3, _DWORD* a4);
-_DWORD* __thiscall sub_44F0E0(_DWORD* this, _DWORD* a2, _DWORD* a3);
-_DWORD* __thiscall sub_44F190(int this, _DWORD* a2, unsigned int a3, _DWORD* a4);
+void __thiscall sub_44DBF0(char* self, int a2, float* a3, int a4);
+void __thiscall sub_44DD20(char* self, float* a2, _DWORD* a3);
+void __thiscall sub_44DF20(char* self, float a2, float a3, float* a4);
+int __thiscall sub_44E040(char* self, int a2, int a3, int a4, float a5, int* a6);
+int __thiscall sub_44E3D0(char* self, int a2, const void* a3);
+int __thiscall sub_44E6F0(_DWORD* self, int a2, const void* a3, _DWORD* a4);
+char __thiscall sub_44E7B0(_DWORD* self, int a2);
+char __thiscall sub_44E7D0(_DWORD* self, int a2);
+char __thiscall sub_44E870(_DWORD* self);
+int __thiscall sub_44E8F0(_DWORD** self);
+int __thiscall sub_44E900(_DWORD** self);
+int __thiscall sub_44E910(_DWORD* self);
+int __thiscall sub_44E940(int* self);
+int __thiscall sub_44E980(_DWORD* self);
+void __thiscall sub_44E9B0(LPVOID* self);
+unsigned int __thiscall sub_44E9E0(_DWORD* self, char* a2, unsigned int a3, const void* a4);
+char* __thiscall sub_44ED10(_DWORD* self, char* a2, char* a3);
+unsigned int __thiscall sub_44ED60(_DWORD* self, char* a2, unsigned int a3, _DWORD* a4);
+_DWORD* __thiscall sub_44F0E0(_DWORD* self, _DWORD* a2, _DWORD* a3);
+_DWORD* __thiscall sub_44F190(int self, _DWORD* a2, unsigned int a3, _DWORD* a4);
 void __cdecl sub_44F3A0(int a1, int a2);
-_DWORD* __thiscall sub_44F490(_DWORD* this, _DWORD* a2);
-char __thiscall sub_44F6F0(int this);
-char __thiscall sub_44F9E0(int this);
-void __thiscall sub_450790(_DWORD* this);
-char __thiscall sub_4507D0(int this, int a2);
-char __thiscall sub_450A10(_DWORD* this, int a2, int a3);
-char __thiscall sub_450A30(int this, int a2);
-void __thiscall sub_450AA0(int** this, int, int);
-int __thiscall sub_450AC0(int this, int a2, int a3);
-char __thiscall sub_450BB0(_DWORD* this);
+_DWORD* __thiscall sub_44F490(_DWORD* self, _DWORD* a2);
+char __thiscall sub_44F6F0(int self);
+char __thiscall sub_44F9E0(int self);
+void __thiscall sub_450790(_DWORD* self);
+char __thiscall sub_4507D0(int self, int a2);
+char __thiscall sub_450A10(_DWORD* self, int a2, int a3);
+char __thiscall sub_450A30(int self, int a2);
+void __thiscall sub_450AA0(int** self, int, int);
+int __thiscall sub_450AC0(int self, int a2, int a3);
+char __thiscall sub_450BB0(_DWORD* self);
 BOOL sub_450BC0();
-int __thiscall sub_450BF0(_DWORD* this, int a2, int a3);
-void __thiscall sub_450C70(_DWORD* this, int a2);
+int __thiscall sub_450BF0(_DWORD* self, int a2, int a3);
+void __thiscall sub_450C70(_DWORD* self, int a2);
 // int __usercall sub_450D30@<eax>(_DWORD *a1@<ecx>, int a2@<ebp>);
-void* __thiscall sub_450FB0(void* this, int a2, int a3, int a4);
-double __thiscall sub_4510D0(float* this, float a2, float a3);
-char* __thiscall sub_451390(char* this, char* FileName);
+void* __thiscall sub_450FB0(void* self, int a2, int a3, int a4);
+double __thiscall sub_4510D0(float* self, float a2, float a3);
+char* __thiscall sub_451390(char* self, char* FileName);
 // void __thiscall unknown_libname_27(void *); idb
-void __thiscall sub_451710(LPVOID* this);
-void __thiscall sub_451770(int this);
-int __thiscall sub_4517D0(_DWORD* this);
-int __thiscall sub_451820(_DWORD* this);
-int __thiscall sub_451870(_DWORD* this);
-int __thiscall sub_451890(_DWORD* this);
-int __thiscall sub_4518B0(char* this);
-_DWORD* __thiscall sub_4519E0(_DWORD* this, char* String1);
+void __thiscall sub_451710(LPVOID* self);
+void __thiscall sub_451770(int self);
+int __thiscall sub_4517D0(_DWORD* self);
+int __thiscall sub_451820(_DWORD* self);
+int __thiscall sub_451870(_DWORD* self);
+int __thiscall sub_451890(_DWORD* self);
+int __thiscall sub_4518B0(char* self);
+_DWORD* __thiscall sub_4519E0(_DWORD* self, char* String1);
 void __thiscall sub_455730(void*); // idb
-_BYTE* __thiscall sub_455750(_BYTE* this);
-int __thiscall sub_4557B0(int this);
-char __thiscall sub_455830(void* this);
-int __thiscall sub_455850(_DWORD* this, int a2, int* a3, int a4);
-int __thiscall sub_455AC0(_DWORD* this, int a2, int a3, float* a4, float* a5, float a6, float a7);
-int __thiscall sub_455DC0(_DWORD* this, int a2);
-int __thiscall sub_455E30(_DWORD* this);
-char __thiscall sub_455ED0(_DWORD* this);
-int __thiscall sub_455F20(_DWORD* this, int a2);
-char __thiscall sub_455FB0(float* this, int a2);
-int __thiscall sub_456000(_DWORD* this, int a2, int* a3, int a4, int a5);
-int __thiscall sub_456050(_DWORD* this, float* a2, int a3, float a4, int a5, int a6);
-_DWORD* __thiscall sub_4560B0(_DWORD* this, int a2, _DWORD* a3, int a4, int a5);
-void __thiscall sub_456370(int this);
-int __thiscall sub_4565B0(int this);
+_BYTE* __thiscall sub_455750(_BYTE* self);
+int __thiscall sub_4557B0(int self);
+char __thiscall sub_455830(void* self);
+int __thiscall sub_455850(_DWORD* self, int a2, int* a3, int a4);
+int __thiscall sub_455AC0(_DWORD* self, int a2, int a3, float* a4, float* a5, float a6, float a7);
+int __thiscall sub_455DC0(_DWORD* self, int a2);
+int __thiscall sub_455E30(_DWORD* self);
+char __thiscall sub_455ED0(_DWORD* self);
+int __thiscall sub_455F20(_DWORD* self, int a2);
+char __thiscall sub_455FB0(float* self, int a2);
+int __thiscall sub_456000(_DWORD* self, int a2, int* a3, int a4, int a5);
+int __thiscall sub_456050(_DWORD* self, float* a2, int a3, float a4, int a5, int a6);
+_DWORD* __thiscall sub_4560B0(_DWORD* self, int a2, _DWORD* a3, int a4, int a5);
+void __thiscall sub_456370(int self);
+int __thiscall sub_4565B0(int self);
 int __stdcall sub_456860(int a1);
-int __thiscall sub_456870(int this, int a2, int* a3, int a4, int a5);
-char __thiscall sub_456A40(int this, float* a2, int a3, float a4, int a5, int a6);
-char __thiscall sub_456C50(int this, float* a2, float a3, char a4, _DWORD* a5);
-int __thiscall sub_456F30(int this, float a2);
-char __thiscall sub_4570A0(int this, int a2);
-char __thiscall sub_458880(int this);
-char __thiscall sub_4588F0(_DWORD* this, int a2);
-int __thiscall sub_4589E0(_DWORD* this);
-int __thiscall sub_458A00(_DWORD* this, int a2);
-int __thiscall sub_458A10(int* this, _DWORD* a2);
-int __thiscall sub_458BE0(_DWORD* this);
+int __thiscall sub_456870(int self, int a2, int* a3, int a4, int a5);
+char __thiscall sub_456A40(int self, float* a2, int a3, float a4, int a5, int a6);
+char __thiscall sub_456C50(int self, float* a2, float a3, char a4, _DWORD* a5);
+int __thiscall sub_456F30(int self, float a2);
+char __thiscall sub_4570A0(int self, int a2);
+char __thiscall sub_458880(int self);
+char __thiscall sub_4588F0(_DWORD* self, int a2);
+int __thiscall sub_4589E0(_DWORD* self);
+int __thiscall sub_458A00(_DWORD* self, int a2);
+int __thiscall sub_458A10(int* self, _DWORD* a2);
+int __thiscall sub_458BE0(_DWORD* self);
 void __stdcall sub_458BF0(void* a1, int a2);
 _DWORD* __stdcall sub_458C00(_DWORD* a1, _DWORD* a2, _DWORD* a3);
 _DWORD* __stdcall sub_458C40(_DWORD* a1, _DWORD* a2, _DWORD* a3);
 _DWORD* __cdecl sub_458C70(_DWORD* a1, _DWORD* a2, _DWORD* a3);
 _DWORD* __cdecl sub_458CA0(int a1, int a2, _DWORD* a3);
 _DWORD* __cdecl sub_458CD0(_DWORD* a1, _DWORD* a2);
-_DWORD* __thiscall sub_458CF0(_DWORD* this);
+_DWORD* __thiscall sub_458CF0(_DWORD* self);
 void __thiscall sub_458DD0(void*); // idb
-void __thiscall sub_458DE0(char* this);
+void __thiscall sub_458DE0(char* self);
 char __fastcall sub_458EE0(int a1);
-int __thiscall sub_45A420(float* this, int a2, int a3, char a4, int a5);
-int __thiscall sub_45A7E0(_DWORD* this);
-int __thiscall sub_45A810(_DWORD* this);
-int __thiscall sub_45A840(_DWORD* this);
-int __thiscall sub_45A870(_DWORD* this, int a2);
-int __thiscall sub_45A890(_DWORD* this, int ArgList, int a3, int a4);
-int __thiscall sub_45A920(_DWORD* this, int ArgList, int a3, int a4);
-void __thiscall sub_45A9D0(_DWORD* this);
-char __thiscall sub_45AA80(_DWORD* this);
+int __thiscall sub_45A420(float* self, int a2, int a3, char a4, int a5);
+int __thiscall sub_45A7E0(_DWORD* self);
+int __thiscall sub_45A810(_DWORD* self);
+int __thiscall sub_45A840(_DWORD* self);
+int __thiscall sub_45A870(_DWORD* self, int a2);
+int __thiscall sub_45A890(_DWORD* self, int ArgList, int a3, int a4);
+int __thiscall sub_45A920(_DWORD* self, int ArgList, int a3, int a4);
+void __thiscall sub_45A9D0(_DWORD* self);
+char __thiscall sub_45AA80(_DWORD* self);
 BOOL sub_45AB10();
-int __thiscall sub_45AB70(_DWORD* this);
-int __thiscall sub_45ABF0(int this);
-void __thiscall sub_45ADB0(_DWORD* this);
-char __thiscall sub_45AF60(_DWORD* this);
-char __thiscall sub_45B150(_DWORD* this, int ArgList, int a3, int a4);
+int __thiscall sub_45AB70(_DWORD* self);
+int __thiscall sub_45ABF0(int self);
+void __thiscall sub_45ADB0(_DWORD* self);
+char __thiscall sub_45AF60(_DWORD* self);
+char __thiscall sub_45B150(_DWORD* self, int ArgList, int a3, int a4);
 // char __usercall sub_45B200@<al>(int *a1@<ecx>, int a2@<edi>);
-char __thiscall sub_45B2B0(int this, const char* a2);
-char __thiscall sub_45B3E0(int this, float* a2);
-void __thiscall sub_45B4B0(_DWORD* this, int ArgList);
+char __thiscall sub_45B2B0(int self, const char* a2);
+char __thiscall sub_45B3E0(int self, float* a2);
+void __thiscall sub_45B4B0(_DWORD* self, int ArgList);
 // char __usercall sub_45B4E0@<al>(int *a1@<ecx>, int a2@<edi>);
 // char __userpurge sub_45B510@<al>(int a1@<ecx>, int a2@<edi>, int a3);
-char __thiscall sub_45C640(int this, int a2);
-void __thiscall sub_45C7E0(int this);
-_DWORD* __thiscall sub_45C860(_DWORD* this, char a2);
-void __thiscall sub_45C880(_DWORD* this);
-int __thiscall sub_45C900(_DWORD* this);
-unsigned int __thiscall sub_45C920(_DWORD* this, char* a2, unsigned int a3, _DWORD* a4);
-_DWORD* __thiscall sub_45CC50(_DWORD* this, _DWORD* a2, _DWORD* a3);
-void __thiscall sub_45CCA0(int this);
-void __thiscall sub_45CD60(int this);
-void __thiscall sub_45CF30(int this, char a2);
+char __thiscall sub_45C640(int self, int a2);
+void __thiscall sub_45C7E0(int self);
+_DWORD* __thiscall sub_45C860(_DWORD* self, char a2);
+void __thiscall sub_45C880(_DWORD* self);
+int __thiscall sub_45C900(_DWORD* self);
+unsigned int __thiscall sub_45C920(_DWORD* self, char* a2, unsigned int a3, _DWORD* a4);
+_DWORD* __thiscall sub_45CC50(_DWORD* self, _DWORD* a2, _DWORD* a3);
+void __thiscall sub_45CCA0(int self);
+void __thiscall sub_45CD60(int self);
+void __thiscall sub_45CF30(int self, char a2);
 // int __usercall sub_45CFA0@<eax>(int a1@<ecx>, int a2@<ebp>);
-int __thiscall sub_45D050(_DWORD* this);
+int __thiscall sub_45D050(_DWORD* self);
 // void __usercall sub_45D070(int a1@<ecx>, int a2@<ebp>);
-void __thiscall sub_45D130(_DWORD* this);
-_DWORD* __thiscall sub_45D180(_DWORD* this, int a2);
-_DWORD* __thiscall sub_45DF90(_DWORD* this);
-int __thiscall sub_45E0B0(int this);
+void __thiscall sub_45D130(_DWORD* self);
+_DWORD* __thiscall sub_45D180(_DWORD* self, int a2);
+_DWORD* __thiscall sub_45DF90(_DWORD* self);
+int __thiscall sub_45E0B0(int self);
 // char __userpurge sub_45E2A0@<al>(int a1@<ecx>, int a2@<ebp>, int a3, int a4, int a5, int a6);
-int __thiscall sub_45E6F0(_DWORD* this, int a2);
-int __thiscall sub_45E720(int this, const char* a2, int a3);
-char __thiscall sub_45E760(int this);
-char __thiscall sub_45E880(int this);
-int __thiscall sub_45E960(_DWORD* this, int a2);
-int __thiscall sub_45E9B0(_DWORD* this, int a2, int a3);
-char __thiscall sub_45EA00(_DWORD* this, int a2);
-int __thiscall sub_45EA60(_DWORD* this);
-int __thiscall sub_45EA80(int this, int a2);
-int __thiscall sub_45EC70(_DWORD* this);
-_DWORD* __thiscall sub_45ECB0(_DWORD* this);
-int __thiscall sub_45ECD0(int this);
+int __thiscall sub_45E6F0(_DWORD* self, int a2);
+int __thiscall sub_45E720(int self, const char* a2, int a3);
+char __thiscall sub_45E760(int self);
+char __thiscall sub_45E880(int self);
+int __thiscall sub_45E960(_DWORD* self, int a2);
+int __thiscall sub_45E9B0(_DWORD* self, int a2, int a3);
+char __thiscall sub_45EA00(_DWORD* self, int a2);
+int __thiscall sub_45EA60(_DWORD* self);
+int __thiscall sub_45EA80(int self, int a2);
+int __thiscall sub_45EC70(_DWORD* self);
+_DWORD* __thiscall sub_45ECB0(_DWORD* self);
+int __thiscall sub_45ECD0(int self);
 // void __userpurge sub_45ED50(int a1@<ecx>, int a2@<edi>, _DWORD *a3, _DWORD *a4);
-int __thiscall sub_45EE50(int this, int a2);
-int __thiscall sub_45EFA0(_DWORD* this);
-int __thiscall sub_45F000(_DWORD* this);
-int __thiscall sub_45F050(_DWORD* this);
-int __thiscall sub_45F080(_DWORD* this);
-void __thiscall sub_45F160(float* this, float* a2);
-float* __thiscall sub_45F2E0(float* this, int a2, int a3, int a4, int a5, float a6);
-_DWORD* __thiscall sub_45F350(_DWORD* this, int a2, char a3);
-int __thiscall sub_45F3A0(char* this, int a2, bool* a3, bool* a4, _DWORD* a5);
-double __thiscall sub_45F480(int this);
-double __thiscall sub_45F4A0(_DWORD* this);
-double __thiscall sub_45F520(int this);
-char __thiscall sub_45F5C0(int this, int a2, int a3);
-void __thiscall sub_45F620(int this, int a2, char a3);
+int __thiscall sub_45EE50(int self, int a2);
+int __thiscall sub_45EFA0(_DWORD* self);
+int __thiscall sub_45F000(_DWORD* self);
+int __thiscall sub_45F050(_DWORD* self);
+int __thiscall sub_45F080(_DWORD* self);
+void __thiscall sub_45F160(float* self, float* a2);
+float* __thiscall sub_45F2E0(float* self, int a2, int a3, int a4, int a5, float a6);
+_DWORD* __thiscall sub_45F350(_DWORD* self, int a2, char a3);
+int __thiscall sub_45F3A0(char* self, int a2, bool* a3, bool* a4, _DWORD* a5);
+double __thiscall sub_45F480(int self);
+double __thiscall sub_45F4A0(_DWORD* self);
+double __thiscall sub_45F520(int self);
+char __thiscall sub_45F5C0(int self, int a2, int a3);
+void __thiscall sub_45F620(int self, int a2, char a3);
 // char __userpurge sub_45F9E0@<al>(int a1@<ecx>, int a2@<edi>, int a3);
-int __thiscall sub_461D40(int this, int* a2, int* a3, int a4, _DWORD* a5);
-void __thiscall sub_461FD0(_DWORD* this, float* a2, float a3, float a4, int a5, int a6);
-void __thiscall sub_462090(int this, float a2);
-void __thiscall sub_4621B0(int* this);
-int __thiscall sub_462240(int this);
-const char* __thiscall sub_462480(_DWORD* this, char* String1);
-unsigned int __thiscall sub_4624D0(_DWORD* this, int a2);
-char __thiscall sub_462520(_DWORD* this, int a2, int a3);
-_DWORD* __thiscall sub_462660(_DWORD* this);
+int __thiscall sub_461D40(int self, int* a2, int* a3, int a4, _DWORD* a5);
+void __thiscall sub_461FD0(_DWORD* self, float* a2, float a3, float a4, int a5, int a6);
+void __thiscall sub_462090(int self, float a2);
+void __thiscall sub_4621B0(int* self);
+int __thiscall sub_462240(int self);
+const char* __thiscall sub_462480(_DWORD* self, char* String1);
+unsigned int __thiscall sub_4624D0(_DWORD* self, int a2);
+char __thiscall sub_462520(_DWORD* self, int a2, int a3);
+_DWORD* __thiscall sub_462660(_DWORD* self);
 // INT __usercall sub_4626F0@<eax>(int a1@<ecx>, int a2@<edi>);
-int __thiscall sub_4629B0(int this, int a2);
-int __thiscall sub_4629F0(int this, int a2);
-int __thiscall sub_462A80(_DWORD* this, _BYTE* a2, _BYTE* a3);
-_DWORD* __thiscall sub_462B20(_DWORD* this);
-_DWORD* __thiscall sub_462DD0(_DWORD* this, int a2);
-int __thiscall sub_462F00(int this, int a2);
-_DWORD* __thiscall sub_462F90(_DWORD* this);
-_DWORD* __thiscall sub_463020(_DWORD* this);
-int __thiscall sub_463070(_DWORD* this);
-_DWORD* __thiscall sub_4630B0(_DWORD* this);
-int __thiscall sub_4630D0(char* this);
-int __thiscall sub_463110(_DWORD* this);
-int __thiscall sub_463150(_DWORD* this);
-int __thiscall sub_463180(_BYTE* this);
-char __thiscall sub_4632B0(int this, int ArgList);
+int __thiscall sub_4629B0(int self, int a2);
+int __thiscall sub_4629F0(int self, int a2);
+int __thiscall sub_462A80(_DWORD* self, _BYTE* a2, _BYTE* a3);
+_DWORD* __thiscall sub_462B20(_DWORD* self);
+_DWORD* __thiscall sub_462DD0(_DWORD* self, int a2);
+int __thiscall sub_462F00(int self, int a2);
+_DWORD* __thiscall sub_462F90(_DWORD* self);
+_DWORD* __thiscall sub_463020(_DWORD* self);
+int __thiscall sub_463070(_DWORD* self);
+_DWORD* __thiscall sub_4630B0(_DWORD* self);
+int __thiscall sub_4630D0(char* self);
+int __thiscall sub_463110(_DWORD* self);
+int __thiscall sub_463150(_DWORD* self);
+int __thiscall sub_463180(_BYTE* self);
+char __thiscall sub_4632B0(int self, int ArgList);
 char __stdcall sub_463710(const char* a1);
-unsigned int __thiscall sub_463780(_DWORD* this);
-char* __thiscall sub_4638A0(int this, char* a2, unsigned int a3, _DWORD* a4);
-_DWORD* __thiscall sub_463AF0(_DWORD* this, _DWORD* a2, int* a3);
-_DWORD* __thiscall sub_463B30(_DWORD* this, _DWORD* a2, int a3, int a4, int a5, float a6, float a7, int a8, int a9, char* a10, int a11, int a12);
-int __thiscall sub_463E00(void* this);
-_DWORD* __thiscall sub_463EB0(_DWORD* this, float a2, _DWORD* a3);
+unsigned int __thiscall sub_463780(_DWORD* self);
+char* __thiscall sub_4638A0(int self, char* a2, unsigned int a3, _DWORD* a4);
+_DWORD* __thiscall sub_463AF0(_DWORD* self, _DWORD* a2, int* a3);
+_DWORD* __thiscall sub_463B30(_DWORD* self, _DWORD* a2, int a3, int a4, int a5, float a6, float a7, int a8, int a9, char* a10, int a11, int a12);
+int __thiscall sub_463E00(void* self);
+_DWORD* __thiscall sub_463EB0(_DWORD* self, float a2, _DWORD* a3);
 // void __userpurge sub_463F60(int a1@<ecx>, int a2@<edi>, float a3);
-int __thiscall sub_4645D0(int* this, int a2);
-_DWORD* __thiscall sub_464730(_DWORD* this);
-void __thiscall sub_464780(_DWORD* this);
-BOOL __thiscall sub_4647E0(_DWORD* this);
+int __thiscall sub_4645D0(int* self, int a2);
+_DWORD* __thiscall sub_464730(_DWORD* self);
+void __thiscall sub_464780(_DWORD* self);
+BOOL __thiscall sub_4647E0(_DWORD* self);
 int sub_4647F0();
 char* __stdcall sub_464800(int a1);
 // char __userpurge sub_464810@<al>(_DWORD *a1@<ecx>, int a2@<ebp>, int a3, int a4);
-char __thiscall sub_4649C0(int this, int a2);
-int __thiscall sub_464A40(int this, int a2);
+char __thiscall sub_4649C0(int self, int a2);
+int __thiscall sub_464A40(int self, int a2);
 // int __usercall sub_464AA0@<eax>(_DWORD *a1@<ecx>, int a2@<ebp>);
-int __thiscall sub_464AC0(_DWORD* this);
+int __thiscall sub_464AC0(_DWORD* self);
 // char __usercall sub_464AE0@<al>(int a1@<ecx>, int a2@<ebp>);
-void __thiscall sub_464BB0(_DWORD* this);
-int __thiscall sub_464C00(_DWORD* this);
-_DWORD* __thiscall sub_464C90(_DWORD* this, int a2);
+void __thiscall sub_464BB0(_DWORD* self);
+int __thiscall sub_464C00(_DWORD* self);
+_DWORD* __thiscall sub_464C90(_DWORD* self, int a2);
 int __fastcall sub_465C10(int a1);
-int __thiscall sub_465C60(LPVOID* this);
-char __thiscall sub_465CD0(void* this);
-int __thiscall sub_465CF0(_DWORD* this, int* a2, int* a3, int a4, float* a5);
-int __thiscall sub_465D40(_DWORD* this, int* a2, float a3, float a4, char a5, int a6);
-int __thiscall sub_465D90(_DWORD* this, int a2);
-int __thiscall sub_465E00(_DWORD* this, int a2, int a3);
-int __thiscall sub_465F20(_DWORD* this);
-char __thiscall sub_465FB0(_DWORD* this);
-_DWORD* __thiscall sub_465FF0(_DWORD* this, int a2, int a3);
-int __thiscall sub_466370(_DWORD* this);
-int __thiscall sub_466410(int this, int* a2, int* a3, int a4, float* a5);
-bool __thiscall sub_4665E0(int this, int* a2, float a3, float a4, char a5, int a6);
-bool __thiscall sub_4666E0(char* this, int a2, int a3, float a4, char a5);
-int __thiscall sub_466AA0(int this);
-char __thiscall sub_466D00(int this, int a2);
-int __thiscall sub_467A00(int this, int a2);
-char __thiscall sub_467A50(int this, char a2);
-char __thiscall sub_467B60(int this, int a2);
-void __thiscall sub_467BA0(int this, float a2);
+int __thiscall sub_465C60(LPVOID* self);
+char __thiscall sub_465CD0(void* self);
+int __thiscall sub_465CF0(_DWORD* self, int* a2, int* a3, int a4, float* a5);
+int __thiscall sub_465D40(_DWORD* self, int* a2, float a3, float a4, char a5, int a6);
+int __thiscall sub_465D90(_DWORD* self, int a2);
+int __thiscall sub_465E00(_DWORD* self, int a2, int a3);
+int __thiscall sub_465F20(_DWORD* self);
+char __thiscall sub_465FB0(_DWORD* self);
+_DWORD* __thiscall sub_465FF0(_DWORD* self, int a2, int a3);
+int __thiscall sub_466370(_DWORD* self);
+int __thiscall sub_466410(int self, int* a2, int* a3, int a4, float* a5);
+bool __thiscall sub_4665E0(int self, int* a2, float a3, float a4, char a5, int a6);
+bool __thiscall sub_4666E0(char* self, int a2, int a3, float a4, char a5);
+int __thiscall sub_466AA0(int self);
+char __thiscall sub_466D00(int self, int a2);
+int __thiscall sub_467A00(int self, int a2);
+char __thiscall sub_467A50(int self, char a2);
+char __thiscall sub_467B60(int self, int a2);
+void __thiscall sub_467BA0(int self, float a2);
 char __cdecl sub_467E30(int a1);
 // int __usercall sub_468000@<eax>(int a1@<ecx>, int a2@<ebp>);
-void __thiscall sub_468370(int this);
-int __thiscall sub_468400(int this, float a2);
+void __thiscall sub_468370(int self);
+int __thiscall sub_468400(int self, float a2);
 // void __userpurge sub_4685D0(int a1@<ecx>, int a2@<edi>, char *String2, int a4, float a5, float a6, float a7);
 int __stdcall sub_468750(_DWORD* a1, float a2);
-int __thiscall sub_4687D0(int* this, int a2, int a3);
+int __thiscall sub_4687D0(int* self, int a2, int a3);
 // int __usercall sub_468A00@<eax>(int a1@<ecx>, int a2@<ebp>);
-double __thiscall sub_468BE0(int* this, int a2, int a3, int* a4);
-char __thiscall sub_468CA0(int* this, float* a2, int* a3, float* a4, int* a5);
-_DWORD* __thiscall sub_468E90(_DWORD** this, int a2);
-char __thiscall sub_468F60(int this, int a2);
-int __thiscall sub_468F80(int this, int a2);
+double __thiscall sub_468BE0(int* self, int a2, int a3, int* a4);
+char __thiscall sub_468CA0(int* self, float* a2, int* a3, float* a4, int* a5);
+_DWORD* __thiscall sub_468E90(_DWORD** self, int a2);
+char __thiscall sub_468F60(int self, int a2);
+int __thiscall sub_468F80(int self, int a2);
 int __fastcall sub_468FA0(int a1);
-void* __thiscall sub_468FF0(void* this, char* a2);
-int __thiscall sub_4690A0(void* this);
-int __thiscall sub_4690E0(_DWORD* this);
-int __thiscall sub_469120(_DWORD* this);
-unsigned int __thiscall sub_469160(int this, _DWORD* a2, const char* a3, const char* a4);
-unsigned int __thiscall sub_469370(int this, _DWORD* a2);
-void* __thiscall sub_4694A0(void* this);
-void __thiscall sub_469580(void* this);
-int __thiscall sub_469650(_DWORD* this, char* String2, char* a3, char a4);
+void* __thiscall sub_468FF0(void* self, char* a2);
+int __thiscall sub_4690A0(void* self);
+int __thiscall sub_4690E0(_DWORD* self);
+int __thiscall sub_469120(_DWORD* self);
+unsigned int __thiscall sub_469160(int self, _DWORD* a2, const char* a3, const char* a4);
+unsigned int __thiscall sub_469370(int self, _DWORD* a2);
+void* __thiscall sub_4694A0(void* self);
+void __thiscall sub_469580(void* self);
+int __thiscall sub_469650(_DWORD* self, char* String2, char* a3, char a4);
 BOOL __stdcall sub_4696E0(int a1, char* String2);
-int __thiscall sub_469700(_DWORD* this, int a2, const char* a3);
-char __thiscall sub_4697A0(int this);
+int __thiscall sub_469700(_DWORD* self, int a2, const char* a3);
+char __thiscall sub_4697A0(int self);
 int __cdecl sub_46A230(const void* a1, const void* a2); // idb
-int __thiscall sub_46A280(int this, const char* a2);
-char __thiscall sub_46A340(int this);
-char __thiscall sub_46A3A0(_BYTE* this, LPCSTR lpFileName);
-int __thiscall sub_46A410(int this, const void* a2, unsigned int a3);
-char __thiscall sub_46A490(_BYTE* this);
-int __thiscall sub_46A4A0(_DWORD* this, int a2);
-int __thiscall sub_46A4C0(int this, const void* a2, unsigned int a3);
-int __thiscall sub_46A570(_DWORD* this, char* a2, unsigned int a3, const void* a4);
+int __thiscall sub_46A280(int self, const char* a2);
+char __thiscall sub_46A340(int self);
+char __thiscall sub_46A3A0(_BYTE* self, LPCSTR lpFileName);
+int __thiscall sub_46A410(int self, const void* a2, unsigned int a3);
+char __thiscall sub_46A490(_BYTE* self);
+int __thiscall sub_46A4A0(_DWORD* self, int a2);
+int __thiscall sub_46A4C0(int self, const void* a2, unsigned int a3);
+int __thiscall sub_46A570(_DWORD* self, char* a2, unsigned int a3, const void* a4);
 // int sf_close();
 // int __cdecl sf_open_read(_DWORD, _DWORD); weak
 // int __cdecl sf_read_short(_DWORD, _DWORD, _DWORD); weak
@@ -1278,10 +1279,10 @@ float* __stdcall sub_46C53F(float* a1, float* a2);
 float* __stdcall sub_46C5C5(float* a1, float* a2, float* a3);
 float* __stdcall sub_46C69B(float* a1, float a2, float a3, float a4);
 float* __stdcall sub_46C6DE(float* a1, float* a2, float* a3, float* a4);
-void* __thiscall sub_46C80E(void* this);
-float* __thiscall sub_46C811(float* this, unsigned int a2);
+void* __thiscall sub_46C80E(void* self);
+float* __thiscall sub_46C811(float* self, unsigned int a2);
 int __stdcall sub_46C866(int a1, int a2, int a3, int(__thiscall* a4)(int));
-unsigned int* __thiscall sub_46C888(unsigned int* this, unsigned int a2);
+unsigned int* __thiscall sub_46C888(unsigned int* self, unsigned int a2);
 int __stdcall sub_46C967(float* a1, unsigned int a2, unsigned int a3, float* a4, float* a5);
 _DWORD* __cdecl sub_46CAA2(int a1);
 // int __usercall sub_46CAC9@<eax>(int a1@<eax>, _DWORD *a2@<ecx>);
@@ -1293,138 +1294,138 @@ int __stdcall sub_46D461(int a1, unsigned __int8* a2, unsigned int a3, int a4, i
 int __stdcall sub_46D89A(int a1, const WCHAR* a2, int a3, int a4, unsigned int a5, int a6, unsigned int a7, BOOL a8, int* a9, int* a10, int a11, _DWORD* a12, char* a13, int* a14);
 void sub_46D8FD(int a1, char* Format, ...);
 BOOL __stdcall sub_46D957(const char* ArgList, int a2, const char* a3);
-_DWORD* __thiscall sub_46DA95(_DWORD* this);
-int __thiscall sub_46DA9F(_DWORD* this);
-void __thiscall sub_46DABD(int this);
-void* __thiscall sub_46DADF(void* this, char a2);
+_DWORD* __thiscall sub_46DA95(_DWORD* self);
+int __thiscall sub_46DA9F(_DWORD* self);
+void __thiscall sub_46DABD(int self);
+void* __thiscall sub_46DADF(void* self, char a2);
 unsigned int* __cdecl sub_46DAFE(unsigned int a1, signed int a2, int a3);
-int __thiscall sub_46DE48(_DWORD* this);
-int __thiscall sub_46E258(_DWORD* this);
-float* __thiscall sub_46E785(float* this, float* a2, float* a3);
-float* __thiscall sub_46E7B3(float* this, float* a2, float a3);
-int __thiscall sub_46E7DF(_DWORD* this);
-int __thiscall sub_46E96A(_DWORD* this);
-int __thiscall sub_46EAAE(_DWORD* this);
-int __thiscall sub_46EBB4(_DWORD* this);
-int __thiscall sub_46ECF4(_DWORD* this);
-int __thiscall sub_46EE09(_DWORD* this);
-int __thiscall sub_46EF3E(_DWORD* this);
-int __thiscall sub_46F081(_DWORD* this);
-int __thiscall sub_46F1AB(_DWORD* this);
-int __thiscall sub_46F246(_DWORD* this);
-int __thiscall sub_46F37E(_DWORD* this);
-int __thiscall sub_46F497(_DWORD* this);
-int __thiscall sub_46F5CF(_DWORD* this);
-int __thiscall sub_46F6F9(_DWORD* this);
-int __thiscall sub_46F82B(_DWORD* this);
-int __thiscall sub_46F91C(_DWORD* this);
-int __thiscall sub_46FB1E(_DWORD* this);
-int __thiscall sub_46FD22(_DWORD* this);
-int __thiscall sub_470113(_DWORD* this);
+int __thiscall sub_46DE48(_DWORD* self);
+int __thiscall sub_46E258(_DWORD* self);
+float* __thiscall sub_46E785(float* self, float* a2, float* a3);
+float* __thiscall sub_46E7B3(float* self, float* a2, float a3);
+int __thiscall sub_46E7DF(_DWORD* self);
+int __thiscall sub_46E96A(_DWORD* self);
+int __thiscall sub_46EAAE(_DWORD* self);
+int __thiscall sub_46EBB4(_DWORD* self);
+int __thiscall sub_46ECF4(_DWORD* self);
+int __thiscall sub_46EE09(_DWORD* self);
+int __thiscall sub_46EF3E(_DWORD* self);
+int __thiscall sub_46F081(_DWORD* self);
+int __thiscall sub_46F1AB(_DWORD* self);
+int __thiscall sub_46F246(_DWORD* self);
+int __thiscall sub_46F37E(_DWORD* self);
+int __thiscall sub_46F497(_DWORD* self);
+int __thiscall sub_46F5CF(_DWORD* self);
+int __thiscall sub_46F6F9(_DWORD* self);
+int __thiscall sub_46F82B(_DWORD* self);
+int __thiscall sub_46F91C(_DWORD* self);
+int __thiscall sub_46FB1E(_DWORD* self);
+int __thiscall sub_46FD22(_DWORD* self);
+int __thiscall sub_470113(_DWORD* self);
 // int *__usercall sub_470516@<eax>(unsigned int a1@<ebx>, unsigned int a2@<edi>, int a3);
-int __thiscall sub_470616(int** this);
-int __thiscall sub_470947(_DWORD* this);
-int __thiscall sub_470E39(int** this, int a2, int a3, int* a4);
-_DWORD* __thiscall sub_470F78(_DWORD* this);
-void __thiscall sub_470F91(int this);
-void* __thiscall sub_470FEA(void* this, char a2);
-int __thiscall sub_471009(int* this, int a2, unsigned int a3);
+int __thiscall sub_470616(int** self);
+int __thiscall sub_470947(_DWORD* self);
+int __thiscall sub_470E39(int** self, int a2, int a3, int* a4);
+_DWORD* __thiscall sub_470F78(_DWORD* self);
+void __thiscall sub_470F91(int self);
+void* __thiscall sub_470FEA(void* self, char a2);
+int __thiscall sub_471009(int* self, int a2, unsigned int a3);
 void __cdecl __noreturn sub_4716F6(int a1);
-int sub_471714(); // weak
-int nullsub_2(); // weak
+//int sub_471714(); // weak
+//int nullsub_2(); // weak
 char __cdecl sub_471746(int a1);
 _DWORD* __cdecl sub_47175E(int a1, int a2);
-int __thiscall sub_471771(_DWORD* this, int a2, int a3);
-int __thiscall sub_4719C6(int* this, unsigned __int8* a2, unsigned int a3);
-unsigned int __thiscall sub_471E3C(_DWORD* this, _BYTE* a2, unsigned int a3);
+int __thiscall sub_471771(_DWORD* self, int a2, int a3);
+int __thiscall sub_4719C6(int* self, unsigned __int8* a2, unsigned int a3);
+unsigned int __thiscall sub_471E3C(_DWORD* self, _BYTE* a2, unsigned int a3);
 unsigned int __cdecl sub_4720BE(jmp_buf Buf, void* a2, unsigned int a3);
 void __cdecl __noreturn sub_472101(jmp_buf Buf, const char* ArgList);
 void __cdecl sub_472121(int a1, const char* ArgList);
-int __thiscall sub_472138(_DWORD* this, int a2, unsigned int a3);
-int __thiscall sub_47264E(_DWORD* this, _DWORD* a2, unsigned int a3);
-int __thiscall sub_472972(int* this, int a2, unsigned int a3);
-int __thiscall sub_4729A4(int this, unsigned __int8* a2, unsigned int a3, _DWORD* a4);
-_DWORD* __thiscall sub_472AF9(_DWORD* this);
-int __thiscall sub_472B0B(int this, const WCHAR* lpWideCharStr, LPSTR lpMultiByteStr);
-void __thiscall sub_472C9E(int this);
+int __thiscall sub_472138(_DWORD* self, int a2, unsigned int a3);
+int __thiscall sub_47264E(_DWORD* self, _DWORD* a2, unsigned int a3);
+int __thiscall sub_472972(int* self, int a2, unsigned int a3);
+int __thiscall sub_4729A4(int self, unsigned __int8* a2, unsigned int a3, _DWORD* a4);
+_DWORD* __thiscall sub_472AF9(_DWORD* self);
+int __thiscall sub_472B0B(int self, const WCHAR* lpWideCharStr, LPSTR lpMultiByteStr);
+void __thiscall sub_472C9E(int self);
 float* __stdcall sub_472CA9(float* a1, float* a2, float* a3);
 float* __stdcall sub_472D27(float* a1, float* a2, float* a3);
 float* __stdcall sub_472D71(float* a1, float* a2, float* a3);
 float* __stdcall sub_472E1D(float* a1, float* a2, float* a3);
 float* __stdcall sub_472E91(float* a1, float* a2, float* a3);
 _BYTE* __stdcall sub_472F4B(_BYTE* a1, _BYTE* a2, _BYTE* a3);
-BOOL __thiscall sub_47304C(float* this, float* a2);
-char* __thiscall sub_473099(_DWORD* this, int a2, int a3, float* a4);
-_BYTE* __thiscall sub_473102(_DWORD* this, int a2, int a3, float* a4);
-char* __thiscall sub_473198(_DWORD* this, int a2, int a3, float* a4);
-char* __thiscall sub_473210(_DWORD* this, int a2, int a3, float* a4);
-__int16* __thiscall sub_47328E(_DWORD* this, int a2, int a3, float* a4);
-unsigned int* __thiscall sub_4732F8(_DWORD* this, int a2, int a3, float* a4);
-float* __thiscall sub_473397(float* this, float* a2, float* a3);
-float* __thiscall sub_4733C5(float* this, float* a2, unsigned int a3, int a4);
-_DWORD* __thiscall sub_4735C3(_DWORD* this, char a2);
-void __thiscall sub_4735E3(float* this, float* a2);
-int __thiscall sub_47362B(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_473703(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_473812(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_4738FF(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_4739EC(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_473AD9(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_473BE2(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_473CF1(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_473DDA(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_473E72(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_473F81(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_47406E(float* this, int a2, int a3, float* a4);
-int __thiscall sub_474183(float* this, int a2, int a3, float* a4);
-int __thiscall sub_47423D(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_4742F1(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_4743E0(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_4744C4(_DWORD* this, int a2, int a3, float* a4);
-int __thiscall sub_47458F(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_474686(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_474785(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_4748AC(_DWORD* this, int a2, int a3, float* a4);
-int __thiscall sub_474977(_DWORD* this, int a2, int a3, int a4);
-int __thiscall sub_474A79(_DWORD* this, int a2, int a3, float* a4);
-void __thiscall sub_474B10(int this, int a2, int a3, float* a4);
-void __thiscall sub_474B9C(int this, int a2, int a3, float* a4);
-void __thiscall sub_474C42(int this, int a2, int a3, float* a4);
-void __thiscall sub_474CDE(int this, int a2, int a3, float* a4);
-void __thiscall sub_474D83(int this, int a2, int a3, float* a4);
-void __thiscall sub_474E25(int this, int a2, int a3, float* a4);
-void __thiscall sub_474ED5(int this, int a2, int a3, float* a4);
-void __thiscall sub_474F84(int this, int a2, int a3, float* a4);
-void __thiscall sub_475026(int this, int a2, int a3, float* a4);
-void __thiscall sub_475098(int this, int a2, int a3, float* a4);
-void __thiscall sub_47514A(int this, int a2, int a3, float* a4);
-void __thiscall sub_4751E9(int this, int a2, int a3, float* a4);
-void __thiscall sub_475270(int this, int a2, int a3, _DWORD* a4);
-void __thiscall sub_4752D5(int this, int a2, int a3, float* a4);
-void __thiscall sub_475343(int this, int a2, int a3, float* a4);
-void __thiscall sub_4753CC(int this, int a2, int a3, float* a4);
-void __thiscall sub_475455(int this, int a2, int a3, float* a4);
-int __thiscall sub_4754C5(int this, int a2);
-int __thiscall sub_4755BD(_DWORD* this);
-int __thiscall sub_4757B0(int this, unsigned int a2, unsigned int a3, int a4);
-signed int __thiscall sub_475A81(_DWORD* this, int a2, int a3, const void* a4);
-void __thiscall sub_475AFA(int this, int a2, int a3, void* a4);
-int __thiscall sub_475B69(int this, int a2);
-int __thiscall sub_475CAA(_DWORD* this);
-int __thiscall sub_476004(_DWORD* this, unsigned int a2, unsigned int a3, int a4);
-signed int __thiscall sub_4762B1(_DWORD* this, int a2, int a3, const void* a4);
-void __thiscall sub_476337(int this, int a2, int a3, void* a4);
-void __thiscall sub_4763AB(_DWORD* this);
-_DWORD* __thiscall sub_4763B2(_DWORD* this, char a2);
-void __thiscall sub_4763D1(int this);
-void __thiscall sub_476415(LPVOID* this);
+BOOL __thiscall sub_47304C(float* self, float* a2);
+char* __thiscall sub_473099(_DWORD* self, int a2, int a3, float* a4);
+_BYTE* __thiscall sub_473102(_DWORD* self, int a2, int a3, float* a4);
+char* __thiscall sub_473198(_DWORD* self, int a2, int a3, float* a4);
+char* __thiscall sub_473210(_DWORD* self, int a2, int a3, float* a4);
+__int16* __thiscall sub_47328E(_DWORD* self, int a2, int a3, float* a4);
+unsigned int* __thiscall sub_4732F8(_DWORD* self, int a2, int a3, float* a4);
+float* __thiscall sub_473397(float* self, float* a2, float* a3);
+float* __thiscall sub_4733C5(float* self, float* a2, unsigned int a3, int a4);
+_DWORD* __thiscall sub_4735C3(_DWORD* self, char a2);
+void __thiscall sub_4735E3(float* self, float* a2);
+int __thiscall sub_47362B(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_473703(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_473812(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_4738FF(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_4739EC(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_473AD9(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_473BE2(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_473CF1(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_473DDA(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_473E72(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_473F81(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_47406E(float* self, int a2, int a3, float* a4);
+int __thiscall sub_474183(float* self, int a2, int a3, float* a4);
+int __thiscall sub_47423D(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_4742F1(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_4743E0(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_4744C4(_DWORD* self, int a2, int a3, float* a4);
+int __thiscall sub_47458F(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_474686(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_474785(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_4748AC(_DWORD* self, int a2, int a3, float* a4);
+int __thiscall sub_474977(_DWORD* self, int a2, int a3, int a4);
+int __thiscall sub_474A79(_DWORD* self, int a2, int a3, float* a4);
+void __thiscall sub_474B10(int self, int a2, int a3, float* a4);
+void __thiscall sub_474B9C(int self, int a2, int a3, float* a4);
+void __thiscall sub_474C42(int self, int a2, int a3, float* a4);
+void __thiscall sub_474CDE(int self, int a2, int a3, float* a4);
+void __thiscall sub_474D83(int self, int a2, int a3, float* a4);
+void __thiscall sub_474E25(int self, int a2, int a3, float* a4);
+void __thiscall sub_474ED5(int self, int a2, int a3, float* a4);
+void __thiscall sub_474F84(int self, int a2, int a3, float* a4);
+void __thiscall sub_475026(int self, int a2, int a3, float* a4);
+void __thiscall sub_475098(int self, int a2, int a3, float* a4);
+void __thiscall sub_47514A(int self, int a2, int a3, float* a4);
+void __thiscall sub_4751E9(int self, int a2, int a3, float* a4);
+void __thiscall sub_475270(int self, int a2, int a3, _DWORD* a4);
+void __thiscall sub_4752D5(int self, int a2, int a3, float* a4);
+void __thiscall sub_475343(int self, int a2, int a3, float* a4);
+void __thiscall sub_4753CC(int self, int a2, int a3, float* a4);
+void __thiscall sub_475455(int self, int a2, int a3, float* a4);
+int __thiscall sub_4754C5(int self, int a2);
+int __thiscall sub_4755BD(_DWORD* self);
+int __thiscall sub_4757B0(int self, unsigned int a2, unsigned int a3, int a4);
+signed int __thiscall sub_475A81(_DWORD* self, int a2, int a3, const void* a4);
+void __thiscall sub_475AFA(int self, int a2, int a3, void* a4);
+int __thiscall sub_475B69(int self, int a2);
+int __thiscall sub_475CAA(_DWORD* self);
+int __thiscall sub_476004(_DWORD* self, unsigned int a2, unsigned int a3, int a4);
+signed int __thiscall sub_4762B1(_DWORD* self, int a2, int a3, const void* a4);
+void __thiscall sub_476337(int self, int a2, int a3, void* a4);
+void __thiscall sub_4763AB(_DWORD* self);
+_DWORD* __thiscall sub_4763B2(_DWORD* self, char a2);
+void __thiscall sub_4763D1(int self);
+void __thiscall sub_476415(LPVOID* self);
 float* __cdecl sub_476468(int a1);
-void* __thiscall sub_476B8B(void* this, char a2);
-LPVOID* __thiscall sub_476BAA(LPVOID* this, char a2);
-void* __thiscall sub_476BC9(void* this, char a2);
-void __thiscall sub_476BE8(int this);
-LPVOID* __thiscall sub_476BED(LPVOID* this, char a2);
-void __thiscall sub_476C0C(LPVOID* this);
+void* __thiscall sub_476B8B(void* self, char a2);
+//LPVOID* __thiscall sub_476BAA(LPvoid* self, char a2);
+void* __thiscall sub_476BC9(void* self, char a2);
+void __thiscall sub_476BE8(int self);
+//LPVOID* __thiscall sub_476BED(LPvoid* self, char a2);
+void __thiscall sub_476C0C(LPVOID* self);
 unsigned int __cdecl sub_476C11(_DWORD* a1, int a2, int a3);
 int __cdecl sub_476CD2(int a1);
 // int __usercall sub_476CDB@<eax>(int a1@<esi>);
@@ -1467,7 +1468,7 @@ jmp_buf __cdecl sub_478B71(_BYTE* a1, int a2, int a3, int a4);
 int __cdecl sub_478C74(jmp_buf Buf, int a2); // idb
 unsigned int __cdecl sub_478DE7(jmp_buf Buf, int a2);
 // int (__cdecl *__usercall sub_478E09@<eax>(int a1@<ebx>, jmp_buf Buf, char *a3, char *a4))(jmp_buf, int, _DWORD);
-int(__cdecl* __cdecl sub_4791B0(jmp_buf Buf, char** a2))(jmp_buf, int, _DWORD);
+int(__cdecl* __cdecl sub_4791B0(jmp_buf Buf, char** a2)),(jmp_buf, int, _DWORD);
 int __cdecl sub_4791FD(int a1, void* a2, void* a3);
 void __cdecl sub_479320(void** a1, void** a2, void** a3);
 int __cdecl sub_4793A1(int a1, int a2, int a3);
@@ -1611,7 +1612,7 @@ unsigned int __cdecl sub_47F1C2(_DWORD* a1, int a2, unsigned int* a3, unsigned i
 int __cdecl sub_47F2CA(int a1, int a2, int a3, int a4);
 int __cdecl sub_47F2ED(_DWORD* a1, int a2);
 int __cdecl sub_47F357(int a1, char a2);
-_DWORD* __thiscall sub_47F42A(_DWORD* this);
+_DWORD* __thiscall sub_47F42A(_DWORD* self);
 _DWORD* __cdecl sub_47F469(_DWORD* a1);
 int __cdecl sub_47F47C(_DWORD* a1, int a2);
 int sub_47F656();
@@ -1789,7 +1790,7 @@ int __cdecl sub_48B813(int a1, int a2);
 // double __fastcall _startOneArgErrorHandling(_DWORD, _DWORD); weak
 // double _load_CW(void); weak
 // double _convertTOStoQNaN(void); weak
-void __thiscall __noreturn sub_48CB2B(EXCEPTION_POINTERS* this);
+void __thiscall __noreturn sub_48CB2B(EXCEPTION_POINTERS* self);
 // int __cdecl _output(FILE *File, int, int); idb
 char __cdecl sub_48D4A3(int a1);
 int sub_48D4D0();
@@ -4681,7 +4682,7 @@ BOOL __cdecl sub_401200(float* a1)
 }
 
 //----- (00401270) --------------------------------------------------------
-int __thiscall sub_401270(int this)
+int __thiscall sub_401270(int self)
 {
     *(_DWORD*)(this + 4) = 0;
     *(_DWORD*)(this + 8) = 0;
@@ -4720,7 +4721,7 @@ int __thiscall sub_401270(int this)
     *(_DWORD*)(this + 336) = 0;
     *(_DWORD*)(this + 332) = 0;
     *(_DWORD*)this = &off_49901C;
-    sub_401450((_DWORD*)this);
+    sub_401450((_DWORD*)self);
     *(_DWORD*)(this + 20) = dword_4A4DB4;
     *(_DWORD*)(this + 24) = dword_4A4DB8;
     *(_DWORD*)(this + 28) = 1061752795;
@@ -4751,13 +4752,13 @@ int __stdcall sub_4013C0(int a1, int a2, int a3, int(__thiscall* a4)(int))
 }
 
 //----- (004013F0) --------------------------------------------------------
-int __thiscall sub_4013F0(_DWORD* this)
+int __thiscall sub_4013F0(_DWORD* self)
 {
     int result; // eax
 
     *this = &off_49901C;
     result = sub_408F30((_DWORD*)dword_520970);
-    if ((_DWORD*)result == this)
+    if ((_DWORD*)result == self)
         result = sub_408EF0(dword_520970, 0);
     *this = &off_499040;
     return result;
@@ -4767,7 +4768,7 @@ int __thiscall sub_4013F0(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00401450) --------------------------------------------------------
-int __thiscall sub_401450(_DWORD* this)
+int __thiscall sub_401450(_DWORD* self)
 {
     int result; // eax
 
@@ -4785,7 +4786,7 @@ int __thiscall sub_401450(_DWORD* this)
 }
 
 //----- (00401480) --------------------------------------------------------
-void __thiscall sub_401480(float* this, float a2, float a3, float a4)
+void __thiscall sub_401480(float* self, float a2, float a3, float a4)
 {
     this[8] = a2 + this[8];
     this[9] = a3 + this[9];
@@ -4796,7 +4797,7 @@ void __thiscall sub_401480(float* this, float a2, float a3, float a4)
 }
 
 //----- (004014C0) --------------------------------------------------------
-void __thiscall sub_4014C0(float* this, float a2, float a3, float a4)
+void __thiscall sub_4014C0(float* self, float a2, float a3, float a4)
 {
     if (a2 != 0.0)
     {
@@ -4816,7 +4817,7 @@ void __thiscall sub_4014C0(float* this, float a2, float a3, float a4)
 }
 
 //----- (00401550) --------------------------------------------------------
-int __thiscall sub_401550(float* this)
+int __thiscall sub_401550(float* self)
 {
     double v2; // st7
     float v4; // [esp+8h] [ebp-8h]
@@ -4835,7 +4836,7 @@ int __thiscall sub_401550(float* this)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00401600) --------------------------------------------------------
-float* __thiscall sub_401600(float* this)
+float* __thiscall sub_401600(float* self)
 {
     double v2; // st7
     double v3; // st7
@@ -5093,7 +5094,7 @@ float* __thiscall sub_401600(float* this)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00401EC0) --------------------------------------------------------
-int __thiscall sub_401EC0(float* this)
+int __thiscall sub_401EC0(float* self)
 {
     _DWORD v3[16]; // [esp+4h] [ebp-40h] BYREF
 
@@ -5116,7 +5117,7 @@ int __thiscall sub_401EC0(float* this)
 }
 
 //----- (00402110) --------------------------------------------------------
-char __thiscall sub_402110(float* this, float* a2, float a3)
+char __thiscall sub_402110(float* self, float* a2, float a3)
 {
     int v3; // edx
     float* i; // ecx
@@ -5135,7 +5136,7 @@ char __thiscall sub_402110(float* this, float* a2, float a3)
 }
 
 //----- (00402170) --------------------------------------------------------
-char __thiscall sub_402170(float* this, float a2, float a3, float a4, float a5, float a6, float a7)
+char __thiscall sub_402170(float* self, float a2, float a3, float a4, float a5, float a6, float a7)
 {
     int v7; // edx
     float* v8; // ecx
@@ -5196,7 +5197,7 @@ char __thiscall sub_402170(float* this, float a2, float a3, float a4, float a5, 
 }
 
 //----- (004022C0) --------------------------------------------------------
-double __thiscall sub_4022C0(float* this, float a2, float a3, float a4)
+double __thiscall sub_4022C0(float* self, float a2, float a3, float a4)
 {
     float v5[3]; // [esp+0h] [ebp-18h] BYREF
     float v6[3]; // [esp+Ch] [ebp-Ch] BYREF
@@ -5209,7 +5210,7 @@ double __thiscall sub_4022C0(float* this, float a2, float a3, float a4)
 }
 
 //----- (00402300) --------------------------------------------------------
-char __thiscall sub_402300(float* this, float* a2, int* a3, int* a4)
+char __thiscall sub_402300(float* self, float* a2, int* a3, int* a4)
 {
     double v5; // st7
     int v6; // ecx
@@ -5243,7 +5244,7 @@ char __thiscall sub_402300(float* this, float* a2, int* a3, int* a4)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00402430) --------------------------------------------------------
-float* __thiscall sub_402430(float* this, float* a2, float* a3)
+float* __thiscall sub_402430(float* self, float* a2, float* a3)
 {
     sub_46C5C5(a3, a2, this + 82);
     return sub_46C5C5(a3, a3, this + 66);
@@ -5256,7 +5257,7 @@ int __stdcall sub_402470(int a1)
 }
 
 //----- (00402480) --------------------------------------------------------
-char __thiscall sub_402480(_BYTE* this, char a2)
+char __thiscall sub_402480(_BYTE* self, char a2)
 {
     char result; // al
 
@@ -5266,9 +5267,9 @@ char __thiscall sub_402480(_BYTE* this, char a2)
 }
 
 //----- (004024C0) --------------------------------------------------------
-_DWORD* __thiscall sub_4024C0(_DWORD* this)
+_DWORD* __thiscall sub_4024C0(_DWORD* self)
 {
-    sub_401270((int)this);
+    sub_401270((int)self);
     *this = &off_499064;
     this[98] = 0;
     this[99] = 0;
@@ -5282,15 +5283,15 @@ _DWORD* __thiscall sub_4024C0(_DWORD* this)
 // 499064: using guessed type _UNKNOWN *off_499064;
 
 //----- (00402530) --------------------------------------------------------
-int __thiscall sub_402530(_DWORD* this)
+int __thiscall sub_402530(_DWORD* self)
 {
     *this = &off_499064;
-    return sub_4013F0(this);
+    return sub_4013F0(self);
 }
 // 499064: using guessed type _UNKNOWN *off_499064;
 
 //----- (00402540) --------------------------------------------------------
-char __thiscall sub_402540(int this, int a2)
+char __thiscall sub_402540(int self, int a2)
 {
     double v3; // st7
     double v4; // st7
@@ -5339,7 +5340,7 @@ char __thiscall sub_402540(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00402670) --------------------------------------------------------
-int __thiscall sub_402670(_DWORD* this, int a2, int a3)
+int __thiscall sub_402670(_DWORD* self, int a2, int a3)
 {
     int result; // eax
 
@@ -5350,7 +5351,7 @@ int __thiscall sub_402670(_DWORD* this, int a2, int a3)
 }
 
 //----- (00402690) --------------------------------------------------------
-int __thiscall sub_402690(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_402690(_DWORD* self, int a2, int a3, int a4)
 {
     int result; // eax
 
@@ -5663,7 +5664,7 @@ char* __thiscall sub_402C60(char* Destination, char* Source)
 }
 
 //----- (00402CB0) --------------------------------------------------------
-void __thiscall sub_402CB0(int this)
+void __thiscall sub_402CB0(int self)
 {
     int v2; // ecx
     int i; // edi
@@ -5699,7 +5700,7 @@ void __thiscall sub_402CB0(int this)
 }
 
 //----- (00402DA0) --------------------------------------------------------
-void __thiscall sub_402DA0(int this, float a2)
+void __thiscall sub_402DA0(int self, float a2)
 {
     int v3; // ebp
     double v4; // st7
@@ -5835,7 +5836,7 @@ void __thiscall sub_402DA0(int this, float a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00402FC0) --------------------------------------------------------
-int __thiscall sub_402FC0(int this)
+int __thiscall sub_402FC0(int self)
 {
     int v2; // ecx
     int result; // eax
@@ -5905,7 +5906,7 @@ int __thiscall sub_402FC0(int this)
 }
 
 //----- (004030B0) --------------------------------------------------------
-int __thiscall sub_4030B0(_DWORD* this, int a2, char* String2, int a4)
+int __thiscall sub_4030B0(_DWORD* self, int a2, char* String2, int a4)
 {
     int v5; // eax
     int v6; // eax
@@ -5963,7 +5964,7 @@ int __thiscall sub_4030B0(_DWORD* this, int a2, char* String2, int a4)
 // 4B5AB0: using guessed type int dword_4B5AB0;
 
 //----- (00403180) --------------------------------------------------------
-_DWORD* __thiscall sub_403180(_DWORD* this)
+_DWORD* __thiscall sub_403180(_DWORD* self)
 {
     this[1] = 0;
     this[2] = 0;
@@ -5979,14 +5980,14 @@ _DWORD* __thiscall sub_403180(_DWORD* this)
     *((_BYTE*)this + 48) = 1;
     *this = &off_499098;
     dword_4B5AB0 = (int)this;
-    sub_4033A0((int)this);
+    sub_4033A0((int)self);
     return this;
 }
 // 499098: using guessed type _UNKNOWN *off_499098;
 // 4B5AB0: using guessed type int dword_4B5AB0;
 
 //----- (00403220) --------------------------------------------------------
-void __thiscall sub_403220(void* this)
+void __thiscall sub_403220(void* self)
 {
     int i; // edi
     int v3; // eax
@@ -6063,7 +6064,7 @@ void __thiscall sub_403220(void* this)
 // 4B5AB0: using guessed type int dword_4B5AB0;
 
 //----- (004033A0) --------------------------------------------------------
-int __thiscall sub_4033A0(int this)
+int __thiscall sub_4033A0(int self)
 {
     char* v2; // ebp
     _DWORD* v3; // eax
@@ -6172,7 +6173,7 @@ int __thiscall sub_4033A0(int this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00403620) --------------------------------------------------------
-char* __thiscall sub_403620(_DWORD* this, char* String2)
+char* __thiscall sub_403620(_DWORD* self, char* String2)
 {
     int v3; // edi
     char* v4; // ebx
@@ -6228,7 +6229,7 @@ char* __thiscall sub_403620(_DWORD* this, char* String2)
 }
 
 //----- (004036D0) --------------------------------------------------------
-char __thiscall sub_4036D0(_DWORD* this, int a2)
+char __thiscall sub_4036D0(_DWORD* self, int a2)
 {
     int i; // esi
 
@@ -6239,7 +6240,7 @@ char __thiscall sub_4036D0(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00403710) --------------------------------------------------------
-int __thiscall sub_403710(_DWORD* this, char* String2)
+int __thiscall sub_403710(_DWORD* self, char* String2)
 {
     int v3; // esi
 
@@ -6255,7 +6256,7 @@ int __thiscall sub_403710(_DWORD* this, char* String2)
 }
 
 //----- (00403760) --------------------------------------------------------
-void __thiscall sub_403760(int this)
+void __thiscall sub_403760(int self)
 {
     int i; // ebp
     void* v3; // edi
@@ -6282,7 +6283,7 @@ void __thiscall sub_403760(int this)
 }
 
 //----- (004037E0) --------------------------------------------------------
-void __thiscall sub_4037E0(int this)
+void __thiscall sub_4037E0(int self)
 {
     int i; // ebp
     void* v3; // edi
@@ -6309,16 +6310,16 @@ void __thiscall sub_4037E0(int this)
 }
 
 //----- (00403860) --------------------------------------------------------
-void* __thiscall sub_403860(void* this, char a2)
+void* __thiscall sub_403860(void* self, char a2)
 {
-    sub_403880((int)this);
+    sub_403880((int)self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
 //----- (00403880) --------------------------------------------------------
-void __thiscall sub_403880(int this)
+void __thiscall sub_403880(int self)
 {
     int i; // ebp
     int v3; // eax
@@ -6347,7 +6348,7 @@ void __thiscall sub_403880(int this)
 }
 
 //----- (00403920) --------------------------------------------------------
-void __thiscall sub_403920(int this)
+void __thiscall sub_403920(int self)
 {
     int v2; // ebp
     int v3; // eax
@@ -6420,7 +6421,7 @@ _DWORD* sub_403A30(_DWORD* a1, int a2, char* Format, ...)
 }
 
 //----- (00403A90) --------------------------------------------------------
-void __thiscall sub_403A90(void* this)
+void __thiscall sub_403A90(void* self)
 {
     int v2; // eax
     int v3; // eax
@@ -6447,7 +6448,7 @@ void __thiscall sub_403A90(void* this)
 }
 
 //----- (00403AE0) --------------------------------------------------------
-void __thiscall sub_403AE0(void* this)
+void __thiscall sub_403AE0(void* self)
 {
     int* v2; // ecx
 
@@ -6462,7 +6463,7 @@ void __thiscall sub_403AE0(void* this)
 }
 
 //----- (00403B10) --------------------------------------------------------
-_DWORD* __thiscall sub_403B10(_DWORD* this)
+_DWORD* __thiscall sub_403B10(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -6490,15 +6491,15 @@ _DWORD* __thiscall sub_403B10(_DWORD* this)
 // 4990BC: using guessed type int (__stdcall *off_4990BC)(int, int, int);
 
 //----- (00403B60) --------------------------------------------------------
-void __thiscall sub_403B60(_DWORD* this)
+void __thiscall sub_403B60(_DWORD* self)
 {
     *this = &off_4990BC;
-    sub_403CE0(this);
+    sub_403CE0(self);
 }
 // 4990BC: using guessed type int (__stdcall *off_4990BC)(int, int, int);
 
 //----- (00403B70) --------------------------------------------------------
-void __thiscall sub_403B70(_DWORD* this)
+void __thiscall sub_403B70(_DWORD* self)
 {
     int v2; // eax
     _DWORD* v3; // ecx
@@ -6509,17 +6510,17 @@ void __thiscall sub_403B70(_DWORD* this)
     {
         v3 = (_DWORD*)this[146];
         if (v3)
-            sub_406A50(v3, (int)this);
-        if (this)
+            sub_406A50(v3, (int)self);
+        if (self)
         {
-            sub_403B60(this);
-            sub_4885A6(this);
+            sub_403B60(self);
+            sub_4885A6(self);
         }
     }
 }
 
 //----- (00403BB0) --------------------------------------------------------
-bool __thiscall sub_403BB0(_DWORD* this, int a2, const char* a3)
+bool __thiscall sub_403BB0(_DWORD* self, int a2, const char* a3)
 {
     int v3; // ebx
     char* v4; // edx
@@ -6556,7 +6557,7 @@ bool __thiscall sub_403BB0(_DWORD* this, int a2, const char* a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (00403C80) --------------------------------------------------------
-int __thiscall sub_403C80(_DWORD* this, int a2, char a3)
+int __thiscall sub_403C80(_DWORD* self, int a2, char a3)
 {
     int result; // eax
 
@@ -6566,7 +6567,7 @@ int __thiscall sub_403C80(_DWORD* this, int a2, char a3)
 }
 
 //----- (00403CB0) --------------------------------------------------------
-int __thiscall sub_403CB0(_DWORD* this, int a2)
+int __thiscall sub_403CB0(_DWORD* self, int a2)
 {
     int v2; // eax
 
@@ -6578,7 +6579,7 @@ int __thiscall sub_403CB0(_DWORD* this, int a2)
 }
 
 //----- (00403CE0) --------------------------------------------------------
-void __thiscall sub_403CE0(_DWORD* this)
+void __thiscall sub_403CE0(_DWORD* self)
 {
     char* v2; // eax
     char* v3; // edi
@@ -6626,7 +6627,7 @@ void __thiscall sub_403CE0(_DWORD* this)
 }
 
 //----- (00403D90) --------------------------------------------------------
-char* __thiscall sub_403D90(char* this, const char* a2)
+char* __thiscall sub_403D90(char* self, const char* a2)
 {
     char* v2; // ebx
     char* result; // eax
@@ -6702,13 +6703,13 @@ char __userpurge sub_403EC0@<al>(int a1@<ecx>, int a2@<ebp>, int a3@<edi>, char*
 // 4A1D45: using guessed type char byte_4A1D45;
 
 //----- (00403F40) --------------------------------------------------------
-int __thiscall sub_403F40(_DWORD* this)
+int __thiscall sub_403F40(_DWORD* self)
 {
     return this[13];
 }
 
 //----- (00403F50) --------------------------------------------------------
-bool __thiscall sub_403F50(int this)
+bool __thiscall sub_403F50(int self)
 {
     bool v2; // al
     char v3; // al
@@ -6731,7 +6732,7 @@ bool __thiscall sub_403F50(int this)
 }
 
 //----- (00403FE0) --------------------------------------------------------
-char __thiscall sub_403FE0(FILE** this)
+char __thiscall sub_403FE0(FILE** self)
 {
     FILE** v1; // ebp
     bool v2; // bl
@@ -6919,7 +6920,7 @@ char __thiscall sub_403FE0(FILE** this)
 // 520970: using guessed type int dword_520970;
 
 //----- (004044D0) --------------------------------------------------------
-_DWORD* __thiscall sub_4044D0(_DWORD* this, int a2)
+_DWORD* __thiscall sub_4044D0(_DWORD* self, int a2)
 {
     int v2; // edx
     int v3; // eax
@@ -6940,7 +6941,7 @@ _DWORD* __thiscall sub_4044D0(_DWORD* this, int a2)
 }
 
 //----- (00404510) --------------------------------------------------------
-bool __thiscall sub_404510(int this)
+bool __thiscall sub_404510(int self)
 {
     int v2; // edi
     bool v3; // bl
@@ -6984,7 +6985,7 @@ bool __thiscall sub_404510(int this)
     }
     if (*(_DWORD*)(this + 52))
     {
-        sub_4050B0((_DWORD*)this);
+        sub_4050B0((_DWORD*)self);
         v8 = *(char**)(this + 32);
         if (v8)
         {
@@ -7016,13 +7017,13 @@ bool __thiscall sub_404510(int this)
 }
 
 //----- (004046A0) --------------------------------------------------------
-void __thiscall sub_4046A0(char* this)
+void __thiscall sub_4046A0(char* self)
 {
     memset(this + 84, 0, 0x58u);
 }
 
 //----- (004046C0) --------------------------------------------------------
-bool __thiscall sub_4046C0(FILE** this, int a2, int ArgList)
+bool __thiscall sub_4046C0(FILE** self, int a2, int ArgList)
 {
     int v3; // ebp
     bool v4; // dl
@@ -7177,7 +7178,7 @@ LABEL_41:
 }
 
 //----- (00404950) --------------------------------------------------------
-bool __thiscall sub_404950(int this, int a2)
+bool __thiscall sub_404950(int self, int a2)
 {
     int v2; // edi
     int v3; // ebp
@@ -7429,7 +7430,7 @@ LABEL_50:
 }
 
 //----- (00404F60) --------------------------------------------------------
-_BYTE* __thiscall sub_404F60(_DWORD* this, int a2, void* a3, float* a4)
+_BYTE* __thiscall sub_404F60(_DWORD* self, int a2, void* a3, float* a4)
 {
     int v4; // esi
     int v5; // eax
@@ -7474,7 +7475,7 @@ _BYTE* __thiscall sub_404F60(_DWORD* this, int a2, void* a3, float* a4)
 }
 
 //----- (004050B0) --------------------------------------------------------
-int __thiscall sub_4050B0(_DWORD* this)
+int __thiscall sub_4050B0(_DWORD* self)
 {
     _DWORD* v1; // edi
     int result; // eax
@@ -7793,7 +7794,7 @@ int __usercall sub_4051C0@<eax>(_DWORD* a1@<ecx>, int a2@<ebp>, int a3@<edi>)
 // 4051C0: could not find valid save-restore pair for edi
 
 //----- (00405770) --------------------------------------------------------
-bool __thiscall sub_405770(FILE** this, unsigned int Buffer)
+bool __thiscall sub_405770(FILE** self, unsigned int Buffer)
 {
     _DWORD* v2; // edi
     void* v5; // eax
@@ -7811,19 +7812,19 @@ bool __thiscall sub_405770(FILE** this, unsigned int Buffer)
 }
 
 //----- (004057E0) --------------------------------------------------------
-BOOL __thiscall sub_4057E0(FILE** this, void* Buffer)
+BOOL __thiscall sub_4057E0(FILE** self, void* Buffer)
 {
     return sub_4898CA(Buffer, 4u, 1u, this[5]) == 1;
 }
 
 //----- (00405800) --------------------------------------------------------
-BOOL __thiscall sub_405800(FILE** this, void* Buffer)
+BOOL __thiscall sub_405800(FILE** self, void* Buffer)
 {
     return sub_4898CA(Buffer, 1u, 1u, this[5]) == 1;
 }
 
 //----- (00405820) --------------------------------------------------------
-BOOL __thiscall sub_405820(FILE** this, FILE** a2)
+BOOL __thiscall sub_405820(FILE** self, FILE** a2)
 {
     FILE** Buffer; // [esp+0h] [ebp-4h] BYREF
 
@@ -7832,7 +7833,7 @@ BOOL __thiscall sub_405820(FILE** this, FILE** a2)
 }
 
 //----- (00405850) --------------------------------------------------------
-char __thiscall sub_405850(int this, int Buffer)
+char __thiscall sub_405850(int self, int Buffer)
 {
     int v2; // edi
     double v4; // st7
@@ -7887,19 +7888,19 @@ char __thiscall sub_405850(int this, int Buffer)
 }
 
 //----- (004059A0) --------------------------------------------------------
-bool __thiscall sub_4059A0(FILE** this, unsigned int Buffer)
+bool __thiscall sub_4059A0(FILE** self, unsigned int Buffer)
 {
     return sub_405770(this, Buffer) && sub_4057E0(this, (void*)(Buffer + 4));
 }
 
 //----- (004059D0) --------------------------------------------------------
-int __thiscall sub_4059D0(_DWORD* this, int a2)
+int __thiscall sub_4059D0(_DWORD* self, int a2)
 {
     return *(_DWORD*)(this[1] + 172 * a2 + 20);
 }
 
 //----- (004059F0) --------------------------------------------------------
-int __thiscall sub_4059F0(_DWORD* this, int a2, int a3)
+int __thiscall sub_4059F0(_DWORD* self, int a2, int a3)
 {
     if (a3 < sub_4059D0(this, a2))
         return *(_DWORD*)(this[1] + 172 * a2 + 24) + 8 * a3;
@@ -7908,7 +7909,7 @@ int __thiscall sub_4059F0(_DWORD* this, int a2, int a3)
 }
 
 //----- (00405A30) --------------------------------------------------------
-int __thiscall sub_405A30(_DWORD* this, char* String1, int a3, char a4)
+int __thiscall sub_405A30(_DWORD* self, char* String1, int a3, char a4)
 {
     int v5; // ebp
     unsigned int v6; // kr04_4
@@ -7981,7 +7982,7 @@ int __thiscall sub_405A30(_DWORD* this, char* String1, int a3, char a4)
 }
 
 //----- (00405BB0) --------------------------------------------------------
-int __thiscall sub_405BB0(_DWORD* this, int a2)
+int __thiscall sub_405BB0(_DWORD* self, int a2)
 {
     int v2; // eax
     char v3; // cl
@@ -7997,19 +7998,19 @@ int __thiscall sub_405BB0(_DWORD* this, int a2)
 }
 
 //----- (00405BE0) --------------------------------------------------------
-char __thiscall sub_405BE0(_DWORD* this, int a2)
+char __thiscall sub_405BE0(_DWORD* self, int a2)
 {
     return *(_BYTE*)(this[1] + 172 * a2 + 81);
 }
 
 //----- (00405C00) --------------------------------------------------------
-char __thiscall sub_405C00(_DWORD* this, int a2)
+char __thiscall sub_405C00(_DWORD* self, int a2)
 {
     return *(_BYTE*)(this[1] + 172 * a2 + 80);
 }
 
 //----- (00405C20) --------------------------------------------------------
-int __thiscall sub_405C20(_DWORD* this, int a2)
+int __thiscall sub_405C20(_DWORD* self, int a2)
 {
     return *(_DWORD*)(this[1] + 172 * a2 + 8);
 }
@@ -8086,9 +8087,9 @@ LABEL_29:
 // 520A50: using guessed type int dword_520A50;
 
 //----- (00405DF0) --------------------------------------------------------
-int __thiscall sub_405DF0(void* this, _DWORD* a2, int a3)
+int __thiscall sub_405DF0(void* self, _DWORD* a2, int a3)
 {
-    (**(void(__thiscall***)(void*, _DWORD*, _DWORD, int))this)(this, a2, 0, a3);
+    (**(void(__thiscall***)(void*, _DWORD*, _DWORD, int))self)(this, a2, 0, a3);
     return sub_406000(a2, a3);
 }
 
@@ -8332,7 +8333,7 @@ int __userpurge sub_406110@<eax>(_DWORD* a1@<ecx>, int a2@<esi>, int a3, float* 
 // 520970: using guessed type int dword_520970;
 
 //----- (004063E0) --------------------------------------------------------
-float* __thiscall sub_4063E0(_DWORD* this, int a2, void* a3, float* a4, float a5, int a6)
+float* __thiscall sub_4063E0(_DWORD* self, int a2, void* a3, float* a4, float a5, int a6)
 {
     int v6; // ebp
     int v7; // edx
@@ -8441,7 +8442,7 @@ LABEL_18:
 // 4A1D46: using guessed type char byte_4A1D46;
 
 //----- (00406620) --------------------------------------------------------
-int __thiscall sub_406620(_DWORD* this, int a2, _BYTE* a3, float* a4, float a5, int a6)
+int __thiscall sub_406620(_DWORD* self, int a2, _BYTE* a3, float* a4, float a5, int a6)
 {
     int v6; // ebp
     int result; // eax
@@ -8591,7 +8592,7 @@ float* __userpurge sub_4066C0@<eax>(
 // 4066C0: could not find valid save-restore pair for esi
 
 //----- (004068D0) --------------------------------------------------------
-_DWORD* __thiscall sub_4068D0(_DWORD* this)
+_DWORD* __thiscall sub_4068D0(_DWORD* self)
 {
     this[1] = 0;
     this[2] = 0;
@@ -8608,7 +8609,7 @@ _DWORD* __thiscall sub_4068D0(_DWORD* this)
 // 4A1D45: using guessed type char byte_4A1D45;
 
 //----- (00406980) --------------------------------------------------------
-int __thiscall sub_406980(_DWORD* this)
+int __thiscall sub_406980(_DWORD* self)
 {
     int result; // eax
     int v2; // edx
@@ -8669,7 +8670,7 @@ char* __userpurge sub_4069C0@<eax>(int a1@<ecx>, int a2@<ebp>, char* String1)
 }
 
 //----- (00406A50) --------------------------------------------------------
-int __thiscall sub_406A50(_DWORD* this, int a2)
+int __thiscall sub_406A50(_DWORD* self, int a2)
 {
     int result; // eax
     int v3; // esi
@@ -8710,7 +8711,7 @@ _DWORD* __cdecl sub_406A90(int a1, char a2)
 }
 
 //----- (00406B00) --------------------------------------------------------
-_DWORD* __thiscall sub_406B00(_DWORD* this, int a2, char a3)
+_DWORD* __thiscall sub_406B00(_DWORD* self, int a2, char a3)
 {
     int v4; // ecx
     int v5; // edi
@@ -8773,7 +8774,7 @@ _DWORD* __cdecl sub_406BE0(_DWORD* a1)
 }
 
 //----- (00406C20) --------------------------------------------------------
-void __thiscall sub_406C20(void* this)
+void __thiscall sub_406C20(void* self)
 {
     int v2; // ebx
     int v3; // edi
@@ -8800,7 +8801,7 @@ void __thiscall sub_406C20(void* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00406CB0) --------------------------------------------------------
-int __thiscall sub_406CB0(int this, int a2)
+int __thiscall sub_406CB0(int self, int a2)
 {
     float* v3; // edi
     int v4; // eax
@@ -8817,7 +8818,7 @@ int __thiscall sub_406CB0(int this, int a2)
 // 406CD9: variable 'v7' is possibly undefined
 
 //----- (00406CF0) --------------------------------------------------------
-int __thiscall sub_406CF0(int this, float a2)
+int __thiscall sub_406CF0(int self, float a2)
 {
     int result; // eax
     int i; // edi
@@ -8835,7 +8836,7 @@ int __thiscall sub_406CF0(int this, float a2)
 }
 
 //----- (00406D30) --------------------------------------------------------
-void __thiscall sub_406D30(int this, float a2)
+void __thiscall sub_406D30(int self, float a2)
 {
     double v2; // st7
     double v3; // st6
@@ -8890,7 +8891,7 @@ void __thiscall sub_406D30(int this, float a2)
 }
 
 //----- (00406DF0) --------------------------------------------------------
-int __thiscall sub_406DF0(int this, int a2)
+int __thiscall sub_406DF0(int self, int a2)
 {
     int v3; // esi
     int v4; // ebx
@@ -8920,7 +8921,7 @@ int __thiscall sub_406DF0(int this, int a2)
     }
     if (!*(_DWORD*)(v3 + 88))
     {
-        v6 = sub_409960((_DWORD*)dword_520970, this);
+        v6 = sub_409960((_DWORD*)dword_520970, self);
         *(_DWORD*)(v3 + 88) = v6;
         v7 = *(_DWORD*)(v4 + 52);
         if (v7)
@@ -8954,7 +8955,7 @@ LABEL_12:
 // 520970: using guessed type int dword_520970;
 
 //----- (00406F00) --------------------------------------------------------
-char __thiscall sub_406F00(float* this, int a2)
+char __thiscall sub_406F00(float* self, int a2)
 {
     int v4; // ecx
     float* v5; // esi
@@ -9066,7 +9067,7 @@ LABEL_24:
 // 520A78: using guessed type int dword_520A78;
 
 //----- (00407120) --------------------------------------------------------
-int __thiscall sub_407120(_DWORD* this, int a2)
+int __thiscall sub_407120(_DWORD* self, int a2)
 {
     int result; // eax
     int v3; // edx
@@ -9092,7 +9093,7 @@ int __thiscall sub_407120(_DWORD* this, int a2)
 }
 
 //----- (00407190) --------------------------------------------------------
-void* __thiscall sub_407190(_DWORD* this, int a2, char a3)
+void* __thiscall sub_407190(_DWORD* self, int a2, char a3)
 {
     int v3; // esi
     void* v4; // edx
@@ -9141,7 +9142,7 @@ void* __thiscall sub_407190(_DWORD* this, int a2, char a3)
 }
 
 //----- (00407250) --------------------------------------------------------
-int __thiscall sub_407250(_DWORD* this)
+int __thiscall sub_407250(_DWORD* self)
 {
     int v2; // ebp
     int v3; // ebx
@@ -9167,7 +9168,7 @@ int __thiscall sub_407250(_DWORD* this)
 }
 
 //----- (004072A0) --------------------------------------------------------
-char __thiscall sub_4072A0(_DWORD* this, int a2, int a3, char a4)
+char __thiscall sub_4072A0(_DWORD* self, int a2, int a3, char a4)
 {
     _BYTE* v5; // esi
     int v6; // eax
@@ -9202,7 +9203,7 @@ char __thiscall sub_4072A0(_DWORD* this, int a2, int a3, char a4)
 }
 
 //----- (00407320) --------------------------------------------------------
-double __thiscall sub_407320(_DWORD* this, int a2)
+double __thiscall sub_407320(_DWORD* self, int a2)
 {
     float* v2; // eax
 
@@ -9214,7 +9215,7 @@ double __thiscall sub_407320(_DWORD* this, int a2)
 }
 
 //----- (00407350) --------------------------------------------------------
-char __thiscall sub_407350(_DWORD* this, int a2)
+char __thiscall sub_407350(_DWORD* self, int a2)
 {
     _BYTE* v3; // eax
 
@@ -9226,21 +9227,21 @@ char __thiscall sub_407350(_DWORD* this, int a2)
 }
 
 //----- (00407390) --------------------------------------------------------
-int __thiscall sub_407390(_DWORD* this, int a2, char a3)
+int __thiscall sub_407390(_DWORD* self, int a2, char a3)
 {
     *((_BYTE*)sub_407190(this, a2, 1) + 68) = a3;
     return sub_407120(this, a2);
 }
 
 //----- (004073C0) --------------------------------------------------------
-int __thiscall sub_4073C0(_DWORD* this, int a2, char a3)
+int __thiscall sub_4073C0(_DWORD* self, int a2, char a3)
 {
     *((_BYTE*)sub_407190(this, a2, 1) + 69) = a3;
     return sub_407120(this, a2);
 }
 
 //----- (004073F0) --------------------------------------------------------
-int __thiscall sub_4073F0(_DWORD* this, int a2, const void* a3)
+int __thiscall sub_4073F0(_DWORD* self, int a2, const void* a3)
 {
     char* v4; // eax
 
@@ -9251,7 +9252,7 @@ int __thiscall sub_4073F0(_DWORD* this, int a2, const void* a3)
 }
 
 //----- (00407430) --------------------------------------------------------
-char* __thiscall sub_407430(_DWORD* this, int a2, char* a3)
+char* __thiscall sub_407430(_DWORD* self, int a2, char* a3)
 {
     char* result; // eax
 
@@ -9262,7 +9263,7 @@ char* __thiscall sub_407430(_DWORD* this, int a2, char* a3)
 }
 
 //----- (00407460) --------------------------------------------------------
-int __thiscall sub_407460(_DWORD* this, int a2)
+int __thiscall sub_407460(_DWORD* self, int a2)
 {
     _BYTE* v3; // eax
 
@@ -9275,7 +9276,7 @@ int __thiscall sub_407460(_DWORD* this, int a2)
 }
 
 //----- (004074B0) --------------------------------------------------------
-int __thiscall sub_4074B0(_DWORD* this, int a2)
+int __thiscall sub_4074B0(_DWORD* self, int a2)
 {
     _BYTE* v3; // eax
 
@@ -9301,7 +9302,7 @@ int __thiscall sub_4074B0(_DWORD* this, int a2)
 }
 
 //----- (00407510) --------------------------------------------------------
-int __thiscall sub_407510(_DWORD* this, int a2, float a3)
+int __thiscall sub_407510(_DWORD* self, int a2, float a3)
 {
     _BYTE* v4; // edi
 
@@ -9314,7 +9315,7 @@ int __thiscall sub_407510(_DWORD* this, int a2, float a3)
 // 4F5AB8: using guessed type _BYTE byte_4F5AB8[64];
 
 //----- (00407560) --------------------------------------------------------
-int __thiscall sub_407560(_DWORD* this, int a2, float a3)
+int __thiscall sub_407560(_DWORD* self, int a2, float a3)
 {
     _BYTE* v4; // edi
 
@@ -9327,7 +9328,7 @@ int __thiscall sub_407560(_DWORD* this, int a2, float a3)
 // 4F5AB8: using guessed type _BYTE byte_4F5AB8[64];
 
 //----- (004075B0) --------------------------------------------------------
-int __thiscall sub_4075B0(_DWORD* this, int a2, float a3)
+int __thiscall sub_4075B0(_DWORD* self, int a2, float a3)
 {
     _BYTE* v4; // edi
 
@@ -9340,7 +9341,7 @@ int __thiscall sub_4075B0(_DWORD* this, int a2, float a3)
 // 4F5AB8: using guessed type _BYTE byte_4F5AB8[64];
 
 //----- (00407600) --------------------------------------------------------
-int __thiscall sub_407600(_DWORD* this, int a2, int a3, int a4, int a5)
+int __thiscall sub_407600(_DWORD* self, int a2, int a3, int a4, int a5)
 {
     _BYTE* v6; // edi
 
@@ -9353,7 +9354,7 @@ int __thiscall sub_407600(_DWORD* this, int a2, int a3, int a4, int a5)
 // 4F5AB8: using guessed type _BYTE byte_4F5AB8[64];
 
 //----- (00407650) --------------------------------------------------------
-_BYTE* __thiscall sub_407650(_DWORD* this, int a2, char a3)
+_BYTE* __thiscall sub_407650(_DWORD* self, int a2, char a3)
 {
     _BYTE* result; // eax
 
@@ -9363,7 +9364,7 @@ _BYTE* __thiscall sub_407650(_DWORD* this, int a2, char a3)
 }
 
 //----- (00407670) --------------------------------------------------------
-_BYTE* __thiscall sub_407670(_DWORD* this, int a2, char a3)
+_BYTE* __thiscall sub_407670(_DWORD* self, int a2, char a3)
 {
     _BYTE* result; // eax
 
@@ -9373,7 +9374,7 @@ _BYTE* __thiscall sub_407670(_DWORD* this, int a2, char a3)
 }
 
 //----- (00407690) --------------------------------------------------------
-int __thiscall sub_407690(int this, int a2, _DWORD* a3)
+int __thiscall sub_407690(int self, int a2, _DWORD* a3)
 {
     int result; // eax
 
@@ -9407,7 +9408,7 @@ int __thiscall sub_407690(int this, int a2, _DWORD* a3)
 }
 
 //----- (00407710) --------------------------------------------------------
-char __thiscall sub_407710(float* this, int a2, int a3, int a4, int a5, int a6, int a7, int* a8, float* a9)
+char __thiscall sub_407710(float* self, int a2, int a3, int a4, int a5, int a6, int a7, int* a8, float* a9)
 {
     float* v9; // edi
     int v10; // eax
@@ -9787,7 +9788,7 @@ BOOL __userpurge sub_407A90@<eax>(
 // 520A58: using guessed type int dword_520A58;
 
 //----- (00407F00) --------------------------------------------------------
-bool __thiscall sub_407F00(int this, int a2, int* a3, float a4, int* a5, float* a6)
+bool __thiscall sub_407F00(int self, int a2, int* a3, float a4, int* a5, float* a6)
 {
     int v7; // ecx
     int v8; // esi
@@ -9917,7 +9918,7 @@ bool __thiscall sub_407F00(int this, int a2, int* a3, float a4, int* a5, float* 
 // 520A58: using guessed type int dword_520A58;
 
 //----- (004081A0) --------------------------------------------------------
-double __thiscall sub_4081A0(int this, int a2, float a3, float a4)
+double __thiscall sub_4081A0(int self, int a2, float a3, float a4)
 {
     int v4; // esi
     int v5; // ebp
@@ -10077,7 +10078,7 @@ double __thiscall sub_4081A0(int this, int a2, float a3, float a4)
 // 520A58: using guessed type int dword_520A58;
 
 //----- (00408540) --------------------------------------------------------
-int __thiscall sub_408540(_DWORD* this, int a2)
+int __thiscall sub_408540(_DWORD* self, int a2)
 {
     int result; // eax
     int v3; // esi
@@ -10103,7 +10104,7 @@ int __thiscall sub_408540(_DWORD* this, int a2)
 }
 
 //----- (00408580) --------------------------------------------------------
-int __thiscall sub_408580(_DWORD* this, int a2, int a3)
+int __thiscall sub_408580(_DWORD* self, int a2, int a3)
 {
     int result; // eax
 
@@ -10114,7 +10115,7 @@ int __thiscall sub_408580(_DWORD* this, int a2, int a3)
 }
 
 //----- (004085B0) --------------------------------------------------------
-float* __thiscall sub_4085B0(int this, int a2, int a3)
+float* __thiscall sub_4085B0(int self, int a2, int a3)
 {
     int v4; // eax
 
@@ -10127,7 +10128,7 @@ float* __thiscall sub_4085B0(int this, int a2, int a3)
 }
 
 //----- (004085F0) --------------------------------------------------------
-_DWORD* __thiscall sub_4085F0(int this, int a2, _DWORD* a3, _DWORD* a4)
+_DWORD* __thiscall sub_4085F0(int self, int a2, _DWORD* a3, _DWORD* a4)
 {
     _DWORD* result; // eax
     _DWORD* v6; // eax
@@ -10148,7 +10149,7 @@ _DWORD* __thiscall sub_4085F0(int this, int a2, _DWORD* a3, _DWORD* a4)
 }
 
 //----- (00408640) --------------------------------------------------------
-int __thiscall sub_408640(_DWORD* this, int a2, char a3)
+int __thiscall sub_408640(_DWORD* self, int a2, char a3)
 {
     int result; // eax
 
@@ -10158,13 +10159,13 @@ int __thiscall sub_408640(_DWORD* this, int a2, char a3)
 }
 
 //----- (00408660) --------------------------------------------------------
-bool __thiscall sub_408660(_DWORD* this, int a2)
+bool __thiscall sub_408660(_DWORD* self, int a2)
 {
     return *(_BYTE*)(96 * a2 + this[6] + 84) == 0;
 }
 
 //----- (00408680) --------------------------------------------------------
-char __thiscall sub_408680(int this, int a2, float* a3, float* a4, float* a5, float* a6, float* a7, float* a8)
+char __thiscall sub_408680(int self, int a2, float* a3, float* a4, float* a5, float* a6, float* a7, float* a8)
 {
     int v9; // edi
     int v10; // esi
@@ -10264,7 +10265,7 @@ char __thiscall sub_408680(int this, int a2, float* a3, float* a4, float* a5, fl
 }
 
 //----- (00408860) --------------------------------------------------------
-int __thiscall sub_408860(_DWORD* this, int a2)
+int __thiscall sub_408860(_DWORD* self, int a2)
 {
     int v2; // edx
     int result; // eax
@@ -10277,19 +10278,19 @@ int __thiscall sub_408860(_DWORD* this, int a2)
 }
 
 //----- (00408880) --------------------------------------------------------
-int __thiscall sub_408880(_DWORD* this)
+int __thiscall sub_408880(_DWORD* self)
 {
     return this[11];
 }
 
 //----- (00408890) --------------------------------------------------------
-int __thiscall sub_408890(_DWORD** this)
+int __thiscall sub_408890(_DWORD** self)
 {
     return sub_403F40(this[7]);
 }
 
 //----- (004088A0) --------------------------------------------------------
-BOOL __thiscall sub_4088A0(int this)
+BOOL __thiscall sub_4088A0(int self)
 {
     double v1; // st7
 
@@ -10298,7 +10299,7 @@ BOOL __thiscall sub_4088A0(int this)
 }
 
 //----- (004088E0) --------------------------------------------------------
-BOOL __thiscall sub_4088E0(int this)
+BOOL __thiscall sub_4088E0(int self)
 {
     double v1; // st7
 
@@ -10307,7 +10308,7 @@ BOOL __thiscall sub_4088E0(int this)
 }
 
 //----- (00408920) --------------------------------------------------------
-double __thiscall sub_408920(int this)
+double __thiscall sub_408920(int self)
 {
     double v1; // st7
 
@@ -10321,7 +10322,7 @@ double __thiscall sub_408920(int this)
 }
 
 //----- (00408960) --------------------------------------------------------
-int __thiscall sub_408960(_DWORD* this, float a2)
+int __thiscall sub_408960(_DWORD* self, float a2)
 {
     int v3; // edi
     int result; // eax
@@ -10356,7 +10357,7 @@ int __thiscall sub_408960(_DWORD* this, float a2)
 }
 
 //----- (004089D0) --------------------------------------------------------
-int __thiscall sub_4089D0(_DWORD* this, int a2, int a3)
+int __thiscall sub_4089D0(_DWORD* self, int a2, int a3)
 {
     int v4; // edi
     int result; // eax
@@ -10390,7 +10391,7 @@ int __thiscall sub_4089D0(_DWORD* this, int a2, int a3)
 }
 
 //----- (00408A30) --------------------------------------------------------
-int __thiscall sub_408A30(_DWORD* this, _DWORD* a2)
+int __thiscall sub_408A30(_DWORD* self, _DWORD* a2)
 {
     int result; // eax
 
@@ -10402,7 +10403,7 @@ int __thiscall sub_408A30(_DWORD* this, _DWORD* a2)
 }
 
 //----- (00408A50) --------------------------------------------------------
-_DWORD* __thiscall sub_408A50(_DWORD* this)
+_DWORD* __thiscall sub_408A50(_DWORD* self)
 {
     INT v2; // eax
     _DWORD* result; // eax
@@ -10452,7 +10453,7 @@ _DWORD* __thiscall sub_408A50(_DWORD* this)
 // 499114: using guessed type _UNKNOWN *off_499114;
 
 //----- (00408B70) --------------------------------------------------------
-void __thiscall sub_408B70(void* this)
+void __thiscall sub_408B70(void* self)
 {
     int i; // edi
     void* v3; // eax
@@ -10514,7 +10515,7 @@ void __thiscall sub_408B70(void* this)
 // 499114: using guessed type _UNKNOWN *off_499114;
 
 //----- (00408D20) --------------------------------------------------------
-char __thiscall sub_408D20(int this)
+char __thiscall sub_408D20(int self)
 {
     void* v2; // eax
     int v3; // eax
@@ -10587,7 +10588,7 @@ char __thiscall sub_408D20(int this)
 // 4A03E4: using guessed type char *off_4A03E4[128];
 
 //----- (00408EF0) --------------------------------------------------------
-int __thiscall sub_408EF0(int this, int a2)
+int __thiscall sub_408EF0(int self, int a2)
 {
     int v3; // ecx
     int result; // eax
@@ -10606,7 +10607,7 @@ int __thiscall sub_408EF0(int this, int a2)
 }
 
 //----- (00408F30) --------------------------------------------------------
-int __thiscall sub_408F30(_DWORD* this)
+int __thiscall sub_408F30(_DWORD* self)
 {
     return this[21];
 }
@@ -10626,14 +10627,14 @@ char __stdcall sub_408F60(int a1)
 // 520A00: using guessed type int dword_520A00;
 
 //----- (00408F80) --------------------------------------------------------
-double __thiscall sub_408F80(float* this, int a2)
+double __thiscall sub_408F80(float* self, int a2)
 {
     return (double)*(int*)(dword_520A00 + 4 * a2 + 276) * this[6] * (double)*(int*)&dword_4A1EC4 * 0.02;
 }
 // 520A00: using guessed type int dword_520A00;
 
 //----- (00408FB0) --------------------------------------------------------
-float* __thiscall sub_408FB0(float* this)
+float* __thiscall sub_408FB0(float* self)
 {
     DWORD Time; // eax
     int v3; // ecx
@@ -10712,7 +10713,7 @@ float* __thiscall sub_408FB0(float* this)
 // 408FE1: variable 'v6' is possibly undefined
 
 //----- (004090F0) --------------------------------------------------------
-int __thiscall sub_4090F0(int this)
+int __thiscall sub_4090F0(int self)
 {
     int v2; // edi
     float* v3; // ecx
@@ -11079,7 +11080,7 @@ int __cdecl sub_4096B0(int* a1, int* a2)
 }
 
 //----- (00409850) --------------------------------------------------------
-int __thiscall sub_409850(int this, int** a2)
+int __thiscall sub_409850(int self, int** a2)
 {
     int v3; // eax
     int v4; // ecx
@@ -11144,7 +11145,7 @@ LABEL_11:
 }
 
 //----- (00409960) --------------------------------------------------------
-_DWORD* __thiscall sub_409960(_DWORD* this, int a2)
+_DWORD* __thiscall sub_409960(_DWORD* self, int a2)
 {
     int v3; // eax
     int v4; // eax
@@ -11192,7 +11193,7 @@ _DWORD* __thiscall sub_409960(_DWORD* this, int a2)
 }
 
 //----- (00409A00) --------------------------------------------------------
-int __thiscall sub_409A00(int this, void* a2)
+int __thiscall sub_409A00(int self, void* a2)
 {
     int v3; // eax
     int v4; // ecx
@@ -11252,19 +11253,19 @@ LABEL_8:
 }
 
 //----- (00409AD0) --------------------------------------------------------
-_BYTE* __thiscall sub_409AD0(int* this, int a2, unsigned int a3)
+_BYTE* __thiscall sub_409AD0(int* self, int a2, unsigned int a3)
 {
     return sub_421980(this[33], a2, a3);
 }
 
 //----- (00409AF0) --------------------------------------------------------
-_DWORD* __thiscall sub_409AF0(_DWORD** this, char* String1, char a3)
+_DWORD* __thiscall sub_409AF0(_DWORD** self, char* String1, char a3)
 {
     return sub_422400(this[31], String1, a3);
 }
 
 //----- (00409B10) --------------------------------------------------------
-_DWORD* __thiscall sub_409B10(_DWORD* this)
+_DWORD* __thiscall sub_409B10(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -11288,7 +11289,7 @@ _DWORD* __thiscall sub_409B10(_DWORD* this)
 // 49914C: using guessed type _UNKNOWN *off_49914C;
 
 //----- (00409B70) --------------------------------------------------------
-int __thiscall sub_409B70(_DWORD* this)
+int __thiscall sub_409B70(_DWORD* self)
 {
     int v2; // eax
     int result; // eax
@@ -11474,7 +11475,7 @@ char __userpurge sub_409BE0@<al>(
 // 520970: using guessed type int dword_520970;
 
 //----- (00409EF0) --------------------------------------------------------
-int __thiscall sub_409EF0(_DWORD* this, int a2)
+int __thiscall sub_409EF0(_DWORD* self, int a2)
 {
     _DWORD v4[16]; // [esp+4h] [ebp-40h] BYREF
 
@@ -11561,7 +11562,7 @@ char sub_40A120(char a1, char* Format, ...)
 // 4F5B00: using guessed type char byte_4F5B00;
 
 //----- (0040A1D0) --------------------------------------------------------
-int __thiscall sub_40A1D0(int this, char* FileName)
+int __thiscall sub_40A1D0(int self, char* FileName)
 {
     FILE* v3; // eax
     FILE* v4; // esi
@@ -11899,7 +11900,7 @@ LABEL_26:
 // 40A62F: conditional instruction was optimized away because al.1==20
 
 //----- (0040A800) --------------------------------------------------------
-int __thiscall sub_40A800(int this)
+int __thiscall sub_40A800(int self)
 {
     int result; // eax
 
@@ -11912,7 +11913,7 @@ int __thiscall sub_40A800(int this)
 }
 
 //----- (0040A830) --------------------------------------------------------
-int __thiscall sub_40A830(int this)
+int __thiscall sub_40A830(int self)
 {
     int v1; // ebx
     int v3; // esi
@@ -11992,7 +11993,7 @@ int __thiscall sub_40A830(int this)
 }
 
 //----- (0040A980) --------------------------------------------------------
-int __thiscall sub_40A980(_DWORD* this)
+int __thiscall sub_40A980(_DWORD* self)
 {
     int result; // eax
 
@@ -12003,7 +12004,7 @@ int __thiscall sub_40A980(_DWORD* this)
 }
 
 //----- (0040A9B0) --------------------------------------------------------
-char __thiscall sub_40A9B0(int this, unsigned int a2)
+char __thiscall sub_40A9B0(int self, unsigned int a2)
 {
     int v3; // eax
     unsigned int v4; // edx
@@ -12020,13 +12021,13 @@ char __thiscall sub_40A9B0(int this, unsigned int a2)
 }
 
 //----- (0040AA00) --------------------------------------------------------
-int __thiscall sub_40AA00(_DWORD* this, int a2)
+int __thiscall sub_40AA00(_DWORD* self, int a2)
 {
     return *(_DWORD*)(this[1] + 24 * this[70]);
 }
 
 //----- (0040AA20) --------------------------------------------------------
-int __thiscall sub_40AA20(_DWORD* this, int a2)
+int __thiscall sub_40AA20(_DWORD* self, int a2)
 {
     int result; // eax
 
@@ -12036,7 +12037,7 @@ int __thiscall sub_40AA20(_DWORD* this, int a2)
 }
 
 //----- (0040AA40) --------------------------------------------------------
-int __thiscall sub_40AA40(int this, char* String2)
+int __thiscall sub_40AA40(int self, char* String2)
 {
     unsigned int v2; // ebx
     int i; // ebp
@@ -12070,7 +12071,7 @@ int __thiscall sub_40AA40(int this, char* String2)
 }
 
 //----- (0040AAF0) --------------------------------------------------------
-bool __thiscall sub_40AAF0(_DWORD* this, char* String2, char a3)
+bool __thiscall sub_40AAF0(_DWORD* self, char* String2, char a3)
 {
     int v4; // esi
     unsigned int v5; // edx
@@ -12106,7 +12107,7 @@ bool __thiscall sub_40AAF0(_DWORD* this, char* String2, char a3)
 }
 
 //----- (0040ABC0) --------------------------------------------------------
-bool __thiscall sub_40ABC0(_DWORD* this, char* String2, char a3)
+bool __thiscall sub_40ABC0(_DWORD* self, char* String2, char a3)
 {
     int v4; // esi
     int v5; // eax
@@ -12151,7 +12152,7 @@ bool __thiscall sub_40ABC0(_DWORD* this, char* String2, char a3)
 }
 
 //----- (0040ACC0) --------------------------------------------------------
-char __thiscall sub_40ACC0(_DWORD* this, char* String2, char* a3)
+char __thiscall sub_40ACC0(_DWORD* self, char* String2, char* a3)
 {
     unsigned int v4; // ebp
     int i; // ebx
@@ -12178,7 +12179,7 @@ char __thiscall sub_40ACC0(_DWORD* this, char* String2, char* a3)
 }
 
 //----- (0040AD80) --------------------------------------------------------
-bool __thiscall sub_40AD80(void* this, char* String2)
+bool __thiscall sub_40AD80(void* self, char* String2)
 {
     const char* v2; // eax
 
@@ -12187,7 +12188,7 @@ bool __thiscall sub_40AD80(void* this, char* String2)
 }
 
 //----- (0040ADB0) --------------------------------------------------------
-unsigned int __thiscall sub_40ADB0(_DWORD* this)
+unsigned int __thiscall sub_40ADB0(_DWORD* self)
 {
     unsigned int v1; // edi
     int i; // ebx
@@ -12213,7 +12214,7 @@ unsigned int __thiscall sub_40ADB0(_DWORD* this)
 }
 
 //----- (0040AE00) --------------------------------------------------------
-int __thiscall sub_40AE00(_DWORD* this, char* String2)
+int __thiscall sub_40AE00(_DWORD* self, char* String2)
 {
     int v2; // ebp
     unsigned int i; // edi
@@ -12237,7 +12238,7 @@ int __thiscall sub_40AE00(_DWORD* this, char* String2)
 }
 
 //----- (0040AE70) --------------------------------------------------------
-char __thiscall sub_40AE70(_DWORD* this, char* String2)
+char __thiscall sub_40AE70(_DWORD* self, char* String2)
 {
     unsigned int v2; // ebp
     int i; // ebx
@@ -12262,7 +12263,7 @@ char __thiscall sub_40AE70(_DWORD* this, char* String2)
 }
 
 //----- (0040AF00) --------------------------------------------------------
-char* __thiscall sub_40AF00(const char* this, char* ArgList, char** a3)
+char* __thiscall sub_40AF00(const char* self, char* ArgList, char** a3)
 {
     char* result; // eax
     char* v5; // esi
@@ -12283,7 +12284,7 @@ char* __thiscall sub_40AF00(const char* this, char* ArgList, char** a3)
 }
 
 //----- (0040AF60) --------------------------------------------------------
-float* __thiscall sub_40AF60(const char* this, char* ArgList, float* a3)
+float* __thiscall sub_40AF60(const char* self, char* ArgList, float* a3)
 {
     float* result; // eax
     const char* v5; // esi
@@ -12306,7 +12307,7 @@ float* __thiscall sub_40AF60(const char* this, char* ArgList, float* a3)
 }
 
 //----- (0040AFC0) --------------------------------------------------------
-int __thiscall sub_40AFC0(void* this, char* String2, _DWORD* a3)
+int __thiscall sub_40AFC0(void* self, char* String2, _DWORD* a3)
 {
     int result; // eax
 
@@ -12317,7 +12318,7 @@ int __thiscall sub_40AFC0(void* this, char* String2, _DWORD* a3)
 }
 
 //----- (0040AFE0) --------------------------------------------------------
-char* __thiscall sub_40AFE0(void* this, char* String2, char** a3)
+char* __thiscall sub_40AFE0(void* self, char* String2, char** a3)
 {
     char* result; // eax
     char* v4; // esi
@@ -12336,7 +12337,7 @@ char* __thiscall sub_40AFE0(void* this, char* String2, char** a3)
 }
 
 //----- (0040B030) --------------------------------------------------------
-char __thiscall sub_40B030(char* this, char* ArgList, float* a3)
+char __thiscall sub_40B030(char* self, char* ArgList, float* a3)
 {
     char* v3; // ebx
     int v4; // ebp
@@ -12400,7 +12401,7 @@ char __thiscall sub_40B030(char* this, char* ArgList, float* a3)
 }
 
 //----- (0040B130) --------------------------------------------------------
-char __thiscall sub_40B130(const char* this, char* ArgList, _BYTE* a3)
+char __thiscall sub_40B130(const char* self, char* ArgList, _BYTE* a3)
 {
     const char* v4; // eax
     const char* v5; // esi
@@ -12419,19 +12420,19 @@ char __thiscall sub_40B130(const char* this, char* ArgList, _BYTE* a3)
 }
 
 //----- (0040B1B0) --------------------------------------------------------
-void __thiscall sub_40B1B0(const char* this, char* ArgList, float* a3)
+void __thiscall sub_40B1B0(const char* self, char* ArgList, float* a3)
 {
     sub_40B1F0(this, ArgList, a3, a3 + 1);
 }
 
 //----- (0040B1D0) --------------------------------------------------------
-void __thiscall sub_40B1D0(const char* this, char* ArgList, float* a3, float* a4)
+void __thiscall sub_40B1D0(const char* self, char* ArgList, float* a3, float* a4)
 {
     sub_40B1F0(this, ArgList, a3, a4);
 }
 
 //----- (0040B1F0) --------------------------------------------------------
-void __thiscall sub_40B1F0(const char* this, char* ArgList, float* a3, float* a4)
+void __thiscall sub_40B1F0(const char* self, char* ArgList, float* a3, float* a4)
 {
     const char* v5; // esi
     int i; // edi
@@ -12488,7 +12489,7 @@ void __thiscall sub_40B1F0(const char* this, char* ArgList, float* a3, float* a4
 }
 
 //----- (0040B310) --------------------------------------------------------
-char __thiscall sub_40B310(const char* this, char* ArgList, _DWORD* a3, const char** a4)
+char __thiscall sub_40B310(const char* self, char* ArgList, _DWORD* a3, const char** a4)
 {
     int v5; // eax
     const char* v6; // esi
@@ -12550,7 +12551,7 @@ char __thiscall sub_40B310(const char* this, char* ArgList, _DWORD* a3, const ch
 // 40B3E2: conditional instruction was optimized away because al.1 is in (==20|==2C)
 
 //----- (0040B420) --------------------------------------------------------
-char __thiscall sub_40B420(const char* this, char* ArgList, float* a3, const char** a4)
+char __thiscall sub_40B420(const char* self, char* ArgList, float* a3, const char** a4)
 {
     int v5; // eax
     const char* v6; // esi
@@ -12612,7 +12613,7 @@ char __thiscall sub_40B420(const char* this, char* ArgList, float* a3, const cha
 // 40B4F2: conditional instruction was optimized away because al.1 is in (==20|==2C)
 
 //----- (0040B530) --------------------------------------------------------
-char __thiscall sub_40B530(const char* this, char* ArgList, _DWORD* a3, _DWORD* a4, const char** a5)
+char __thiscall sub_40B530(const char* self, char* ArgList, _DWORD* a3, _DWORD* a4, const char** a5)
 {
     const char* v6; // esi
     char result; // al
@@ -12704,7 +12705,7 @@ char __thiscall sub_40B530(const char* this, char* ArgList, _DWORD* a3, _DWORD* 
 // 40B6A0: conditional instruction was optimized away because al.1 is in (==20|==2C)
 
 //----- (0040B6E0) --------------------------------------------------------
-int __thiscall sub_40B6E0(int this, char* String2, char a3)
+int __thiscall sub_40B6E0(int self, char* String2, char a3)
 {
     int v4; // eax
     unsigned int v5; // edx
@@ -12753,7 +12754,7 @@ int __thiscall sub_40B6E0(int this, char* String2, char a3)
 }
 
 //----- (0040B800) --------------------------------------------------------
-int __thiscall sub_40B800(int* this)
+int __thiscall sub_40B800(int* self)
 {
     int v2; // ebx
     int i; // esi
@@ -12771,7 +12772,7 @@ int __thiscall sub_40B800(int* this)
 }
 
 //----- (0040B840) --------------------------------------------------------
-unsigned int __thiscall sub_40B840(_DWORD* this, int a2, unsigned int a3, int a4)
+unsigned int __thiscall sub_40B840(_DWORD* self, int a2, unsigned int a3, int a4)
 {
     int v4; // esi
     unsigned int v5; // edi
@@ -12966,7 +12967,7 @@ unsigned int __thiscall sub_40B840(_DWORD* this, int a2, unsigned int a3, int a4
 }
 
 //----- (0040BB60) --------------------------------------------------------
-_DWORD* __thiscall sub_40BB60(_DWORD* this, _DWORD* a2, int a3)
+_DWORD* __thiscall sub_40BB60(_DWORD* self, _DWORD* a2, int a3)
 {
     _DWORD* result; // eax
     int v4; // ebp
@@ -13070,7 +13071,7 @@ void __cdecl sub_40BBF0(int a1, int a2)
 }
 
 //----- (0040BCC0) --------------------------------------------------------
-int* __thiscall sub_40BCC0(int* this, int* a2)
+int* __thiscall sub_40BCC0(int* self, int* a2)
 {
     int* v2; // ebp
     _DWORD* v3; // edi
@@ -13243,7 +13244,7 @@ void __cdecl sub_40BF70()
 // 40BFD0: using guessed type int __thiscall sub_40BFD0(_DWORD);
 
 //----- (0040BF80) --------------------------------------------------------
-_DWORD* __thiscall sub_40BF80(_DWORD* this)
+_DWORD* __thiscall sub_40BF80(_DWORD* self)
 {
     this[1] = 0;
     *this = 0;
@@ -13258,7 +13259,7 @@ _DWORD* __thiscall sub_40BF80(_DWORD* this)
 }
 
 //----- (0040BFE0) --------------------------------------------------------
-_DWORD* __thiscall sub_40BFE0(int this, _DWORD* a2, int a3, int a4, char a5)
+_DWORD* __thiscall sub_40BFE0(int self, _DWORD* a2, int a3, int a4, char a5)
 {
     int v6; // eax
     _DWORD* v7; // esi
@@ -13329,7 +13330,7 @@ _DWORD* __thiscall sub_40BFE0(int this, _DWORD* a2, int a3, int a4, char a5)
 }
 
 //----- (0040C130) --------------------------------------------------------
-_DWORD* __thiscall sub_40C130(_DWORD** this, _DWORD* a2, int a3, char a4)
+_DWORD* __thiscall sub_40C130(_DWORD** self, _DWORD* a2, int a3, char a4)
 {
     _DWORD* v4; // esi
     int v5; // eax
@@ -13373,7 +13374,7 @@ _DWORD* __thiscall sub_40C130(_DWORD** this, _DWORD* a2, int a3, char a4)
 }
 
 //----- (0040C1F0) --------------------------------------------------------
-_DWORD* __thiscall sub_40C1F0(int this, _DWORD* a2, int a3, char a4)
+_DWORD* __thiscall sub_40C1F0(int self, _DWORD* a2, int a3, char a4)
 {
     _DWORD* v5; // esi
     int v6; // eax
@@ -13416,7 +13417,7 @@ _DWORD* __thiscall sub_40C1F0(int this, _DWORD* a2, int a3, char a4)
 }
 
 //----- (0040C2B0) --------------------------------------------------------
-_DWORD* __thiscall sub_40C2B0(int this, _DWORD* a2)
+_DWORD* __thiscall sub_40C2B0(int self, _DWORD* a2)
 {
     _DWORD* result; // eax
     int v4; // [esp+4h] [ebp-8h] BYREF
@@ -13435,7 +13436,7 @@ _DWORD* __thiscall sub_40C2B0(int this, _DWORD* a2)
 }
 
 //----- (0040C310) --------------------------------------------------------
-_DWORD* __thiscall sub_40C310(_DWORD* this, _DWORD* a2)
+_DWORD* __thiscall sub_40C310(_DWORD* self, _DWORD* a2)
 {
     int v3; // eax
     void* v4; // edi
@@ -13535,7 +13536,7 @@ LABEL_20:
 }
 
 //----- (0040C4C0) --------------------------------------------------------
-_DWORD* __thiscall sub_40C4C0(_DWORD* this, _DWORD* a2)
+_DWORD* __thiscall sub_40C4C0(_DWORD* self, _DWORD* a2)
 {
     int v3; // ebp
     int v4; // eax
@@ -13619,7 +13620,7 @@ _DWORD* __thiscall sub_40C4C0(_DWORD* this, _DWORD* a2)
 // 40C565: conditional instruction was optimized away because edi.4>=0
 
 //----- (0040C630) --------------------------------------------------------
-_DWORD* __thiscall sub_40C630(_DWORD* this, int a2, int a3)
+_DWORD* __thiscall sub_40C630(_DWORD* self, int a2, int a3)
 {
     _DWORD* result; // eax
 
@@ -13632,7 +13633,7 @@ _DWORD* __thiscall sub_40C630(_DWORD* this, int a2, int a3)
 }
 
 //----- (0040C660) --------------------------------------------------------
-_DWORD* __thiscall sub_40C660(_DWORD* this, int a2, int a3)
+_DWORD* __thiscall sub_40C660(_DWORD* self, int a2, int a3)
 {
     _DWORD* result; // eax
 
@@ -13645,7 +13646,7 @@ _DWORD* __thiscall sub_40C660(_DWORD* this, int a2, int a3)
 }
 
 //----- (0040C690) --------------------------------------------------------
-int __thiscall sub_40C690(_DWORD* this)
+int __thiscall sub_40C690(_DWORD* self)
 {
     int v2; // eax
     int v3; // eax
@@ -14618,7 +14619,7 @@ double __cdecl sub_40E420(float* a1, float* a2, float* a3)
 }
 
 //----- (0040E510) --------------------------------------------------------
-float* __thiscall sub_40E510(float* this, float* a2)
+float* __thiscall sub_40E510(float* self, float* a2)
 {
     float* result; // eax
 
@@ -14630,7 +14631,7 @@ float* __thiscall sub_40E510(float* this, float* a2)
 }
 
 //----- (0040E530) --------------------------------------------------------
-float* __thiscall sub_40E530(float* this, float* a2)
+float* __thiscall sub_40E530(float* self, float* a2)
 {
     float* result; // eax
 
@@ -14642,7 +14643,7 @@ float* __thiscall sub_40E530(float* this, float* a2)
 }
 
 //----- (0040E550) --------------------------------------------------------
-void __thiscall sub_40E550(float* this, float a2)
+void __thiscall sub_40E550(float* self, float a2)
 {
     *this = a2 * *this;
     this[1] = a2 * this[1];
@@ -14650,7 +14651,7 @@ void __thiscall sub_40E550(float* this, float a2)
 }
 
 //----- (0040E570) --------------------------------------------------------
-float* __thiscall sub_40E570(float* this, float* a2, float* a3)
+float* __thiscall sub_40E570(float* self, float* a2, float* a3)
 {
     float* result; // eax
     float v4; // [esp+0h] [ebp-Ch]
@@ -14668,13 +14669,13 @@ float* __thiscall sub_40E570(float* this, float* a2, float* a3)
 }
 
 //----- (0040E5D0) --------------------------------------------------------
-double __thiscall sub_40E5D0(float* this)
+double __thiscall sub_40E5D0(float* self)
 {
     return *this * *this + this[1] * this[1] + this[2] * this[2];
 }
 
 //----- (0040E5F0) --------------------------------------------------------
-void __thiscall sub_40E5F0(_DWORD* this)
+void __thiscall sub_40E5F0(_DWORD* self)
 {
     _DWORD* v2; // eax
 
@@ -14687,7 +14688,7 @@ void __thiscall sub_40E5F0(_DWORD* this)
 }
 
 //----- (0040E620) --------------------------------------------------------
-void __thiscall sub_40E620(LPVOID* this)
+void __thiscall sub_40E620(LPVOID* self)
 {
     sub_488CEE(this[1]);
     this[1] = 0;
@@ -14695,7 +14696,7 @@ void __thiscall sub_40E620(LPVOID* this)
 }
 
 //----- (0040E640) --------------------------------------------------------
-long double __thiscall sub_40E640(int this, float a2, int a3, int a4)
+long double __thiscall sub_40E640(int self, float a2, int a3, int a4)
 {
     int v4; // edx
     double v5; // st7
@@ -14713,7 +14714,7 @@ long double __thiscall sub_40E640(int this, float a2, int a3, int a4)
 }
 
 //----- (0040E6D0) --------------------------------------------------------
-long double __thiscall sub_40E6D0(int* this, float a2)
+long double __thiscall sub_40E6D0(int* self, float a2)
 {
     int v2; // esi
     int v4; // edx
@@ -14743,7 +14744,7 @@ long double __thiscall sub_40E6D0(int* this, float a2)
 }
 
 //----- (0040E780) --------------------------------------------------------
-char __thiscall sub_40E780(LPVOID* this, FILE* Stream)
+char __thiscall sub_40E780(LPvoid* self, FILE* Stream)
 {
     FILE* v2; // ebp
     int v4; // edi
@@ -14753,7 +14754,7 @@ char __thiscall sub_40E780(LPVOID* this, FILE* Stream)
     v4 = 0;
     Stream = 0;
     sub_4898CA(&Stream, 4u, 1u, v2);
-    if (Stream != *this)
+    if (Stream != *self)
     {
         sub_4885A6(this[1]);
         this[1] = operator new(8 * (_DWORD)Stream);
@@ -14765,12 +14766,12 @@ char __thiscall sub_40E780(LPVOID* this, FILE* Stream)
     {
         sub_4898CA((char*)this[1] + 8 * v4, 4u, 1u, v2);
         sub_4898CA((char*)this[1] + 8 * v4++ + 4, 4u, 1u, v2);
-    } while (v4 < (int)*this);
+    } while (v4 < (int)*self);
     return 1;
 }
 
 //----- (0040E850) --------------------------------------------------------
-_BYTE* __thiscall sub_40E850(_BYTE* this, float a2)
+_BYTE* __thiscall sub_40E850(_BYTE* self, float a2)
 {
     sub_46BF69(flt_4F5C48, a2);
     return sub_46B97C(this, this, flt_4F5C48);
@@ -14778,7 +14779,7 @@ _BYTE* __thiscall sub_40E850(_BYTE* this, float a2)
 // 4F5C48: using guessed type float flt_4F5C48[16];
 
 //----- (0040E880) --------------------------------------------------------
-_BYTE* __thiscall sub_40E880(_BYTE* this, int a2, int a3, int a4)
+_BYTE* __thiscall sub_40E880(_BYTE* self, int a2, int a3, int a4)
 {
     sub_46BE02((int)flt_4F5C48, a2, a3, a4);
     return sub_46B97C(this, this, flt_4F5C48);
@@ -14786,7 +14787,7 @@ _BYTE* __thiscall sub_40E880(_BYTE* this, int a2, int a3, int a4)
 // 4F5C48: using guessed type float flt_4F5C48[16];
 
 //----- (0040E8B0) --------------------------------------------------------
-_BYTE* __thiscall sub_40E8B0(_BYTE* this, int a2, int a3, int a4)
+_BYTE* __thiscall sub_40E8B0(_BYTE* self, int a2, int a3, int a4)
 {
     sub_46BDA2((int)flt_4F5C48, a2, a3, a4);
     return sub_46B97C(this, this, flt_4F5C48);
@@ -14980,13 +14981,13 @@ void sub_40EC30()
 }
 
 //----- (0040EC60) --------------------------------------------------------
-int __thiscall sub_40EC60(int this)
+int __thiscall sub_40EC60(int self)
 {
     void* v2; // eax
     int v3; // eax
     int v4; // ecx
 
-    sub_401270(this);
+    sub_401270(self);
     *(_DWORD*)(this + 392) = 0;
     *(_DWORD*)(this + 396) = 0;
     *(_DWORD*)(this + 400) = 0;
@@ -15012,15 +15013,15 @@ int __thiscall sub_40EC60(int this)
 // 4A4DB8: using guessed type int dword_4A4DB8;
 
 //----- (0040ED60) --------------------------------------------------------
-int __thiscall sub_40ED60(_DWORD* this)
+int __thiscall sub_40ED60(_DWORD* self)
 {
     *this = &off_499184;
-    return sub_4013F0(this);
+    return sub_4013F0(self);
 }
 // 499184: using guessed type _UNKNOWN *off_499184;
 
 //----- (0040ED70) --------------------------------------------------------
-int __thiscall sub_40ED70(_DWORD* this, int a2, int a3, int a4, int a5, int a6)
+int __thiscall sub_40ED70(_DWORD* self, int a2, int a3, int a4, int a5, int a6)
 {
     int result; // eax
 
@@ -15034,7 +15035,7 @@ int __thiscall sub_40ED70(_DWORD* this, int a2, int a3, int a4, int a5, int a6)
 }
 
 //----- (0040EDB0) --------------------------------------------------------
-char __thiscall sub_40EDB0(int this, int a2)
+char __thiscall sub_40EDB0(int self, int a2)
 {
     int v3; // ecx
     double v4; // st7
@@ -15264,7 +15265,7 @@ char __thiscall sub_40EDB0(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0040F460) --------------------------------------------------------
-char __thiscall sub_40F460(_BYTE* this, int a2, char a3)
+char __thiscall sub_40F460(_BYTE* self, int a2, char a3)
 {
     char result; // al
 
@@ -15286,7 +15287,7 @@ char __thiscall sub_40F460(_BYTE* this, int a2, char a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0040F4A0) --------------------------------------------------------
-_DWORD* __thiscall sub_40F4A0(_DWORD* this, int a2, int a3, int a4)
+_DWORD* __thiscall sub_40F4A0(_DWORD* self, int a2, int a3, int a4)
 {
     _DWORD* result; // eax
 
@@ -15298,7 +15299,7 @@ _DWORD* __thiscall sub_40F4A0(_DWORD* this, int a2, int a3, int a4)
 }
 
 //----- (0040F4C0) --------------------------------------------------------
-int* __thiscall sub_40F4C0(_DWORD* this, int a2, unsigned int a3, _WORD* a4)
+int* __thiscall sub_40F4C0(_DWORD* self, int a2, unsigned int a3, _WORD* a4)
 {
     int* result; // eax
 
@@ -15313,7 +15314,7 @@ int* __thiscall sub_40F4C0(_DWORD* this, int a2, unsigned int a3, _WORD* a4)
 }
 
 //----- (0040F510) --------------------------------------------------------
-char* __thiscall sub_40F510(char* this)
+char* __thiscall sub_40F510(char* self)
 {
     *((_DWORD*)this + 1) = 0;
     *((_DWORD*)this + 2) = 0;
@@ -15367,7 +15368,7 @@ char* __thiscall sub_40F510(char* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0040F620) --------------------------------------------------------
-void __thiscall sub_40F620(char* this)
+void __thiscall sub_40F620(char* self)
 {
     void(__stdcall * v2)(LPCRITICAL_SECTION); // ebp
     int v3; // eax
@@ -15381,7 +15382,7 @@ void __thiscall sub_40F620(char* this)
     _DWORD* v11; // edi
 
     *(_DWORD*)this = &off_4991B0;
-    sub_411C50((int)this);
+    sub_411C50((int)self);
     if (*((_DWORD*)this + 246))
         CloseHandle(*((HANDLE*)this + 246));
     v2 = DeleteCriticalSection;
@@ -15455,7 +15456,7 @@ void __thiscall sub_40F620(char* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0040F7B0) --------------------------------------------------------
-_DWORD* __thiscall sub_40F7B0(int this, _DWORD* a2)
+_DWORD* __thiscall sub_40F7B0(int self, _DWORD* a2)
 {
     int v3; // esi
     int v4; // edi
@@ -15475,7 +15476,7 @@ _DWORD* __thiscall sub_40F7B0(int this, _DWORD* a2)
     WCHAR WideCharStr[260]; // [esp+E4h] [ebp-208h] BYREF
 
     v13 = 0;
-    sub_411C50(this);
+    sub_411C50(self);
     EnterCriticalSection((LPCRITICAL_SECTION)(this + 960));
     sub_4229D0(aStartsearchfor);
     v3 = *(_DWORD*)(this + 956);
@@ -15606,7 +15607,7 @@ _DWORD* __thiscall sub_40F7B0(int this, _DWORD* a2)
         0);
     if (v11 < 0)
     {
-        sub_411C50(this);
+        sub_411C50(self);
         switch (v11)
         {
         case -2146073824:
@@ -15646,7 +15647,7 @@ _DWORD* __thiscall sub_40F7B0(int this, _DWORD* a2)
 // 4A4DCC: using guessed type int dword_4A4DCC;
 
 //----- (0040FC90) --------------------------------------------------------
-FILE* __thiscall sub_40FC90(struct _RTL_CRITICAL_SECTION* this)
+FILE* __thiscall sub_40FC90(struct _RTL_CRITICAL_SECTION* self)
 {
     PRTL_CRITICAL_SECTION_DEBUG DebugInfo; // eax
     struct _RTL_CRITICAL_SECTION* v3; // edi
@@ -15718,7 +15719,7 @@ int __thiscall sub_40FD50(struct _RTL_CRITICAL_SECTION* this, char** a2, int a3)
 }
 
 //----- (0040FDD0) --------------------------------------------------------
-_DWORD* __thiscall sub_40FDD0(int this, _DWORD* a2, char* String2)
+_DWORD* __thiscall sub_40FDD0(int self, _DWORD* a2, char* String2)
 {
     struct _RTL_CRITICAL_SECTION* v4; // ebp
     int v5; // esi
@@ -15790,7 +15791,7 @@ _DWORD* __thiscall sub_40FDD0(int this, _DWORD* a2, char* String2)
 // 40FE6D: conditional instruction was optimized away because esi.4<0
 
 //----- (0040FEE0) --------------------------------------------------------
-_DWORD* __thiscall sub_40FEE0(int this, _DWORD* a2)
+_DWORD* __thiscall sub_40FEE0(int self, _DWORD* a2)
 {
     _DWORD* v3; // ebx
     _DWORD* result; // eax
@@ -15806,7 +15807,7 @@ _DWORD* __thiscall sub_40FEE0(int this, _DWORD* a2)
     WCHAR WideCharStr[260]; // [esp+294h] [ebp-208h] BYREF
 
     v10[4] = 0;
-    sub_411C50(this);
+    sub_411C50(self);
     v10[0] = 1402159760;
     v10[1] = 299000461;
     v10[2] = 1610616750;
@@ -15946,7 +15947,7 @@ _DWORD* __thiscall sub_40FEE0(int this, _DWORD* a2)
 // 4A4DCC: using guessed type int dword_4A4DCC;
 
 //----- (004102F0) --------------------------------------------------------
-_DWORD* __thiscall sub_4102F0(int this, _DWORD* a2, const CHAR* lpMultiByteStr, int a4)
+_DWORD* __thiscall sub_4102F0(int self, _DWORD* a2, const CHAR* lpMultiByteStr, int a4)
 {
     _DWORD* v5; // ebx
     _DWORD* result; // eax
@@ -15970,7 +15971,7 @@ _DWORD* __thiscall sub_4102F0(int this, _DWORD* a2, const CHAR* lpMultiByteStr, 
     WCHAR WideCharStr[260]; // [esp+372h] [ebp-208h] BYREF
 
     v17 = 0;
-    sub_411C50(this);
+    sub_411C50(self);
     *(_DWORD*)(this + 984) = CreateEventA(0, 0, 0, 0);
     v18[0] = -335643744;
     v18[1] = 299000461;
@@ -16235,7 +16236,7 @@ int __stdcall sub_410A90(int a1, unsigned int a2, float a3)
 }
 
 //----- (00410AB0) --------------------------------------------------------
-int __thiscall sub_410AB0(int this, unsigned int a2, float a3)
+int __thiscall sub_410AB0(int self, unsigned int a2, float a3)
 {
     int v4; // eax
     void* v5; // ebx
@@ -16661,7 +16662,7 @@ void __stdcall sub_4113D0(int a1)
 }
 
 //----- (004113F0) --------------------------------------------------------
-_BYTE* __thiscall sub_4113F0(_DWORD* this, int a2, __int16 a3, __int16 a4, char a5)
+_BYTE* __thiscall sub_4113F0(_DWORD* self, int a2, __int16 a3, __int16 a4, char a5)
 {
     _BYTE* result; // eax
 
@@ -16676,7 +16677,7 @@ _BYTE* __thiscall sub_4113F0(_DWORD* this, int a2, __int16 a3, __int16 a4, char 
 }
 
 //----- (00411430) --------------------------------------------------------
-_DWORD* __thiscall sub_411430(_DWORD* this, int a2)
+_DWORD* __thiscall sub_411430(_DWORD* self, int a2)
 {
     _DWORD* v3; // edi
     _DWORD* result; // eax
@@ -16706,7 +16707,7 @@ _DWORD* __thiscall sub_411430(_DWORD* this, int a2)
 }
 
 //----- (00411480) --------------------------------------------------------
-bool __thiscall sub_411480(_DWORD* this, int** a2, int a3, _WORD* a4, int a5, int a6, int a7)
+bool __thiscall sub_411480(_DWORD* self, int** a2, int a3, _WORD* a4, int a5, int a6, int a7)
 {
     int v7; // ebx
     _WORD* v9; // eax
@@ -16913,13 +16914,13 @@ bool __thiscall sub_411480(_DWORD* this, int** a2, int a3, _WORD* a4, int a5, in
 // 520A08: using guessed type int dword_520A08;
 
 //----- (004117A0) --------------------------------------------------------
-bool __thiscall sub_4117A0(_DWORD* this, int** a2, _WORD* a3, int a4, int a5, int a6)
+bool __thiscall sub_4117A0(_DWORD* self, int** a2, _WORD* a3, int a4, int a5, int a6)
 {
     return sub_411480(this, a2, 0, a3, a4, a5, a6);
 }
 
 //----- (004117D0) --------------------------------------------------------
-bool __thiscall sub_4117D0(int this, int** a2, _WORD* a3, int a4, int a5, int a6)
+bool __thiscall sub_4117D0(int self, int** a2, _WORD* a3, int a4, int a5, int a6)
 {
     struct _RTL_CRITICAL_SECTION* v7; // edi
     bool v8; // bl
@@ -16932,7 +16933,7 @@ bool __thiscall sub_4117D0(int this, int** a2, _WORD* a3, int a4, int a5, int a6
 }
 
 //----- (00411820) --------------------------------------------------------
-char __thiscall sub_411820(int this, __int16 a2, int a3, unsigned int a4)
+char __thiscall sub_411820(int self, __int16 a2, int a3, unsigned int a4)
 {
     int* v5; // ebx
     int** v6; // eax
@@ -16969,7 +16970,7 @@ char __thiscall sub_411820(int this, __int16 a2, int a3, unsigned int a4)
 }
 
 //----- (004118C0) --------------------------------------------------------
-int __thiscall sub_4118C0(int this, _DWORD* a2, int a3)
+int __thiscall sub_4118C0(int self, _DWORD* a2, int a3)
 {
     struct _RTL_CRITICAL_SECTION* v4; // ebx
     int v5; // eax
@@ -16994,7 +16995,7 @@ int __thiscall sub_4118C0(int this, _DWORD* a2, int a3)
 }
 
 //----- (00411920) --------------------------------------------------------
-void __thiscall sub_411920(int this, int** a2, int a3)
+void __thiscall sub_411920(int self, int** a2, int a3)
 {
     struct _RTL_CRITICAL_SECTION* v4; // ebx
     int* v5; // esi
@@ -17059,7 +17060,7 @@ void __thiscall sub_411920(int this, int** a2, int a3)
 // 4119C7: conditional instruction was optimized away because ebx.4!=0
 
 //----- (004119F0) --------------------------------------------------------
-void __thiscall sub_4119F0(int this)
+void __thiscall sub_4119F0(int self)
 {
     int i; // edi
     void* v3; // eax
@@ -17104,7 +17105,7 @@ void __thiscall sub_4119F0(int this)
 }
 
 //----- (00411B60) --------------------------------------------------------
-_DWORD* __thiscall sub_411B60(int this, int a2)
+_DWORD* __thiscall sub_411B60(int self, int a2)
 {
     struct _RTL_CRITICAL_SECTION* v3; // edi
     _DWORD* v4; // esi
@@ -17131,7 +17132,7 @@ _DWORD* __thiscall sub_411B60(int this, int a2)
 // 411B9B: conditional instruction was optimized away because esi.4!=0
 
 //----- (00411BB0) --------------------------------------------------------
-void __thiscall sub_411BB0(int this, int a2)
+void __thiscall sub_411BB0(int self, int a2)
 {
     struct _RTL_CRITICAL_SECTION* v3; // ebx
     int* v4; // esi
@@ -17170,7 +17171,7 @@ LABEL_10:
 // 411BEF: conditional instruction was optimized away because esi.4!=0
 
 //----- (00411C50) --------------------------------------------------------
-FILE* __thiscall sub_411C50(int this)
+FILE* __thiscall sub_411C50(int self)
 {
     int v2; // eax
     int v3; // eax
@@ -17211,12 +17212,12 @@ FILE* __thiscall sub_411C50(int this)
         (*(void(__stdcall**)(_DWORD))(*(_DWORD*)v4 + 8))(*(_DWORD*)(this + 96));
         *(_DWORD*)(this + 96) = 0;
     }
-    sub_411D20((_DWORD*)this);
+    sub_411D20((_DWORD*)self);
     return sub_4229D0(aMpDisconnectFi);
 }
 
 //----- (00411D20) --------------------------------------------------------
-int __thiscall sub_411D20(_DWORD* this)
+int __thiscall sub_411D20(_DWORD* self)
 {
     struct _RTL_CRITICAL_SECTION* v2; // ebx
     int* v3; // eax
@@ -17287,7 +17288,7 @@ LABEL_12:
 }
 
 //----- (00411DE0) --------------------------------------------------------
-void __thiscall sub_411DE0(int this, char* a2)
+void __thiscall sub_411DE0(int self, char* a2)
 {
     struct _RTL_CRITICAL_SECTION* v3; // ebx
 
@@ -17339,7 +17340,7 @@ void __cdecl sub_411E70()
 // 4F5CB4: using guessed type char byte_4F5CB4;
 
 //----- (00411EE0) --------------------------------------------------------
-int __thiscall sub_411EE0(int this, _DWORD* a2, _DWORD* a3, _DWORD* a4)
+int __thiscall sub_411EE0(int self, _DWORD* a2, _DWORD* a3, _DWORD* a4)
 {
     signed int i; // esi
     _DWORD* v6; // ebx
@@ -17468,7 +17469,7 @@ int __stdcall sub_412140(const char* a1, const char* a2)
 // 4F5CB0: using guessed type int dword_4F5CB0;
 
 //----- (004122F0) --------------------------------------------------------
-char __thiscall sub_4122F0(int this, int a2)
+char __thiscall sub_4122F0(int self, int a2)
 {
     double v3; // st7
     int v4; // edi
@@ -17705,7 +17706,7 @@ LABEL_22:
 // 520970: using guessed type int dword_520970;
 
 //----- (00412620) --------------------------------------------------------
-void __thiscall sub_412620(_DWORD* this, int a2)
+void __thiscall sub_412620(_DWORD* self, int a2)
 {
     int v2; // ebx
     unsigned int v3; // edi
@@ -17941,7 +17942,7 @@ LABEL_46:
 // 4126A1: conditional instruction was optimized away because ecx.4>=1
 
 //----- (004129B0) --------------------------------------------------------
-void __thiscall sub_4129B0(_DWORD* this, int a2)
+void __thiscall sub_4129B0(_DWORD* self, int a2)
 {
     _DWORD* v3; // esi
     bool i; // bl
@@ -17962,7 +17963,7 @@ void __thiscall sub_4129B0(_DWORD* this, int a2)
 }
 
 //----- (00412A30) --------------------------------------------------------
-void __thiscall sub_412A30(char* this)
+void __thiscall sub_412A30(char* self)
 {
     struct _RTL_CRITICAL_SECTION* v2; // ebp
     int v3; // edi
@@ -18003,7 +18004,7 @@ void __thiscall sub_412A30(char* this)
 }
 
 //----- (00412AB0) --------------------------------------------------------
-_DWORD* __thiscall sub_412AB0(_DWORD* this)
+_DWORD* __thiscall sub_412AB0(_DWORD* self)
 {
     _DWORD* v2; // ebp
     _DWORD* v3; // edi
@@ -18082,7 +18083,7 @@ _DWORD* __thiscall sub_412AB0(_DWORD* this)
 // 4991D4: using guessed type void *(__thiscall *off_4991D4)(std::ios_base *__hidden this, unsigned int);
 
 //----- (00412CC0) --------------------------------------------------------
-int __thiscall sub_412CC0(int this, int a2)
+int __thiscall sub_412CC0(int self, int a2)
 {
     double v3; // st7
     unsigned __int8 v5; // c0
@@ -18118,7 +18119,7 @@ int __thiscall sub_412CC0(int this, int a2)
         sub_413180(this, v7, 0);
     }
     if (!*(_DWORD*)(this + 124))
-        *(_DWORD*)(this + 124) = sub_409960((_DWORD*)dword_520970, this);
+        *(_DWORD*)(this + 124) = sub_409960((_DWORD*)dword_520970, self);
     *(_DWORD*)(*(_DWORD*)(this + 124) + 28) = 0;
     *(_DWORD*)(*(_DWORD*)(this + 124) + 12) = 6;
     *(_DWORD*)(*(_DWORD*)(this + 124) + 36) = *(_DWORD*)(this + 108);
@@ -18224,7 +18225,7 @@ int __userpurge sub_412DB0@<eax>(int a1@<ecx>, int a2@<edi>, int a3)
 // 520A50: using guessed type int dword_520A50;
 
 //----- (00413090) --------------------------------------------------------
-void __thiscall sub_413090(int this, float a2, float a3, float a4, float a5)
+void __thiscall sub_413090(int self, float a2, float a3, float a4, float a5)
 {
     double v6; // st7
 
@@ -18238,7 +18239,7 @@ void __thiscall sub_413090(int this, float a2, float a3, float a4, float a5)
 }
 
 //----- (00413100) --------------------------------------------------------
-int __thiscall sub_413100(int this, int a2, int a3, int a4)
+int __thiscall sub_413100(int self, int a2, int a3, int a4)
 {
     int result; // eax
 
@@ -18251,7 +18252,7 @@ int __thiscall sub_413100(int this, int a2, int a3, int a4)
 }
 
 //----- (00413120) --------------------------------------------------------
-int __thiscall sub_413120(int this, int a2)
+int __thiscall sub_413120(int self, int a2)
 {
     int result; // eax
 
@@ -18262,7 +18263,7 @@ int __thiscall sub_413120(int this, int a2)
 }
 
 //----- (00413130) --------------------------------------------------------
-int __thiscall sub_413130(int this, int a2, int a3, int a4, int a5)
+int __thiscall sub_413130(int self, int a2, int a3, int a4, int a5)
 {
     int result; // eax
 
@@ -18276,7 +18277,7 @@ int __thiscall sub_413130(int this, int a2, int a3, int a4, int a5)
 }
 
 //----- (00413160) --------------------------------------------------------
-int __thiscall sub_413160(int this, int a2, int a3, int a4)
+int __thiscall sub_413160(int self, int a2, int a3, int a4)
 {
     int result; // eax
 
@@ -18289,7 +18290,7 @@ int __thiscall sub_413160(int this, int a2, int a3, int a4)
 }
 
 //----- (00413180) --------------------------------------------------------
-char __thiscall sub_413180(int this, int a2, char a3)
+char __thiscall sub_413180(int self, int a2, char a3)
 {
     char result; // al
 
@@ -18306,7 +18307,7 @@ char __thiscall sub_413180(int this, int a2, char a3)
 }
 
 //----- (004131B0) --------------------------------------------------------
-_DWORD* __thiscall sub_4131B0(_DWORD* this, _DWORD* a2)
+_DWORD* __thiscall sub_4131B0(_DWORD* self, _DWORD* a2)
 {
     _DWORD* result; // eax
 
@@ -18321,7 +18322,7 @@ _DWORD* __thiscall sub_4131B0(_DWORD* this, _DWORD* a2)
 // 422230: using guessed type int sub_422230(void);
 
 //----- (004131D0) --------------------------------------------------------
-float* __thiscall sub_4131D0(float* this, float* a2, float* a3)
+float* __thiscall sub_4131D0(float* self, float* a2, float* a3)
 {
     float* result; // eax
     long double v4; // st7
@@ -18342,7 +18343,7 @@ float* __thiscall sub_4131D0(float* this, float* a2, float* a3)
 }
 
 //----- (00413240) --------------------------------------------------------
-int __thiscall sub_413240(_DWORD* this, int a2, int a3, int a4, int a5)
+int __thiscall sub_413240(_DWORD* self, int a2, int a3, int a4, int a5)
 {
     int result; // eax
 
@@ -18356,19 +18357,19 @@ int __thiscall sub_413240(_DWORD* this, int a2, int a3, int a4, int a5)
 }
 
 //----- (00413270) --------------------------------------------------------
-void __thiscall sub_413270(float* this, int a2)
+void __thiscall sub_413270(float* self, int a2)
 {
     sub_40E6D0((int*)(*(_DWORD*)this + 12 * a2 + 376), this[4]);
 }
 
 //----- (00413290) --------------------------------------------------------
-void __thiscall sub_413290(int this, int a2)
+void __thiscall sub_413290(int self, int a2)
 {
     sub_40E6D0((int*)(*(_DWORD*)(this + 4) + 12 * a2 + 376), *(float*)(this + 8));
 }
 
 //----- (004132B0) --------------------------------------------------------
-_DWORD* __thiscall sub_4132B0(_DWORD* this)
+_DWORD* __thiscall sub_4132B0(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -18389,7 +18390,7 @@ _DWORD* __thiscall sub_4132B0(_DWORD* this)
 // 4991F4: using guessed type _UNKNOWN *off_4991F4;
 
 //----- (00413300) --------------------------------------------------------
-void __thiscall sub_413300(LPVOID* this)
+void __thiscall sub_413300(LPVOID* self)
 {
     void* v2; // ecx
     _DWORD* v3; // esi
@@ -18427,7 +18428,7 @@ void __thiscall sub_413300(LPVOID* this)
 // 4991F4: using guessed type _UNKNOWN *off_4991F4;
 
 //----- (004133C0) --------------------------------------------------------
-char __thiscall sub_4133C0(_DWORD* this)
+char __thiscall sub_4133C0(_DWORD* self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // ecx
@@ -18500,14 +18501,14 @@ char __thiscall sub_4133C0(_DWORD* this)
 }
 
 //----- (004134A0) --------------------------------------------------------
-int __thiscall sub_4134A0(_DWORD* this)
+int __thiscall sub_4134A0(_DWORD* self)
 {
     int v2; // edi
     int v3; // ebx
     void* v4; // edi
     int result; // eax
 
-    sub_4139B0(this);
+    sub_4139B0(self);
     v2 = 0;
     if ((int)this[8] > 0)
     {
@@ -18528,7 +18529,7 @@ int __thiscall sub_4134A0(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (004134F0) --------------------------------------------------------
-void __thiscall sub_4134F0(_DWORD* this)
+void __thiscall sub_4134F0(_DWORD* self)
 {
     int v2; // esi
     int* v3; // ecx
@@ -18552,7 +18553,7 @@ void __thiscall sub_4134F0(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00413550) --------------------------------------------------------
-void __thiscall sub_413550(int this)
+void __thiscall sub_413550(int self)
 {
     FILE* v2; // eax
     bool v3; // zf
@@ -18590,7 +18591,7 @@ void __thiscall sub_413550(int this)
             LABEL_17:
                 fclose(*(FILE**)(this + 20));
                 *(_DWORD*)(this + 20) = 0;
-                sub_4134F0((_DWORD*)this);
+                sub_4134F0((_DWORD*)self);
             }
             else
             {
@@ -18599,7 +18600,7 @@ void __thiscall sub_413550(int this)
                     sub_4898CA(&v11, 4u, 1u, *(FILE**)(this + 20));
                     if (v11 != -554860416)
                         break;
-                    v4 = (LPVOID*)sub_413780((_DWORD*)this);
+                    v4 = (LPVOID*)sub_413780((_DWORD*)self);
                     sub_4898CA(&ElementSize, 4u, 1u, *(FILE**)(this + 20));
                     sub_4898CA(v4, ElementSize, 1u, *(FILE**)(this + 20));
                     sub_4898CA(&ElementSize, 4u, 1u, *(FILE**)(this + 20));
@@ -18638,7 +18639,7 @@ void __thiscall sub_413550(int this)
 }
 
 //----- (00413780) --------------------------------------------------------
-_DWORD* __thiscall sub_413780(_DWORD* this)
+_DWORD* __thiscall sub_413780(_DWORD* self)
 {
     _DWORD* v2; // esi
     _DWORD* result; // eax
@@ -18670,7 +18671,7 @@ _DWORD* __thiscall sub_413780(_DWORD* this)
 }
 
 //----- (00413830) --------------------------------------------------------
-int __thiscall sub_413830(_DWORD* this, char* String1)
+int __thiscall sub_413830(_DWORD* self, char* String1)
 {
     int v2; // esi
 
@@ -18687,7 +18688,7 @@ int __thiscall sub_413830(_DWORD* this, char* String1)
 }
 
 //----- (00413870) --------------------------------------------------------
-_DWORD* __thiscall sub_413870(_DWORD* this, int a2)
+_DWORD* __thiscall sub_413870(_DWORD* self, int a2)
 {
     int v2; // edx
     int v3; // eax
@@ -18747,7 +18748,7 @@ char __stdcall sub_413990(_BYTE* a1)
 }
 
 //----- (004139B0) --------------------------------------------------------
-char __thiscall sub_4139B0(_DWORD* this)
+char __thiscall sub_4139B0(_DWORD* self)
 {
     int i; // esi
     _BYTE* v2; // edx
@@ -18769,7 +18770,7 @@ char __thiscall sub_4139B0(_DWORD* this)
 }
 
 //----- (004139F0) --------------------------------------------------------
-char __thiscall sub_4139F0(_DWORD* this, int a2)
+char __thiscall sub_4139F0(_DWORD* self, int a2)
 {
     _DWORD* v2; // ebx
     int v3; // esi
@@ -19544,7 +19545,7 @@ char __thiscall sub_4139F0(_DWORD* this, int a2)
 // 520A38: using guessed type int dword_520A38;
 
 //----- (00414C80) --------------------------------------------------------
-char __thiscall sub_414C80(_DWORD* this, int a2)
+char __thiscall sub_414C80(_DWORD* self, int a2)
 {
     int i; // edi
     int v4; // esi
@@ -19575,10 +19576,10 @@ char __thiscall sub_414C80(_DWORD* this, int a2)
 }
 
 //----- (00414CE0) --------------------------------------------------------
-int __thiscall sub_414CE0(void* this)
+int __thiscall sub_414CE0(void* self)
 {
     *(_DWORD*)this = &off_499224;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499224: using guessed type _UNKNOWN *off_499224;
 
@@ -19614,7 +19615,7 @@ int __fastcall sub_414CF0(int a1)
 // 499230: using guessed type _UNKNOWN *off_499230;
 
 //----- (00414D70) --------------------------------------------------------
-void __thiscall sub_414D70(LPVOID* this)
+void __thiscall sub_414D70(LPVOID* self)
 {
     int i; // ebp
     _DWORD* v3; // eax
@@ -19660,7 +19661,7 @@ void __thiscall sub_414D70(LPVOID* this)
 // 499230: using guessed type _UNKNOWN *off_499230;
 
 //----- (00414E60) --------------------------------------------------------
-char __thiscall sub_414E60(int this)
+char __thiscall sub_414E60(int self)
 {
     char* v2; // ebx
     int v3; // eax
@@ -19819,7 +19820,7 @@ LABEL_17:
 // 415158: conditional instruction was optimized away because edi.4!=0
 
 //----- (004151F0) --------------------------------------------------------
-void __thiscall sub_4151F0(int this)
+void __thiscall sub_4151F0(int self)
 {
     int i; // ebp
     int v3; // eax
@@ -19849,7 +19850,7 @@ void __thiscall sub_4151F0(int this)
 // 415760: using guessed type int __thiscall nullsub_1(_DWORD);
 
 //----- (00415270) --------------------------------------------------------
-_DWORD* __thiscall sub_415270(int this, int a2)
+_DWORD* __thiscall sub_415270(int self, int a2)
 {
     _DWORD* v3; // eax
     _DWORD* v4; // ebx
@@ -19886,7 +19887,7 @@ _DWORD* __thiscall sub_415270(int this, int a2)
 }
 
 //----- (00415330) --------------------------------------------------------
-void __thiscall sub_415330(int this, void* a2)
+void __thiscall sub_415330(int self, void* a2)
 {
     int v3; // eax
     int v4; // ecx
@@ -19924,7 +19925,7 @@ void __thiscall sub_415330(int this, void* a2)
 // 415760: using guessed type int __thiscall nullsub_1(_DWORD);
 
 //----- (004153B0) --------------------------------------------------------
-char __thiscall sub_4153B0(_DWORD* this, int a2)
+char __thiscall sub_4153B0(_DWORD* self, int a2)
 {
     int v2; // ebx
     unsigned int v3; // edi
@@ -19946,7 +19947,7 @@ char __thiscall sub_4153B0(_DWORD* this, int a2)
 // 415409: variable 'v6' is possibly undefined
 
 //----- (00415430) --------------------------------------------------------
-char __thiscall sub_415430(_DWORD* this, int a2)
+char __thiscall sub_415430(_DWORD* self, int a2)
 {
     int v3; // eax
     int i; // edi
@@ -20037,7 +20038,7 @@ char __thiscall sub_415430(_DWORD* this, int a2)
 }
 
 //----- (00415660) --------------------------------------------------------
-_DWORD* __thiscall sub_415660(_DWORD* this, int a2)
+_DWORD* __thiscall sub_415660(_DWORD* self, int a2)
 {
     _DWORD* result; // eax
     _DWORD* v3; // ecx
@@ -20080,7 +20081,7 @@ _DWORD* __thiscall sub_415660(_DWORD* this, int a2)
 }
 
 //----- (00415770) --------------------------------------------------------
-int __thiscall sub_415770(int this, float* a2, float* a3, int a4, int a5)
+int __thiscall sub_415770(int self, float* a2, float* a3, int a4, int a5)
 {
     double v5; // st7
     double v6; // st6
@@ -20144,14 +20145,14 @@ int __thiscall sub_415770(int this, float* a2, float* a3, int a4, int a5)
 }
 
 //----- (00415910) --------------------------------------------------------
-void __thiscall sub_415910(void* this)
+void __thiscall sub_415910(void* self)
 {
-    sub_415330(*(_DWORD*)(dword_520970 + 244), this);
+    sub_415330(*(_DWORD*)(dword_520970 + 244), self);
 }
 // 520970: using guessed type int dword_520970;
 
 //----- (00415930) --------------------------------------------------------
-void __thiscall sub_415930(int this, int a2, float a3)
+void __thiscall sub_415930(int self, int a2, float a3)
 {
     double v3; // st7
 
@@ -20173,7 +20174,7 @@ void __thiscall sub_415930(int this, int a2, float a3)
 }
 
 //----- (004159B0) --------------------------------------------------------
-void __thiscall sub_4159B0(int this, float a2, _DWORD* a3, _DWORD* a4, float* a5, int a6, float* a7)
+void __thiscall sub_4159B0(int self, float a2, _DWORD* a3, _DWORD* a4, float* a5, int a6, float* a7)
 {
     double v8; // st7
     double v9; // st7
@@ -20565,7 +20566,7 @@ void __thiscall sub_4159B0(int this, float a2, _DWORD* a3, _DWORD* a4, float* a5
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (00416260) --------------------------------------------------------
-float* __thiscall sub_416260(float* this, float* a2)
+float* __thiscall sub_416260(float* self, float* a2)
 {
     float* result; // eax
 
@@ -20577,7 +20578,7 @@ float* __thiscall sub_416260(float* this, float* a2)
 }
 
 //----- (00416290) --------------------------------------------------------
-float* __thiscall sub_416290(float* this, float a2)
+float* __thiscall sub_416290(float* self, float a2)
 {
     double v2; // st7
     float* result; // eax
@@ -20591,7 +20592,7 @@ float* __thiscall sub_416290(float* this, float a2)
 }
 
 //----- (004162C0) --------------------------------------------------------
-float* __thiscall sub_4162C0(float* this, float* a2, float* a3)
+float* __thiscall sub_4162C0(float* self, float* a2, float* a3)
 {
     double v3; // st7
     double v4; // st6
@@ -20607,7 +20608,7 @@ float* __thiscall sub_4162C0(float* this, float* a2, float* a3)
 }
 
 //----- (004162F0) --------------------------------------------------------
-float* __thiscall sub_4162F0(float* this, float* a2, float a3)
+float* __thiscall sub_4162F0(float* self, float* a2, float a3)
 {
     double v3; // st7
     double v4; // st6
@@ -20623,7 +20624,7 @@ float* __thiscall sub_4162F0(float* this, float* a2, float a3)
 }
 
 //----- (00416320) --------------------------------------------------------
-float* __thiscall sub_416320(float* this, float* a2, float a3)
+float* __thiscall sub_416320(float* self, float* a2, float a3)
 {
     double v3; // st7
     float* result; // eax
@@ -20643,7 +20644,7 @@ float* __thiscall sub_416320(float* this, float* a2, float a3)
 }
 
 //----- (00416350) --------------------------------------------------------
-char __thiscall sub_416350(int this, _DWORD* a2, char a3)
+char __thiscall sub_416350(int self, _DWORD* a2, char a3)
 {
     char result; // al
     _BYTE* v5; // eax
@@ -20665,7 +20666,7 @@ char __thiscall sub_416350(int this, _DWORD* a2, char a3)
         *(_DWORD*)(this + 20 * *(_DWORD*)(this + 4132) + 148) = 0;
         v7 = *(_DWORD*)(this + 4132) + 1;
         *(_DWORD*)(this + 4132) = v7;
-        if (a3 && *(_BYTE*)(this + 4148) && v7 >= 6 && !sub_415430(*(_DWORD**)(dword_520970 + 244), this))
+        if (a3 && *(_BYTE*)(this + 4148) && v7 >= 6 && !sub_415430(*(_DWORD**)(dword_520970 + 244), self))
         {
             v8 = *(_DWORD*)(this + 4132) - 1;
             *(_DWORD*)(this + 4132) = v8;
@@ -20677,9 +20678,9 @@ char __thiscall sub_416350(int this, _DWORD* a2, char a3)
         else
         {
             *(_BYTE*)(this + 12) = 1;
-            sub_4164D0((float*)this);
+            sub_4164D0((float*)self);
             if (*(_DWORD*)(this + 4132) == 6)
-                sub_416570((float*)this);
+                sub_416570((float*)self);
             return 1;
         }
     }
@@ -20688,7 +20689,7 @@ char __thiscall sub_416350(int this, _DWORD* a2, char a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (004164A0) --------------------------------------------------------
-void __thiscall sub_4164A0(int this, int a2)
+void __thiscall sub_4164A0(int self, int a2)
 {
     int v2; // edx
     int v3; // eax
@@ -20699,11 +20700,11 @@ void __thiscall sub_4164A0(int this, int a2)
     if (*(_DWORD*)(this + 4140) < v2 + a2)
         v3 = *(_DWORD*)(this + 4140);
     *(_DWORD*)(this + 4140) = v3;
-    sub_4164D0((float*)this);
+    sub_4164D0((float*)self);
 }
 
 //----- (004164D0) --------------------------------------------------------
-void __thiscall sub_4164D0(float* this)
+void __thiscall sub_4164D0(float* self)
 {
     int v2; // eax
     int v3; // eax
@@ -20742,7 +20743,7 @@ void __thiscall sub_4164D0(float* this)
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (00416570) --------------------------------------------------------
-int __thiscall sub_416570(float* this)
+int __thiscall sub_416570(float* self)
 {
     float* v1; // esi
     float v2; // edx
@@ -21107,7 +21108,7 @@ int __thiscall sub_416570(float* this)
 }
 
 //----- (00416EE0) --------------------------------------------------------
-int __thiscall sub_416EE0(int this, int a2)
+int __thiscall sub_416EE0(int self, int a2)
 {
     int result; // eax
     int v4; // edi
@@ -21124,13 +21125,13 @@ int __thiscall sub_416EE0(int this, int a2)
         sub_416F80((_DWORD*)this, 1);
         result = *(_DWORD*)(this + 4132);
         if (result >= 6)
-            return sub_416570((float*)this);
+            return sub_416570((float*)self);
     }
     return result;
 }
 
 //----- (00416F80) --------------------------------------------------------
-char __thiscall sub_416F80(_DWORD* this, char a2)
+char __thiscall sub_416F80(_DWORD* self, char a2)
 {
     int v4; // edi
     bool v5; // zf
@@ -21178,12 +21179,12 @@ char __thiscall sub_416F80(_DWORD* this, char a2)
                     ++*i;
                     if ((int)this[1033] <= 8)
                     {
-                        v10 = sub_417160(this);
+                        v10 = sub_417160(self);
                         v11 = 3 * this[1070];
                     }
                     else
                     {
-                        v10 = sub_417160(this);
+                        v10 = sub_417160(self);
                         v11 = this[1070];
                     }
                     if (v10 <= v11)
@@ -21216,7 +21217,7 @@ char __thiscall sub_416F80(_DWORD* this, char a2)
         {
             this[1033] = v7 + 1;
             LOBYTE(this[5 * v7 + 33]) = 0;
-            sub_417260((float*)this);
+            sub_417260((float*)self);
         }
         v7 = this[1033];
         if (v7 >= this[1069])
@@ -21228,31 +21229,31 @@ char __thiscall sub_416F80(_DWORD* this, char a2)
 // 417082: conditional instruction was optimized away because bl.1==0
 
 //----- (00417120) --------------------------------------------------------
-int __thiscall sub_417120(void* this, int a2)
+int __thiscall sub_417120(void* self, int a2)
 {
     return (int)this + 20 * a2 + 136;
 }
 
 //----- (00417140) --------------------------------------------------------
-int __thiscall sub_417140(_DWORD* this, int a2)
+int __thiscall sub_417140(_DWORD* self, int a2)
 {
     return sub_417120(this, this[1033] - a2 - 1);
 }
 
 //----- (00417160) --------------------------------------------------------
-int __thiscall sub_417160(_DWORD* this)
+int __thiscall sub_417160(_DWORD* self)
 {
     return this[5 * this[1033] + 32];
 }
 
 //----- (00417180) --------------------------------------------------------
-char* __thiscall sub_417180(char* this)
+char* __thiscall sub_417180(char* self)
 {
     return this + 120;
 }
 
 //----- (00417190) --------------------------------------------------------
-char __thiscall sub_417190(int this, int a2, _DWORD* a3, unsigned __int8 a4)
+char __thiscall sub_417190(int self, int a2, _DWORD* a3, unsigned __int8 a4)
 {
     signed int v5; // ecx
     int v6; // eax
@@ -21291,14 +21292,14 @@ char __thiscall sub_417190(int this, int a2, _DWORD* a3, unsigned __int8 a4)
     }
     if (v8 < 6 && *(int*)(this + 4132) >= 6 && !*(_DWORD*)(this + 4136))
         v7 = 1;
-    sub_417260((float*)this);
+    sub_417260((float*)self);
     if (*(int*)(this + 4132) >= 6)
-        sub_416570((float*)this);
+        sub_416570((float*)self);
     return v7;
 }
 
 //----- (00417260) --------------------------------------------------------
-void __thiscall sub_417260(float* this)
+void __thiscall sub_417260(float* self)
 {
     int v1; // edi
     int v2; // ebx
@@ -21533,7 +21534,7 @@ void __thiscall sub_417260(float* this)
 }
 
 //----- (004176E0) --------------------------------------------------------
-char __thiscall sub_4176E0(_DWORD* this, _DWORD* a2, _DWORD* a3, _BYTE* a4, int a5)
+char __thiscall sub_4176E0(_DWORD* self, _DWORD* a2, _DWORD* a3, _BYTE* a4, int a5)
 {
     int v5; // edi
     int v6; // esi
@@ -21566,7 +21567,7 @@ char __thiscall sub_4176E0(_DWORD* this, _DWORD* a2, _DWORD* a3, _BYTE* a4, int 
 }
 
 //----- (00417770) --------------------------------------------------------
-int __thiscall sub_417770(float* this)
+int __thiscall sub_417770(float* self)
 {
     float* v1; // esi
     double v2; // st7
@@ -22014,7 +22015,7 @@ int __thiscall sub_417770(float* this)
 }
 
 //----- (004183A0) --------------------------------------------------------
-char __thiscall sub_4183A0(int this, int a2, float a3)
+char __thiscall sub_4183A0(int self, int a2, float a3)
 {
     int v4; // eax
     int* v5; // ecx
@@ -22037,14 +22038,14 @@ char __thiscall sub_4183A0(int this, int a2, float a3)
     *(_BYTE*)(this + 4202) = 0;
     if (v8 >= 6)
     {
-        sub_417770((float*)this);
+        sub_417770((float*)self);
         LOBYTE(v8) = sub_418420(this, a2, a3, 0, 0, 0);
     }
     return v8;
 }
 
 //----- (00418420) --------------------------------------------------------
-char __thiscall sub_418420(int this, int a2, float a3, float* a4, float* a5, _DWORD* a6)
+char __thiscall sub_418420(int self, int a2, float a3, float* a4, float* a5, _DWORD* a6)
 {
     int v7; // ecx
     char v9; // al
@@ -22225,7 +22226,7 @@ char __thiscall sub_418420(int this, int a2, float a3, float* a4, float* a5, _DW
     }
 LABEL_16:
     if (*(_BYTE*)(this + 4200))
-        sub_417770((float*)this);
+        sub_417770((float*)self);
     if (this == a2)
     {
         v18 = a4;
@@ -22467,7 +22468,7 @@ LABEL_16:
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (00418E20) --------------------------------------------------------
-float* __thiscall sub_418E20(float* this, float* a2)
+float* __thiscall sub_418E20(float* self, float* a2)
 {
     float* result; // eax
 
@@ -22479,7 +22480,7 @@ float* __thiscall sub_418E20(float* this, float* a2)
 }
 
 //----- (00418E50) --------------------------------------------------------
-bool __thiscall sub_418E50(int this, char a2, float a3)
+bool __thiscall sub_418E50(int self, char a2, float a3)
 {
     int v4; // eax
     float* v5; // edx
@@ -22554,7 +22555,7 @@ bool __thiscall sub_418E50(int this, char a2, float a3)
     {
         v7 = 0;
         v25 = 0;
-        if (sub_417160((_DWORD*)this) <= *(_DWORD*)(this + 4280) / 2)
+        if (sub_417160((_DWORD*)self) <= *(_DWORD*)(this + 4280) / 2)
             goto LABEL_6;
     }
     v25 = 1;
@@ -22751,7 +22752,7 @@ float* __cdecl sub_419690(float* a1, float* a2, float* a3)
 }
 
 //----- (004196F0) --------------------------------------------------------
-bool __thiscall sub_4196F0(int this, float* a2, float a3, float a4, char a5, char a6)
+bool __thiscall sub_4196F0(int self, float* a2, float a3, float a4, char a5, char a6)
 {
     double v8; // st7
     long double v9; // st7
@@ -22811,7 +22812,7 @@ bool __thiscall sub_4196F0(int this, float* a2, float a3, float a4, char a5, cha
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (004198A0) --------------------------------------------------------
-bool __thiscall sub_4198A0(_DWORD* this, float* a2, float a3, float a4, char a5, char a6)
+bool __thiscall sub_4198A0(_DWORD* self, float* a2, float a3, float a4, char a5, char a6)
 {
     double v7; // st7
     double v8; // st6
@@ -22828,7 +22829,7 @@ bool __thiscall sub_4198A0(_DWORD* this, float* a2, float a3, float a4, char a5,
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (00419910) --------------------------------------------------------
-bool __thiscall sub_419910(int this, float a2, float a3, float a4, char a5, char a6)
+bool __thiscall sub_419910(int self, float a2, float a3, float a4, char a5, char a6)
 {
     char v7; // bl
     int v8; // ecx
@@ -22879,7 +22880,7 @@ bool __thiscall sub_419910(int this, float a2, float a3, float a4, char a5, char
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (00419A30) --------------------------------------------------------
-char __thiscall sub_419A30(_DWORD* this, float a2, float a3, float a4)
+char __thiscall sub_419A30(_DWORD* self, float a2, float a3, float a4)
 {
     int v5; // ebx
     int v6; // edi
@@ -22920,7 +22921,7 @@ char __thiscall sub_419A30(_DWORD* this, float a2, float a3, float a4)
 }
 
 //----- (00419BC0) --------------------------------------------------------
-char __thiscall sub_419BC0(_DWORD* this, int a2)
+char __thiscall sub_419BC0(_DWORD* self, int a2)
 {
     int v3; // ebp
     int v4; // esi
@@ -22942,7 +22943,7 @@ char __thiscall sub_419BC0(_DWORD* this, int a2)
 }
 
 //----- (00419C40) --------------------------------------------------------
-bool __thiscall sub_419C40(int this, float* a2)
+bool __thiscall sub_419C40(int self, float* a2)
 {
     double v2; // st7
 
@@ -22954,7 +22955,7 @@ bool __thiscall sub_419C40(int this, float* a2)
 }
 
 //----- (00419CC0) --------------------------------------------------------
-int __thiscall sub_419CC0(_DWORD* this)
+int __thiscall sub_419CC0(_DWORD* self)
 {
     int result; // eax
 
@@ -22965,7 +22966,7 @@ int __thiscall sub_419CC0(_DWORD* this)
 }
 
 //----- (00419CF0) --------------------------------------------------------
-char* __thiscall sub_419CF0(char* this, char* a2, unsigned int a3, _DWORD* a4)
+char* __thiscall sub_419CF0(char* self, char* a2, unsigned int a3, _DWORD* a4)
 {
     char* v4; // ebx
     char* result; // eax
@@ -23201,7 +23202,7 @@ char* __thiscall sub_419CF0(char* this, char* a2, unsigned int a3, _DWORD* a4)
 }
 
 //----- (0041A000) --------------------------------------------------------
-int __thiscall sub_41A000(_DWORD* this, char* a2, unsigned int a3, const void* a4)
+int __thiscall sub_41A000(_DWORD* self, char* a2, unsigned int a3, const void* a4)
 {
     _DWORD* v4; // esi
     char* v6; // ebx
@@ -23409,7 +23410,7 @@ int __thiscall sub_41A000(_DWORD* this, char* a2, unsigned int a3, const void* a
 }
 
 //----- (0041A300) --------------------------------------------------------
-char* __thiscall sub_41A300(_DWORD* this, char* a2, char* a3)
+char* __thiscall sub_41A300(_DWORD* self, char* a2, char* a3)
 {
     char* v3; // edx
     char* v4; // ebx
@@ -24483,14 +24484,14 @@ int __cdecl sub_41B970(int a1, int a2, int a3, _DWORD* a4)
 // 520A14: using guessed type int dword_520A14;
 
 //----- (0041BB80) --------------------------------------------------------
-_DWORD* __thiscall sub_41BB80(_DWORD* this)
+_DWORD* __thiscall sub_41BB80(_DWORD* self)
 {
-    sub_41BB90(this);
+    sub_41BB90(self);
     return this;
 }
 
 //----- (0041BB90) --------------------------------------------------------
-int __thiscall sub_41BB90(_DWORD* this)
+int __thiscall sub_41BB90(_DWORD* self)
 {
     int v1; // esi
     _DWORD* v2; // edi
@@ -24519,12 +24520,12 @@ int __thiscall sub_41BB90(_DWORD* this)
 }
 
 //----- (0041BC00) --------------------------------------------------------
-int __thiscall sub_41BC00(_DWORD* this, int a2, int a3, int a4, int a5, int a6, int a7, int a8)
+int __thiscall sub_41BC00(_DWORD* self, int a2, int a3, int a4, int a5, int a6, int a7, int a8)
 {
     int result; // eax
     int v10; // [esp+64h] [ebp-4h]
 
-    if (a2 != -1 && a2 != *this)
+    if (a2 != -1 && a2 != *self)
     {
         *this = a2;
         if (a2)
@@ -24644,7 +24645,7 @@ LABEL_15:
 // 5209BC: using guessed type char byte_5209BC;
 
 //----- (0041BEF0) --------------------------------------------------------
-int __thiscall sub_41BEF0(_DWORD* this, int a2, int a3, int a4, int a5)
+int __thiscall sub_41BEF0(_DWORD* self, int a2, int a3, int a4, int a5)
 {
     int v6; // eax
     int v7; // ecx
@@ -24721,7 +24722,7 @@ LABEL_12:
 // 41BF94: variable 'v9' is possibly undefined
 
 //----- (0041C050) --------------------------------------------------------
-int __thiscall sub_41C050(_DWORD* this)
+int __thiscall sub_41C050(_DWORD* self)
 {
     int result; // eax
 
@@ -24732,15 +24733,15 @@ int __thiscall sub_41C050(_DWORD* this)
 }
 
 //----- (0041C060) --------------------------------------------------------
-int __thiscall sub_41C060(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_41C060(_DWORD* self, int a2, int a3, int a4)
 {
-    sub_41C050(this);
+    sub_41C050(self);
     *this = a2;
     return sub_41C090(this, a3, a4);
 }
 
 //----- (0041C090) --------------------------------------------------------
-int __thiscall sub_41C090(_DWORD* this, int a2, int a3)
+int __thiscall sub_41C090(_DWORD* self, int a2, int a3)
 {
     int result; // eax
 
@@ -24751,7 +24752,7 @@ int __thiscall sub_41C090(_DWORD* this, int a2, int a3)
 }
 
 //----- (0041C0B0) --------------------------------------------------------
-void __thiscall sub_41C0B0(int this, float a2)
+void __thiscall sub_41C0B0(int self, float a2)
 {
     int v2; // eax
 
@@ -24759,11 +24760,11 @@ void __thiscall sub_41C0B0(int this, float a2)
     v2 = *(_DWORD*)(this + 32) + 1;
     *(_DWORD*)(this + 32) = v2;
     if (v2 == 4)
-        sub_41C0E0((float*)this);
+        sub_41C0E0((float*)self);
 }
 
 //----- (0041C0E0) --------------------------------------------------------
-void __thiscall sub_41C0E0(float* this)
+void __thiscall sub_41C0E0(float* self)
 {
     double v1; // st7
 
@@ -24775,7 +24776,7 @@ void __thiscall sub_41C0E0(float* this)
 }
 
 //----- (0041C150) --------------------------------------------------------
-void __thiscall sub_41C150(int this)
+void __thiscall sub_41C150(int self)
 {
     int v2; // ecx
     int v3; // eax
@@ -24796,13 +24797,13 @@ void __thiscall sub_41C150(int this)
             ++v5;
         } while (v2 < *(_DWORD*)(this + 32));
     }
-    sub_41C190(this);
+    sub_41C190(self);
     if (*(int*)(this + 32) >= 4)
-        sub_41C0E0((float*)this);
+        sub_41C0E0((float*)self);
 }
 
 //----- (0041C190) --------------------------------------------------------
-void __thiscall sub_41C190(int this)
+void __thiscall sub_41C190(int self)
 {
     float v2; // [esp+4h] [ebp-Ch]
     float v3; // [esp+8h] [ebp-8h]
@@ -24825,7 +24826,7 @@ void __thiscall sub_41C190(int this)
 }
 
 //----- (0041C200) --------------------------------------------------------
-double __thiscall sub_41C200(float* this, float a2)
+double __thiscall sub_41C200(float* self, float a2)
 {
     double v3; // st7
     double v4; // st7
@@ -24837,11 +24838,11 @@ double __thiscall sub_41C200(float* this, float a2)
     else
         v4 = a2 / v3;
     this[3] = v4 + this[3];
-    sub_41C190((int)this);
+    sub_41C190((int)self);
     while (this[3] > 1.0)
     {
         this[3] = this[3] - 1.0;
-        sub_41C150((int)this);
+        sub_41C150((int)self);
     }
     v5 = this[3];
     return (v5 * v5 * v5 * this[4] + v5 * v5 * this[5] + v5 * this[6] + this[7]) * 0.16666667;
@@ -24860,18 +24861,18 @@ double __stdcall sub_41C2A0(float a1)
 }
 
 //----- (0041C2F0) --------------------------------------------------------
-double __thiscall sub_41C2F0(float* this, float a2)
+double __thiscall sub_41C2F0(float* self, float a2)
 {
     double result; // st7
 
     result = sub_41C2A0(a2);
-    if (result < *this)
+    if (result < *self)
         return result + 6.2831855;
     return result;
 }
 
 //----- (0041C310) --------------------------------------------------------
-BOOL __thiscall sub_41C310(int this, float a2, float a3)
+BOOL __thiscall sub_41C310(int self, float a2, float a3)
 {
     double v4; // st7
     double v5; // st7
@@ -24892,7 +24893,7 @@ BOOL __thiscall sub_41C310(int this, float a2, float a3)
 }
 
 //----- (0041C380) --------------------------------------------------------
-BOOL __thiscall sub_41C380(float* this, float a2)
+BOOL __thiscall sub_41C380(float* self, float a2)
 {
     double v3; // st7
 
@@ -24901,7 +24902,7 @@ BOOL __thiscall sub_41C380(float* this, float a2)
 }
 
 //----- (0041C3C0) --------------------------------------------------------
-void __thiscall sub_41C3C0(int this, float a2, float a3, int a4)
+void __thiscall sub_41C3C0(int self, float a2, float a3, int a4)
 {
     double v5; // st7
     long double v6; // st7
@@ -24957,7 +24958,7 @@ void __thiscall sub_41C3C0(int this, float a2, float a3, int a4)
 }
 
 //----- (0041C4E0) --------------------------------------------------------
-void __thiscall sub_41C4E0(float* this)
+void __thiscall sub_41C4E0(float* self)
 {
     float v2; // ecx
     float v3; // [esp+8h] [ebp-8h]
@@ -25032,7 +25033,7 @@ LPDIRECTSOUND sub_41C680()
 }
 
 //----- (0041C6A0) --------------------------------------------------------
-_DWORD* __thiscall sub_41C6A0(_DWORD* this)
+_DWORD* __thiscall sub_41C6A0(_DWORD* self)
 {
     memset(this + 76, 0, 0x1Cu);
     this[75] = 0;
@@ -25055,38 +25056,38 @@ _DWORD* __thiscall sub_41C6A0(_DWORD* this)
 }
 
 //----- (0041C700) --------------------------------------------------------
-FILE* __thiscall sub_41C700(int this)
+FILE* __thiscall sub_41C700(int self)
 {
     const char* v2; // edi
 
     v2 = (const char*)(this + 40);
     sub_4229D0("SOUND: Destroying '%s'", (const char*)(this + 40));
-    sub_41C940(this);
+    sub_41C940(self);
     sub_4885A6(*(LPVOID*)(this + 36));
     *(_DWORD*)(this + 36) = 0;
     return sub_4229D0("SOUND: Done destroying '%s'", v2);
 }
 
 //----- (0041C740) --------------------------------------------------------
-char __thiscall sub_41C740(int this)
+char __thiscall sub_41C740(int self)
 {
     sub_41CFD0(this, *(float*)(this + 12));
     return sub_41D010((_DWORD*)this, *(float*)(this + 24));
 }
 
 //----- (0041C760) --------------------------------------------------------
-unsigned int __thiscall sub_41C760(int this, const char* a2)
+unsigned int __thiscall sub_41C760(int self, const char* a2)
 {
     unsigned int result; // eax
 
-    sub_41C940(this);
+    sub_41C940(self);
     result = strlen(a2) + 1;
     qmemcpy((void*)(this + 40), a2, result);
     return result;
 }
 
 //----- (0041C7A0) --------------------------------------------------------
-char __thiscall sub_41C7A0(int this, char a2)
+char __thiscall sub_41C7A0(int self, char a2)
 {
     char result; // al
     bool v4; // bl
@@ -25095,30 +25096,30 @@ char __thiscall sub_41C7A0(int this, char a2)
     if (a2 != *(_BYTE*)(this + 2))
     {
         v4 = *(_DWORD*)(this + 32) != 0;
-        result = sub_41C940(this);
+        result = sub_41C940(self);
         *(_BYTE*)(this + 2) = a2;
         if (v4)
         {
             result = *(_BYTE*)(this + 3);
             if (!result)
-                return sub_41CA40(this);
+                return sub_41CA40(self);
         }
     }
     return result;
 }
 
 //----- (0041C7E0) --------------------------------------------------------
-char __thiscall sub_41C7E0(_BYTE* this, char a2)
+char __thiscall sub_41C7E0(_BYTE* self, char a2)
 {
     this[3] = a2;
     if (!a2)
-        return sub_41CA40((int)this);
-    sub_41C940((int)this);
-    return sub_41C810((int)this);
+        return sub_41CA40((int)self);
+    sub_41C940((int)self);
+    return sub_41C810((int)self);
 }
 
 //----- (0041C810) --------------------------------------------------------
-char __thiscall sub_41C810(int this)
+char __thiscall sub_41C810(int self)
 {
     int v2; // ecx
     _DWORD* v3; // edi
@@ -25165,7 +25166,7 @@ char __thiscall sub_41C810(int this)
 // 5200DC: using guessed type int dword_5200DC;
 
 //----- (0041C940) --------------------------------------------------------
-char __thiscall sub_41C940(int this)
+char __thiscall sub_41C940(int self)
 {
     int v2; // eax
     int v3; // eax
@@ -25194,7 +25195,7 @@ char __thiscall sub_41C940(int this)
 // 5200DC: using guessed type int dword_5200DC;
 
 //----- (0041C9A0) --------------------------------------------------------
-char __thiscall sub_41C9A0(char* this, char* a2)
+char __thiscall sub_41C9A0(char* self, char* a2)
 {
     if (ppDS->lpVtbl->DuplicateSoundBuffer(
         ppDS,
@@ -25219,7 +25220,7 @@ char __thiscall sub_41C9A0(char* this, char* a2)
 }
 
 //----- (0041CA40) --------------------------------------------------------
-char __thiscall sub_41CA40(int this)
+char __thiscall sub_41CA40(int self)
 {
     __int64 v2; // rcx
     char v4; // al
@@ -25240,10 +25241,10 @@ char __thiscall sub_41CA40(int this)
     __int64 v19; // [esp+58h] [ebp-2Ch]
     _DWORD v20[9]; // [esp+60h] [ebp-24h] BYREF
 
-    sub_41C940(this);
+    sub_41C940(self);
     HIDWORD(v2) = 0;
     if (*(_BYTE*)(this + 2))
-        return sub_41D1A0((char*)this);
+        return sub_41D1A0((char*)self);
     if (!ppDS)
     {
         sub_4229D0("SOUND: can't load '%s', because dsound isn't created yet", (const char*)(this + 40));
@@ -25301,7 +25302,7 @@ char __thiscall sub_41CA40(int this)
             return 0;
         }
         (*(void(__stdcall**)(_DWORD, int))(*(_DWORD*)*v7 + 32))(*v7, this + 344);
-        sub_41C740(this);
+        sub_41C740(self);
     }
     if ((*(int(__stdcall**)(_DWORD, _DWORD, _DWORD, int*, unsigned int*, _DWORD, _DWORD, int))(*(_DWORD*)*v7 + 44))(
         *v7,
@@ -25373,7 +25374,7 @@ char __thiscall sub_41CA40(int this)
 // 5200DC: using guessed type int dword_5200DC;
 
 //----- (0041CD90) --------------------------------------------------------
-char __thiscall sub_41CD90(int this)
+char __thiscall sub_41CD90(int self)
 {
     int v2; // eax
     int* v3; // edi
@@ -25382,7 +25383,7 @@ char __thiscall sub_41CD90(int this)
 
     LOBYTE(v2) = *(_BYTE*)(this + 3);
     if ((_BYTE)v2)
-        LOBYTE(v2) = sub_41CA40(this);
+        LOBYTE(v2) = sub_41CA40(self);
     v3 = *(int**)(this + 32);
     *(_BYTE*)(this + 1) = 1;
     if (v3)
@@ -25408,17 +25409,17 @@ char __thiscall sub_41CD90(int this)
                         0,
                         0,
                         1);
-                    LOBYTE(v2) = sub_41C740(this);
+                    LOBYTE(v2) = sub_41C740(self);
                 }
                 else
                 {
-                    if (sub_41CA40(this))
+                    if (sub_41CA40(self))
                         (*(void(__stdcall**)(_DWORD, _DWORD, _DWORD, bool))(**(_DWORD**)(this + 32) + 48))(
                             *(_DWORD*)(this + 32),
                             0,
                             0,
                             *(_BYTE*)this != 0);
-                    LOBYTE(v2) = sub_41C740(this);
+                    LOBYTE(v2) = sub_41C740(self);
                 }
             }
         }
@@ -25472,18 +25473,18 @@ char __usercall sub_41CE60@<al>(int a1@<ebx>, unsigned int a2)
 // 41CE60: could not find valid save-restore pair for ebx
 
 //----- (0041CF00) --------------------------------------------------------
-char __thiscall sub_41CF00(int this)
+char __thiscall sub_41CF00(int self)
 {
     int v2; // eax
 
     if (*(_BYTE*)(this + 3))
     {
-        LOBYTE(v2) = sub_41C940(this);
+        LOBYTE(v2) = sub_41C940(self);
         *(_BYTE*)(this + 1) = 0;
     }
     else if (*(_BYTE*)(this + 2))
     {
-        LOBYTE(v2) = sub_41D1A0((char*)this);
+        LOBYTE(v2) = sub_41D1A0((char*)self);
         *(_BYTE*)(this + 1) = 0;
     }
     else
@@ -25500,7 +25501,7 @@ char __thiscall sub_41CF00(int this)
 }
 
 //----- (0041CF50) --------------------------------------------------------
-int __thiscall sub_41CF50(int this)
+int __thiscall sub_41CF50(int self)
 {
     int result; // eax
 
@@ -25514,7 +25515,7 @@ int __thiscall sub_41CF50(int this)
 }
 
 //----- (0041CF80) --------------------------------------------------------
-int __thiscall sub_41CF80(int this, float a2)
+int __thiscall sub_41CF80(int self, float a2)
 {
     unsigned int v3; // ecx
     __int64 v4; // rax
@@ -25528,7 +25529,7 @@ int __thiscall sub_41CF80(int this, float a2)
 }
 
 //----- (0041CFD0) --------------------------------------------------------
-int __thiscall sub_41CFD0(int this, float a2)
+int __thiscall sub_41CFD0(int self, float a2)
 {
     int result; // eax
     int v3; // esi
@@ -25544,7 +25545,7 @@ int __thiscall sub_41CFD0(int this, float a2)
 }
 
 //----- (0041D010) --------------------------------------------------------
-char __thiscall sub_41D010(_DWORD* this, float a2)
+char __thiscall sub_41D010(_DWORD* self, float a2)
 {
     int v2; // esi
     double v4; // st7
@@ -25632,7 +25633,7 @@ char __userpurge sub_41D0C0@<al>(int a1@<ecx>, int a2@<ebp>, float a3)
 }
 
 //----- (0041D1A0) --------------------------------------------------------
-char __thiscall sub_41D1A0(char* this)
+char __thiscall sub_41D1A0(char* self)
 {
     char result; // al
     int v3; // eax
@@ -25742,7 +25743,7 @@ char __thiscall sub_41D1A0(char* this)
                         sf_close();
                         *((_DWORD*)this + 75) = 0;
                         ++dword_5200DC;
-                        if (*this)
+                        if (*self)
                         {
                             v16 = sf_open_read(this + 40, this + 304);
                             *((_DWORD*)this + 75) = v16;
@@ -25941,7 +25942,7 @@ char __usercall sub_41D4F0@<al>(int a1@<ecx>, int a2@<ebp>)
 // 5200DC: using guessed type int dword_5200DC;
 
 //----- (0041D700) --------------------------------------------------------
-void __thiscall sub_41D700(_DWORD* this)
+void __thiscall sub_41D700(_DWORD* self)
 {
     int v2; // eax
     int v3; // ecx
@@ -25964,7 +25965,7 @@ void __thiscall sub_41D700(_DWORD* this)
             {
                 v6 = (_DWORD*)*v4;
                 v7 = (_DWORD*)*v4;
-                while ((_DWORD*)*v7 != this)
+                while ((_DWORD*)*v7 != self)
                 {
                     ++v5;
                     ++v7;
@@ -25981,23 +25982,23 @@ void __thiscall sub_41D700(_DWORD* this)
             }
         }
     LABEL_11:
-        if (this)
+        if (self)
         {
-            sub_403880((int)this);
-            sub_4885A6(this);
+            sub_403880((int)self);
+            sub_4885A6(self);
         }
     }
 }
 // 5200E8: using guessed type int dword_5200E8;
 
 //----- (0041D790) --------------------------------------------------------
-void __thiscall sub_41D790(_DWORD* this)
+void __thiscall sub_41D790(_DWORD* self)
 {
     ++this[69];
 }
 
 //----- (0041D7A0) --------------------------------------------------------
-void __thiscall sub_41D7A0(_DWORD* this)
+void __thiscall sub_41D7A0(_DWORD* self)
 {
     int v2; // edx
     int v3; // ecx
@@ -26024,7 +26025,7 @@ void __thiscall sub_41D7A0(_DWORD* this)
             {
                 v8 = (_DWORD*)*v6;
                 v9 = (_DWORD*)*v6;
-                while ((_DWORD*)*v9 != this)
+                while ((_DWORD*)*v9 != self)
                 {
                     ++v7;
                     ++v9;
@@ -26041,17 +26042,17 @@ void __thiscall sub_41D7A0(_DWORD* this)
             }
         }
     LABEL_11:
-        if (this)
+        if (self)
         {
-            sub_403880((int)this);
-            sub_4885A6(this);
+            sub_403880((int)self);
+            sub_4885A6(self);
         }
     }
 }
 // 5200E8: using guessed type int dword_5200E8;
 
 //----- (0041D840) --------------------------------------------------------
-char __thiscall sub_41D840(int this)
+char __thiscall sub_41D840(int self)
 {
     char result; // al
 
@@ -26065,7 +26066,7 @@ char __thiscall sub_41D840(int this)
 }
 
 //----- (0041D860) --------------------------------------------------------
-char __thiscall sub_41D860(int this)
+char __thiscall sub_41D860(int self)
 {
     char result; // al
     int v3; // ecx
@@ -26082,13 +26083,13 @@ char __thiscall sub_41D860(int this)
         }
         result = *(_BYTE*)(this + 52);
         if (result)
-            return sub_41D9A0(this);
+            return sub_41D9A0(self);
     }
     return result;
 }
 
 //----- (0041D8A0) --------------------------------------------------------
-char __thiscall sub_41D8A0(_BYTE* this, char a2)
+char __thiscall sub_41D8A0(_BYTE* self, char a2)
 {
     char result; // al
 
@@ -26098,7 +26099,7 @@ char __thiscall sub_41D8A0(_BYTE* this, char a2)
 }
 
 //----- (0041D8B0) --------------------------------------------------------
-int __thiscall sub_41D8B0(_DWORD* this, int a2, int a3, int a4, int a5, int a6, int a7)
+int __thiscall sub_41D8B0(_DWORD* self, int a2, int a3, int a4, int a5, int a6, int a7)
 {
     int result; // eax
 
@@ -26113,7 +26114,7 @@ int __thiscall sub_41D8B0(_DWORD* this, int a2, int a3, int a4, int a5, int a6, 
 }
 
 //----- (0041D8E0) --------------------------------------------------------
-int __thiscall sub_41D8E0(int this, char a2, int a3)
+int __thiscall sub_41D8E0(int self, char a2, int a3)
 {
     int result; // eax
 
@@ -26124,7 +26125,7 @@ int __thiscall sub_41D8E0(int this, char a2, int a3)
 }
 
 //----- (0041D900) --------------------------------------------------------
-int __thiscall sub_41D900(_DWORD* this, int a2, int a3, int a4, int a5, int a6, int a7, int a8)
+int __thiscall sub_41D900(_DWORD* self, int a2, int a3, int a4, int a5, int a6, int a7, int a8)
 {
     int result; // eax
 
@@ -26140,7 +26141,7 @@ int __thiscall sub_41D900(_DWORD* this, int a2, int a3, int a4, int a5, int a6, 
 }
 
 //----- (0041D940) --------------------------------------------------------
-int __thiscall sub_41D940(_DWORD* this, int a2, int a3)
+int __thiscall sub_41D940(_DWORD* self, int a2, int a3)
 {
     int result; // eax
 
@@ -26151,7 +26152,7 @@ int __thiscall sub_41D940(_DWORD* this, int a2, int a3)
 }
 
 //----- (0041D960) --------------------------------------------------------
-int __thiscall sub_41D960(_DWORD* this, _DWORD* a2, _DWORD* a3)
+int __thiscall sub_41D960(_DWORD* self, _DWORD* a2, _DWORD* a3)
 {
     _DWORD* v3; // eax
     _DWORD* v4; // ecx
@@ -26170,7 +26171,7 @@ int __thiscall sub_41D960(_DWORD* this, _DWORD* a2, _DWORD* a3)
 }
 
 //----- (0041D9A0) --------------------------------------------------------
-int __thiscall sub_41D9A0(int this)
+int __thiscall sub_41D9A0(int self)
 {
     int v2; // ecx
     int result; // eax
@@ -26186,7 +26187,7 @@ int __thiscall sub_41D9A0(int this)
 }
 
 //----- (0041D9C0) --------------------------------------------------------
-_DWORD* __thiscall sub_41D9C0(_DWORD* this)
+_DWORD* __thiscall sub_41D9C0(_DWORD* self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // ecx
@@ -26260,7 +26261,7 @@ _DWORD* __thiscall sub_41D9C0(_DWORD* this)
 // 5200E8: using guessed type int dword_5200E8;
 
 //----- (0041DB10) --------------------------------------------------------
-void __thiscall sub_41DB10(_DWORD* this)
+void __thiscall sub_41DB10(_DWORD* self)
 {
     _DWORD* v1; // ebx
     int i; // esi
@@ -26446,7 +26447,7 @@ void __thiscall sub_41DB10(_DWORD* this)
 // 5200E8: using guessed type int dword_5200E8;
 
 //----- (0041DE10) --------------------------------------------------------
-char* __thiscall sub_41DE10(_DWORD* this, char* String2, int a3, char a4, char a5, char a6, char a7)
+char* __thiscall sub_41DE10(_DWORD* self, char* String2, int a3, char a4, char a5, char a6, char a7)
 {
     int v8; // esi
     char* v9; // ebp
@@ -26662,7 +26663,7 @@ LABEL_6:
 }
 
 //----- (0041E250) --------------------------------------------------------
-int __thiscall sub_41E250(_DWORD* this, char* String2)
+int __thiscall sub_41E250(_DWORD* self, char* String2)
 {
     int v4; // esi
     int v5; // edi
@@ -26693,7 +26694,7 @@ int __thiscall sub_41E250(_DWORD* this, char* String2)
 }
 
 //----- (0041E2D0) --------------------------------------------------------
-int __thiscall sub_41E2D0(_DWORD* this, _DWORD* a2, char a3, char a4)
+int __thiscall sub_41E2D0(_DWORD* self, _DWORD* a2, char a3, char a4)
 {
     int v5; // eax
     int i; // esi
@@ -26727,7 +26728,7 @@ int __thiscall sub_41E2D0(_DWORD* this, _DWORD* a2, char a3, char a4)
     sub_41D790(a2);
     *(_BYTE*)(i + 52) = a3;
     *(_BYTE*)(i + 24) = a4;
-    v9 = sub_409960((_DWORD*)dword_520970, (int)this);
+    v9 = sub_409960((_DWORD*)dword_520970, (int)self);
     *(_DWORD*)(i + 4) = v9;
     v9[10] = i;
     *(_DWORD*)(i + 64) = 1065353216;
@@ -26761,7 +26762,7 @@ char __stdcall sub_41E3D0(int a1)
 }
 
 //----- (0041E410) --------------------------------------------------------
-char __thiscall sub_41E410(_DWORD* this, int a2)
+char __thiscall sub_41E410(_DWORD* self, int a2)
 {
     int v2; // ebp
     _DWORD* v3; // eax
@@ -27132,7 +27133,7 @@ unsigned int __cdecl sub_41E920(int* a1, int* a2)
 // 41E9AD: conditional instruction was optimized away because eax.4==0
 
 //----- (0041EA30) --------------------------------------------------------
-void __thiscall sub_41EA30(float* this, int a2, int a3)
+void __thiscall sub_41EA30(float* self, int a2, int a3)
 {
     _DWORD* v5; // ebx
     double v6; // st7
@@ -27373,7 +27374,7 @@ LABEL_39:
 // 4A34BC: using guessed type char byte_4A34BC;
 
 //----- (0041EFE0) --------------------------------------------------------
-int __thiscall sub_41EFE0(float* this, int a2)
+int __thiscall sub_41EFE0(float* self, int a2)
 {
     int v2; // eax
     _DWORD v4[16]; // [esp+0h] [ebp-40h] BYREF
@@ -27413,7 +27414,7 @@ int __thiscall sub_41EFE0(float* this, int a2)
 }
 
 //----- (0041F0F0) --------------------------------------------------------
-int __thiscall sub_41F0F0(_DWORD* this)
+int __thiscall sub_41F0F0(_DWORD* self)
 {
     int i; // esi
     int v3; // ecx
@@ -27430,7 +27431,7 @@ int __thiscall sub_41F0F0(_DWORD* this)
 }
 
 //----- (0041F120) --------------------------------------------------------
-void __thiscall sub_41F120(int this)
+void __thiscall sub_41F120(int self)
 {
     int i; // ebp
     void* v3; // edi
@@ -27457,7 +27458,7 @@ void __thiscall sub_41F120(int this)
 }
 
 //----- (0041F1A0) --------------------------------------------------------
-void __thiscall sub_41F1A0(int this, char a2)
+void __thiscall sub_41F1A0(int self, char a2)
 {
     int i; // ebp
     void* v4; // edi
@@ -27478,14 +27479,14 @@ void __thiscall sub_41F1A0(int this, char a2)
     *(_DWORD*)(this + 4) = 0;
     if (a2)
     {
-        sub_488CEE(*(LPVOID*)this);
+        sub_488CEE(*(LPVOID*)self);
         *(_DWORD*)(this + 8) = 0;
         *(_DWORD*)this = 0;
     }
 }
 
 //----- (0041F220) --------------------------------------------------------
-void __thiscall sub_41F220(int this, char a2)
+void __thiscall sub_41F220(int self, char a2)
 {
     int i; // ebp
     void* v4; // edi
@@ -27506,14 +27507,14 @@ void __thiscall sub_41F220(int this, char a2)
     *(_DWORD*)(this + 4) = 0;
     if (a2)
     {
-        sub_488CEE(*(LPVOID*)this);
+        sub_488CEE(*(LPVOID*)self);
         *(_DWORD*)(this + 8) = 0;
         *(_DWORD*)this = 0;
     }
 }
 
 //----- (0041F2A0) --------------------------------------------------------
-int __thiscall sub_41F2A0(void** this)
+int __thiscall sub_41F2A0(void** self)
 {
     void* v2; // eax
     void* v3; // ecx
@@ -27670,7 +27671,7 @@ int __cdecl sub_41F3D0(float a1, float a2, float a3, float a4, float a5, float a
 // 520A50: using guessed type int dword_520A50;
 
 //----- (0041F5B0) --------------------------------------------------------
-int __thiscall sub_41F5B0(int this, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9)
+int __thiscall sub_41F5B0(int self, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9)
 {
     _DWORD* v10; // eax
     int v11; // edx
@@ -27693,7 +27694,7 @@ int __thiscall sub_41F5B0(int this, int a2, int a3, int a4, int a5, int a6, int 
     *(_DWORD*)(this + 48) = a5;
     *(_DWORD*)this = &off_4992F4;
     *(_DWORD*)(this + 56) = 0;
-    v10 = sub_409960((_DWORD*)dword_520970, this);
+    v10 = sub_409960((_DWORD*)dword_520970, self);
     v11 = *(_DWORD*)(this + 32);
     *(_DWORD*)(this + 52) = v10;
     v10[3] = v11 != 255 ? 4 : 2;
@@ -27712,7 +27713,7 @@ int __thiscall sub_41F5B0(int this, int a2, int a3, int a4, int a5, int a6, int 
 // 520970: using guessed type int dword_520970;
 
 //----- (0041F6C0) --------------------------------------------------------
-int __thiscall sub_41F6C0(int this, float a2)
+int __thiscall sub_41F6C0(int self, float a2)
 {
     double v3; // st7
     double v4; // st6
@@ -27758,7 +27759,7 @@ int __thiscall sub_41F6C0(int this, float a2)
 }
 
 //----- (0041F790) --------------------------------------------------------
-int __thiscall sub_41F790(int this, int a2)
+int __thiscall sub_41F790(int self, int a2)
 {
     _DWORD v4[16]; // [esp+4h] [ebp-40h] BYREF
 
@@ -27782,7 +27783,7 @@ int __thiscall sub_41F790(int this, int a2)
 }
 
 //----- (0041F860) --------------------------------------------------------
-int __thiscall sub_41F860(void** this)
+int __thiscall sub_41F860(void** self)
 {
     int result; // eax
 
@@ -28751,7 +28752,7 @@ bool __cdecl sub_420B50(
 // 520970: using guessed type int dword_520970;
 
 //----- (004210B0) --------------------------------------------------------
-float* __thiscall sub_4210B0(float* this, float* a2)
+float* __thiscall sub_4210B0(float* self, float* a2)
 {
     double v2; // st7
     float* result; // eax
@@ -28767,7 +28768,7 @@ float* __thiscall sub_4210B0(float* this, float* a2)
 }
 
 //----- (004210D0) --------------------------------------------------------
-float* __thiscall sub_4210D0(float* this, float* a2, float* a3)
+float* __thiscall sub_4210D0(float* self, float* a2, float* a3)
 {
     double v3; // st7
     double v4; // st6
@@ -28783,13 +28784,13 @@ float* __thiscall sub_4210D0(float* this, float* a2, float* a3)
 }
 
 //----- (00421100) --------------------------------------------------------
-float* __thiscall sub_421100(float* this, float* a2)
+float* __thiscall sub_421100(float* self, float* a2)
 {
     return sub_46C5C5(this, this, a2);
 }
 
 //----- (00421110) --------------------------------------------------------
-char __thiscall sub_421110(int this, const char* a2)
+char __thiscall sub_421110(int self, const char* a2)
 {
     signed int v3; // kr04_4
 
@@ -28816,7 +28817,7 @@ char sub_421190(int a1, char* Format, ...)
 }
 
 //----- (004211E0) --------------------------------------------------------
-char __thiscall sub_4211E0(int this, char a2)
+char __thiscall sub_4211E0(int self, char a2)
 {
     unsigned int v3; // kr04_4
     char* v5; // [esp+Ch] [ebp-4h]
@@ -28835,7 +28836,7 @@ char __thiscall sub_4211E0(int this, char a2)
 }
 
 //----- (00421280) --------------------------------------------------------
-char __thiscall sub_421280(int this)
+char __thiscall sub_421280(int self)
 {
     const char* v2; // esi
     unsigned int v3; // kr04_4
@@ -28848,32 +28849,32 @@ char __thiscall sub_421280(int this)
 }
 
 //----- (004212C0) --------------------------------------------------------
-_DWORD* __thiscall sub_4212C0(int this, int a2)
+_DWORD* __thiscall sub_4212C0(int self, int a2)
 {
     *(_DWORD*)(this + 52) = (a2 << 24) | *(_DWORD*)(this + 52) & 0xFFFFFF;
     *(_DWORD*)(this + 56) = (a2 << 24) | *(_DWORD*)(this + 56) & 0xFFFFFF;
     *(_BYTE*)(this + 34) = a2 == 0;
-    return sub_421540((void**)this);
+    return sub_421540((void**)self);
 }
 
 //----- (00421300) --------------------------------------------------------
-_DWORD* __thiscall sub_421300(int this, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4, int a5)
+_DWORD* __thiscall sub_421300(int self, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4, int a5)
 {
     *(_DWORD*)(this + 52) = a4 | ((a3 | (((a5 << 8) | a2) << 8)) << 8);
     *(_BYTE*)(this + 34) = a5 == 0;
-    return sub_421540((void**)this);
+    return sub_421540((void**)self);
 }
 
 //----- (00421350) --------------------------------------------------------
-_DWORD* __thiscall sub_421350(int this, int a2)
+_DWORD* __thiscall sub_421350(int self, int a2)
 {
     *(_DWORD*)(this + 52) = a2;
     *(_BYTE*)(this + 34) = (a2 & 0xFF000000) == 0;
-    return sub_421540((void**)this);
+    return sub_421540((void**)self);
 }
 
 //----- (00421370) --------------------------------------------------------
-int __thiscall sub_421370(_DWORD* this, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4, int a5)
+int __thiscall sub_421370(_DWORD* self, unsigned __int8 a2, unsigned __int8 a3, unsigned __int8 a4, int a5)
 {
     int result; // eax
 
@@ -28883,7 +28884,7 @@ int __thiscall sub_421370(_DWORD* this, unsigned __int8 a2, unsigned __int8 a3, 
 }
 
 //----- (004213B0) --------------------------------------------------------
-void __thiscall sub_4213B0(int this)
+void __thiscall sub_4213B0(int self)
 {
     int v2; // eax
     _DWORD* v3; // esi
@@ -28900,7 +28901,7 @@ void __thiscall sub_4213B0(int this)
     {
         v5 = (_DWORD*)*v3;
         v6 = (_DWORD*)*v3;
-        while (*v6 != this)
+        while (*v6 != self)
         {
             ++v2;
             ++v6;
@@ -28924,7 +28925,7 @@ LABEL_8:
 // 520970: using guessed type int dword_520970;
 
 //----- (00421430) --------------------------------------------------------
-int __thiscall sub_421430(_DWORD* this, int a2, int a3, int a4, int a5)
+int __thiscall sub_421430(_DWORD* self, int a2, int a3, int a4, int a5)
 {
     int result; // eax
 
@@ -28938,7 +28939,7 @@ int __thiscall sub_421430(_DWORD* this, int a2, int a3, int a4, int a5)
 }
 
 //----- (00421460) --------------------------------------------------------
-void __thiscall sub_421460(int this, int a2)
+void __thiscall sub_421460(int self, int a2)
 {
     double v2; // st7
     double v3; // st7
@@ -28977,7 +28978,7 @@ void __thiscall sub_421460(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00421540) --------------------------------------------------------
-_DWORD* __thiscall sub_421540(void** this)
+_DWORD* __thiscall sub_421540(void** self)
 {
     _DWORD* v2; // eax
     _DWORD* result; // eax
@@ -29009,7 +29010,7 @@ _DWORD* __thiscall sub_421540(void** this)
 // 520970: using guessed type int dword_520970;
 
 //----- (004215C0) --------------------------------------------------------
-_DWORD* __thiscall sub_4215C0(_DWORD* this)
+_DWORD* __thiscall sub_4215C0(_DWORD* self)
 {
     _DWORD* v2; // ebp
     int v3; // ecx
@@ -29061,7 +29062,7 @@ _DWORD* __thiscall sub_4215C0(_DWORD* this)
 // 499314: using guessed type _UNKNOWN *off_499314;
 
 //----- (004216E0) --------------------------------------------------------
-void __thiscall sub_4216E0(void* this)
+void __thiscall sub_4216E0(void* self)
 {
     int v2; // eax
     int v3; // eax
@@ -29121,7 +29122,7 @@ void __thiscall sub_4216E0(void* this)
 // 499314: using guessed type _UNKNOWN *off_499314;
 
 //----- (00421810) --------------------------------------------------------
-int __thiscall sub_421810(int this, const char* a2, int a3, int a4)
+int __thiscall sub_421810(int self, const char* a2, int a3, int a4)
 {
     char* v5; // ebx
     _DWORD* v6; // eax
@@ -29196,7 +29197,7 @@ int __thiscall sub_421810(int this, const char* a2, int a3, int a4)
 // 520970: using guessed type int dword_520970;
 
 //----- (00421980) --------------------------------------------------------
-_BYTE* __thiscall sub_421980(int this, int a2, unsigned int a3)
+_BYTE* __thiscall sub_421980(int self, int a2, unsigned int a3)
 {
     int v4; // edi
     _BYTE* v5; // esi
@@ -29289,13 +29290,13 @@ char __stdcall sub_421AB0(int a1, char* a2, float* a3, _DWORD* a4)
 }
 
 //----- (00421B20) --------------------------------------------------------
-int __thiscall sub_421B20(_DWORD* this, int a2)
+int __thiscall sub_421B20(_DWORD* self, int a2)
 {
     return *(_DWORD*)(*(_DWORD*)(this[5] + 4 * a2) + 272);
 }
 
 //----- (00421B40) --------------------------------------------------------
-void __thiscall sub_421B40(_DWORD* this, int a2)
+void __thiscall sub_421B40(_DWORD* self, int a2)
 {
     int v3; // esi
     int v4; // ebx
@@ -29311,7 +29312,7 @@ void __thiscall sub_421B40(_DWORD* this, int a2)
 }
 
 //----- (00421B70) --------------------------------------------------------
-int __thiscall sub_421B70(int this, int a2)
+int __thiscall sub_421B70(int self, int a2)
 {
     int v2; // esi
     int v4; // edi
@@ -29470,7 +29471,7 @@ double __stdcall sub_421DE0(int a1, char a2, char a3)
 }
 
 //----- (00421E30) --------------------------------------------------------
-int __thiscall sub_421E30(_DWORD** this, float a2, float a3, float a4, int a5, float* a6)
+int __thiscall sub_421E30(_DWORD** self, float a2, float a3, float a4, int a5, float* a6)
 {
     double v7; // st7
     double v8; // st6
@@ -29529,7 +29530,7 @@ int __thiscall sub_421E30(_DWORD** this, float a2, float a3, float a4, int a5, f
 // 520A20: using guessed type int dword_520A20;
 
 //----- (00422000) --------------------------------------------------------
-void __thiscall sub_422000(int this)
+void __thiscall sub_422000(int self)
 {
     int i; // ebp
     void* v3; // edi
@@ -29604,7 +29605,7 @@ int __cdecl sub_422080(char* FileName, _DWORD* Buffer)
 }
 
 //----- (004221E0) --------------------------------------------------------
-_DWORD* __thiscall sub_4221E0(_DWORD* this)
+_DWORD* __thiscall sub_4221E0(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -29619,7 +29620,7 @@ _DWORD* __thiscall sub_4221E0(_DWORD* this)
 }
 
 //----- (00422200) --------------------------------------------------------
-void __thiscall sub_422200(int this)
+void __thiscall sub_422200(int self)
 {
     void* v2; // edx
 
@@ -29630,7 +29631,7 @@ void __thiscall sub_422200(int this)
 }
 
 //----- (00422230) --------------------------------------------------------
-void __thiscall sub_422230(int* this)
+void __thiscall sub_422230(int* self)
 {
     int v2; // eax
     _DWORD* v3; // ecx
@@ -29641,17 +29642,17 @@ void __thiscall sub_422230(int* this)
     {
         v3 = (_DWORD*)this[5];
         if (v3)
-            sub_4226E0(v3, this);
-        if (this)
+            sub_4226E0(v3, self);
+        if (self)
         {
-            sub_422200((int)this);
-            sub_4885A6(this);
+            sub_422200((int)self);
+            sub_4885A6(self);
         }
     }
 }
 
 //----- (00422270) --------------------------------------------------------
-int __thiscall sub_422270(int this, int a2)
+int __thiscall sub_422270(int self, int a2)
 {
     int result; // eax
 
@@ -29664,7 +29665,7 @@ int __thiscall sub_422270(int this, int a2)
 }
 
 //----- (00422290) --------------------------------------------------------
-int __thiscall sub_422290(int this)
+int __thiscall sub_422290(int self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // eax
@@ -29705,7 +29706,7 @@ int __thiscall sub_422290(int this)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (004223D0) --------------------------------------------------------
-int __thiscall sub_4223D0(_DWORD* this)
+int __thiscall sub_4223D0(_DWORD* self)
 {
     int result; // eax
     int v2; // edx
@@ -29730,7 +29731,7 @@ int __thiscall sub_4223D0(_DWORD* this)
 // 499334: using guessed type _UNKNOWN *off_499334;
 
 //----- (00422400) --------------------------------------------------------
-_DWORD* __thiscall sub_422400(_DWORD* this, char* String1, char a3)
+_DWORD* __thiscall sub_422400(_DWORD* self, char* String1, char a3)
 {
     int v4; // esi
     char* v5; // ebx
@@ -29899,7 +29900,7 @@ _DWORD* __thiscall sub_422400(_DWORD* this, char* String1, char a3)
 // 520A14: using guessed type int dword_520A14;
 
 //----- (004226E0) --------------------------------------------------------
-_DWORD* __thiscall sub_4226E0(_DWORD* this, _DWORD* a2)
+_DWORD* __thiscall sub_4226E0(_DWORD* self, _DWORD* a2)
 {
     _DWORD* v3; // ecx
     _DWORD* result; // eax
@@ -29941,7 +29942,7 @@ LABEL_8:
 }
 
 //----- (00422740) --------------------------------------------------------
-int __thiscall sub_422740(_DWORD* this, int a2)
+int __thiscall sub_422740(_DWORD* self, int a2)
 {
     int result; // eax
 
@@ -29951,7 +29952,7 @@ int __thiscall sub_422740(_DWORD* this, int a2)
 }
 
 //----- (00422760) --------------------------------------------------------
-int __thiscall sub_422760(_DWORD* this, _DWORD* a2, _DWORD* a3, _DWORD* a4, _DWORD* a5)
+int __thiscall sub_422760(_DWORD* self, _DWORD* a2, _DWORD* a3, _DWORD* a4, _DWORD* a5)
 {
     int result; // eax
 
@@ -29973,7 +29974,7 @@ int __thiscall sub_422760(_DWORD* this, _DWORD* a2, _DWORD* a3, _DWORD* a4, _DWO
 }
 
 //----- (004227C0) --------------------------------------------------------
-FILE* __thiscall sub_4227C0(_DWORD* this)
+FILE* __thiscall sub_4227C0(_DWORD* self)
 {
     int v2; // esi
     int v3; // ebx
@@ -30338,7 +30339,7 @@ char __cdecl sub_422F40(const char* a1)
 }
 
 //----- (00423060) --------------------------------------------------------
-const void* __thiscall sub_423060(_DWORD* this, int a2)
+const void* __thiscall sub_423060(_DWORD* self, int a2)
 {
     int v3; // eax
     int v4; // ecx
@@ -30374,7 +30375,7 @@ const void* __thiscall sub_423060(_DWORD* this, int a2)
 }
 
 //----- (004230F0) --------------------------------------------------------
-double __thiscall sub_4230F0(_DWORD* this)
+double __thiscall sub_4230F0(_DWORD* self)
 {
     int v1; // eax
     double result; // st7
@@ -30399,7 +30400,7 @@ double __thiscall sub_4230F0(_DWORD* this)
 }
 
 //----- (00423120) --------------------------------------------------------
-double __thiscall sub_423120(int* this)
+double __thiscall sub_423120(int* self)
 {
     int v1; // edx
     double v2; // st7
@@ -30593,7 +30594,7 @@ FILE* __cdecl sub_423340(char* FileName, unsigned int a2)
 }
 
 //----- (004233C0) --------------------------------------------------------
-int __thiscall sub_4233C0(int this, int a2, const char* a3)
+int __thiscall sub_4233C0(int self, int a2, const char* a3)
 {
     char* v4; // edx
 
@@ -30610,14 +30611,14 @@ int __thiscall sub_4233C0(int this, int a2, const char* a3)
     v4 = (char*)operator new(strlen(a3) + 1);
     *(_DWORD*)(this + 20) = v4;
     strcpy(v4, a3);
-    sub_423600((_DWORD*)this);
+    sub_423600((_DWORD*)self);
     sub_423520(this, 0);
     return this;
 }
 // 499368: using guessed type _UNKNOWN *off_499368;
 
 //----- (004234A0) --------------------------------------------------------
-void __thiscall sub_4234A0(void* this)
+void __thiscall sub_4234A0(void* self)
 {
     void* v2; // eax
     int i; // edi
@@ -30643,7 +30644,7 @@ void __thiscall sub_4234A0(void* this)
 // 499368: using guessed type _UNKNOWN *off_499368;
 
 //----- (00423520) --------------------------------------------------------
-char __thiscall sub_423520(int this, char a2)
+char __thiscall sub_423520(int self, char a2)
 {
     int v2; // ebp
     int v3; // esi
@@ -30710,7 +30711,7 @@ char __thiscall sub_423520(int this, char a2)
 }
 
 //----- (00423600) --------------------------------------------------------
-char __thiscall sub_423600(_DWORD* this)
+char __thiscall sub_423600(_DWORD* self)
 {
     const char* v1; // eax
     char* v2; // ebp
@@ -31236,13 +31237,13 @@ LABEL_117:
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (004242F0) --------------------------------------------------------
-const char* __thiscall sub_4242F0(_DWORD** this, char* String2)
+const char* __thiscall sub_4242F0(_DWORD** self, char* String2)
 {
     return sub_426000(this[10], String2);
 }
 
 //----- (00424300) --------------------------------------------------------
-const char* __thiscall sub_424300(_DWORD** this, int a2, int a3, char* String2, char a5)
+const char* __thiscall sub_424300(_DWORD** self, int a2, int a3, char* String2, char a5)
 {
     const char* result; // eax
 
@@ -31261,7 +31262,7 @@ const char* __thiscall sub_424300(_DWORD** this, int a2, int a3, char* String2, 
 }
 
 //----- (00424350) --------------------------------------------------------
-const char* __thiscall sub_424350(_DWORD* this, char* String2)
+const char* __thiscall sub_424350(_DWORD* self, char* String2)
 {
     int v3; // ebp
     int v4; // esi
@@ -31283,13 +31284,13 @@ const char* __thiscall sub_424350(_DWORD* this, char* String2)
 }
 
 //----- (00424390) --------------------------------------------------------
-int __thiscall sub_424390(_DWORD* this, int a2)
+int __thiscall sub_424390(_DWORD* self, int a2)
 {
     return *(_DWORD*)(this[6] + 4 * a2);
 }
 
 //----- (004243A0) --------------------------------------------------------
-_DWORD* __thiscall sub_4243A0(_DWORD* this)
+_DWORD* __thiscall sub_4243A0(_DWORD* self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // eax
@@ -31338,7 +31339,7 @@ _DWORD* __thiscall sub_4243A0(_DWORD* this)
     sub_41CA40(this[21]);
     v8 = (double)*(int*)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
     sub_41CFD0(this[21], v8);
-    sub_425140((int)this);
+    sub_425140((int)self);
     return this;
 }
 // 4993AC: using guessed type _UNKNOWN *off_4993AC;
@@ -31346,7 +31347,7 @@ _DWORD* __thiscall sub_4243A0(_DWORD* this)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00424520) --------------------------------------------------------
-void __thiscall sub_424520(int this)
+void __thiscall sub_424520(int self)
 {
     int i; // edi
     void(__thiscall * **v3)(_DWORD, int); // ecx
@@ -31355,8 +31356,8 @@ void __thiscall sub_424520(int this)
     void* v6; // eax
 
     *(_DWORD*)this = &off_4993AC;
-    sub_4246F0((int*)this);
-    sub_425F60(this);
+    sub_4246F0((int*)self);
+    sub_425F60(self);
     if (*(_BYTE*)(this + 48))
     {
         for (i = 0; i < *(_DWORD*)(this + 40); ++i)
@@ -31389,7 +31390,7 @@ void __thiscall sub_424520(int this)
 // 4993AC: using guessed type _UNKNOWN *off_4993AC;
 
 //----- (00424630) --------------------------------------------------------
-char __thiscall sub_424630(int* this)
+char __thiscall sub_424630(int* self)
 {
     int v2; // eax
     _DWORD* v3; // eax
@@ -31417,7 +31418,7 @@ char __thiscall sub_424630(int* this)
 }
 
 //----- (004246F0) --------------------------------------------------------
-void __thiscall sub_4246F0(int* this)
+void __thiscall sub_4246F0(int* self)
 {
     int v2; // ecx
     void* v3; // edi
@@ -31437,7 +31438,7 @@ void __thiscall sub_4246F0(int* this)
 }
 
 //----- (00424730) --------------------------------------------------------
-char __thiscall sub_424730(_DWORD* this, int a2)
+char __thiscall sub_424730(_DWORD* self, int a2)
 {
     int v3; // ecx
     double v5; // st7
@@ -31775,7 +31776,7 @@ char __thiscall sub_424730(_DWORD* this, int a2)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00424C80) --------------------------------------------------------
-void __thiscall sub_424C80(_DWORD* this, int a2)
+void __thiscall sub_424C80(_DWORD* self, int a2)
 {
     _DWORD* v4; // ecx
     int v5; // eax
@@ -31850,7 +31851,7 @@ LABEL_14:
 }
 
 //----- (00424E30) --------------------------------------------------------
-char __thiscall sub_424E30(_DWORD* this, int a2)
+char __thiscall sub_424E30(_DWORD* self, int a2)
 {
     int v3; // eax
     int v4; // ebx
@@ -31933,7 +31934,7 @@ char __thiscall sub_424E30(_DWORD* this, int a2)
 }
 
 //----- (00425030) --------------------------------------------------------
-char __thiscall sub_425030(_DWORD* this, int ArgList, int a3)
+char __thiscall sub_425030(_DWORD* self, int ArgList, int a3)
 {
     int v4; // ecx
     int v5; // eax
@@ -31997,7 +31998,7 @@ char __thiscall sub_425030(_DWORD* this, int ArgList, int a3)
 // 4250C1: conditional instruction was optimized away because eax.4!=0
 
 //----- (00425140) --------------------------------------------------------
-int __thiscall sub_425140(int this)
+int __thiscall sub_425140(int self)
 {
     _DWORD* v2; // ebx
     unsigned int v3; // edi
@@ -32256,7 +32257,7 @@ int __thiscall sub_425140(int this)
     j = (int)v18;
     v178 = 1;
     if (v18)
-        v19 = sub_43A740(v18, this);
+        v19 = sub_43A740(v18, self);
     else
         v19 = 0;
     v20 = *(_DWORD*)(this + 44);
@@ -32283,7 +32284,7 @@ int __thiscall sub_425140(int this)
     j = (int)v27;
     v178 = 2;
     if (v27)
-        v28 = sub_43A850(v27, this);
+        v28 = sub_43A850(v27, self);
     else
         v28 = 0;
     v29 = *(_DWORD*)(this + 44);
@@ -32309,7 +32310,7 @@ int __thiscall sub_425140(int this)
     j = (int)v35;
     v178 = 3;
     if (v35)
-        v36 = sub_43AE80(v35, this);
+        v36 = sub_43AE80(v35, self);
     else
         v36 = 0;
     v37 = *(_DWORD*)(this + 44);
@@ -32335,7 +32336,7 @@ int __thiscall sub_425140(int this)
     j = (int)v43;
     v178 = 4;
     if (v43)
-        v44 = sub_43B390(v43, this);
+        v44 = sub_43B390(v43, self);
     else
         v44 = 0;
     v45 = *(_DWORD*)(this + 44);
@@ -32361,7 +32362,7 @@ int __thiscall sub_425140(int this)
     j = (int)v51;
     v178 = 5;
     if (v51)
-        v52 = sub_43B6C0(v51, this);
+        v52 = sub_43B6C0(v51, self);
     else
         v52 = 0;
     v53 = *(_DWORD*)(this + 44);
@@ -32387,7 +32388,7 @@ int __thiscall sub_425140(int this)
     j = (int)v59;
     v178 = 6;
     if (v59)
-        v60 = sub_43BA40(v59, this);
+        v60 = sub_43BA40(v59, self);
     else
         v60 = 0;
     v61 = *(_DWORD*)(this + 44);
@@ -32413,7 +32414,7 @@ int __thiscall sub_425140(int this)
     j = (int)v67;
     v178 = 7;
     if (v67)
-        v68 = sub_43BB70(v67, this);
+        v68 = sub_43BB70(v67, self);
     else
         v68 = 0;
     v69 = *(_DWORD*)(this + 44);
@@ -32439,7 +32440,7 @@ int __thiscall sub_425140(int this)
     j = (int)v75;
     v178 = 8;
     if (v75)
-        v76 = sub_43C730(v75, this);
+        v76 = sub_43C730(v75, self);
     else
         v76 = 0;
     v77 = *(_DWORD*)(this + 44);
@@ -32465,7 +32466,7 @@ int __thiscall sub_425140(int this)
     j = (int)v83;
     v178 = 9;
     if (v83)
-        v84 = sub_43D040(v83, this);
+        v84 = sub_43D040(v83, self);
     else
         v84 = 0;
     v85 = *(_DWORD*)(this + 44);
@@ -32491,7 +32492,7 @@ int __thiscall sub_425140(int this)
     j = (int)v91;
     v178 = 10;
     if (v91)
-        v92 = sub_43C990((int)v91, this);
+        v92 = sub_43C990((int)v91, self);
     else
         v92 = 0;
     v93 = *(_DWORD*)(this + 44);
@@ -32517,7 +32518,7 @@ int __thiscall sub_425140(int this)
     j = (int)v99;
     v178 = 11;
     if (v99)
-        v100 = sub_43D0D0(v99, this);
+        v100 = sub_43D0D0(v99, self);
     else
         v100 = 0;
     v101 = *(_DWORD*)(this + 44);
@@ -32543,7 +32544,7 @@ int __thiscall sub_425140(int this)
     j = (int)v107;
     v178 = 12;
     if (v107)
-        v108 = sub_43D1D0(v107, this);
+        v108 = sub_43D1D0(v107, self);
     else
         v108 = 0;
     v109 = *(_DWORD*)(this + 44);
@@ -32569,7 +32570,7 @@ int __thiscall sub_425140(int this)
     j = (int)v115;
     v178 = 13;
     if (v115)
-        v116 = sub_43D280(v115, this);
+        v116 = sub_43D280(v115, self);
     else
         v116 = 0;
     v117 = *(_DWORD*)(this + 44);
@@ -32595,7 +32596,7 @@ int __thiscall sub_425140(int this)
     j = (int)v123;
     v178 = 14;
     if (v123)
-        v124 = sub_43D450(v123, this);
+        v124 = sub_43D450(v123, self);
     else
         v124 = 0;
     v125 = *(_DWORD*)(this + 44);
@@ -32621,7 +32622,7 @@ int __thiscall sub_425140(int this)
     j = (int)v131;
     v178 = 15;
     if (v131)
-        v132 = sub_43BDB0(v131, this);
+        v132 = sub_43BDB0(v131, self);
     else
         v132 = 0;
     v133 = *(_DWORD*)(this + 44);
@@ -32647,7 +32648,7 @@ int __thiscall sub_425140(int this)
     j = (int)v139;
     v178 = 16;
     if (v139)
-        v140 = sub_43C3D0(v139, this);
+        v140 = sub_43C3D0(v139, self);
     else
         v140 = 0;
     v141 = *(_DWORD*)(this + 44);
@@ -32673,7 +32674,7 @@ int __thiscall sub_425140(int this)
     j = (int)v147;
     v178 = 17;
     if (v147)
-        v148 = sub_43DE90(v147, this);
+        v148 = sub_43DE90(v147, self);
     else
         v148 = 0;
     v149 = *(_DWORD*)(this + 44);
@@ -32699,7 +32700,7 @@ int __thiscall sub_425140(int this)
     j = (int)v155;
     v178 = 18;
     if (v155)
-        v156 = sub_43D580(v155, this);
+        v156 = sub_43D580(v155, self);
     else
         v156 = 0;
     v157 = *(_DWORD*)(this + 44);
@@ -32725,7 +32726,7 @@ int __thiscall sub_425140(int this)
     j = (int)v163;
     v178 = 19;
     if (v163)
-        v164 = sub_43D7C0(v163, this);
+        v164 = sub_43D7C0(v163, self);
     else
         v164 = 0;
     v165 = *(_DWORD*)(this + 44);
@@ -32751,7 +32752,7 @@ int __thiscall sub_425140(int this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00425F60) --------------------------------------------------------
-int __thiscall sub_425F60(int this)
+int __thiscall sub_425F60(int self)
 {
     int v2; // ebp
     int v3; // ebx
@@ -32793,7 +32794,7 @@ int __thiscall sub_425F60(int this)
 }
 
 //----- (00426000) --------------------------------------------------------
-const char* __thiscall sub_426000(_DWORD* this, char* String2)
+const char* __thiscall sub_426000(_DWORD* self, char* String2)
 {
     int v3; // ebp
     int v4; // esi
@@ -32815,7 +32816,7 @@ const char* __thiscall sub_426000(_DWORD* this, char* String2)
 }
 
 //----- (00426040) --------------------------------------------------------
-const char* __thiscall sub_426040(_DWORD* this, char* String2)
+const char* __thiscall sub_426040(_DWORD* self, char* String2)
 {
     _DWORD* v2; // ecx
 
@@ -32827,7 +32828,7 @@ const char* __thiscall sub_426040(_DWORD* this, char* String2)
 }
 
 //----- (00426060) --------------------------------------------------------
-char __thiscall sub_426060(int this, int a2, int ArgList)
+char __thiscall sub_426060(int self, int a2, int ArgList)
 {
     int v4; // eax
     int v5; // eax
@@ -32934,7 +32935,7 @@ char __thiscall sub_426060(int this, int a2, int ArgList)
 // 520970: using guessed type int dword_520970;
 
 //----- (004261C0) --------------------------------------------------------
-char __thiscall sub_4261C0(_DWORD* this, char* String2, char a3)
+char __thiscall sub_4261C0(_DWORD* self, char* String2, char a3)
 {
     int v4; // ebx
     const char** v5; // edi
@@ -32989,13 +32990,13 @@ char __thiscall sub_4261C0(_DWORD* this, char* String2, char a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (004262D0) --------------------------------------------------------
-int __thiscall sub_4262D0(int* this)
+int __thiscall sub_4262D0(int* self)
 {
     int v2; // esi
     int result; // eax
 
     sub_4229D0(aUiHiding);
-    sub_4246F0(this);
+    sub_4246F0(self);
     v2 = this[13];
     if (v2)
     {
@@ -33028,7 +33029,7 @@ char __stdcall sub_4263D0(int a1, int a2, int a3)
 }
 
 //----- (004263E0) --------------------------------------------------------
-_DWORD* __thiscall sub_4263E0(_DWORD* this, int a2)
+_DWORD* __thiscall sub_4263E0(_DWORD* self, int a2)
 {
     int v4; // ebx
     _DWORD* result; // eax
@@ -34417,15 +34418,15 @@ void sub_428420()
 }
 
 //----- (00428580) --------------------------------------------------------
-void __thiscall sub_428580(void* this)
+void __thiscall sub_428580(void* self)
 {
     *(_DWORD*)this = &off_4993D0;
-    sub_408B70(this);
+    sub_408B70(self);
 }
 // 4993D0: using guessed type _UNKNOWN *off_4993D0;
 
 //----- (00428590) --------------------------------------------------------
-char __thiscall sub_428590(_DWORD* this, int a2, int a3)
+char __thiscall sub_428590(_DWORD* self, int a2, int a3)
 {
     int i; // esi
     char result; // al
@@ -34440,7 +34441,7 @@ char __thiscall sub_428590(_DWORD* this, int a2, int a3)
 }
 
 //----- (004285C0) --------------------------------------------------------
-char __thiscall sub_4285C0(_DWORD* this, int a2)
+char __thiscall sub_4285C0(_DWORD* self, int a2)
 {
     int i; // esi
     char result; // al
@@ -34455,7 +34456,7 @@ char __thiscall sub_4285C0(_DWORD* this, int a2)
 }
 
 //----- (004285F0) --------------------------------------------------------
-char __thiscall sub_4285F0(_DWORD* this, int a2, int a3)
+char __thiscall sub_4285F0(_DWORD* self, int a2, int a3)
 {
     int i; // esi
     char result; // al
@@ -34470,7 +34471,7 @@ char __thiscall sub_4285F0(_DWORD* this, int a2, int a3)
 }
 
 //----- (00428620) --------------------------------------------------------
-char __thiscall sub_428620(_DWORD* this, int a2)
+char __thiscall sub_428620(_DWORD* self, int a2)
 {
     int i; // esi
     char result; // al
@@ -34485,7 +34486,7 @@ char __thiscall sub_428620(_DWORD* this, int a2)
 }
 
 //----- (00428650) --------------------------------------------------------
-char __thiscall sub_428650(int this)
+char __thiscall sub_428650(int self)
 {
     char result; // al
     int i; // ecx
@@ -34502,7 +34503,7 @@ char __thiscall sub_428650(int this)
 // 428660: conditional instruction was optimized away because al.1!=0
 
 //----- (00428680) --------------------------------------------------------
-int __thiscall sub_428680(_DWORD* this, int a2)
+int __thiscall sub_428680(_DWORD* self, int a2)
 {
     int v2; // edx
     int i; // eax
@@ -34529,7 +34530,7 @@ int __thiscall sub_428680(_DWORD* this, int a2)
 }
 
 //----- (004286C0) --------------------------------------------------------
-int __thiscall sub_4286C0(_DWORD* this, int a2)
+int __thiscall sub_4286C0(_DWORD* self, int a2)
 {
     int result; // eax
     int v3; // edx
@@ -34568,7 +34569,7 @@ int __thiscall sub_4286C0(_DWORD* this, int a2)
 // 4286E8: conditional instruction was optimized away because eax.4!=0
 
 //----- (00428720) --------------------------------------------------------
-void __thiscall sub_428720(_DWORD* this)
+void __thiscall sub_428720(_DWORD* self)
 {
     int v2; // esi
     int i; // edi
@@ -34649,7 +34650,7 @@ void __cdecl sub_428840(LPSTR lpMultiByteStr, wchar_t* String, size_t a3)
 }
 
 //----- (00428860) --------------------------------------------------------
-int** __thiscall sub_428860(int** this, char* FileName)
+int** __thiscall sub_428860(int** self, char* FileName)
 {
     int** v2; // ebx
     int* v3; // eax
@@ -34776,7 +34777,7 @@ int** __thiscall sub_428860(int** this, char* FileName)
 }
 
 //----- (00428C90) --------------------------------------------------------
-int __thiscall sub_428C90(_DWORD* this)
+int __thiscall sub_428C90(_DWORD* self)
 {
     int result; // eax
     int v2; // eax
@@ -34810,7 +34811,7 @@ int __thiscall sub_428C90(_DWORD* this)
 }
 
 //----- (00428CD0) --------------------------------------------------------
-bool __thiscall sub_428CD0(_DWORD* this)
+bool __thiscall sub_428CD0(_DWORD* self)
 {
     _DWORD* v1; // esi
     char v3; // [esp+7h] [ebp-1h] BYREF
@@ -34829,7 +34830,7 @@ bool __thiscall sub_428CD0(_DWORD* this)
 }
 
 //----- (00428D50) --------------------------------------------------------
-int __thiscall sub_428D50(_DWORD* this, const char* a2)
+int __thiscall sub_428D50(_DWORD* self, const char* a2)
 {
     void* v3; // ebp
     int result; // eax
@@ -34848,7 +34849,7 @@ int __thiscall sub_428D50(_DWORD* this, const char* a2)
 }
 
 //----- (00428DE0) --------------------------------------------------------
-char __thiscall sub_428DE0(_DWORD* this, char a2)
+char __thiscall sub_428DE0(_DWORD* self, char a2)
 {
     void* v3; // edi
     int v4; // eax
@@ -34865,20 +34866,20 @@ char __thiscall sub_428DE0(_DWORD* this, char a2)
 }
 
 //----- (00428E30) --------------------------------------------------------
-void __thiscall sub_428E30(int* this)
+void __thiscall sub_428E30(int* self)
 {
     void* v1; // esi
 
     v1 = (void*)*this;
-    if (*this)
+    if (*self)
     {
-        sub_428E50(*this);
+        sub_428E50(*self);
         sub_4885A6(v1);
     }
 }
 
 //----- (00428E50) --------------------------------------------------------
-void __thiscall sub_428E50(int this)
+void __thiscall sub_428E50(int self)
 {
     sub_429E40((FILE***)(this + 284));
     sub_4885A6(*(LPVOID*)(this + 272));
@@ -34886,37 +34887,37 @@ void __thiscall sub_428E50(int this)
 }
 
 //----- (00428EB0) --------------------------------------------------------
-int __thiscall sub_428EB0(void* this)
+int __thiscall sub_428EB0(void* self)
 {
     return **(_DWORD**)this;
 }
 
 //----- (00428EC0) --------------------------------------------------------
-int __thiscall sub_428EC0(void* this, int a2)
+int __thiscall sub_428EC0(void* self, int a2)
 {
     return 272 * a2 + *(_DWORD*)(*(_DWORD*)this + 260);
 }
 
 //----- (00428EE0) --------------------------------------------------------
-int __thiscall sub_428EE0(void* this, int a2)
+int __thiscall sub_428EE0(void* self, int a2)
 {
     return 272 * a2 + *(_DWORD*)(*(_DWORD*)this + 272);
 }
 
 //----- (00428F00) --------------------------------------------------------
-int __thiscall sub_428F00(void* this)
+int __thiscall sub_428F00(void* self)
 {
     return *(_DWORD*)(*(_DWORD*)this + 264);
 }
 
 //----- (00428F10) --------------------------------------------------------
-int __thiscall sub_428F10(void* this)
+int __thiscall sub_428F10(void* self)
 {
     return *(_DWORD*)(*(_DWORD*)this + 276);
 }
 
 //----- (00428F20) --------------------------------------------------------
-int __thiscall sub_428F20(int* this)
+int __thiscall sub_428F20(int* self)
 {
     int v1; // ecx
     int result; // eax
@@ -34952,7 +34953,7 @@ int __thiscall sub_428F20(int* this)
 }
 
 //----- (00428F60) --------------------------------------------------------
-int __thiscall sub_428F60(int* this)
+int __thiscall sub_428F60(int* self)
 {
     int v1; // eax
 
@@ -34964,7 +34965,7 @@ int __thiscall sub_428F60(int* this)
 }
 
 //----- (00428F80) --------------------------------------------------------
-int __thiscall sub_428F80(void* this, int a2)
+int __thiscall sub_428F80(void* self, int a2)
 {
     int v2; // ebp
     _DWORD* v4; // edi
@@ -34981,7 +34982,7 @@ int __thiscall sub_428F80(void* this, int a2)
 
     v2 = 0;
     v13 = 0;
-    if (sub_428F00(this) <= 0)
+    if (sub_428F00(self) <= 0)
         return -1;
     while (1)
     {
@@ -34989,18 +34990,18 @@ int __thiscall sub_428F80(void* this, int a2)
         v14 = sub_429AD0(v4);
         v5 = sub_429AD0(v4) << 12;
         v6 = sub_429AE0(v4) + v5;
-        v7 = sub_428EB0(this) + v6;
+        v7 = sub_428EB0(self) + v6;
         v8 = v7 + sub_429AF0(v4);
         if (a2 < v7 || a2 >= v8)
             goto LABEL_9;
-        v9 = sub_428F10(this) - 1;
+        v9 = sub_428F10(self) - 1;
         if (v9 >= 0)
             break;
     LABEL_8:
         v2 = v13;
     LABEL_9:
         v13 = ++v2;
-        if (v2 >= sub_428F00(this))
+        if (v2 >= sub_428F00(self))
             return -1;
     }
     while (1)
@@ -35009,7 +35010,7 @@ int __thiscall sub_428F80(void* this, int a2)
         if (sub_429AD0(v15) == v14)
         {
             v10 = sub_429AD0(v15) << 12;
-            v11 = sub_428EB0(this) + v10;
+            v11 = sub_428EB0(self) + v10;
             if (sub_429AE0(v15) + v11 <= a2)
                 return v9;
         }
@@ -35043,7 +35044,7 @@ int __cdecl sub_429090(LPSTR lpFilename, int a2)
 }
 
 //----- (004291F0) --------------------------------------------------------
-int __thiscall sub_4291F0(_DWORD* this, const void* a2)
+int __thiscall sub_4291F0(_DWORD* self, const void* a2)
 {
     int v3; // eax
     int result; // eax
@@ -35058,7 +35059,7 @@ int __thiscall sub_4291F0(_DWORD* this, const void* a2)
 }
 
 //----- (00429240) --------------------------------------------------------
-void __thiscall sub_429240(int this, int a2)
+void __thiscall sub_429240(int self, int a2)
 {
     int v2; // esi
     Concurrency::details::TaskStack* v4; // eax
@@ -35112,7 +35113,7 @@ void __thiscall sub_429240(int this, int a2)
             v10 += 272;
         } while (v9 < *(_DWORD*)(this + 4));
     }
-    sub_4885A6(*(LPVOID*)this);
+    sub_4885A6(*(LPVOID*)self);
     *(_DWORD*)this = v5;
 }
 
@@ -35407,7 +35408,7 @@ unsigned int __cdecl sub_429820(_DWORD* a1, _DWORD* a2)
 }
 
 //----- (00429A90) --------------------------------------------------------
-void* __thiscall sub_429A90(void* this, int a2, int a3, int a4, char* Source)
+void* __thiscall sub_429A90(void* self, int a2, int a3, int a4, char* Source)
 {
     *(_DWORD*)this = a2;
     *((_DWORD*)this + 1) = a3;
@@ -35418,31 +35419,31 @@ void* __thiscall sub_429A90(void* this, int a2, int a3, int a4, char* Source)
 }
 
 //----- (00429AD0) --------------------------------------------------------
-int __thiscall sub_429AD0(void* this)
+int __thiscall sub_429AD0(void* self)
 {
     return *(_DWORD*)this;
 }
 
 //----- (00429AE0) --------------------------------------------------------
-int __thiscall sub_429AE0(_DWORD* this)
+int __thiscall sub_429AE0(_DWORD* self)
 {
     return this[1];
 }
 
 //----- (00429AF0) --------------------------------------------------------
-int __thiscall sub_429AF0(_DWORD* this)
+int __thiscall sub_429AF0(_DWORD* self)
 {
     return this[2];
 }
 
 //----- (00429B00) --------------------------------------------------------
-char* __thiscall sub_429B00(char* this)
+char* __thiscall sub_429B00(char* self)
 {
     return this + 12;
 }
 
 //----- (00429B10) --------------------------------------------------------
-bool __thiscall sub_429B10(_DWORD* this, _DWORD* a2)
+bool __thiscall sub_429B10(_DWORD* self, _DWORD* a2)
 {
     if (*this < *a2)
         return 1;
@@ -35587,7 +35588,7 @@ int sub_429DD0()
 }
 
 //----- (00429DE0) --------------------------------------------------------
-_DWORD* __thiscall sub_429DE0(_DWORD* this, char* FileName)
+_DWORD* __thiscall sub_429DE0(_DWORD* self, char* FileName)
 {
     _DWORD* v3; // esi
     FILE* v4; // eax
@@ -35614,12 +35615,12 @@ _DWORD* __thiscall sub_429DE0(_DWORD* this, char* FileName)
 }
 
 //----- (00429E40) --------------------------------------------------------
-void __thiscall sub_429E40(FILE*** this)
+void __thiscall sub_429E40(FILE*** self)
 {
     FILE** v1; // esi
 
     v1 = *this;
-    if (*this)
+    if (*self)
     {
         if (v1[3])
         {
@@ -35631,7 +35632,7 @@ void __thiscall sub_429E40(FILE*** this)
 }
 
 //----- (00429E70) --------------------------------------------------------
-bool __thiscall sub_429E70(_DWORD* this, _BYTE* a2, int a3)
+bool __thiscall sub_429E70(_DWORD* self, _BYTE* a2, int a3)
 {
     _DWORD* v3; // esi
     int v5; // eax
@@ -35646,7 +35647,7 @@ bool __thiscall sub_429E70(_DWORD* this, _BYTE* a2, int a3)
     int v14; // [esp+8h] [ebp-4h]
 
     v3 = (_DWORD*)*this;
-    if (*(_DWORD*)*this)
+    if (*(_DWORD*)*self)
         return 0;
     do
     {
@@ -35735,11 +35736,11 @@ bool __thiscall sub_429E70(_DWORD* this, _BYTE* a2, int a3)
 }
 
 //----- (0042A010) --------------------------------------------------------
-char __thiscall sub_42A010(void* this, _BYTE* a2)
+char __thiscall sub_42A010(void* self, _BYTE* a2)
 {
     int v4; // eax
 
-    if (*(_DWORD*)this)
+    if (*(_DWORD*)self)
         return 0;
     if (*((_BYTE*)this + 8))
         goto LABEL_9;
@@ -35761,7 +35762,7 @@ char __thiscall sub_42A010(void* this, _BYTE* a2)
 }
 
 //----- (0042A070) --------------------------------------------------------
-void __thiscall sub_42A070(_DWORD* this)
+void __thiscall sub_42A070(_DWORD* self)
 {
     _DWORD* v1; // esi
     char v2; // bl
@@ -35770,7 +35771,7 @@ void __thiscall sub_42A070(_DWORD* this)
     char v5; // [esp+Bh] [ebp-1h]
 
     v1 = (_DWORD*)*this;
-    if (!*(_DWORD*)*this)
+    if (!*(_DWORD*)*self)
     {
         v2 = v5;
         while (!*v1)
@@ -35806,7 +35807,7 @@ void __thiscall sub_42A070(_DWORD* this)
 // 42A07A: variable 'v5' is possibly undefined
 
 //----- (0042A0E0) --------------------------------------------------------
-int __thiscall sub_42A0E0(_DWORD* this)
+int __thiscall sub_42A0E0(_DWORD* self)
 {
     _DWORD* v1; // esi
     int v3; // eax
@@ -35818,7 +35819,7 @@ int __thiscall sub_42A0E0(_DWORD* this)
     char v9; // [esp+Bh] [ebp-1h] BYREF
 
     v1 = (_DWORD*)*this;
-    if (*(_DWORD*)*this)
+    if (*(_DWORD*)*self)
         return 0;
     do
     {
@@ -35963,11 +35964,11 @@ int __thiscall sub_42A0E0(_DWORD* this)
 }
 
 //----- (0042A370) --------------------------------------------------------
-char __thiscall sub_42A370(_DWORD* this)
+char __thiscall sub_42A370(_DWORD* self)
 {
     int v1; // eax
 
-    if (*this)
+    if (*self)
         LOBYTE(v1) = 1;
     else
         return (*(_DWORD*)(this[3] + 12) >> 4) & 1;
@@ -35975,14 +35976,14 @@ char __thiscall sub_42A370(_DWORD* this)
 }
 
 //----- (0042A390) --------------------------------------------------------
-char __thiscall sub_42A390(void* this, _BYTE* a2)
+char __thiscall sub_42A390(void* self, _BYTE* a2)
 {
     char result; // al
     char v4; // al
     bool v5; // zf
     int v6; // eax
 
-    if (*(_DWORD*)this)
+    if (*(_DWORD*)self)
         return 0;
     v4 = *((_BYTE*)this + 8);
     v5 = v4 == 0;
@@ -36014,7 +36015,7 @@ char __thiscall sub_42A390(void* this, _BYTE* a2)
 }
 
 //----- (0042A400) --------------------------------------------------------
-bool __thiscall sub_42A400(_DWORD* this)
+bool __thiscall sub_42A400(_DWORD* self)
 {
     _DWORD* v1; // esi
     int v3; // eax
@@ -36023,7 +36024,7 @@ bool __thiscall sub_42A400(_DWORD* this)
     char v6; // al
 
     v1 = (_DWORD*)*this;
-    if (*(_DWORD*)*this)
+    if (*(_DWORD*)*self)
         return 0;
     while (!*v1)
     {
@@ -36074,7 +36075,7 @@ bool __thiscall sub_42A400(_DWORD* this)
 }
 
 //----- (0042A4F0) --------------------------------------------------------
-char __thiscall sub_42A4F0(_DWORD* this, _BYTE* a2)
+char __thiscall sub_42A4F0(_DWORD* self, _BYTE* a2)
 {
     _DWORD* v2; // esi
     char result; // al
@@ -36083,7 +36084,7 @@ char __thiscall sub_42A4F0(_DWORD* this, _BYTE* a2)
     int v6; // eax
 
     v2 = (_DWORD*)*this;
-    if (*(_DWORD*)*this)
+    if (*(_DWORD*)*self)
         return 0;
     v4 = *((_BYTE*)v2 + 8);
     v5 = v4 == 0;
@@ -36115,13 +36116,13 @@ char __thiscall sub_42A4F0(_DWORD* this, _BYTE* a2)
 }
 
 //----- (0042A560) --------------------------------------------------------
-char __thiscall sub_42A560(_DWORD* this, _BYTE* a2)
+char __thiscall sub_42A560(_DWORD* self, _BYTE* a2)
 {
     _DWORD* v2; // esi
     int v4; // eax
 
     v2 = (_DWORD*)*this;
-    if (*(_DWORD*)*this)
+    if (*(_DWORD*)*self)
         return 0;
     if (*((_BYTE*)v2 + 8))
         goto LABEL_9;
@@ -36143,13 +36144,13 @@ char __thiscall sub_42A560(_DWORD* this, _BYTE* a2)
 }
 
 //----- (0042A5C0) --------------------------------------------------------
-int __thiscall sub_42A5C0(void* this)
+int __thiscall sub_42A5C0(void* self)
 {
     return *(_DWORD*)(*(_DWORD*)this + 4);
 }
 
 //----- (0042A5F0) --------------------------------------------------------
-float* __thiscall sub_42A5F0(float* this, char* a2)
+float* __thiscall sub_42A5F0(float* self, char* a2)
 {
     char* v2; // edi
     double v4; // st7
@@ -36196,10 +36197,10 @@ float* __thiscall sub_42A5F0(float* this, char* a2)
 // 499400: using guessed type _UNKNOWN *off_499400;
 
 //----- (0042A770) --------------------------------------------------------
-int __thiscall sub_42A770(void* this)
+int __thiscall sub_42A770(void* self)
 {
     *(_DWORD*)this = &off_499400;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499400: using guessed type _UNKNOWN *off_499400;
 
@@ -36211,10 +36212,10 @@ int __usercall sub_42A780@<eax>(_DWORD* a1@<ecx>, int a2@<ebp>)
 }
 
 //----- (0042A7A0) --------------------------------------------------------
-int __thiscall sub_42A7A0(_DWORD* this)
+int __thiscall sub_42A7A0(_DWORD* self)
 {
-    sub_42A840(this);
-    return sub_469120(this);
+    sub_42A840(self);
+    return sub_469120(self);
 }
 
 //----- (0042A7C0) --------------------------------------------------------
@@ -36243,7 +36244,7 @@ int __usercall sub_42A7C0@<eax>(int a1@<ecx>, int a2@<ebp>)
 // 520970: using guessed type int dword_520970;
 
 //----- (0042A840) --------------------------------------------------------
-void __thiscall sub_42A840(_DWORD* this)
+void __thiscall sub_42A840(_DWORD* self)
 {
     _DWORD* v2; // ecx
 
@@ -36256,14 +36257,14 @@ void __thiscall sub_42A840(_DWORD* this)
 }
 
 //----- (0042A860) --------------------------------------------------------
-int __thiscall sub_42A860(int this)
+int __thiscall sub_42A860(int self)
 {
     int i; // ebp
     int v3; // edi
     void* v4; // eax
 
     *(_DWORD*)this = &off_49940C;
-    sub_42A840((_DWORD*)this);
+    sub_42A840((_DWORD*)self);
     sub_4885A6(*(LPVOID*)(this + 980));
     *(_DWORD*)(this + 980) = 0;
     *(_DWORD*)(this + 984) = 0;
@@ -36294,12 +36295,12 @@ int __thiscall sub_42A860(int this)
     *(_DWORD*)(this + 612) = 0;
     *(_DWORD*)(this + 616) = 0;
     *(_DWORD*)(this + 620) = 0;
-    return sub_4690A0((void*)this);
+    return sub_4690A0((void*)self);
 }
 // 49940C: using guessed type _UNKNOWN *off_49940C;
 
 //----- (0042A9D0) --------------------------------------------------------
-void __thiscall sub_42A9D0(LPVOID* this)
+void __thiscall sub_42A9D0(LPVOID* self)
 {
     sub_4885A6(this[3]);
     this[3] = 0;
@@ -37433,9 +37434,9 @@ LABEL_301:
 // 520970: using guessed type int dword_520970;
 
 //----- (0042CA00) --------------------------------------------------------
-void __thiscall sub_42CA00(_BYTE* this)
+void __thiscall sub_42CA00(_BYTE* self)
 {
-    this[8] = HIBYTE(this);
+    this[8] = HIBYTE(self);
     *((_DWORD*)this + 3) = 0;
     *((_DWORD*)this + 4) = 0;
     *((_DWORD*)this + 5) = 0;
@@ -37465,7 +37466,7 @@ int __fastcall sub_42CA20(int a1)
 // 49941C: using guessed type _UNKNOWN *off_49941C;
 
 //----- (0042CB00) --------------------------------------------------------
-char __thiscall sub_42CB00(void* this)
+char __thiscall sub_42CB00(void* self)
 {
     sub_4113F0((_DWORD*)dword_4F5CC4, (int)this, 65280, 256, 0);
     return 1;
@@ -37473,13 +37474,13 @@ char __thiscall sub_42CB00(void* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0042CB20) --------------------------------------------------------
-char __thiscall sub_42CB20(_DWORD* this, int a2)
+char __thiscall sub_42CB20(_DWORD* self, int a2)
 {
     return sub_428620(this, a2);
 }
 
 //----- (0042CB30) --------------------------------------------------------
-void __thiscall sub_42CB30(_DWORD* this, int ArgList, int a3)
+void __thiscall sub_42CB30(_DWORD* self, int ArgList, int a3)
 {
     int v3; // ebp
     int v4; // edi
@@ -38430,7 +38431,7 @@ void __thiscall sub_42CB30(_DWORD* this, int ArgList, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0042E480) --------------------------------------------------------
-void __thiscall sub_42E480(_DWORD* this, int ArgList, int a3, void* a4)
+void __thiscall sub_42E480(_DWORD* self, int ArgList, int a3, void* a4)
 {
     int v5; // edi
     float v6; // ebx
@@ -38911,7 +38912,7 @@ void __thiscall sub_42E480(_DWORD* this, int ArgList, int a3, void* a4)
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (0042EF80) --------------------------------------------------------
-void __thiscall sub_42EF80(_DWORD* this, int ArgList, int a3, float* a4)
+void __thiscall sub_42EF80(_DWORD* self, int ArgList, int a3, float* a4)
 {
     int v4; // edi
     int* v5; // esi
@@ -39162,7 +39163,7 @@ void __thiscall sub_42EF80(_DWORD* this, int ArgList, int a3, float* a4)
 // 42F3CD: variable 'v24' is possibly undefined
 
 //----- (0042F620) --------------------------------------------------------
-void __thiscall sub_42F620(_DWORD* this, int ArgList, int a3)
+void __thiscall sub_42F620(_DWORD* self, int ArgList, int a3)
 {
     int v3; // edi
     int* v4; // esi
@@ -39379,7 +39380,7 @@ void __thiscall sub_42F620(_DWORD* this, int ArgList, int a3)
 // 42F989: variable 'v19' is possibly undefined
 
 //----- (0042FB40) --------------------------------------------------------
-int __thiscall sub_42FB40(_DWORD* this, int* a2, int* a3, int a4, float* a5)
+int __thiscall sub_42FB40(_DWORD* self, int* a2, int* a3, int a4, float* a5)
 {
     int result; // eax
     unsigned int i; // esi
@@ -39405,7 +39406,7 @@ int __thiscall sub_42FB40(_DWORD* this, int* a2, int* a3, int a4, float* a5)
 }
 
 //----- (0042FBB0) --------------------------------------------------------
-int __thiscall sub_42FBB0(_DWORD* this, int* a2, float a3, float a4, int a5, int a6)
+int __thiscall sub_42FBB0(_DWORD* self, int* a2, float a3, float a4, int a5, int a6)
 {
     unsigned int i; // edi
     int result; // eax
@@ -39427,7 +39428,7 @@ int __thiscall sub_42FBB0(_DWORD* this, int* a2, float a3, float a4, int a5, int
 }
 
 //----- (0042FC10) --------------------------------------------------------
-unsigned int __thiscall sub_42FC10(_DWORD* this, int a2)
+unsigned int __thiscall sub_42FC10(_DWORD* self, int a2)
 {
     __int16 v2; // ax
     float v4; // edi
@@ -39464,7 +39465,7 @@ unsigned int __thiscall sub_42FC10(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0042FCC0) --------------------------------------------------------
-int __thiscall sub_42FCC0(_DWORD* this, float a2, float a3, int a4)
+int __thiscall sub_42FCC0(_DWORD* self, float a2, float a3, int a4)
 {
     void* v5; // eax
     int v6; // eax
@@ -39505,7 +39506,7 @@ int __thiscall sub_42FCC0(_DWORD* this, float a2, float a3, int a4)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0042FDD0) --------------------------------------------------------
-int __thiscall sub_42FDD0(_DWORD* this)
+int __thiscall sub_42FDD0(_DWORD* self)
 {
     int v2; // eax
     int v3; // ebx
@@ -39533,7 +39534,7 @@ int __thiscall sub_42FDD0(_DWORD* this)
 }
 
 //----- (0042FE50) --------------------------------------------------------
-char __thiscall sub_42FE50(_DWORD* this)
+char __thiscall sub_42FE50(_DWORD* self)
 {
     int v1; // eax
     int v2; // edx
@@ -39568,7 +39569,7 @@ char __thiscall sub_42FE50(_DWORD* this)
 }
 
 //----- (0042FEB0) --------------------------------------------------------
-int __thiscall sub_42FEB0(int this, float a2, float a3)
+int __thiscall sub_42FEB0(int self, float a2, float a3)
 {
     char v4; // al
     char v5; // cl
@@ -39643,7 +39644,7 @@ int __thiscall sub_42FEB0(int this, float a2, float a3)
     int v75; // [esp+34h] [ebp-4h]
 
     v71 = this;
-    sub_401270(this);
+    sub_401270(self);
     v75 = 0;
     Iostream_init::Iostream_init((Iostream_init*)(this + 472));
     v4 = LOBYTE(a2);
@@ -40071,7 +40072,7 @@ int __thiscall sub_42FEB0(int this, float a2, float a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (00430A90) --------------------------------------------------------
-int __thiscall sub_430A90(int this)
+int __thiscall sub_430A90(int self)
 {
     void* v2; // ecx
 
@@ -40100,14 +40101,14 @@ int __thiscall sub_430A90(int this)
     *(_DWORD*)(this + 1372) = 0;
     *(_DWORD*)(this + 1376) = 0;
     nullsub_1(this + 472);
-    return sub_4013F0((_DWORD*)this);
+    return sub_4013F0((_DWORD*)self);
 }
 // 415760: using guessed type int __thiscall nullsub_1(_DWORD);
 // 499458: using guessed type _UNKNOWN *off_499458;
 // 520970: using guessed type int dword_520970;
 
 //----- (00430BC0) --------------------------------------------------------
-int __thiscall sub_430BC0(int this, int* a2, int* a3, int a4, float* a5)
+int __thiscall sub_430BC0(int self, int* a2, int* a3, int a4, float* a5)
 {
     float v5; // ebp
     int* v7; // ebx
@@ -40184,7 +40185,7 @@ LABEL_13:
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00430DC0) --------------------------------------------------------
-char __thiscall sub_430DC0(int this, int* a2, float a3, float a4, int a5, int a6)
+char __thiscall sub_430DC0(int self, int* a2, float a3, float a4, int a5, int a6)
 {
     int v6; // ebx
     int v7; // edi
@@ -40242,7 +40243,7 @@ char __thiscall sub_430DC0(int this, int* a2, float a3, float a4, int a5, int a6
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00430F00) --------------------------------------------------------
-char __thiscall sub_430F00(int this, int a2, int* a3, float a4, int a5)
+char __thiscall sub_430F00(int self, int a2, int* a3, float a4, int a5)
 {
     char v6; // bl
     double v7; // st7
@@ -40283,7 +40284,7 @@ char __thiscall sub_430F00(int this, int a2, int* a3, float a4, int a5)
 // 520970: using guessed type int dword_520970;
 
 //----- (00431040) --------------------------------------------------------
-char __thiscall sub_431040(int this, int a2)
+char __thiscall sub_431040(int self, int a2)
 {
     int v3; // edi
     unsigned int i; // ebp
@@ -40620,7 +40621,7 @@ LABEL_80:
 // 520970: using guessed type int dword_520970;
 
 //----- (004317B0) --------------------------------------------------------
-int __thiscall sub_4317B0(_DWORD* this, int a2)
+int __thiscall sub_4317B0(_DWORD* self, int a2)
 {
     int result; // eax
     int v4; // ecx
@@ -40677,7 +40678,7 @@ int __thiscall sub_4317B0(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (004318B0) --------------------------------------------------------
-char __thiscall sub_4318B0(_DWORD* this)
+char __thiscall sub_4318B0(_DWORD* self)
 {
     int v2; // ecx
     int v3; // ecx
@@ -40799,7 +40800,7 @@ char __thiscall sub_4318B0(_DWORD* this)
 }
 
 //----- (00431A70) --------------------------------------------------------
-char __thiscall sub_431A70(int this, int a2)
+char __thiscall sub_431A70(int self, int a2)
 {
     double v3; // st7
     float* v4; // edi
@@ -41708,11 +41709,11 @@ LABEL_40:
         v122[2] = v120;
         *(float*)(*(_DWORD*)(this + 2300) + 20) = -atan2(*(float*)(this + 1324), *(float*)(this + 1328));
     }
-    sub_4318B0((_DWORD*)this);
-    if (sub_408F30((_DWORD*)dword_520970) == this)
+    sub_4318B0((_DWORD*)self);
+    if (sub_408F30((_DWORD*)dword_520970) == self)
     {
         sub_407430(*(_DWORD**)(this + 432), 0, (char*)&v160);
-        sub_401450((_DWORD*)this);
+        sub_401450((_DWORD*)self);
         *(float*)&v154 = 0.0;
         v155 = -1000.0;
         v156 = 500.0;
@@ -41793,7 +41794,7 @@ LABEL_40:
 // 520970: using guessed type int dword_520970;
 
 //----- (00433360) --------------------------------------------------------
-int __thiscall sub_433360(int this, int a2)
+int __thiscall sub_433360(int self, int a2)
 {
     int* v3; // ecx
     int result; // eax
@@ -41822,7 +41823,7 @@ int __thiscall sub_433360(int this, int a2)
 }
 
 //----- (004333C0) --------------------------------------------------------
-char __thiscall sub_4333C0(int this, int a2)
+char __thiscall sub_4333C0(int self, int a2)
 {
     int v3; // eax
     int v4; // esi
@@ -41881,7 +41882,7 @@ char __stdcall sub_4334A0(int a1, char a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (004334E0) --------------------------------------------------------
-void __thiscall sub_4334E0(int this, float a2)
+void __thiscall sub_4334E0(int self, float a2)
 {
     int v3; // esi
     int v5; // ecx
@@ -42292,7 +42293,7 @@ char __cdecl sub_433790(int a1)
 // 520970: using guessed type int dword_520970;
 
 //----- (00433EF0) --------------------------------------------------------
-void __thiscall sub_433EF0(int this)
+void __thiscall sub_433EF0(int self)
 {
     int i; // ebp
     void* v3; // edi
@@ -42319,7 +42320,7 @@ void __thiscall sub_433EF0(int this)
 }
 
 //----- (00433F70) --------------------------------------------------------
-char* __thiscall sub_433F70(_DWORD* this, char* a2, unsigned int a3, const void* a4)
+char* __thiscall sub_433F70(_DWORD* self, char* a2, unsigned int a3, const void* a4)
 {
     unsigned int v4; // esi
     _DWORD* v5; // edi
@@ -42532,7 +42533,7 @@ char* __thiscall sub_433F70(_DWORD* this, char* a2, unsigned int a3, const void*
 }
 
 //----- (00434200) --------------------------------------------------------
-char* __thiscall sub_434200(_DWORD* this, char* a2, char* a3)
+char* __thiscall sub_434200(_DWORD* self, char* a2, char* a3)
 {
     char* v3; // edx
     char* v4; // ebx
@@ -42566,7 +42567,7 @@ void sub_434250()
 // 520C38: using guessed type float flt_520C38;
 
 //----- (00434270) --------------------------------------------------------
-int __thiscall sub_434270(int this)
+int __thiscall sub_434270(int self)
 {
     int v2; // ebp
     _BYTE* v3; // eax
@@ -43301,7 +43302,7 @@ int __thiscall sub_434270(int this)
             break;
         v83 = v96 + 1;
     }
-    sub_436D70((_DWORD*)this);
+    sub_436D70((_DWORD*)self);
     sub_4229D0(aFinishedLoadin_0);
     return this;
 }
@@ -43312,7 +43313,7 @@ int __thiscall sub_434270(int this)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00435880) --------------------------------------------------------
-void __thiscall sub_435880(LPVOID* this)
+void __thiscall sub_435880(LPVOID* self)
 {
     int i; // edi
     void* v3; // eax
@@ -43354,7 +43355,7 @@ void __thiscall sub_435880(LPVOID* this)
 // 4994B8: using guessed type _UNKNOWN *off_4994B8;
 
 //----- (004359A0) --------------------------------------------------------
-char __thiscall sub_4359A0(int this, int a2)
+char __thiscall sub_4359A0(int self, int a2)
 {
     double v3; // st7
     int v4; // esi
@@ -44048,7 +44049,7 @@ char __thiscall sub_4359A0(int this, int a2)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00436A40) --------------------------------------------------------
-int __thiscall sub_436A40(int this, int a2)
+int __thiscall sub_436A40(int self, int a2)
 {
     _DWORD* v3; // eax
     int v4; // ecx
@@ -44067,7 +44068,7 @@ int __thiscall sub_436A40(int this, int a2)
 }
 
 //----- (00436A90) --------------------------------------------------------
-int __thiscall sub_436A90(int this)
+int __thiscall sub_436A90(int self)
 {
     int v2; // ebx
     int v3; // edi
@@ -44209,7 +44210,7 @@ int __thiscall sub_436A90(int this)
 // 5209D8: using guessed type int dword_5209D8;
 
 //----- (00436D70) --------------------------------------------------------
-int __thiscall sub_436D70(_DWORD* this)
+int __thiscall sub_436D70(_DWORD* self)
 {
     int i; // esi
     int v3; // ecx
@@ -44227,7 +44228,7 @@ int __thiscall sub_436D70(_DWORD* this)
 }
 
 //----- (00436DD0) --------------------------------------------------------
-int __thiscall sub_436DD0(_DWORD* this)
+int __thiscall sub_436DD0(_DWORD* self)
 {
     int v2; // eax
     int v4; // ecx
@@ -44241,7 +44242,7 @@ int __thiscall sub_436DD0(_DWORD* this)
 }
 
 //----- (00436E20) --------------------------------------------------------
-_BYTE* __thiscall sub_436E20(char* this)
+_BYTE* __thiscall sub_436E20(char* self)
 {
     _BYTE* result; // eax
     int v2; // ecx
@@ -44258,7 +44259,7 @@ _BYTE* __thiscall sub_436E20(char* this)
 }
 
 //----- (00436E40) --------------------------------------------------------
-int __thiscall sub_436E40(char* this, const char* a2)
+int __thiscall sub_436E40(char* self, const char* a2)
 {
     int v2; // edi
     char* i; // esi
@@ -44290,7 +44291,7 @@ int __thiscall sub_436E40(char* this, const char* a2)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00436EC0) --------------------------------------------------------
-unsigned int __thiscall sub_436EC0(_DWORD* this, unsigned int a2, int a3, int ArgList)
+unsigned int __thiscall sub_436EC0(_DWORD* self, unsigned int a2, int a3, int ArgList)
 {
     unsigned int result; // eax
     _DWORD* v5; // esi
@@ -44332,7 +44333,7 @@ unsigned int __thiscall sub_436EC0(_DWORD* this, unsigned int a2, int a3, int Ar
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00436FA0) --------------------------------------------------------
-int __thiscall sub_436FA0(int this, int a2, float a3)
+int __thiscall sub_436FA0(int self, int a2, float a3)
 {
     int v4; // [esp+8h] [ebp+8h]
 
@@ -44342,7 +44343,7 @@ int __thiscall sub_436FA0(int this, int a2, float a3)
 }
 
 //----- (00436FD0) --------------------------------------------------------
-int __thiscall sub_436FD0(int this, int a2, float a3)
+int __thiscall sub_436FD0(int self, int a2, float a3)
 {
     int v4; // [esp+8h] [ebp+8h]
 
@@ -44352,13 +44353,13 @@ int __thiscall sub_436FD0(int this, int a2, float a3)
 }
 
 //----- (00437000) --------------------------------------------------------
-BOOL __thiscall sub_437000(float* this)
+BOOL __thiscall sub_437000(float* self)
 {
     return this[11] <= 0.0;
 }
 
 //----- (00437020) --------------------------------------------------------
-void __thiscall sub_437020(float* this, float a2, float a3)
+void __thiscall sub_437020(float* self, float a2, float a3)
 {
     int v3; // edx
     int v4; // esi
@@ -44430,13 +44431,13 @@ LABEL_7:
 }
 
 //----- (00437180) --------------------------------------------------------
-char __thiscall sub_437180(_DWORD* this, int a2, int a3)
+char __thiscall sub_437180(_DWORD* self, int a2, int a3)
 {
     return sub_428590(this, a2, a3);
 }
 
 //----- (004371A0) --------------------------------------------------------
-char __thiscall sub_4371A0(int this, char a2)
+char __thiscall sub_4371A0(int self, char a2)
 {
     char v2; // bl
     char v4; // al
@@ -44487,7 +44488,7 @@ char __thiscall sub_4371A0(int this, char a2)
                         v12 = (CHAR*)(352 * v13 + v11 + 899);
                 }
                 sprintf(Buffer, (const char* const)&dword_4A0090 + 32, v12, *(_DWORD*)(*(_DWORD*)(this + 736) + 8));
-                v14 = sub_436A90(this);
+                v14 = sub_436A90(self);
                 sub_421110(v14, Buffer);
                 if (!*(_BYTE*)(dword_4F5CC4 + 936) && !*(_BYTE*)(dword_4F5CC4 + 937))
                     sub_4375C0((void*)this, v10);
@@ -44551,7 +44552,7 @@ char __thiscall sub_4371A0(int this, char a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00437450) --------------------------------------------------------
-_DWORD* __thiscall sub_437450(int this, char a2)
+_DWORD* __thiscall sub_437450(int self, char a2)
 {
     int v3; // eax
     int v4; // eax
@@ -44586,7 +44587,7 @@ _DWORD* __thiscall sub_437450(int this, char a2)
 }
 
 //----- (00437540) --------------------------------------------------------
-int __thiscall sub_437540(_DWORD* this, int a2)
+int __thiscall sub_437540(_DWORD* self, int a2)
 {
     int v3; // eax
     int v4; // ecx
@@ -44621,7 +44622,7 @@ int __thiscall sub_437540(_DWORD* this, int a2)
 }
 
 //----- (004375C0) --------------------------------------------------------
-char __thiscall sub_4375C0(void* this, char* String1)
+char __thiscall sub_4375C0(void* self, char* String1)
 {
     int v3; // eax
     int v4; // eax
@@ -44630,14 +44631,14 @@ char __thiscall sub_4375C0(void* this, char* String1)
     {
         *(_BYTE*)(*(_DWORD*)(dword_520970 + 280) + 2552) = *(_BYTE*)(*(_DWORD*)(dword_520970 + 280) + 2552) == 0;
     LABEL_5:
-        v4 = sub_436A90((int)this);
+        v4 = sub_436A90((int)self);
         LOBYTE(v3) = sub_421110(v4, aCheatCodeEnabl);
         return v3;
     }
     v3 = _strcmpi(String1, aSayUncle);
     if (!v3)
     {
-        LOBYTE(v3) = sub_45B4E0(*(int**)(dword_520970 + 236), (int)this);
+        LOBYTE(v3) = sub_45B4E0(*(int**)(dword_520970 + 236), (int)self);
         if ((_BYTE)v3)
             goto LABEL_5;
     }
@@ -44646,7 +44647,7 @@ char __thiscall sub_4375C0(void* this, char* String1)
 // 520970: using guessed type int dword_520970;
 
 //----- (004376B0) --------------------------------------------------------
-_DWORD* __thiscall sub_4376B0(_DWORD* this, int a2)
+_DWORD* __thiscall sub_4376B0(_DWORD* self, int a2)
 {
     int v3; // ebx
     int v4; // ecx
@@ -44666,7 +44667,7 @@ _DWORD* __thiscall sub_4376B0(_DWORD* this, int a2)
     int v19; // [esp+ACh] [ebp-4h]
 
     LODWORD(v16[16]) = this;
-    sub_403B10(this);
+    sub_403B10(self);
     v3 = 0;
     v19 = 0;
     v4 = 13;
@@ -44682,7 +44683,7 @@ _DWORD* __thiscall sub_4376B0(_DWORD* this, int a2)
     *this = &off_499508;
     this[148] = a2;
     sub_403D90((char*)this, aMapMapworksPf3);
-    sub_403E30((int)this, (int)this);
+    sub_403E30((int)this, (int)self);
     v6 = operator new(0x15Cu);
     LOBYTE(v19) = 1;
     if (v6)
@@ -44751,7 +44752,7 @@ _DWORD* __thiscall sub_4376B0(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (004379D0) --------------------------------------------------------
-int __thiscall sub_4379D0(int* this, int a2, int a3, int a4)
+int __thiscall sub_4379D0(int* self, int a2, int a3, int a4)
 {
     int v5; // eax
     int v6; // ebp
@@ -44807,7 +44808,7 @@ int __thiscall sub_4379D0(int* this, int a2, int a3, int a4)
 }
 
 //----- (00437AA0) --------------------------------------------------------
-char* __thiscall sub_437AA0(char* this, int a2, int a3)
+char* __thiscall sub_437AA0(char* self, int a2, int a3)
 {
     char* result; // eax
 
@@ -44820,7 +44821,7 @@ char* __thiscall sub_437AA0(char* this, int a2, int a3)
 }
 
 //----- (00437AE0) --------------------------------------------------------
-_DWORD* __thiscall sub_437AE0(_DWORD* this)
+_DWORD* __thiscall sub_437AE0(_DWORD* self)
 {
     _DWORD* result; // eax
     int v2; // ecx
@@ -44840,7 +44841,7 @@ _DWORD* __thiscall sub_437AE0(_DWORD* this)
 }
 
 //----- (00437B10) --------------------------------------------------------
-_DWORD* __thiscall sub_437B10(_DWORD* this)
+_DWORD* __thiscall sub_437B10(_DWORD* self)
 {
     _DWORD* result; // eax
     int v2; // ecx
@@ -44860,7 +44861,7 @@ _DWORD* __thiscall sub_437B10(_DWORD* this)
 }
 
 //----- (00437B40) --------------------------------------------------------
-int __thiscall sub_437B40(_DWORD* this)
+int __thiscall sub_437B40(_DWORD* self)
 {
     int result; // eax
 
@@ -45167,7 +45168,7 @@ void __userpurge sub_437B70(int a1@<ecx>, int a2@<ebp>, float a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (004383D0) --------------------------------------------------------
-_DWORD* __thiscall sub_4383D0(_DWORD** this, int a2)
+_DWORD* __thiscall sub_4383D0(_DWORD** self, int a2)
 {
     _DWORD* result; // eax
 
@@ -45187,7 +45188,7 @@ _DWORD* __thiscall sub_4383D0(_DWORD** this, int a2)
 }
 
 //----- (00438430) --------------------------------------------------------
-char* __thiscall sub_438430(char* this, int a2, int a3, int a4, int a5)
+char* __thiscall sub_438430(char* self, int a2, int a3, int a4, int a5)
 {
     char* result; // eax
 
@@ -45199,7 +45200,7 @@ char* __thiscall sub_438430(char* this, int a2, int a3, int a4, int a5)
 }
 
 //----- (00438460) --------------------------------------------------------
-int __thiscall sub_438460(_DWORD** this, int a2, float a3, float a4, float a5)
+int __thiscall sub_438460(_DWORD** self, int a2, float a3, float a4, float a5)
 {
     int v6; // ebp
     int* v7; // ebx
@@ -45240,13 +45241,13 @@ int __thiscall sub_438460(_DWORD** this, int a2, float a3, float a4, float a5)
 }
 
 //----- (004385C0) --------------------------------------------------------
-_DWORD* __thiscall sub_4385C0(_DWORD* this)
+_DWORD* __thiscall sub_4385C0(_DWORD* self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // eax
     float v5; // [esp+0h] [ebp-20h]
 
-    sub_401270((int)this);
+    sub_401270((int)self);
     this[101] = 0;
     this[102] = 0;
     this[122] = 0;
@@ -45286,7 +45287,7 @@ _DWORD* __thiscall sub_4385C0(_DWORD* this)
 // 49951C: using guessed type _UNKNOWN *off_49951C;
 
 //----- (00438730) --------------------------------------------------------
-int __thiscall sub_438730(int this)
+int __thiscall sub_438730(int self)
 {
     _DWORD* v2; // ecx
     void* v3; // edi
@@ -45324,12 +45325,12 @@ int __thiscall sub_438730(int this)
     sub_488CEE(v6);
     *(_DWORD*)(this + 496) = 0;
     *(_DWORD*)(this + 488) = 0;
-    return sub_4013F0((_DWORD*)this);
+    return sub_4013F0((_DWORD*)self);
 }
 // 49951C: using guessed type _UNKNOWN *off_49951C;
 
 //----- (00438840) --------------------------------------------------------
-BOOL __thiscall sub_438840(_DWORD* this)
+BOOL __thiscall sub_438840(_DWORD* self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // eax
@@ -45346,7 +45347,7 @@ BOOL __thiscall sub_438840(_DWORD* this)
     {
         v2 = operator new(0x988u);
         if (v2)
-            v3 = sub_4376B0(v2, (int)this);
+            v3 = sub_4376B0(v2, (int)self);
         else
             v3 = 0;
         this[101] = v3;
@@ -45375,7 +45376,7 @@ BOOL __thiscall sub_438840(_DWORD* this)
 }
 
 //----- (004389A0) --------------------------------------------------------
-void __thiscall sub_4389A0(_DWORD* this)
+void __thiscall sub_4389A0(_DWORD* self)
 {
     void(__thiscall * **v2)(_DWORD, int); // ecx
     _DWORD* v3; // ecx
@@ -45397,7 +45398,7 @@ void __thiscall sub_4389A0(_DWORD* this)
 }
 
 //----- (004389F0) --------------------------------------------------------
-void __thiscall sub_4389F0(int this, char a2)
+void __thiscall sub_4389F0(int self, char a2)
 {
     int v3; // ecx
     void* v4; // edi
@@ -45426,7 +45427,7 @@ void __thiscall sub_4389F0(int this, char a2)
         v5 = *(_DWORD*)(this + 416);
         if (v5)
             sub_41CF50(v5);
-        sub_4389A0((_DWORD*)this);
+        sub_4389A0((_DWORD*)self);
     }
 }
 // 4A4DD0: using guessed type int dword_4A4DD0;
@@ -45435,7 +45436,7 @@ void __thiscall sub_4389F0(int this, char a2)
 // 4AA1E4: using guessed type int dword_4AA1E4;
 
 //----- (00438A70) --------------------------------------------------------
-char __thiscall sub_438A70(int this)
+char __thiscall sub_438A70(int self)
 {
     _DWORD* v2; // eax
     char* v3; // ecx
@@ -45449,7 +45450,7 @@ char __thiscall sub_438A70(int this)
     *(_DWORD*)(*(_DWORD*)(this + 408) + 36) = 1065353216;
     *(_BYTE*)(*(_DWORD*)(this + 408) + 48) = 0;
     if (*(int*)(this + 428) > -1)
-        sub_408EF0(dword_520970, this);
+        sub_408EF0(dword_520970, self);
     sub_41CF50(*(_DWORD*)(this + 416));
     sub_41CF00(*(_DWORD*)(this + 416));
     v3 = *(char**)(this + 404);
@@ -45464,7 +45465,7 @@ char __thiscall sub_438A70(int this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00438B40) --------------------------------------------------------
-char* __thiscall sub_438B40(int this)
+char* __thiscall sub_438B40(int self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // eax
@@ -45497,7 +45498,7 @@ char* __thiscall sub_438B40(int this)
     sub_41CFD0(*(_DWORD*)(this + 412), v10);
     sub_41CD90(*(_DWORD*)(this + 412));
     if (*(int*)(this + 472) > -1)
-        sub_408EF0(dword_520970, this);
+        sub_408EF0(dword_520970, self);
     v4 = 0;
     v5 = 0;
     do
@@ -45533,7 +45534,7 @@ char* __thiscall sub_438B40(int this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00438D00) --------------------------------------------------------
-int __thiscall sub_438D00(int* this)
+int __thiscall sub_438D00(int* self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // eax
@@ -45554,7 +45555,7 @@ int __thiscall sub_438D00(int* this)
 }
 
 //----- (00438DC0) --------------------------------------------------------
-char __thiscall sub_438DC0(int* this)
+char __thiscall sub_438DC0(int* self)
 {
     char** v2; // ebx
     int* v3; // ebp
@@ -45647,7 +45648,7 @@ char __thiscall sub_438DC0(int* this)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00438FF0) --------------------------------------------------------
-int __thiscall sub_438FF0(_DWORD* this)
+int __thiscall sub_438FF0(_DWORD* self)
 {
     int result; // eax
 
@@ -45659,7 +45660,7 @@ int __thiscall sub_438FF0(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00439020) --------------------------------------------------------
-int __thiscall sub_439020(int this, int a2)
+int __thiscall sub_439020(int self, int a2)
 {
     int result; // eax
 
@@ -45675,7 +45676,7 @@ int __thiscall sub_439020(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00439070) --------------------------------------------------------
-char __thiscall sub_439070(int this, int a2)
+char __thiscall sub_439070(int self, int a2)
 {
     int v3; // ebx
     float* v4; // edi
@@ -45839,7 +45840,7 @@ char __thiscall sub_439070(int this, int a2)
     }
     if (v14 == 1)
     {
-        sub_438840((_DWORD*)this);
+        sub_438840((_DWORD*)self);
         v16 = sub_450BF0((_DWORD*)dword_520970, 1, 1082130432);
         sub_421110(v16, AppName);
         (*(void(__thiscall**)(_DWORD, int))(**(_DWORD**)(this + 408) + 24))(*(_DWORD*)(this + 408), 1);
@@ -45848,13 +45849,13 @@ char __thiscall sub_439070(int this, int a2)
         *(_DWORD*)(this + 484) = 2;
         if (v17 == -1)
         {
-            sub_438A70(this);
+            sub_438A70(self);
             sub_422DC0((HKEY)AppName, aShowintro, 0);
             *(_DWORD*)(this + 484) = 3;
         }
         else
         {
-            sub_438B40(this);
+            sub_438B40(self);
             *(_DWORD*)(this + 484) = 4;
         }
     LABEL_140:
@@ -45933,7 +45934,7 @@ char __thiscall sub_439070(int this, int a2)
                     }
                     else if (sub_437000(*(float**)(dword_520970 + 224)))
                     {
-                        sub_438DC0((int*)this);
+                        sub_438DC0((int*)self);
                     }
                 }
             }
@@ -46246,7 +46247,7 @@ char __thiscall sub_439070(int this, int a2)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (0043A080) --------------------------------------------------------
-char __thiscall sub_43A080(_DWORD* this, int a2, int a3)
+char __thiscall sub_43A080(_DWORD* self, int a2, int a3)
 {
     int v4; // eax
     int v5; // eax
@@ -46283,7 +46284,7 @@ char __thiscall sub_43A080(_DWORD* this, int a2, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043A120) --------------------------------------------------------
-int __thiscall sub_43A120(int this, int a2)
+int __thiscall sub_43A120(int self, int a2)
 {
     int result; // eax
     double v3; // st7
@@ -46303,7 +46304,7 @@ int __thiscall sub_43A120(int this, int a2)
 // 4AA62C: using guessed type int dword_4AA62C[23];
 
 //----- (0043A180) --------------------------------------------------------
-_DWORD* __thiscall sub_43A180(_DWORD* this)
+_DWORD* __thiscall sub_43A180(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -46324,14 +46325,14 @@ _DWORD* __thiscall sub_43A180(_DWORD* this)
 // 49955C: using guessed type _UNKNOWN *off_49955C;
 
 //----- (0043A1D0) --------------------------------------------------------
-void __thiscall sub_43A1D0(_DWORD* this)
+void __thiscall sub_43A1D0(_DWORD* self)
 {
     *this = &off_499040;
 }
 // 499040: using guessed type void *(__thiscall *off_499040)(std::locale::facet *__hidden this, unsigned int);
 
 //----- (0043A1E0) --------------------------------------------------------
-int __thiscall sub_43A1E0(int* this)
+int __thiscall sub_43A1E0(int* self)
 {
     int v2; // ebx
     int* v3; // esi
@@ -46358,7 +46359,7 @@ int __thiscall sub_43A1E0(int* this)
 }
 
 //----- (0043A230) --------------------------------------------------------
-void __thiscall sub_43A230(int* this, int ArgList)
+void __thiscall sub_43A230(int* self, int ArgList)
 {
     _DWORD* v3; // eax
     _DWORD* v4; // eax
@@ -46392,7 +46393,7 @@ void __thiscall sub_43A230(int* this, int ArgList)
     sub_4229D0("Showing Newspaper #%d", ArgList);
     if (!*(_BYTE*)(dword_520970 + 296))
         *(_BYTE*)(dword_520970 + 296) = 1;
-    sub_43A1E0(this);
+    sub_43A1E0(self);
     (*(void(__thiscall**)(int*, int))(*this + 24))(this, 1);
     this[5] = ArgList;
     v5 = 0;
@@ -46448,7 +46449,7 @@ void __thiscall sub_43A230(int* this, int ArgList)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043A460) --------------------------------------------------------
-char __thiscall sub_43A460(_DWORD* this, int a2, char a3)
+char __thiscall sub_43A460(_DWORD* self, int a2, char a3)
 {
     char result; // al
 
@@ -46456,13 +46457,13 @@ char __thiscall sub_43A460(_DWORD* this, int a2, char a3)
     if (a3)
     {
         if (this[11] == 1)
-            return sub_43A4A0(this);
+            return sub_43A4A0(self);
     }
     return result;
 }
 
 //----- (0043A480) --------------------------------------------------------
-char __thiscall sub_43A480(int this, int a2, char a3)
+char __thiscall sub_43A480(int self, int a2, char a3)
 {
     char result; // al
 
@@ -46473,14 +46474,14 @@ char __thiscall sub_43A480(int this, int a2, char a3)
         if (result)
         {
             if (*(_DWORD*)(this + 44) == 1)
-                return sub_43A4A0((_DWORD*)this);
+                return sub_43A4A0((_DWORD*)self);
         }
     }
     return result;
 }
 
 //----- (0043A4A0) --------------------------------------------------------
-int __thiscall sub_43A4A0(_DWORD* this)
+int __thiscall sub_43A4A0(_DWORD* self)
 {
     void* v2; // esi
     _DWORD** v3; // esi
@@ -46509,11 +46510,11 @@ int __thiscall sub_43A4A0(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043A520) --------------------------------------------------------
-int __thiscall sub_43A520(int* this)
+int __thiscall sub_43A520(int* self)
 {
     int result; // eax
 
-    sub_43A1E0(this);
+    sub_43A1E0(self);
     result = (*(int(__thiscall**)(int*, _DWORD))(*this + 24))(this, 0);
     *(_BYTE*)(dword_520970 + 296) = 0;
     return result;
@@ -46601,7 +46602,7 @@ char __userpurge sub_43A540@<al>(int a1@<ecx>, int a2@<ebp>, int a3)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (0043A740) --------------------------------------------------------
-_DWORD* __thiscall sub_43A740(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43A740(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aMainmenu);
     *this = &off_499588;
@@ -46610,7 +46611,7 @@ _DWORD* __thiscall sub_43A740(_DWORD* this, int a2)
 // 499588: using guessed type _UNKNOWN *off_499588;
 
 //----- (0043A760) --------------------------------------------------------
-char __thiscall sub_43A760(_DWORD** this, char* String1, int a3)
+char __thiscall sub_43A760(_DWORD** self, char* String1, int a3)
 {
     if (String1)
     {
@@ -46641,13 +46642,13 @@ char __thiscall sub_43A760(_DWORD** this, char* String1, int a3)
 // 520885: using guessed type char byte_520885;
 
 //----- (0043A840) --------------------------------------------------------
-char __thiscall sub_43A840(int** this)
+char __thiscall sub_43A840(int** self)
 {
     return sub_424630(this[10]);
 }
 
 //----- (0043A850) --------------------------------------------------------
-_DWORD* __thiscall sub_43A850(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43A850(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aOptions);
     *this = &off_4995C0;
@@ -46666,7 +46667,7 @@ _DWORD* __thiscall sub_43A850(_DWORD* this, int a2)
 // 4995C0: using guessed type _UNKNOWN *off_4995C0;
 
 //----- (0043A950) --------------------------------------------------------
-char __thiscall sub_43A950(int this)
+char __thiscall sub_43A950(int self)
 {
     char* v2; // eax
     int v3; // eax
@@ -46734,7 +46735,7 @@ char __thiscall sub_43A950(int this)
 // 520974: using guessed type char byte_520974;
 
 //----- (0043AAC0) --------------------------------------------------------
-void __thiscall sub_43AAC0(int* this)
+void __thiscall sub_43AAC0(int* self)
 {
     int v2; // ecx
     _DWORD* v3; // ecx
@@ -46755,7 +46756,7 @@ void __thiscall sub_43AAC0(int* this)
 }
 
 //----- (0043AB00) --------------------------------------------------------
-int __thiscall sub_43AB00(_DWORD* this)
+int __thiscall sub_43AB00(_DWORD* self)
 {
     int v2; // esi
     int v3; // edi
@@ -46795,7 +46796,7 @@ int __thiscall sub_43AB00(_DWORD* this)
 // 520974: using guessed type char byte_520974;
 
 //----- (0043AC00) --------------------------------------------------------
-char __thiscall sub_43AC00(int this, char* String1, int a3)
+char __thiscall sub_43AC00(int self, char* String1, int a3)
 {
     int v5; // ecx
     _DWORD* v6; // eax
@@ -46811,7 +46812,7 @@ char __thiscall sub_43AC00(int this, char* String1, int a3)
 
     if (String1 && !_strcmpi(String1, aOkbutton))
     {
-        sub_43AB00((_DWORD*)this);
+        sub_43AB00((_DWORD*)self);
         sub_4261C0(*(_DWORD**)(this + 40), byte_521688, 0);
         return 1;
     }
@@ -46917,7 +46918,7 @@ char __thiscall sub_43AC00(int this, char* String1, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043AE80) --------------------------------------------------------
-_DWORD* __thiscall sub_43AE80(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43AE80(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aNameentry);
     *this = &off_4995F8;
@@ -46929,18 +46930,18 @@ _DWORD* __thiscall sub_43AE80(_DWORD* this, int a2)
 // 4995F8: using guessed type _UNKNOWN *off_4995F8;
 
 //----- (0043AEF0) --------------------------------------------------------
-bool __thiscall sub_43AEF0(int this)
+bool __thiscall sub_43AEF0(int self)
 {
     sub_424630(*(int**)(this + 40));
-    sub_43B180((_DWORD*)this);
+    sub_43B180((_DWORD*)self);
     *(_DWORD*)(*(_DWORD*)(this + 52) + 132) = *(_DWORD*)(this + 48);
     *(_BYTE*)(*(_DWORD*)(this + 52) + 136) = 1;
     *(_DWORD*)(*(_DWORD*)(this + 52) + 124) = 0;
-    return sub_43B330((_DWORD*)this);
+    return sub_43B330((_DWORD*)self);
 }
 
 //----- (0043AF30) --------------------------------------------------------
-char __thiscall sub_43AF30(int this, char* String1, int a3)
+char __thiscall sub_43AF30(int self, char* String1, int a3)
 {
     int v5; // eax
     int v6; // eax
@@ -46989,7 +46990,7 @@ char __thiscall sub_43AF30(int this, char* String1, int a3)
             {
             LABEL_20:
                 *((_BYTE*)v7 + 136) = 1;
-                sub_43B330((_DWORD*)this);
+                sub_43B330((_DWORD*)self);
                 return 1;
             }
             v9 = v11 - v10;
@@ -47026,14 +47027,14 @@ char __stdcall sub_43B150(int a1, int a2, int a3)
 }
 
 //----- (0043B160) --------------------------------------------------------
-void __thiscall sub_43B160(int this)
+void __thiscall sub_43B160(int self)
 {
     sub_4885A6(*(LPVOID*)(this + 44));
     *(_DWORD*)(this + 48) = 0;
 }
 
 //----- (0043B180) --------------------------------------------------------
-int __thiscall sub_43B180(_DWORD* this)
+int __thiscall sub_43B180(_DWORD* self)
 {
     void* v2; // esi
     int i; // esi
@@ -47047,7 +47048,7 @@ int __thiscall sub_43B180(_DWORD* this)
     char String1[260]; // [esp+24h] [ebp-208h] BYREF
     char Str[260]; // [esp+128h] [ebp-104h] BYREF
 
-    sub_43B160((int)this);
+    sub_43B160((int)self);
     v2 = (void*)_findfirst(FileName, (int)v11);
     if (v2 != (void*)-1)
     {
@@ -47089,7 +47090,7 @@ int __thiscall sub_43B180(_DWORD* this)
 }
 
 //----- (0043B2F0) --------------------------------------------------------
-char __thiscall sub_43B2F0(_DWORD* this, int a2, int a3, int a4, int a5)
+char __thiscall sub_43B2F0(_DWORD* self, int a2, int a3, int a4, int a5)
 {
     char result; // al
 
@@ -47105,7 +47106,7 @@ char __thiscall sub_43B2F0(_DWORD* this, int a2, int a3, int a4, int a5)
 }
 
 //----- (0043B330) --------------------------------------------------------
-bool __thiscall sub_43B330(_DWORD* this)
+bool __thiscall sub_43B330(_DWORD* self)
 {
     const char* v2; // edi
     const char* v3; // ebx
@@ -47122,7 +47123,7 @@ bool __thiscall sub_43B330(_DWORD* this)
 }
 
 //----- (0043B390) --------------------------------------------------------
-_DWORD* __thiscall sub_43B390(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43B390(_DWORD* self, int a2)
 {
     const char* v3; // eax
     const char* v4; // eax
@@ -47143,7 +47144,7 @@ _DWORD* __thiscall sub_43B390(_DWORD* this, int a2)
 // 499630: using guessed type _UNKNOWN *off_499630;
 
 //----- (0043B440) --------------------------------------------------------
-char __thiscall sub_43B440(int this, char* String1, int a3)
+char __thiscall sub_43B440(int self, char* String1, int a3)
 {
     char result; // al
     char v5[260]; // [esp+10h] [ebp-208h] BYREF
@@ -47210,7 +47211,7 @@ char __thiscall sub_43B440(int this, char* String1, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043B6C0) --------------------------------------------------------
-_DWORD* __thiscall sub_43B6C0(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43B6C0(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aLevelselect);
     *this = &off_499668;
@@ -47219,7 +47220,7 @@ _DWORD* __thiscall sub_43B6C0(_DWORD* this, int a2)
 // 499668: using guessed type _UNKNOWN *off_499668;
 
 //----- (0043B6E0) --------------------------------------------------------
-char __thiscall sub_43B6E0(_DWORD* this, int a2, int a3, int a4)
+char __thiscall sub_43B6E0(_DWORD* self, int a2, int a3, int a4)
 {
     const char* v4; // eax
     int v5; // ecx
@@ -47237,7 +47238,7 @@ char __thiscall sub_43B6E0(_DWORD* this, int a2, int a3, int a4)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043B730) --------------------------------------------------------
-bool __thiscall sub_43B730(int this)
+bool __thiscall sub_43B730(int self)
 {
     int v2; // edi
     int v3; // ebp
@@ -47291,12 +47292,12 @@ bool __thiscall sub_43B730(int this)
     v13 = sub_424350((_DWORD*)this, aGamescore);
     v14 = sub_45EA60(*(_DWORD**)(dword_520970 + 280));
     sub_421190(*((_DWORD*)v13 + 28), "%d", v14);
-    return sub_43B9E0((_DWORD*)this);
+    return sub_43B9E0((_DWORD*)self);
 }
 // 520970: using guessed type int dword_520970;
 
 //----- (0043B870) --------------------------------------------------------
-char __thiscall sub_43B870(int this, char* String1, int a3)
+char __thiscall sub_43B870(int self, char* String1, int a3)
 {
     int v5; // eax
     const char* v6; // eax
@@ -47341,7 +47342,7 @@ char __thiscall sub_43B870(int this, char* String1, int a3)
         {
         LABEL_12:
             *((_BYTE*)v6 + 136) = 1;
-            sub_43B9E0((_DWORD*)this);
+            sub_43B9E0((_DWORD*)self);
             return 1;
         }
         v8 = v10 - v9;
@@ -47365,7 +47366,7 @@ FILE* __stdcall sub_43B9A0(int a1, int ArgList, int a3, int a4)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043B9E0) --------------------------------------------------------
-bool __thiscall sub_43B9E0(_DWORD* this)
+bool __thiscall sub_43B9E0(_DWORD* self)
 {
     const char* v2; // edi
     const char* v3; // ebx
@@ -47382,7 +47383,7 @@ bool __thiscall sub_43B9E0(_DWORD* this)
 }
 
 //----- (0043BA40) --------------------------------------------------------
-_DWORD* __thiscall sub_43BA40(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43BA40(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aConnectiontype);
     *this = &off_4996A0;
@@ -47391,7 +47392,7 @@ _DWORD* __thiscall sub_43BA40(_DWORD* this, int a2)
 // 4996A0: using guessed type _UNKNOWN *off_4996A0;
 
 //----- (0043BA60) --------------------------------------------------------
-char __thiscall sub_43BA60(_DWORD** this, char* String1, int a3)
+char __thiscall sub_43BA60(_DWORD** self, char* String1, int a3)
 {
     char result; // al
 
@@ -47421,7 +47422,7 @@ char __thiscall sub_43BA60(_DWORD** this, char* String1, int a3)
 // 521684: using guessed type char byte_521684;
 
 //----- (0043BAF0) --------------------------------------------------------
-char __thiscall sub_43BAF0(_DWORD* this, char* String1)
+char __thiscall sub_43BAF0(_DWORD* self, char* String1)
 {
     const char* v2; // eax
     const char* v3; // esi
@@ -47453,7 +47454,7 @@ char __thiscall sub_43BAF0(_DWORD* this, char* String1)
 }
 
 //----- (0043BB70) --------------------------------------------------------
-_DWORD* __thiscall sub_43BB70(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43BB70(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aNetnameentry);
     *this = &off_4996D8;
@@ -47462,7 +47463,7 @@ _DWORD* __thiscall sub_43BB70(_DWORD* this, int a2)
 // 4996D8: using guessed type _UNKNOWN *off_4996D8;
 
 //----- (0043BB90) --------------------------------------------------------
-char __thiscall sub_43BB90(int this)
+char __thiscall sub_43BB90(int self)
 {
     const char* v2; // eax
     const char* v3; // esi
@@ -47479,7 +47480,7 @@ char __thiscall sub_43BB90(int this)
 }
 
 //----- (0043BBE0) --------------------------------------------------------
-char __thiscall sub_43BBE0(_DWORD* this)
+char __thiscall sub_43BBE0(_DWORD* self)
 {
     char v2[260]; // [esp+Ch] [ebp-104h] BYREF
 
@@ -47496,7 +47497,7 @@ char __thiscall sub_43BBE0(_DWORD* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043BD20) --------------------------------------------------------
-char __thiscall sub_43BD20(int this, char* String1, int a3)
+char __thiscall sub_43BD20(int self, char* String1, int a3)
 {
     if (String1)
     {
@@ -47505,7 +47506,7 @@ char __thiscall sub_43BD20(int this, char* String1, int a3)
             sub_4261C0(*(_DWORD**)(this + 40), aConnectiontype, 0);
             return 1;
         }
-        if (!_strcmpi(String1, aOkbutton) && sub_43BBE0((_DWORD*)this))
+        if (!_strcmpi(String1, aOkbutton) && sub_43BBE0((_DWORD*)self))
         {
             if (byte_521684)
             {
@@ -47520,7 +47521,7 @@ char __thiscall sub_43BD20(int this, char* String1, int a3)
 // 521684: using guessed type char byte_521684;
 
 //----- (0043BDB0) --------------------------------------------------------
-_DWORD* __thiscall sub_43BDB0(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43BDB0(_DWORD* self, int a2)
 {
     _DWORD* v3; // esi
     int v4; // edi
@@ -47543,7 +47544,7 @@ _DWORD* __thiscall sub_43BDB0(_DWORD* this, int a2)
 // 499710: using guessed type _UNKNOWN *off_499710;
 
 //----- (0043BE50) --------------------------------------------------------
-void __thiscall sub_43BE50(LPVOID* this)
+void __thiscall sub_43BE50(LPVOID* self)
 {
     LPVOID* v2; // esi
     int v3; // edi
@@ -47556,12 +47557,12 @@ void __thiscall sub_43BE50(LPVOID* this)
         sub_4885A6(*v2++);
         --v3;
     } while (v3);
-    sub_4234A0(this);
+    sub_4234A0(self);
 }
 // 499710: using guessed type _UNKNOWN *off_499710;
 
 //----- (0043BE80) --------------------------------------------------------
-void __thiscall sub_43BE80(int this)
+void __thiscall sub_43BE80(int self)
 {
     const char* v2; // eax
     int v3; // [esp+4h] [ebp-14h] BYREF
@@ -47597,7 +47598,7 @@ FILE* sub_43BFA0()
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043BFC0) --------------------------------------------------------
-char __thiscall sub_43BFC0(int this, char* String1, int a3)
+char __thiscall sub_43BFC0(int self, char* String1, int a3)
 {
     int v4; // eax
     char* v5; // ecx
@@ -47672,7 +47673,7 @@ char __thiscall sub_43BFC0(int this, char* String1, int a3)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043C290) --------------------------------------------------------
-char __thiscall sub_43C290(int this, int a2)
+char __thiscall sub_43C290(int self, int a2)
 {
     double v3; // st7
     int v4; // ecx
@@ -47718,7 +47719,7 @@ char __thiscall sub_43C290(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043C3A0) --------------------------------------------------------
-char __thiscall sub_43C3A0(_DWORD* this, int a2, int a3, int a4, int a5)
+char __thiscall sub_43C3A0(_DWORD* self, int a2, int a3, int a4, int a5)
 {
     char result; // al
 
@@ -47733,7 +47734,7 @@ char __thiscall sub_43C3A0(_DWORD* this, int a2, int a3, int a4, int a5)
 }
 
 //----- (0043C3D0) --------------------------------------------------------
-_DWORD* __thiscall sub_43C3D0(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43C3D0(_DWORD* self, int a2)
 {
     const char* v3; // eax
     int v4; // eax
@@ -47761,7 +47762,7 @@ _DWORD* __thiscall sub_43C3D0(_DWORD* this, int a2)
 // 499748: using guessed type _UNKNOWN *off_499748;
 
 //----- (0043C470) --------------------------------------------------------
-char __thiscall sub_43C470(int this)
+char __thiscall sub_43C470(int self)
 {
     const char* v2; // eax
     const char* v3; // esi
@@ -47783,7 +47784,7 @@ char __thiscall sub_43C470(int this)
 }
 
 //----- (0043C4D0) --------------------------------------------------------
-char __thiscall sub_43C4D0(int this, char* String1, int a3)
+char __thiscall sub_43C4D0(int self, char* String1, int a3)
 {
     const char* v4; // esi
     char* v6; // [esp-8h] [ebp-30h]
@@ -47854,7 +47855,7 @@ char __thiscall sub_43C4D0(int this, char* String1, int a3)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043C730) --------------------------------------------------------
-_DWORD* __thiscall sub_43C730(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43C730(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aTelegram);
     *this = &off_499780;
@@ -47864,7 +47865,7 @@ _DWORD* __thiscall sub_43C730(_DWORD* this, int a2)
 // 499780: using guessed type _UNKNOWN *off_499780;
 
 //----- (0043C760) --------------------------------------------------------
-char __thiscall sub_43C760(int* this)
+char __thiscall sub_43C760(int* self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // eax
@@ -47889,7 +47890,7 @@ char __thiscall sub_43C760(int* this)
 }
 
 //----- (0043C820) --------------------------------------------------------
-void __thiscall sub_43C820(int* this)
+void __thiscall sub_43C820(int* self)
 {
     int v2; // ecx
     void* v3; // edi
@@ -47909,18 +47910,18 @@ void __thiscall sub_43C820(int* this)
 }
 
 //----- (0043C860) --------------------------------------------------------
-char __thiscall sub_43C860(int this, int a2, int a3)
+char __thiscall sub_43C860(int self, int a2, int a3)
 {
     if ((_BYTE)a3 && *(float*)(this + 48) == 0.0)
-        sub_43C930((int**)this);
+        sub_43C930((int**)self);
     return sub_4285F0((_DWORD*)this, a2, a3);
 }
 
 //----- (0043C8A0) --------------------------------------------------------
-char __thiscall sub_43C8A0(int this, int a2, int a3)
+char __thiscall sub_43C8A0(int self, int a2, int a3)
 {
     if ((_BYTE)a3 && *(float*)(this + 48) == 0.0)
-        sub_43C930((int**)this);
+        sub_43C930((int**)self);
     return sub_428590((_DWORD*)this, a2, a3);
 }
 
@@ -47942,7 +47943,7 @@ char __userpurge sub_43C8E0@<al>(int a1@<ecx>, int a2@<ebp>, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043C930) --------------------------------------------------------
-char __thiscall sub_43C930(int** this)
+char __thiscall sub_43C930(int** self)
 {
     if (*(_BYTE*)(dword_4F5CC4 + 936) || *(_BYTE*)(dword_4F5CC4 + 937))
     {
@@ -47959,7 +47960,7 @@ char __thiscall sub_43C930(int** this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043C990) --------------------------------------------------------
-int __thiscall sub_43C990(int this, int a2)
+int __thiscall sub_43C990(int self, int a2)
 {
     const char* v3; // eax
     const char* v4; // eax
@@ -47984,7 +47985,7 @@ int __thiscall sub_43C990(int this, int a2)
 // 4997B8: using guessed type _UNKNOWN *off_4997B8;
 
 //----- (0043CA50) --------------------------------------------------------
-void __thiscall sub_43CA50(int this)
+void __thiscall sub_43CA50(int self)
 {
     int i; // edi
     void* v3; // eax
@@ -48000,11 +48001,11 @@ void __thiscall sub_43CA50(int this)
     sub_488CEE(v3);
     *(_DWORD*)(this + 52) = 0;
     *(_DWORD*)(this + 44) = 0;
-    sub_4234A0((void*)this);
+    sub_4234A0((void*)self);
 }
 
 //----- (0043CAC0) --------------------------------------------------------
-char __thiscall sub_43CAC0(_DWORD* this, int a2, int a3, int a4, int a5)
+char __thiscall sub_43CAC0(_DWORD* self, int a2, int a3, int a4, int a5)
 {
     int v5; // eax
 
@@ -48022,7 +48023,7 @@ char __thiscall sub_43CAC0(_DWORD* this, int a2, int a3, int a4, int a5)
 }
 
 //----- (0043CB00) --------------------------------------------------------
-int __thiscall sub_43CB00(_DWORD* this)
+int __thiscall sub_43CB00(_DWORD* self)
 {
     _DWORD* v1; // esi
     int result; // eax
@@ -48132,7 +48133,7 @@ char __userpurge sub_43CDB0@<al>(_DWORD* a1@<ecx>, int a2@<ebp>, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043CDE0) --------------------------------------------------------
-int __thiscall sub_43CDE0(int this)
+int __thiscall sub_43CDE0(int self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // eax
@@ -48158,7 +48159,7 @@ int __thiscall sub_43CDE0(int this)
     v9 = (double)*(int*)&dword_4A34C0 * 0.0099999998 * 0.40000001 + 0.60000002;
     sub_41CFD0(*(_DWORD*)(this + 76), v9);
     sub_41CD90(*(_DWORD*)(this + 76));
-    sub_43CB00((_DWORD*)this);
+    sub_43CB00((_DWORD*)self);
     *(_DWORD*)(this + 60) = 0;
     v4 = 0;
     if (*(int*)(this + 48) > 0)
@@ -48188,7 +48189,7 @@ int __thiscall sub_43CDE0(int this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043CF70) --------------------------------------------------------
-void __thiscall sub_43CF70(_DWORD* this)
+void __thiscall sub_43CF70(_DWORD* self)
 {
     int v2; // ecx
     void* v3; // edi
@@ -48227,7 +48228,7 @@ void __thiscall sub_43CF70(_DWORD* this)
 // 5216E4: using guessed type char byte_5216E4;
 
 //----- (0043D010) --------------------------------------------------------
-char __thiscall sub_43D010(int** this, char* String1, int a3)
+char __thiscall sub_43D010(int** self, char* String1, int a3)
 {
     if (String1 && !_strcmpi(String1, aOkbutton))
         sub_4262D0(this[10]);
@@ -48235,7 +48236,7 @@ char __thiscall sub_43D010(int** this, char* String1, int a3)
 }
 
 //----- (0043D040) --------------------------------------------------------
-_DWORD* __thiscall sub_43D040(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43D040(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aHelpscreen);
     *this = &off_4997F0;
@@ -48244,7 +48245,7 @@ _DWORD* __thiscall sub_43D040(_DWORD* this, int a2)
 // 4997F0: using guessed type _UNKNOWN *off_4997F0;
 
 //----- (0043D060) --------------------------------------------------------
-char __thiscall sub_43D060(_DWORD* this)
+char __thiscall sub_43D060(_DWORD* self)
 {
     const char* v2; // eax
     const char* v3; // eax
@@ -48256,7 +48257,7 @@ char __thiscall sub_43D060(_DWORD* this)
 }
 
 //----- (0043D0A0) --------------------------------------------------------
-char __thiscall sub_43D0A0(int** this, char* String1, int a3)
+char __thiscall sub_43D0A0(int** self, char* String1, int a3)
 {
     if (!_strcmpi(String1, aOkbutton_0))
         sub_4262D0(this[10]);
@@ -48264,7 +48265,7 @@ char __thiscall sub_43D0A0(int** this, char* String1, int a3)
 }
 
 //----- (0043D0D0) --------------------------------------------------------
-_DWORD* __thiscall sub_43D0D0(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43D0D0(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aDeletechar);
     *this = &off_499828;
@@ -48273,7 +48274,7 @@ _DWORD* __thiscall sub_43D0D0(_DWORD* this, int a2)
 // 499828: using guessed type _UNKNOWN *off_499828;
 
 //----- (0043D0F0) --------------------------------------------------------
-char __thiscall sub_43D0F0(int this)
+char __thiscall sub_43D0F0(int self)
 {
     const char* v2; // eax
     const char* v3; // eax
@@ -48289,7 +48290,7 @@ char __thiscall sub_43D0F0(int this)
 }
 
 //----- (0043D140) --------------------------------------------------------
-char __thiscall sub_43D140(_DWORD** this, char* String1, int a3)
+char __thiscall sub_43D140(_DWORD** self, char* String1, int a3)
 {
     char Buffer[260]; // [esp+8h] [ebp-104h] BYREF
 
@@ -48310,7 +48311,7 @@ char __thiscall sub_43D140(_DWORD** this, char* String1, int a3)
 }
 
 //----- (0043D1D0) --------------------------------------------------------
-_DWORD* __thiscall sub_43D1D0(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43D1D0(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aErrormsg);
     *this = &off_499860;
@@ -48319,7 +48320,7 @@ _DWORD* __thiscall sub_43D1D0(_DWORD* this, int a2)
 // 499860: using guessed type _UNKNOWN *off_499860;
 
 //----- (0043D1F0) --------------------------------------------------------
-char __thiscall sub_43D1F0(int this)
+char __thiscall sub_43D1F0(int self)
 {
     const char* v2; // eax
     const char* v3; // eax
@@ -48335,7 +48336,7 @@ char __thiscall sub_43D1F0(int this)
 }
 
 //----- (0043D240) --------------------------------------------------------
-char __thiscall sub_43D240(_DWORD** this, char* String1, int a3)
+char __thiscall sub_43D240(_DWORD** self, char* String1, int a3)
 {
     if (String1 && !_strcmpi(String1, aOkbutton))
         sub_4261C0(this[10], byte_520D40, 0);
@@ -48343,7 +48344,7 @@ char __thiscall sub_43D240(_DWORD** this, char* String1, int a3)
 }
 
 //----- (0043D280) --------------------------------------------------------
-_DWORD* __thiscall sub_43D280(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43D280(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aConnecting);
     *this = &off_499898;
@@ -48354,7 +48355,7 @@ _DWORD* __thiscall sub_43D280(_DWORD* this, int a2)
 // 499898: using guessed type _UNKNOWN *off_499898;
 
 //----- (0043D2F0) --------------------------------------------------------
-char __thiscall sub_43D2F0(_DWORD** this, char* String1, int a3)
+char __thiscall sub_43D2F0(_DWORD** self, char* String1, int a3)
 {
     if (String1 && !_strcmpi(String1, aCancelbutton))
     {
@@ -48368,7 +48369,7 @@ char __thiscall sub_43D2F0(_DWORD** this, char* String1, int a3)
 // 520C3C: using guessed type char byte_520C3C;
 
 //----- (0043D340) --------------------------------------------------------
-char __thiscall sub_43D340(int this, int a2)
+char __thiscall sub_43D340(int self, int a2)
 {
     double v3; // st7
     int v5; // [esp+4h] [ebp-1Ch] BYREF
@@ -48415,7 +48416,7 @@ char __thiscall sub_43D340(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043D450) --------------------------------------------------------
-_DWORD* __thiscall sub_43D450(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43D450(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aMissionfailed);
     *this = &off_4998D0;
@@ -48424,7 +48425,7 @@ _DWORD* __thiscall sub_43D450(_DWORD* this, int a2)
 // 4998D0: using guessed type _UNKNOWN *off_4998D0;
 
 //----- (0043D480) --------------------------------------------------------
-const char* __thiscall sub_43D480(int this)
+const char* __thiscall sub_43D480(int self)
 {
     const char* v2; // edi
     const char* result; // eax
@@ -48441,7 +48442,7 @@ const char* __thiscall sub_43D480(int this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043D4D0) --------------------------------------------------------
-char __thiscall sub_43D4D0(int** this, char* String1, int a3)
+char __thiscall sub_43D4D0(int** self, char* String1, int a3)
 {
     if (String1)
     {
@@ -48468,7 +48469,7 @@ char __thiscall sub_43D4D0(int** this, char* String1, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043D580) --------------------------------------------------------
-_DWORD* __thiscall sub_43D580(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43D580(_DWORD* self, int a2)
 {
     sub_4233C0((int)this, a2, aIngamemenu);
     *this = &off_499908;
@@ -48477,20 +48478,20 @@ _DWORD* __thiscall sub_43D580(_DWORD* this, int a2)
 // 499908: using guessed type _UNKNOWN *off_499908;
 
 //----- (0043D5A0) --------------------------------------------------------
-void __thiscall sub_43D5A0(_BYTE* this)
+void __thiscall sub_43D5A0(_BYTE* self)
 {
     this[44] = 1;
 }
 
 //----- (0043D5B0) --------------------------------------------------------
-char __thiscall sub_43D5B0(int this, int a2)
+char __thiscall sub_43D5B0(int self, int a2)
 {
     *(_BYTE*)(this + 44) = 0;
     return sub_428620((_DWORD*)this, a2);
 }
 
 //----- (0043D5D0) --------------------------------------------------------
-char __thiscall sub_43D5D0(int this, char* String1, int a3)
+char __thiscall sub_43D5D0(int self, char* String1, int a3)
 {
     int v5; // esi
     int v6; // edi
@@ -48562,7 +48563,7 @@ char __thiscall sub_43D5D0(int this, char* String1, int a3)
 // 521684: using guessed type char byte_521684;
 
 //----- (0043D7C0) --------------------------------------------------------
-const char** __thiscall sub_43D7C0(const char** this, int a2)
+const char** __thiscall sub_43D7C0(const char** self, int a2)
 {
     int v3; // esi
     const char** v4; // ebx
@@ -48603,7 +48604,7 @@ char __userpurge sub_43D8A0@<al>(_DWORD* a1@<ecx>, int a2@<ebp>, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043D8D0) --------------------------------------------------------
-char __thiscall sub_43D8D0(_DWORD* this)
+char __thiscall sub_43D8D0(_DWORD* self)
 {
     int v2; // edi
     int v3; // ebp
@@ -48674,7 +48675,7 @@ char __thiscall sub_43D8D0(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043DA70) --------------------------------------------------------
-char __thiscall sub_43DA70(int this)
+char __thiscall sub_43DA70(int self)
 {
     _DWORD* v2; // esi
     int v3; // ebp
@@ -48763,7 +48764,7 @@ char __thiscall sub_43DA70(int this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043DC50) --------------------------------------------------------
-const char* __thiscall sub_43DC50(_DWORD* this)
+const char* __thiscall sub_43DC50(_DWORD* self)
 {
     const char* v2; // edi
     const char* result; // eax
@@ -48776,7 +48777,7 @@ const char* __thiscall sub_43DC50(_DWORD* this)
 }
 
 //----- (0043DC90) --------------------------------------------------------
-char __thiscall sub_43DC90(_DWORD* this)
+char __thiscall sub_43DC90(_DWORD* self)
 {
     const char* v2; // eax
     _DWORD* v3; // eax
@@ -48784,9 +48785,9 @@ char __thiscall sub_43DC90(_DWORD* this)
     float v6; // [esp+0h] [ebp-18h]
 
     this[12] = 0;
-    sub_43D8D0(this);
-    sub_43DA70((int)this);
-    sub_43DC50(this);
+    sub_43D8D0(self);
+    sub_43DA70((int)self);
+    sub_43DC50(self);
     v2 = sub_424350(this, aOkbutton);
     if (*(_BYTE*)(dword_4F5CC4 + 937))
         *((_BYTE*)v2 + 44) = 0;
@@ -48809,7 +48810,7 @@ char __thiscall sub_43DC90(_DWORD* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043DD80) --------------------------------------------------------
-void __thiscall sub_43DD80(int* this)
+void __thiscall sub_43DD80(int* self)
 {
     int v2; // ecx
     void* v3; // edi
@@ -48833,7 +48834,7 @@ void __thiscall sub_43DD80(int* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043DDF0) --------------------------------------------------------
-char __thiscall sub_43DDF0(int this, char* String1, int a3)
+char __thiscall sub_43DDF0(int self, char* String1, int a3)
 {
     char result; // al
     int v5; // eax
@@ -48866,14 +48867,14 @@ char __thiscall sub_43DDF0(int this, char* String1, int a3)
         v7 = v6 ? 0 : v5;
     }
     *(_DWORD*)(this + 48) = v7;
-    sub_43DA70(this);
-    sub_43DC50((_DWORD*)this);
+    sub_43DA70(self);
+    sub_43DC50((_DWORD*)self);
     return 1;
 }
 // 520970: using guessed type int dword_520970;
 
 //----- (0043DE90) --------------------------------------------------------
-_DWORD* __thiscall sub_43DE90(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43DE90(_DWORD* self, int a2)
 {
     const char* v3; // eax
     int v4; // ecx
@@ -48917,20 +48918,20 @@ _DWORD* __thiscall sub_43DE90(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043E040) --------------------------------------------------------
-void __thiscall sub_43E040(LPVOID* this)
+void __thiscall sub_43E040(LPVOID* self)
 {
     *this = &off_499978;
     sub_4885A6(this[31]);
     *(_DWORD*)(dword_520970 + 312) = 0;
-    sub_411430((_DWORD*)dword_4F5CC4, (int)this);
-    sub_4234A0(this);
+    sub_411430((_DWORD*)dword_4F5CC4, (int)self);
+    sub_4234A0(self);
 }
 // 499978: using guessed type _UNKNOWN *off_499978;
 // 4F5CC4: using guessed type int dword_4F5CC4;
 // 520970: using guessed type int dword_520970;
 
 //----- (0043E0C0) --------------------------------------------------------
-bool __thiscall sub_43E0C0(_DWORD* this)
+bool __thiscall sub_43E0C0(_DWORD* self)
 {
     int v1; // edx
     int v2; // eax
@@ -48949,7 +48950,7 @@ bool __thiscall sub_43E0C0(_DWORD* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043E100) --------------------------------------------------------
-char __thiscall sub_43E100(int this, char* String1, int a3)
+char __thiscall sub_43E100(int self, char* String1, int a3)
 {
     int v4; // edi
     int v5; // eax
@@ -49003,7 +49004,7 @@ char __thiscall sub_43E100(int this, char* String1, int a3)
                 sub_421110(*((_DWORD*)v7 + 28), v8);
             }
             sub_422DC0((HKEY)AppName, aMultiplayersky, *(_DWORD*)(this + 104));
-            sub_43E0C0((_DWORD*)this);
+            sub_43E0C0((_DWORD*)self);
             return 1;
         }
         return 1;
@@ -49047,7 +49048,7 @@ char __thiscall sub_43E100(int this, char* String1, int a3)
                 sub_421110(*(_DWORD*)(*(_DWORD*)(this + 88) + 112), aRecruit);
             }
             *(_DWORD*)(*(_DWORD*)(dword_520970 + 236) + 20) = *(_DWORD*)(this + 108);
-            sub_43E0C0((_DWORD*)this);
+            sub_43E0C0((_DWORD*)self);
             return 1;
         }
     LABEL_38:
@@ -49120,7 +49121,7 @@ char __thiscall sub_43E100(int this, char* String1, int a3)
         sub_421110(*((_DWORD*)v15 + 28), v16);
     }
     sub_422DC0((HKEY)AppName, aMultiplayermis, *(_DWORD*)(this + 100));
-    sub_43E0C0((_DWORD*)this);
+    sub_43E0C0((_DWORD*)self);
     return 1;
 }
 // 4F5CC4: using guessed type int dword_4F5CC4;
@@ -49128,7 +49129,7 @@ char __thiscall sub_43E100(int this, char* String1, int a3)
 // 521684: using guessed type char byte_521684;
 
 //----- (0043E540) --------------------------------------------------------
-char __thiscall sub_43E540(int this, int a2)
+char __thiscall sub_43E540(int self, int a2)
 {
     double v3; // st7
     int v4; // ebp
@@ -49180,7 +49181,7 @@ char __thiscall sub_43E540(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043E670) --------------------------------------------------------
-_DWORD* __thiscall sub_43E670(_DWORD* this, _DWORD* a2, int a3, int a4, int a5)
+_DWORD* __thiscall sub_43E670(_DWORD* self, _DWORD* a2, int a3, int a4, int a5)
 {
     _DWORD* result; // eax
     int v7; // ecx
@@ -49210,7 +49211,7 @@ _DWORD* __thiscall sub_43E670(_DWORD* this, _DWORD* a2, int a3, int a4, int a5)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043E720) --------------------------------------------------------
-bool __thiscall sub_43E720(int this)
+bool __thiscall sub_43E720(int self)
 {
     const char* v2; // edi
     const char* v3; // ebp
@@ -49295,7 +49296,7 @@ int sub_43E8D0()
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043E8F0) --------------------------------------------------------
-char __thiscall sub_43E8F0(_DWORD* this, int a2, int a3)
+char __thiscall sub_43E8F0(_DWORD* self, int a2, int a3)
 {
     int v4; // eax
     _WORD v6[3]; // [esp+8h] [ebp-48h] BYREF
@@ -49324,7 +49325,7 @@ char __thiscall sub_43E8F0(_DWORD* this, int a2, int a3)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0043E9B0) --------------------------------------------------------
-int __thiscall sub_43E9B0(_DWORD* this)
+int __thiscall sub_43E9B0(_DWORD* self)
 {
     int v2; // ebx
     int v3; // eax
@@ -49358,7 +49359,7 @@ int __thiscall sub_43E9B0(_DWORD* this)
 }
 
 //----- (0043EA00) --------------------------------------------------------
-int __thiscall sub_43EA00(_DWORD* this, const char* a2, int a3, int a4, char a5)
+int __thiscall sub_43EA00(_DWORD* self, const char* a2, int a3, int a4, char a5)
 {
     int v6; // eax
     int v7; // eax
@@ -49383,7 +49384,7 @@ int __thiscall sub_43EA00(_DWORD* this, const char* a2, int a3, int a4, char a5)
         }
     }
     if (this[30] == this[29])
-        sub_43E9B0(this);
+        sub_43E9B0(self);
     v9 = this[31] + 72 * this[30];
     strcpy((char*)(v9 + 8), a2);
     *(_DWORD*)v9 = a4;
@@ -49399,7 +49400,7 @@ int __thiscall sub_43EA00(_DWORD* this, const char* a2, int a3, int a4, char a5)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043EB00) --------------------------------------------------------
-char __thiscall sub_43EB00(int this, int a2)
+char __thiscall sub_43EB00(int self, int a2)
 {
     int v3; // eax
     int v4; // ebp
@@ -49465,7 +49466,7 @@ char __thiscall sub_43EB00(int this, int a2)
         {
             v3 = *(_DWORD*)(v4 + 6);
             if (v3)
-                LOBYTE(v3) = sub_43E0C0((_DWORD*)this);
+                LOBYTE(v3) = sub_43E0C0((_DWORD*)self);
         }
     }
     else
@@ -49580,21 +49581,21 @@ char __thiscall sub_43EB00(int this, int a2)
 // 521684: using guessed type char byte_521684;
 
 //----- (0043EF90) --------------------------------------------------------
-_DWORD* __thiscall sub_43EF90(void* this, _DWORD* a2, int a3)
+_DWORD* __thiscall sub_43EF90(void* self, _DWORD* a2, int a3)
 {
     sub_4102F0((int)this, a2, 0, a3);
     return a2;
 }
 
 //----- (0043EFC0) --------------------------------------------------------
-_DWORD* __thiscall sub_43EFC0(void* this, _DWORD* a2, const CHAR* a3, int a4)
+_DWORD* __thiscall sub_43EFC0(void* self, _DWORD* a2, const CHAR* a3, int a4)
 {
     sub_4102F0((int)this, a2, a3, a4);
     return a2;
 }
 
 //----- (0043EFF0) --------------------------------------------------------
-_DWORD* __thiscall sub_43EFF0(_DWORD* this, _DWORD* a2)
+_DWORD* __thiscall sub_43EFF0(_DWORD* self, _DWORD* a2)
 {
     const char* v2; // ecx
 
@@ -49606,7 +49607,7 @@ _DWORD* __thiscall sub_43EFF0(_DWORD* this, _DWORD* a2)
 }
 
 //----- (0043F030) --------------------------------------------------------
-float* __thiscall sub_43F030(float* this, char* a2)
+float* __thiscall sub_43F030(float* self, char* a2)
 {
     char* v2; // edi
     double v4; // st7
@@ -49685,10 +49686,10 @@ float* __thiscall sub_43F030(float* this, char* a2)
 // 4999B0: using guessed type _UNKNOWN *off_4999B0;
 
 //----- (0043F320) --------------------------------------------------------
-int __thiscall sub_43F320(void* this)
+int __thiscall sub_43F320(void* self)
 {
     *(_DWORD*)this = &off_4999B0;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 4999B0: using guessed type _UNKNOWN *off_4999B0;
 
@@ -49733,14 +49734,14 @@ unsigned int __usercall sub_43F350@<eax>(int a1@<ecx>, int a2@<ebp>)
 // 520970: using guessed type int dword_520970;
 
 //----- (0043F3E0) --------------------------------------------------------
-int __thiscall sub_43F3E0(int this)
+int __thiscall sub_43F3E0(int self)
 {
     int i; // edi
     void* v3; // ecx
     void* v4; // eax
 
     *(_DWORD*)this = &off_4999BC;
-    sub_42A840((_DWORD*)this);
+    sub_42A840((_DWORD*)self);
     if (*(_BYTE*)(this + 936))
     {
         for (i = 0; i < *(_DWORD*)(this + 928); ++i)
@@ -49772,12 +49773,12 @@ int __thiscall sub_43F3E0(int this)
     *(_DWORD*)(this + 596) = 0;
     *(_DWORD*)(this + 600) = 0;
     *(_DWORD*)(this + 604) = 0;
-    return sub_4690A0((void*)this);
+    return sub_4690A0((void*)self);
 }
 // 4999BC: using guessed type _UNKNOWN *off_4999BC;
 
 //----- (0043F560) --------------------------------------------------------
-_DWORD* __thiscall sub_43F560(_DWORD* this, int a2)
+_DWORD* __thiscall sub_43F560(_DWORD* self, int a2)
 {
     char v3; // cl
     char v4; // dl
@@ -50141,7 +50142,7 @@ _DWORD* __thiscall sub_43F560(_DWORD* this, int a2)
     strcpy((char*)this + 304, String1);
     this[141] = 0;
     if (!sub_46A3A0(*(_BYTE**)(dword_520970 + 200), (LPCSTR)this + 304))
-        sub_43F350((int)this, (int)this);
+        sub_43F350((int)this, (int)self);
     if (!sub_46A490(*(_BYTE**)(dword_520970 + 200)))
     {
         sub_4066C0(
@@ -51459,7 +51460,7 @@ LABEL_380:
                 sub_40A120(v260[13] != -1, "%s, see %s : %s", aCollisionObjec, (const char*)this[1], *(const char**)ArgList);
         }
     }
-    sub_42A840(this);
+    sub_42A840(self);
     sub_4229D0("Finished loading %s in %s", (const char*)this[1], *(const char**)ArgList);
     return this;
 }
@@ -51491,7 +51492,7 @@ int __fastcall sub_442440(int a1)
 // 4999C8: using guessed type _UNKNOWN *off_4999C8;
 
 //----- (00442520) --------------------------------------------------------
-char __thiscall sub_442520(int this)
+char __thiscall sub_442520(int self)
 {
     int v2; // eax
     int v3; // esi
@@ -51576,7 +51577,7 @@ char __thiscall sub_442520(int this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (004426B0) --------------------------------------------------------
-int __thiscall sub_4426B0(_DWORD* this, int ArgList, int a3)
+int __thiscall sub_4426B0(_DWORD* self, int ArgList, int a3)
 {
     int v3; // esi
     int v5; // eax
@@ -51890,7 +51891,7 @@ int __thiscall sub_4426B0(_DWORD* this, int ArgList, int a3)
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (00442EE0) --------------------------------------------------------
-int __thiscall sub_442EE0(_DWORD* this, int* a2, int* a3, int a4, _DWORD* a5)
+int __thiscall sub_442EE0(_DWORD* self, int* a2, int* a3, int a4, _DWORD* a5)
 {
     int result; // eax
     unsigned int i; // esi
@@ -51915,7 +51916,7 @@ int __thiscall sub_442EE0(_DWORD* this, int* a2, int* a3, int a4, _DWORD* a5)
 }
 
 //----- (00442F30) --------------------------------------------------------
-int __thiscall sub_442F30(_DWORD* this, int* a2, float a3, float a4, int a5, int a6)
+int __thiscall sub_442F30(_DWORD* self, int* a2, float a3, float a4, int a5, int a6)
 {
     unsigned int i; // edi
     int result; // eax
@@ -51934,7 +51935,7 @@ int __thiscall sub_442F30(_DWORD* this, int* a2, float a3, float a4, int a5, int
 }
 
 //----- (00442F80) --------------------------------------------------------
-_WORD* __thiscall sub_442F80(_DWORD* this, _WORD* a2)
+_WORD* __thiscall sub_442F80(_DWORD* self, _WORD* a2)
 {
     int v3; // ebx
     void* v4; // eax
@@ -51977,7 +51978,7 @@ _WORD* __thiscall sub_442F80(_DWORD* this, _WORD* a2)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00443080) --------------------------------------------------------
-int __thiscall sub_443080(_DWORD* this)
+int __thiscall sub_443080(_DWORD* self)
 {
     int v2; // eax
     int v3; // ebx
@@ -52007,7 +52008,7 @@ int __thiscall sub_443080(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00443130) --------------------------------------------------------
-char __thiscall sub_443130(_DWORD* this)
+char __thiscall sub_443130(_DWORD* self)
 {
     int v1; // edx
     int v2; // eax
@@ -52031,7 +52032,7 @@ char __thiscall sub_443130(_DWORD* this)
 }
 
 //----- (00443180) --------------------------------------------------------
-__int16 __thiscall sub_443180(_DWORD* this, int a2)
+__int16 __thiscall sub_443180(_DWORD* self, int a2)
 {
     unsigned int v2; // eax
     int v3; // edx
@@ -52055,13 +52056,13 @@ __int16 __thiscall sub_443180(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (004431F0) --------------------------------------------------------
-int __thiscall sub_4431F0(_DWORD* this, int a2, int a3)
+int __thiscall sub_4431F0(_DWORD* self, int a2, int a3)
 {
     return sub_4436D0(*(int**)(this[6] + 4 * a2), a3);
 }
 
 //----- (00443210) --------------------------------------------------------
-int __thiscall sub_443210(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_443210(_DWORD* self, int a2, int a3, int a4)
 {
     unsigned int i; // esi
     int result; // eax
@@ -52077,7 +52078,7 @@ int __thiscall sub_443210(_DWORD* this, int a2, int a3, int a4)
 }
 
 //----- (00443250) --------------------------------------------------------
-int __thiscall sub_443250(int this, int a2, int ArgList)
+int __thiscall sub_443250(int self, int a2, int ArgList)
 {
     _DWORD* v4; // eax
     _DWORD* v5; // eax
@@ -52096,7 +52097,7 @@ int __thiscall sub_443250(int this, int a2, int ArgList)
     int v19; // [esp+30h] [ebp-4h]
 
     v17[1] = this;
-    sub_401270(this);
+    sub_401270(self);
     v19 = 0;
     *(_BYTE*)(this + 520) = a2;
     *(_DWORD*)(this + 524) = 0;
@@ -52191,7 +52192,7 @@ int __thiscall sub_443250(int this, int a2, int ArgList)
 // 520970: using guessed type int dword_520970;
 
 //----- (00443590) --------------------------------------------------------
-int __thiscall sub_443590(int this)
+int __thiscall sub_443590(int self)
 {
     void* v2; // ecx
     int v3; // edi
@@ -52232,13 +52233,13 @@ int __thiscall sub_443590(int this)
     *(_DWORD*)(this + 524) = 0;
     *(_DWORD*)(this + 528) = 0;
     *(_DWORD*)(this + 532) = 0;
-    return sub_4013F0((_DWORD*)this);
+    return sub_4013F0((_DWORD*)self);
 }
 // 415760: using guessed type int __thiscall nullsub_1(_DWORD);
 // 4999E8: using guessed type _UNKNOWN *off_4999E8;
 
 //----- (004436D0) --------------------------------------------------------
-int __thiscall sub_4436D0(int* this, int a2)
+int __thiscall sub_4436D0(int* self, int a2)
 {
     _DWORD* v3; // eax
     int v4; // ecx
@@ -52328,13 +52329,13 @@ int __thiscall sub_4436D0(int* this, int a2)
 }
 
 //----- (004438C0) --------------------------------------------------------
-BOOL __thiscall sub_4438C0(float* this)
+BOOL __thiscall sub_4438C0(float* self)
 {
-    return sub_4438E0(this) > 0.0;
+    return sub_4438E0(self) > 0.0;
 }
 
 //----- (004438E0) --------------------------------------------------------
-double __thiscall sub_4438E0(float* this)
+double __thiscall sub_4438E0(float* self)
 {
     if (this[106] <= (double)this[105])
         return this[106];
@@ -52343,7 +52344,7 @@ double __thiscall sub_4438E0(float* this)
 }
 
 //----- (00443910) --------------------------------------------------------
-char __thiscall sub_443910(float** this, int* a2, int* a3)
+char __thiscall sub_443910(float** self, int* a2, int* a3)
 {
     float v4[3]; // [esp+0h] [ebp-Ch] BYREF
 
@@ -52426,7 +52427,7 @@ int __userpurge sub_443950@<eax>(_DWORD* a1@<ecx>, int a2@<ebx>, int* a3, int* a
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00443B50) --------------------------------------------------------
-unsigned int __thiscall sub_443B50(int this, int* a2, float a3, float a4, float a5, int a6)
+unsigned int __thiscall sub_443B50(int self, int* a2, float a3, float a4, float a5, int a6)
 {
     float v6; // ebx
     int v8; // ebp
@@ -52510,7 +52511,7 @@ unsigned int __thiscall sub_443B50(int this, int* a2, float a3, float a4, float 
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00443CD0) --------------------------------------------------------
-bool __thiscall sub_443CD0(int this, int a2, int a3, float a4, float a5)
+bool __thiscall sub_443CD0(int self, int a2, int a3, float a4, float a5)
 {
     int v6; // ebp
     unsigned int i; // edi
@@ -52593,7 +52594,7 @@ bool __thiscall sub_443CD0(int this, int a2, int a3, float a4, float a5)
                 a4 = 0.0;
         }
     }
-    if (sub_4438C0((float*)this))
+    if (sub_4438C0((float*)self))
     {
         v17 = *(_DWORD*)(this + 408);
         if (a2 == *(_DWORD*)(v17 + 616))
@@ -52605,18 +52606,18 @@ bool __thiscall sub_443CD0(int this, int a2, int a3, float a4, float a5)
             *(float*)(this + 420) = *(float*)(this + 420) - a4;
         if (*(_BYTE*)(dword_4F5CC4 + 937))
         {
-            if (!sub_4438C0((float*)this))
+            if (!sub_4438C0((float*)self))
             {
                 sub_4477F0(this, 1);
                 *(_DWORD*)(this + 428) = 2139095039;
             }
         }
-        else if (*(float*)(v17 + 676) != 0.0 || sub_4438C0((float*)this))
+        else if (*(float*)(v17 + 676) != 0.0 || sub_4438C0((float*)self))
         {
             if (*(_BYTE*)(this + 392))
             {
                 v24 = *(float*)(*(_DWORD*)(this + 408) + 668);
-                v18 = v24 == 0.0 ? 0.0 : sub_4438E0((float*)this) / v24;
+                v18 = v24 == 0.0 ? 0.0 : sub_4438E0((float*)self) / v24;
                 if (v18 <= *(float*)(*(_DWORD*)(this + 408) + 676))
                     sub_4477F0(this, 1);
             }
@@ -52641,7 +52642,7 @@ bool __thiscall sub_443CD0(int this, int a2, int a3, float a4, float a5)
 // 520970: using guessed type int dword_520970;
 
 //----- (00444030) --------------------------------------------------------
-char __thiscall sub_444030(_DWORD* this, char a2)
+char __thiscall sub_444030(_DWORD* self, char a2)
 {
     int v3; // ecx
     char result; // al
@@ -52668,7 +52669,7 @@ char __thiscall sub_444030(_DWORD* this, char a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (004440B0) --------------------------------------------------------
-char __thiscall sub_4440B0(int this, char a2)
+char __thiscall sub_4440B0(int self, char a2)
 {
     int v3; // eax
     int v4; // ecx
@@ -52751,7 +52752,7 @@ LABEL_11:
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (004442A0) --------------------------------------------------------
-char __thiscall sub_4442A0(int this)
+char __thiscall sub_4442A0(int self)
 {
     int v2; // eax
     float* v3; // eax
@@ -53041,7 +53042,7 @@ void sub_444A90()
 // 444A93: control flows out of bounds to 415760
 
 //----- (00444AA0) --------------------------------------------------------
-char __thiscall sub_444AA0(int this, int a2)
+char __thiscall sub_444AA0(int self, int a2)
 {
     double v3; // st7
     double v4; // st6
@@ -53444,7 +53445,7 @@ char __thiscall sub_444AA0(int this, int a2)
     v304[15] = 1065353216;
     sub_46B97C(v304, v310, v304);
     sub_4073F0(*(_DWORD**)(this + 412), 0, v304);
-    if (!sub_4438C0((float*)this) && sub_408880(*(_DWORD**)(this + 412)) > 0 && sub_4088E0(*(_DWORD*)(this + 412))
+    if (!sub_4438C0((float*)self) && sub_408880(*(_DWORD**)(this + 412)) > 0 && sub_4088E0(*(_DWORD*)(this + 412))
         || ((v17 = *(_DWORD*)(this + 436), v17 == 1) || v17 == 2)
         && *(float*)(this + 460) * *(float*)(this + 488)
         + *(float*)(this + 456) * *(float*)(this + 484)
@@ -53487,7 +53488,7 @@ char __thiscall sub_444AA0(int this, int a2)
         (*(void(__thiscall**)(int, _DWORD))(*(_DWORD*)this + 24))(this, 0);
         sub_4477F0(this, 0);
     }
-    if (!sub_4438C0((float*)this) && !sub_408880(*(_DWORD**)(this + 412)))
+    if (!sub_4438C0((float*)self) && !sub_408880(*(_DWORD**)(this + 412)))
     {
         v28 = *(float*)(this + 428) - *(float*)&a2;
         v29 = *(_DWORD*)(this + 408);
@@ -53544,7 +53545,7 @@ char __thiscall sub_444AA0(int this, int a2)
         }
     }
 LABEL_60:
-    if (sub_4438C0((float*)this))
+    if (sub_4438C0((float*)self))
     {
         v39 = *(_DWORD*)(*(_DWORD*)(this + 408) + 292);
         if (v39)
@@ -54082,7 +54083,7 @@ LABEL_60:
             }
         }
     }
-    if (sub_4438C0((float*)this))
+    if (sub_4438C0((float*)self))
     {
         v111 = *(_BYTE*)(this + 1425);
         v112 = *(float*)(this + 492) < (double)*(float*)(*(_DWORD*)(this + 408) + 920);
@@ -54472,7 +54473,7 @@ LABEL_60:
             v113 += 4;
         }
     }
-    v177 = sub_4438E0((float*)this);
+    v177 = sub_4438E0((float*)self);
     v178 = *(_DWORD*)(this + 408);
     v269 = v177;
     v179 = *(float*)(v178 + 668);
@@ -54583,10 +54584,10 @@ LABEL_60:
         v289 = v203;
         sub_41D960(v198, &v287, &v271);
     }
-    if (sub_408F30((_DWORD*)dword_520970) == this)
+    if (sub_408F30((_DWORD*)dword_520970) == self)
     {
         sub_407430(*(_DWORD**)(this + 412), 0, (char*)v300);
-        sub_401450((_DWORD*)this);
+        sub_401450((_DWORD*)self);
         *(float*)&v248 = 0.0;
         v249 = 4000.0;
         v250 = 0.0;
@@ -54670,7 +54671,7 @@ LABEL_60:
 // 520970: using guessed type int dword_520970;
 
 //----- (004476E0) --------------------------------------------------------
-int __thiscall sub_4476E0(int* this, int a2, int a3)
+int __thiscall sub_4476E0(int* self, int a2, int a3)
 {
     int v3; // esi
     int result; // eax
@@ -54689,7 +54690,7 @@ int __thiscall sub_4476E0(int* this, int a2, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (00447720) --------------------------------------------------------
-int __thiscall sub_447720(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_447720(_DWORD* self, int a2, int a3, int a4)
 {
     int result; // eax
 
@@ -54702,7 +54703,7 @@ int __thiscall sub_447720(_DWORD* this, int a2, int a3, int a4)
 }
 
 //----- (00447750) --------------------------------------------------------
-int __thiscall sub_447750(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_447750(_DWORD* self, int a2, int a3, int a4)
 {
     int result; // eax
     int v5; // edx
@@ -54723,7 +54724,7 @@ int __thiscall sub_447750(_DWORD* this, int a2, int a3, int a4)
 }
 
 //----- (004477A0) --------------------------------------------------------
-int __thiscall sub_4477A0(int this, int a2)
+int __thiscall sub_4477A0(int self, int a2)
 {
     int* v3; // ecx
     int result; // eax
@@ -54747,7 +54748,7 @@ int __thiscall sub_4477A0(int this, int a2)
 }
 
 //----- (004477F0) --------------------------------------------------------
-int __thiscall sub_4477F0(int this, int a2)
+int __thiscall sub_4477F0(int self, int a2)
 {
     int v3; // ebx
     int v4; // eax
@@ -54889,7 +54890,7 @@ int __thiscall sub_4477F0(int this, int a2)
 // 5216E8: using guessed type int dword_5216E8;
 
 //----- (00447AA0) --------------------------------------------------------
-void __thiscall sub_447AA0(_DWORD* this, float a2)
+void __thiscall sub_447AA0(_DWORD* self, float a2)
 {
     int v3; // esi
     float v4; // eax
@@ -55004,8 +55005,8 @@ void __thiscall sub_447AA0(_DWORD* this, float a2)
         }
         break;
     case 0x204:
-        LOBYTE(this) = *(_BYTE*)(v3 + 28);
-        sub_443CD0(v5, *(_DWORD*)(v3 + 8), v3 + 12, *(float*)(v3 + 24), *(float*)&this);
+        LOBYTE(self) = *(_BYTE*)(v3 + 28);
+        sub_443CD0(v5, *(_DWORD*)(v3 + 8), v3 + 12, *(float*)(v3 + 24), *(float*)&self);
         if (*(_DWORD*)(v3 + 29))
         {
             v22 = sub_411B60(dword_4F5CC4, *(_DWORD*)(v3 + 29));
@@ -55040,7 +55041,7 @@ char __cdecl sub_447D70(int a1)
 }
 
 //----- (00447D80) --------------------------------------------------------
-char __thiscall sub_447D80(int this)
+char __thiscall sub_447D80(int self)
 {
     int v2; // eax
     int v3; // edi
@@ -55199,7 +55200,7 @@ LABEL_22:
 // 44811C: variable 'v26' is possibly undefined
 
 //----- (004481C0) --------------------------------------------------------
-int __thiscall sub_4481C0(_DWORD* this)
+int __thiscall sub_4481C0(_DWORD* self)
 {
     int v1; // edx
 
@@ -55211,7 +55212,7 @@ int __thiscall sub_4481C0(_DWORD* this)
 }
 
 //----- (004481E0) --------------------------------------------------------
-int __thiscall sub_4481E0(_DWORD* this)
+int __thiscall sub_4481E0(_DWORD* self)
 {
     int result; // eax
 
@@ -55222,7 +55223,7 @@ int __thiscall sub_4481E0(_DWORD* this)
 }
 
 //----- (00448210) --------------------------------------------------------
-void __thiscall sub_448210(int this)
+void __thiscall sub_448210(int self)
 {
     int i; // ebp
     void* v3; // edi
@@ -55249,7 +55250,7 @@ void __thiscall sub_448210(int this)
 }
 
 //----- (00448290) --------------------------------------------------------
-int __thiscall sub_448290(int this)
+int __thiscall sub_448290(int self)
 {
     int v2; // ebx
     int i; // esi
@@ -55267,7 +55268,7 @@ int __thiscall sub_448290(int this)
 }
 
 //----- (004482D0) --------------------------------------------------------
-int __thiscall sub_4482D0(_DWORD* this)
+int __thiscall sub_4482D0(_DWORD* self)
 {
     int result; // eax
 
@@ -55278,7 +55279,7 @@ int __thiscall sub_4482D0(_DWORD* this)
 }
 
 //----- (00448300) --------------------------------------------------------
-_DWORD* __thiscall sub_448300(_DWORD* this, _DWORD* a2, int* a3)
+_DWORD* __thiscall sub_448300(_DWORD* self, _DWORD* a2, int* a3)
 {
     int* v3; // edx
     _DWORD* result; // eax
@@ -55303,7 +55304,7 @@ _DWORD* __thiscall sub_448300(_DWORD* this, _DWORD* a2, int* a3)
 }
 
 //----- (00448350) --------------------------------------------------------
-int __thiscall sub_448350(_DWORD* this, int a2)
+int __thiscall sub_448350(_DWORD* self, int a2)
 {
     int result; // eax
     _DWORD* v3; // esi
@@ -55318,7 +55319,7 @@ int __thiscall sub_448350(_DWORD* this, int a2)
 }
 
 //----- (00448390) --------------------------------------------------------
-int __thiscall sub_448390(_DWORD* this, char* a2, unsigned int a3, const void* a4)
+int __thiscall sub_448390(_DWORD* self, char* a2, unsigned int a3, const void* a4)
 {
     _DWORD* v4; // esi
     char* v6; // ebx
@@ -55534,7 +55535,7 @@ int __thiscall sub_448390(_DWORD* this, char* a2, unsigned int a3, const void* a
 }
 
 //----- (004486E0) --------------------------------------------------------
-char* __thiscall sub_4486E0(_DWORD* this, char* a2, char* a3)
+char* __thiscall sub_4486E0(_DWORD* self, char* a2, char* a3)
 {
     char* v3; // edx
     char* v4; // ebx
@@ -55561,7 +55562,7 @@ char* __thiscall sub_4486E0(_DWORD* this, char* a2, char* a3)
 }
 
 //----- (00448730) --------------------------------------------------------
-int __thiscall sub_448730(_DWORD* this)
+int __thiscall sub_448730(_DWORD* self)
 {
     int v1; // edx
 
@@ -55573,7 +55574,7 @@ int __thiscall sub_448730(_DWORD* this)
 }
 
 //----- (00448750) --------------------------------------------------------
-_DWORD* __thiscall sub_448750(_DWORD* this, _DWORD* a2, _DWORD* a3)
+_DWORD* __thiscall sub_448750(_DWORD* self, _DWORD* a2, _DWORD* a3)
 {
     _DWORD* v3; // edx
     _DWORD* v4; // esi
@@ -55605,7 +55606,7 @@ _DWORD* __thiscall sub_448750(_DWORD* this, _DWORD* a2, _DWORD* a3)
 }
 
 //----- (004487A0) --------------------------------------------------------
-unsigned int __thiscall sub_4487A0(_DWORD* this, char* a2, unsigned int a3, const void* a4)
+unsigned int __thiscall sub_4487A0(_DWORD* self, char* a2, unsigned int a3, const void* a4)
 {
     _DWORD* v4; // esi
     char* v6; // ebx
@@ -55828,7 +55829,7 @@ unsigned int __thiscall sub_4487A0(_DWORD* this, char* a2, unsigned int a3, cons
 }
 
 //----- (00448B20) --------------------------------------------------------
-char* __thiscall sub_448B20(_DWORD* this, char* a2, char* a3)
+char* __thiscall sub_448B20(_DWORD* self, char* a2, char* a3)
 {
     char* v3; // eax
     char* v4; // ebx
@@ -55912,16 +55913,16 @@ _DWORD* __cdecl sub_448BE0(_DWORD* a1, _DWORD* a2)
 }
 
 //----- (00448C00) --------------------------------------------------------
-void* __thiscall sub_448C00(void* this, char a2)
+void* __thiscall sub_448C00(void* self, char a2)
 {
-    sub_448C20((int)this);
+    sub_448C20((int)self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
 //----- (00448C20) --------------------------------------------------------
-int __thiscall sub_448C20(int this)
+int __thiscall sub_448C20(int self)
 {
     sub_4885A6(*(LPVOID*)(this + 40));
     *(_DWORD*)(this + 40) = 0;
@@ -55933,7 +55934,7 @@ int __thiscall sub_448C20(int this)
 // 415760: using guessed type int __thiscall nullsub_1(_DWORD);
 
 //----- (00448C90) --------------------------------------------------------
-_DWORD* __thiscall sub_448C90(_DWORD* this, char* a2)
+_DWORD* __thiscall sub_448C90(_DWORD* self, char* a2)
 {
     char* v2; // ebx
 
@@ -55996,10 +55997,10 @@ _DWORD* __thiscall sub_448C90(_DWORD* this, char* a2)
 // 499A18: using guessed type _UNKNOWN *off_499A18;
 
 //----- (00448F60) --------------------------------------------------------
-int __thiscall sub_448F60(void* this)
+int __thiscall sub_448F60(void* self)
 {
     *(_DWORD*)this = &off_499A18;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499A18: using guessed type _UNKNOWN *off_499A18;
 
@@ -56187,7 +56188,7 @@ _DWORD* __fastcall sub_448F70(_DWORD* a1, int a2, char* String1, char a4)
 // 520970: using guessed type int dword_520970;
 
 //----- (00449660) --------------------------------------------------------
-int __thiscall sub_449660(int** this)
+int __thiscall sub_449660(int** self)
 {
     int* v2; // eax
 
@@ -56198,18 +56199,18 @@ int __thiscall sub_449660(int** this)
     if (v2 != (int*)1)
     {
         if (v2 != (int*)2)
-            return sub_4690A0(this);
+            return sub_4690A0(self);
     LABEL_5:
         sub_422230(this[98]);
-        return sub_4690A0(this);
+        return sub_4690A0(self);
     }
     sub_403B70(this[100]);
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499A24: using guessed type _UNKNOWN *off_499A24;
 
 //----- (004496E0) --------------------------------------------------------
-int __thiscall sub_4496E0(void* this, char* a2)
+int __thiscall sub_4496E0(void* self, char* a2)
 {
     char* v2; // ebp
     int v3; // edi
@@ -56351,19 +56352,19 @@ int __thiscall sub_4496E0(void* this, char* a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00449AA0) --------------------------------------------------------
-int __thiscall sub_449AA0(LPVOID* this)
+int __thiscall sub_449AA0(LPVOID* self)
 {
     *this = &off_499A30;
     sub_4885A6(this[77]);
     this[77] = 0;
     this[78] = 0;
     this[79] = 0;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499A30: using guessed type _UNKNOWN *off_499A30;
 
 //----- (00449AE0) --------------------------------------------------------
-_DWORD* __thiscall sub_449AE0(_DWORD* this)
+_DWORD* __thiscall sub_449AE0(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -56378,12 +56379,12 @@ _DWORD* __thiscall sub_449AE0(_DWORD* this)
 // 499A3C: using guessed type _UNKNOWN *off_499A3C;
 
 //----- (00449B20) --------------------------------------------------------
-_DWORD* __thiscall sub_449B20(_DWORD* this)
+_DWORD* __thiscall sub_449B20(_DWORD* self)
 {
     _DWORD* result; // eax
 
     *this = &off_499A3C;
-    result = sub_411430((_DWORD*)dword_4F5CC4, (int)this);
+    result = sub_411430((_DWORD*)dword_4F5CC4, (int)self);
     *this = &off_499040;
     return result;
 }
@@ -56392,7 +56393,7 @@ _DWORD* __thiscall sub_449B20(_DWORD* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00449B70) --------------------------------------------------------
-char __thiscall sub_449B70(_DWORD* this)
+char __thiscall sub_449B70(_DWORD* self)
 {
     int v2; // edi
     int v3; // ecx
@@ -56438,7 +56439,7 @@ LABEL_7:
 // 520970: using guessed type int dword_520970;
 
 //----- (00449C10) --------------------------------------------------------
-int __thiscall sub_449C10(char* this)
+int __thiscall sub_449C10(char* self)
 {
     int result; // eax
     _BYTE* i; // ecx
@@ -56454,7 +56455,7 @@ int __thiscall sub_449C10(char* this)
 // 449C31: conditional instruction was optimized away because eax.4<7E8
 
 //----- (00449C40) --------------------------------------------------------
-char __thiscall sub_449C40(char* this, int a2, _DWORD* a3, _DWORD* a4, char a5, char a6, float a7, int a8)
+char __thiscall sub_449C40(char* self, int a2, _DWORD* a3, _DWORD* a4, char a5, char a6, float a7, int a8)
 {
     int v9; // eax
     int v11; // esi
@@ -56517,7 +56518,7 @@ char __thiscall sub_449C40(char* this, int a2, _DWORD* a3, _DWORD* a4, char a5, 
     int v69; // [esp+63h] [ebp-11h]
     int v70; // [esp+70h] [ebp-4h]
 
-    v9 = sub_449C10(this);
+    v9 = sub_449C10(self);
     if (v9 == -1)
         return 0;
     v11 = (int)&this[136 * v9 + 32];
@@ -56617,7 +56618,7 @@ char __thiscall sub_449C40(char* this, int a2, _DWORD* a3, _DWORD* a4, char a5, 
     *(_DWORD*)(v11 + 116) = *(_DWORD*)(*(_DWORD*)(v11 + 4) + 296);
     *(_BYTE*)(v11 + 124) = a6;
     *(_BYTE*)(v11 + 125) = a6;
-    v31 = sub_409960((_DWORD*)dword_520970, (int)this);
+    v31 = sub_409960((_DWORD*)dword_520970, (int)self);
     *(_DWORD*)(v11 + 120) = v31;
     v31[10] = v11;
     *(_DWORD*)(*(_DWORD*)(v11 + 120) + 28) = 0;
@@ -56724,7 +56725,7 @@ char __thiscall sub_449C40(char* this, int a2, _DWORD* a3, _DWORD* a4, char a5, 
 // 520970: using guessed type int dword_520970;
 
 //----- (0044A1D0) --------------------------------------------------------
-char __thiscall sub_44A1D0(char* this, int a2, float* a3, float* a4, float a5, char a6, char a7, float a8, int a9)
+char __thiscall sub_44A1D0(char* self, int a2, float* a3, float* a4, float a5, char a6, char a7, float a8, int a9)
 {
     int v11[3]; // [esp+Ch] [ebp-18h] BYREF
     int v12[3]; // [esp+18h] [ebp-Ch] BYREF
@@ -56825,7 +56826,7 @@ double __cdecl sub_44A3E0(float* a1, float* a2, float a3, float a4)
 }
 
 //----- (0044A440) --------------------------------------------------------
-char __thiscall sub_44A440(char* this, int a2, _DWORD* a3, _DWORD* a4, char a5, char a6)
+char __thiscall sub_44A440(char* self, int a2, _DWORD* a3, _DWORD* a4, char a5, char a6)
 {
     int v7[3]; // [esp+0h] [ebp-Ch] BYREF
 
@@ -56836,7 +56837,7 @@ char __thiscall sub_44A440(char* this, int a2, _DWORD* a3, _DWORD* a4, char a5, 
 }
 
 //----- (0044A490) --------------------------------------------------------
-int __thiscall sub_44A490(char* this, int a2, _DWORD* a3, float* a4, char a5, char a6)
+int __thiscall sub_44A490(char* self, int a2, _DWORD* a3, float* a4, char a5, char a6)
 {
     unsigned int i; // edi
     int result; // eax
@@ -56869,7 +56870,7 @@ int __thiscall sub_44A490(char* this, int a2, _DWORD* a3, float* a4, char a5, ch
             break;
         if (i >= (*(_DWORD*)(a2 + 312) - result) >> 2)
             break;
-        result = sub_449C10(this);
+        result = sub_449C10(self);
         if (result == -1)
             break;
         v25 = fabs((double)rand() * 0.000030518509);
@@ -56930,7 +56931,7 @@ int __thiscall sub_44A490(char* this, int a2, _DWORD* a3, float* a4, char a5, ch
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (0044A730) --------------------------------------------------------
-char __thiscall sub_44A730(int this, int a2)
+char __thiscall sub_44A730(int self, int a2)
 {
     _DWORD* v2; // edi
     int v3; // esi
@@ -57505,7 +57506,7 @@ int __stdcall sub_44AF40(int a1)
 // 520A50: using guessed type int dword_520A50;
 
 //----- (0044B390) --------------------------------------------------------
-char __thiscall sub_44B390(char* this, int a2)
+char __thiscall sub_44B390(char* self, int a2)
 {
     char result; // al
     int v3; // eax
@@ -57541,7 +57542,7 @@ char __thiscall sub_44B390(char* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044B3F0) --------------------------------------------------------
-int __thiscall sub_44B3F0(_DWORD* this)
+int __thiscall sub_44B3F0(_DWORD* self)
 {
     int v2; // ebp
     _DWORD* v3; // esi
@@ -57576,13 +57577,13 @@ int __thiscall sub_44B3F0(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044B460) --------------------------------------------------------
-int __thiscall sub_44B460(_DWORD** this)
+int __thiscall sub_44B460(_DWORD** self)
 {
     return (*(int(__thiscall**)(_DWORD*))(*this[5] + 4))(this[5]);
 }
 
 //----- (0044B470) --------------------------------------------------------
-int __thiscall sub_44B470(_DWORD** this)
+int __thiscall sub_44B470(_DWORD** self)
 {
     return (*(int(__thiscall**)(_DWORD*))(*this[5] + 8))(this[5]);
 }
@@ -57610,7 +57611,7 @@ _DWORD* __stdcall sub_44B480(_DWORD* a1, _DWORD* a2, _DWORD* a3)
 }
 
 //----- (0044B4B0) --------------------------------------------------------
-_DWORD* __thiscall sub_44B4B0(_DWORD* this, char* ArgList)
+_DWORD* __thiscall sub_44B4B0(_DWORD* self, char* ArgList)
 {
     char* v2; // ebx
     int v4; // eax
@@ -57655,19 +57656,19 @@ _DWORD* __thiscall sub_44B4B0(_DWORD* this, char* ArgList)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044B5E0) --------------------------------------------------------
-int __thiscall sub_44B5E0(LPVOID* this)
+int __thiscall sub_44B5E0(LPVOID* self)
 {
     *this = &off_499A68;
     sub_4885A6(this[74]);
     this[74] = 0;
     this[75] = 0;
     this[76] = 0;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499A68: using guessed type _UNKNOWN *off_499A68;
 
 //----- (0044B620) --------------------------------------------------------
-int __thiscall sub_44B620(int this)
+int __thiscall sub_44B620(int self)
 {
     int v2; // eax
     int j; // edi
@@ -57720,12 +57721,12 @@ int __thiscall sub_44B620(int this)
         }
         ++v12;
     }
-    return sub_4690E0((_DWORD*)this);
+    return sub_4690E0((_DWORD*)self);
 }
 // 520970: using guessed type int dword_520970;
 
 //----- (0044B7A0) --------------------------------------------------------
-int __thiscall sub_44B7A0(_DWORD* this)
+int __thiscall sub_44B7A0(_DWORD* self)
 {
     int v1; // eax
     int v3; // eax
@@ -57763,11 +57764,11 @@ int __thiscall sub_44B7A0(_DWORD* this)
         }
         v1 = v11 + 40;
     }
-    return sub_469120(this);
+    return sub_469120(self);
 }
 
 //----- (0044B870) --------------------------------------------------------
-float* __thiscall sub_44B870(float* this, char* a2)
+float* __thiscall sub_44B870(float* self, char* a2)
 {
     char* v2; // esi
     double v4; // st7
@@ -58092,7 +58093,7 @@ float* __thiscall sub_44B870(float* this, char* a2)
 // 499A74: using guessed type _UNKNOWN *off_499A74;
 
 //----- (0044C220) --------------------------------------------------------
-int __thiscall sub_44C220(int this)
+int __thiscall sub_44C220(int self)
 {
     int result; // eax
 
@@ -58105,7 +58106,7 @@ int __thiscall sub_44C220(int this)
 }
 
 //----- (0044C250) --------------------------------------------------------
-int __thiscall sub_44C250(_DWORD* this)
+int __thiscall sub_44C250(_DWORD* self)
 {
     _DWORD* v1; // esi
     int v2; // ebp
@@ -58155,7 +58156,7 @@ int __thiscall sub_44C250(_DWORD* this)
 // 499A74: using guessed type _UNKNOWN *off_499A74;
 
 //----- (0044C330) --------------------------------------------------------
-float* __thiscall sub_44C330(float* this, char* a2)
+float* __thiscall sub_44C330(float* self, char* a2)
 {
     char* v2; // edi
 
@@ -58177,15 +58178,15 @@ float* __thiscall sub_44C330(float* this, char* a2)
 // 499A80: using guessed type _UNKNOWN *off_499A80;
 
 //----- (0044C460) --------------------------------------------------------
-int __thiscall sub_44C460(void* this)
+int __thiscall sub_44C460(void* self)
 {
     *(_DWORD*)this = &off_499A80;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499A80: using guessed type _UNKNOWN *off_499A80;
 
 //----- (0044C470) --------------------------------------------------------
-_DWORD* __thiscall sub_44C470(_DWORD* this, char* a2)
+_DWORD* __thiscall sub_44C470(_DWORD* self, char* a2)
 {
     char* v2; // ebp
 
@@ -58210,15 +58211,15 @@ _DWORD* __thiscall sub_44C470(_DWORD* this, char* a2)
 // 499A8C: using guessed type _UNKNOWN *off_499A8C;
 
 //----- (0044C610) --------------------------------------------------------
-int __thiscall sub_44C610(void* this)
+int __thiscall sub_44C610(void* self)
 {
     *(_DWORD*)this = &off_499A8C;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499A8C: using guessed type _UNKNOWN *off_499A8C;
 
 //----- (0044C620) --------------------------------------------------------
-float* __thiscall sub_44C620(float* this, char* String1)
+float* __thiscall sub_44C620(float* self, char* String1)
 {
     char* v2; // edi
 
@@ -58237,15 +58238,15 @@ float* __thiscall sub_44C620(float* this, char* String1)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044C710) --------------------------------------------------------
-int __thiscall sub_44C710(void* this)
+int __thiscall sub_44C710(void* self)
 {
     *(_DWORD*)this = &off_499A98;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499A98: using guessed type _UNKNOWN *off_499A98;
 
 //----- (0044C720) --------------------------------------------------------
-_DWORD* __thiscall sub_44C720(_DWORD* this, char* a2)
+_DWORD* __thiscall sub_44C720(_DWORD* self, char* a2)
 {
     char* v2; // ebp
     unsigned int v4; // ebx
@@ -58341,19 +58342,19 @@ _DWORD* __thiscall sub_44C720(_DWORD* this, char* a2)
 // 499AA4: using guessed type _UNKNOWN *off_499AA4;
 
 //----- (0044C990) --------------------------------------------------------
-int __thiscall sub_44C990(LPVOID* this)
+int __thiscall sub_44C990(LPVOID* self)
 {
     *this = &off_499AA4;
     sub_4885A6(this[75]);
     this[75] = 0;
     this[76] = 0;
     this[77] = 0;
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 499AA4: using guessed type _UNKNOWN *off_499AA4;
 
 //----- (0044C9D0) --------------------------------------------------------
-_DWORD* __thiscall sub_44C9D0(_DWORD* this)
+_DWORD* __thiscall sub_44C9D0(_DWORD* self)
 {
     this[1] = 0;
     this[2] = 0;
@@ -58370,16 +58371,16 @@ _DWORD* __thiscall sub_44C9D0(_DWORD* this)
 // 499AB0: using guessed type int (__stdcall *off_499AB0)(char);
 
 //----- (0044CA40) --------------------------------------------------------
-_DWORD* __thiscall sub_44CA40(_DWORD* this, char a2)
+_DWORD* __thiscall sub_44CA40(_DWORD* self, char a2)
 {
-    sub_44CA60(this);
+    sub_44CA60(self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
 //----- (0044CA60) --------------------------------------------------------
-FILE* __thiscall sub_44CA60(_DWORD* this)
+FILE* __thiscall sub_44CA60(_DWORD* self)
 {
     int v2; // eax
     int v3; // eax
@@ -58412,7 +58413,7 @@ FILE* __thiscall sub_44CA60(_DWORD* this)
 // 499AB0: using guessed type int (__stdcall *off_499AB0)(char);
 
 //----- (0044CB20) --------------------------------------------------------
-char __thiscall sub_44CB20(int this)
+char __thiscall sub_44CB20(int self)
 {
     INT v2; // eax
     int v3; // ecx
@@ -58547,7 +58548,7 @@ char __thiscall sub_44CB20(int this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044CD90) --------------------------------------------------------
-_DWORD* __thiscall sub_44CD90(_DWORD* this, float* a2)
+_DWORD* __thiscall sub_44CD90(_DWORD* self, float* a2)
 {
     _DWORD* result; // eax
 
@@ -58835,7 +58836,7 @@ char __userpurge sub_44CDD0@<al>(int a1@<ecx>, int a2@<ebp>, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044D3B0) --------------------------------------------------------
-int __thiscall sub_44D3B0(_DWORD* this, int a2)
+int __thiscall sub_44D3B0(_DWORD* self, int a2)
 {
     int result; // eax
     int v4; // esi
@@ -58969,7 +58970,7 @@ int __thiscall sub_44D3B0(_DWORD* this, int a2)
 // 520A50: using guessed type int dword_520A50;
 
 //----- (0044D740) --------------------------------------------------------
-int __thiscall sub_44D740(_DWORD* this)
+int __thiscall sub_44D740(_DWORD* self)
 {
     int result; // eax
     _DWORD* i; // ecx
@@ -58985,7 +58986,7 @@ int __thiscall sub_44D740(_DWORD* this)
 // 44D761: conditional instruction was optimized away because eax.4<80
 
 //----- (0044D770) --------------------------------------------------------
-int __thiscall sub_44D770(_DWORD* this, int a2)
+int __thiscall sub_44D770(_DWORD* self, int a2)
 {
     int result; // eax
     _DWORD* i; // ecx
@@ -59003,7 +59004,7 @@ int __thiscall sub_44D770(_DWORD* this, int a2)
 // 44D79A: conditional instruction was optimized away because eax.4<80
 
 //----- (0044D7B0) --------------------------------------------------------
-int __thiscall sub_44D7B0(_DWORD* this)
+int __thiscall sub_44D7B0(_DWORD* self)
 {
     int result; // eax
 
@@ -59186,7 +59187,7 @@ _DWORD* __stdcall sub_44DAD0(int* a1, float* a2, int a3, int a4)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044DBF0) --------------------------------------------------------
-void __thiscall sub_44DBF0(char* this, int a2, float* a3, int a4)
+void __thiscall sub_44DBF0(char* self, int a2, float* a3, int a4)
 {
     int v6; // esi
     _BYTE* i; // eax
@@ -59231,7 +59232,7 @@ void __thiscall sub_44DBF0(char* this, int a2, float* a3, int a4)
 // 44DC26: conditional instruction was optimized away because esi.4<10
 
 //----- (0044DD20) --------------------------------------------------------
-void __thiscall sub_44DD20(char* this, float* a2, _DWORD* a3)
+void __thiscall sub_44DD20(char* self, float* a2, _DWORD* a3)
 {
     int v4; // edi
     _BYTE* i; // eax
@@ -59292,7 +59293,7 @@ void __thiscall sub_44DD20(char* this, float* a2, _DWORD* a3)
         else
             v10 = fabs((double)rand() * 0.000030518509) * (v20 - v16) + v16;
         *((float*)v6 + 6862) = v10;
-        v11 = sub_409960((_DWORD*)dword_520970, (int)this);
+        v11 = sub_409960((_DWORD*)dword_520970, (int)self);
         *((_DWORD*)v6 + 6863) = v11;
         v11[10] = v6 + 27416;
         *(_DWORD*)(*((_DWORD*)v6 + 6863) + 28) = 0;
@@ -59304,7 +59305,7 @@ void __thiscall sub_44DD20(char* this, float* a2, _DWORD* a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044DF20) --------------------------------------------------------
-void __thiscall sub_44DF20(char* this, float a2, float a3, float* a4)
+void __thiscall sub_44DF20(char* self, float a2, float a3, float* a4)
 {
     int v6; // edx
     int* v7; // ebx
@@ -59350,7 +59351,7 @@ void __thiscall sub_44DF20(char* this, float a2, float a3, float* a4)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044E040) --------------------------------------------------------
-int __thiscall sub_44E040(char* this, int a2, int a3, int a4, float a5, int* a6)
+int __thiscall sub_44E040(char* self, int a2, int a3, int a4, float a5, int* a6)
 {
     int v8; // eax
     int v9; // esi
@@ -59391,12 +59392,12 @@ int __thiscall sub_44E040(char* this, int a2, int a3, int a4, float a5, int* a6)
 
     if (!a2)
         return 0;
-    v8 = sub_44D740(this);
+    v8 = sub_44D740(self);
     if (v8 == -1)
         return 0;
     v9 = (int)&this[212 * v8 + 24];
     v38 = v9;
-    *(_DWORD*)v9 = sub_44D7B0(this);
+    *(_DWORD*)v9 = sub_44D7B0(self);
     v10 = a5;
     v36 = LODWORD(a5);
     *(_DWORD*)(v9 + 4) = a2;
@@ -59500,7 +59501,7 @@ int __thiscall sub_44E040(char* this, int a2, int a3, int a4, float a5, int* a6)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044E3D0) --------------------------------------------------------
-int __thiscall sub_44E3D0(char* this, int a2, const void* a3)
+int __thiscall sub_44E3D0(char* self, int a2, const void* a3)
 {
     int v4; // eax
     int v5; // esi
@@ -59536,12 +59537,12 @@ int __thiscall sub_44E3D0(char* this, int a2, const void* a3)
     int v38; // [esp+38h] [ebp-4h]
     float v39; // [esp+40h] [ebp+4h]
 
-    v4 = sub_44D740(this);
+    v4 = sub_44D740(self);
     if (v4 == -1)
         return 0;
     v5 = (int)&this[212 * v4 + 24];
     v29 = v5;
-    *(_DWORD*)v5 = sub_44D7B0(this);
+    *(_DWORD*)v5 = sub_44D7B0(self);
     *(_DWORD*)(v5 + 4) = a2;
     *(_BYTE*)(v5 + 200) = 0;
     v7 = *(_DWORD*)(a2 + 292);
@@ -59639,7 +59640,7 @@ int __thiscall sub_44E3D0(char* this, int a2, const void* a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044E6F0) --------------------------------------------------------
-int __thiscall sub_44E6F0(_DWORD* this, int a2, const void* a3, _DWORD* a4)
+int __thiscall sub_44E6F0(_DWORD* self, int a2, const void* a3, _DWORD* a4)
 {
     int result; // eax
     int v6; // edx
@@ -59689,7 +59690,7 @@ int __thiscall sub_44E6F0(_DWORD* this, int a2, const void* a3, _DWORD* a4)
 }
 
 //----- (0044E7B0) --------------------------------------------------------
-char __thiscall sub_44E7B0(_DWORD* this, int a2)
+char __thiscall sub_44E7B0(_DWORD* self, int a2)
 {
     int v3; // eax
 
@@ -59700,7 +59701,7 @@ char __thiscall sub_44E7B0(_DWORD* this, int a2)
 }
 
 //----- (0044E7D0) --------------------------------------------------------
-char __thiscall sub_44E7D0(_DWORD* this, int a2)
+char __thiscall sub_44E7D0(_DWORD* self, int a2)
 {
     int v2; // eax
     _DWORD* v3; // esi
@@ -59753,7 +59754,7 @@ char __thiscall sub_44E7D0(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044E870) --------------------------------------------------------
-char __thiscall sub_44E870(_DWORD* this)
+char __thiscall sub_44E870(_DWORD* self)
 {
     int i; // esi
     char result; // al
@@ -59798,19 +59799,19 @@ char __thiscall sub_44E870(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0044E8F0) --------------------------------------------------------
-int __thiscall sub_44E8F0(_DWORD** this)
+int __thiscall sub_44E8F0(_DWORD** self)
 {
     return (*(int(__thiscall**)(_DWORD*))(*this[7496] + 4))(this[7496]);
 }
 
 //----- (0044E900) --------------------------------------------------------
-int __thiscall sub_44E900(_DWORD** this)
+int __thiscall sub_44E900(_DWORD** self)
 {
     return (*(int(__thiscall**)(_DWORD*))(*this[7496] + 8))(this[7496]);
 }
 
 //----- (0044E910) --------------------------------------------------------
-int __thiscall sub_44E910(_DWORD* this)
+int __thiscall sub_44E910(_DWORD* self)
 {
     int result; // eax
 
@@ -59821,7 +59822,7 @@ int __thiscall sub_44E910(_DWORD* this)
 }
 
 //----- (0044E940) --------------------------------------------------------
-int __thiscall sub_44E940(int* this)
+int __thiscall sub_44E940(int* self)
 {
     int v2; // ebx
     int i; // esi
@@ -59839,7 +59840,7 @@ int __thiscall sub_44E940(int* this)
 }
 
 //----- (0044E980) --------------------------------------------------------
-int __thiscall sub_44E980(_DWORD* this)
+int __thiscall sub_44E980(_DWORD* self)
 {
     int result; // eax
 
@@ -59850,7 +59851,7 @@ int __thiscall sub_44E980(_DWORD* this)
 }
 
 //----- (0044E9B0) --------------------------------------------------------
-void __thiscall sub_44E9B0(LPVOID* this)
+void __thiscall sub_44E9B0(LPVOID* self)
 {
     sub_4885A6(this[1]);
     this[1] = 0;
@@ -59859,7 +59860,7 @@ void __thiscall sub_44E9B0(LPVOID* this)
 }
 
 //----- (0044E9E0) --------------------------------------------------------
-unsigned int __thiscall sub_44E9E0(_DWORD* this, char* a2, unsigned int a3, const void* a4)
+unsigned int __thiscall sub_44E9E0(_DWORD* self, char* a2, unsigned int a3, const void* a4)
 {
     _DWORD* v4; // edi
     char* v6; // ebx
@@ -60067,7 +60068,7 @@ unsigned int __thiscall sub_44E9E0(_DWORD* this, char* a2, unsigned int a3, cons
 }
 
 //----- (0044ED10) --------------------------------------------------------
-char* __thiscall sub_44ED10(_DWORD* this, char* a2, char* a3)
+char* __thiscall sub_44ED10(_DWORD* self, char* a2, char* a3)
 {
     char* v3; // edx
     char* v4; // ebx
@@ -60094,7 +60095,7 @@ char* __thiscall sub_44ED10(_DWORD* this, char* a2, char* a3)
 }
 
 //----- (0044ED60) --------------------------------------------------------
-unsigned int __thiscall sub_44ED60(_DWORD* this, char* a2, unsigned int a3, _DWORD* a4)
+unsigned int __thiscall sub_44ED60(_DWORD* self, char* a2, unsigned int a3, _DWORD* a4)
 {
     char* v4; // esi
     unsigned int v5; // edi
@@ -60323,7 +60324,7 @@ unsigned int __thiscall sub_44ED60(_DWORD* this, char* a2, unsigned int a3, _DWO
 }
 
 //----- (0044F0E0) --------------------------------------------------------
-_DWORD* __thiscall sub_44F0E0(_DWORD* this, _DWORD* a2, _DWORD* a3)
+_DWORD* __thiscall sub_44F0E0(_DWORD* self, _DWORD* a2, _DWORD* a3)
 {
     _DWORD* result; // eax
     _DWORD* v4; // edi
@@ -60380,7 +60381,7 @@ _DWORD* __thiscall sub_44F0E0(_DWORD* this, _DWORD* a2, _DWORD* a3)
 }
 
 //----- (0044F190) --------------------------------------------------------
-_DWORD* __thiscall sub_44F190(int this, _DWORD* a2, unsigned int a3, _DWORD* a4)
+_DWORD* __thiscall sub_44F190(int self, _DWORD* a2, unsigned int a3, _DWORD* a4)
 {
     int v5; // edi
     _DWORD* result; // eax
@@ -60584,7 +60585,7 @@ void __cdecl sub_44F3A0(int a1, int a2)
 }
 
 //----- (0044F490) --------------------------------------------------------
-_DWORD* __thiscall sub_44F490(_DWORD* this, _DWORD* a2)
+_DWORD* __thiscall sub_44F490(_DWORD* self, _DWORD* a2)
 {
     _DWORD* v3; // edi
     char* v4; // esi
@@ -60739,7 +60740,7 @@ _DWORD* __thiscall sub_44F490(_DWORD* this, _DWORD* a2)
 }
 
 //----- (0044F6F0) --------------------------------------------------------
-char __thiscall sub_44F6F0(int this)
+char __thiscall sub_44F6F0(int self)
 {
     char result; // al
     __time32_t v3; // eax
@@ -60791,7 +60792,7 @@ char __thiscall sub_44F6F0(int this)
     *(_DWORD*)(this + 304) = 0;
     *(_DWORD*)(this + 300) = 0;
     *(_DWORD*)(this + 316) = 0;
-    result = sub_408D20(this);
+    result = sub_408D20(self);
     if (result)
     {
         v3 = time(0);
@@ -60845,7 +60846,7 @@ char __thiscall sub_44F6F0(int this)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (0044F9E0) --------------------------------------------------------
-char __thiscall sub_44F9E0(int this)
+char __thiscall sub_44F9E0(int self)
 {
     char* v2; // eax
     char* v3; // esi
@@ -60957,7 +60958,7 @@ char __thiscall sub_44F9E0(int this)
         v82 = (int)v4;
         v89 = 1;
         if (v4)
-            v5 = sub_468A00((int)v4, this);
+            v5 = sub_468A00((int)v4, self);
         else
             v5 = 0;
         v89 = -1;
@@ -61186,7 +61187,7 @@ char __thiscall sub_44F9E0(int this)
                     sub_40AF60(*(const char**)(this + 172), aZrange, (float*)&v81);
                     sub_402670(*(_DWORD**)(this + 268), v82, v81);
                 }
-                sub_450D30((_DWORD*)this, this);
+                sub_450D30((_DWORD*)this, self);
                 (*(void(__thiscall**)(_DWORD, _DWORD))(**(_DWORD**)(this + 260) + 24))(*(_DWORD*)(this + 260), 0);
             }
         }
@@ -61398,13 +61399,13 @@ char __thiscall sub_44F9E0(int this)
 // 522340: using guessed type int dword_522340;
 
 //----- (00450790) --------------------------------------------------------
-void __thiscall sub_450790(_DWORD* this)
+void __thiscall sub_450790(_DWORD* self)
 {
     _DWORD* v2; // ecx
 
     if (!this[46])
         sub_45ABF0(*(_DWORD*)(dword_520970 + 236));
-    sub_408EE0(this);
+    sub_408EE0(self);
     v2 = (_DWORD*)this[46];
     if (v2)
     {
@@ -61415,7 +61416,7 @@ void __thiscall sub_450790(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (004507D0) --------------------------------------------------------
-char __thiscall sub_4507D0(int this, int a2)
+char __thiscall sub_4507D0(int self, int a2)
 {
     int v4; // eax
     int v5; // ecx
@@ -61496,13 +61497,13 @@ char __thiscall sub_4507D0(int this, int a2)
 }
 
 //----- (00450A10) --------------------------------------------------------
-char __thiscall sub_450A10(_DWORD* this, int a2, int a3)
+char __thiscall sub_450A10(_DWORD* self, int a2, int a3)
 {
     return sub_437180(this, a2, a3);
 }
 
 //----- (00450A30) --------------------------------------------------------
-char __thiscall sub_450A30(int this, int a2)
+char __thiscall sub_450A30(int self, int a2)
 {
     _DWORD* v4; // ecx
 
@@ -61521,13 +61522,13 @@ char __thiscall sub_450A30(int this, int a2)
 }
 
 //----- (00450AA0) --------------------------------------------------------
-void __thiscall sub_450AA0(int** this, int a2, int a3)
+void __thiscall sub_450AA0(int** self, int a2, int a3)
 {
     sub_468BE0(this[65], a2, a3, 0);
 }
 
 //----- (00450AC0) --------------------------------------------------------
-int __thiscall sub_450AC0(int this, int a2, int a3)
+int __thiscall sub_450AC0(int self, int a2, int a3)
 {
     (*(void(__thiscall**)(_DWORD, bool))(**(_DWORD**)(this + 208) + 24))(*(_DWORD*)(this + 208), (_BYTE)a2 == 0);
     (*(void(__thiscall**)(_DWORD, bool))(**(_DWORD**)(this + 212) + 24))(*(_DWORD*)(this + 212), (_BYTE)a2 == 0);
@@ -61550,7 +61551,7 @@ int __thiscall sub_450AC0(int this, int a2, int a3)
 }
 
 //----- (00450BB0) --------------------------------------------------------
-char __thiscall sub_450BB0(_DWORD* this)
+char __thiscall sub_450BB0(_DWORD* self)
 {
     return *(_BYTE*)(this[62] + 16);
 }
@@ -61563,7 +61564,7 @@ BOOL sub_450BC0()
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00450BF0) --------------------------------------------------------
-int __thiscall sub_450BF0(_DWORD* this, int a2, int a3)
+int __thiscall sub_450BF0(_DWORD* self, int a2, int a3)
 {
     int v5; // [esp+0h] [ebp-14h]
 
@@ -61581,7 +61582,7 @@ int __thiscall sub_450BF0(_DWORD* this, int a2, int a3)
 }
 
 //----- (00450C70) --------------------------------------------------------
-void __thiscall sub_450C70(_DWORD* this, int a2)
+void __thiscall sub_450C70(_DWORD* self, int a2)
 {
     unsigned int v2; // eax
     int v3; // ecx
@@ -61711,7 +61712,7 @@ int __usercall sub_450D30@<eax>(_DWORD* a1@<ecx>, int a2@<ebp>)
 }
 
 //----- (00450FB0) --------------------------------------------------------
-void* __thiscall sub_450FB0(void* this, int a2, int a3, int a4)
+void* __thiscall sub_450FB0(void* self, int a2, int a3, int a4)
 {
     double v6; // st7
     double v7; // st6
@@ -61766,7 +61767,7 @@ void* __thiscall sub_450FB0(void* this, int a2, int a3, int a4)
 }
 
 //----- (004510D0) --------------------------------------------------------
-double __thiscall sub_4510D0(float* this, float a2, float a3)
+double __thiscall sub_4510D0(float* self, float a2, float a3)
 {
     double v4; // st7
     double v5; // st7
@@ -61906,7 +61907,7 @@ double __thiscall sub_4510D0(float* this, float a2, float a3)
 }
 
 //----- (00451390) --------------------------------------------------------
-char* __thiscall sub_451390(char* this, char* FileName)
+char* __thiscall sub_451390(char* self, char* FileName)
 {
     _DWORD* v3; // edi
     _DWORD* v4; // ebx
@@ -62024,11 +62025,11 @@ char* __thiscall sub_451390(char* this, char* FileName)
 // 499ADC: using guessed type _UNKNOWN *off_499ADC;
 
 //----- (00451710) --------------------------------------------------------
-void __thiscall sub_451710(LPVOID* this)
+void __thiscall sub_451710(LPVOID* self)
 {
-    if (*this)
+    if (*self)
     {
-        sub_4885A6(*this);
+        sub_4885A6(*self);
         *this = 0;
     }
     if (this[2])
@@ -62039,7 +62040,7 @@ void __thiscall sub_451710(LPVOID* this)
 }
 
 //----- (00451770) --------------------------------------------------------
-void __thiscall sub_451770(int this)
+void __thiscall sub_451770(int self)
 {
     char* v2; // eax
     char* v3; // edi
@@ -62053,7 +62054,7 @@ void __thiscall sub_451770(int this)
             sub_4885A6(v3);
         *(_DWORD*)(this + 8) = 0;
     }
-    sub_451820((_DWORD*)this);
+    sub_451820((_DWORD*)self);
     if (*(_DWORD*)(this + 16))
     {
         sub_4885A6(*(LPVOID*)(this + 16));
@@ -62063,7 +62064,7 @@ void __thiscall sub_451770(int this)
 // 499ADC: using guessed type _UNKNOWN *off_499ADC;
 
 //----- (004517D0) --------------------------------------------------------
-int __thiscall sub_4517D0(_DWORD* this)
+int __thiscall sub_4517D0(_DWORD* self)
 {
     int v2; // ebx
     int result; // eax
@@ -62090,7 +62091,7 @@ int __thiscall sub_4517D0(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00451820) --------------------------------------------------------
-int __thiscall sub_451820(_DWORD* this)
+int __thiscall sub_451820(_DWORD* self)
 {
     int v2; // ebx
     int result; // eax
@@ -62119,23 +62120,23 @@ int __thiscall sub_451820(_DWORD* this)
 }
 
 //----- (00451870) --------------------------------------------------------
-int __thiscall sub_451870(_DWORD* this)
+int __thiscall sub_451870(_DWORD* self)
 {
     sub_4517D0((_DWORD*)dword_5216EC[this[73]]);
-    return sub_4690E0(this);
+    return sub_4690E0(self);
 }
 // 5216EC: using guessed type int dword_5216EC[3];
 
 //----- (00451890) --------------------------------------------------------
-int __thiscall sub_451890(_DWORD* this)
+int __thiscall sub_451890(_DWORD* self)
 {
     sub_451820((_DWORD*)dword_5216EC[this[73]]);
-    return sub_469120(this);
+    return sub_469120(self);
 }
 // 5216EC: using guessed type int dword_5216EC[3];
 
 //----- (004518B0) --------------------------------------------------------
-int __thiscall sub_4518B0(char* this)
+int __thiscall sub_4518B0(char* self)
 {
     _DWORD* v2; // ecx
     void(__thiscall * **v3)(_DWORD, int); // ecx
@@ -62163,13 +62164,13 @@ int __thiscall sub_4518B0(char* this)
     *((_DWORD*)this + 176) = 0;
     *((_DWORD*)this + 177) = 0;
     `eh vector destructor iterator'(this + 372, 0x10u, 20, (void (__thiscall *)(void *))sub_44E9B0);
-        return sub_4690A0(this);
+        return sub_4690A0(self);
 }
 // 499AE0: using guessed type _UNKNOWN *off_499AE0;
 // 5216EC: using guessed type int dword_5216EC[3];
 
 //----- (004519E0) --------------------------------------------------------
-_DWORD* __thiscall sub_4519E0(_DWORD* this, char* String1)
+_DWORD* __thiscall sub_4519E0(_DWORD* self, char* String1)
 {
     char* v2; // edi
     char v4; // cl
@@ -64727,20 +64728,20 @@ _DWORD* __thiscall sub_4519E0(_DWORD* this, char* String1)
 // 5216EC: using guessed type int dword_5216EC[3];
 
 //----- (00455730) --------------------------------------------------------
-void __thiscall sub_455730(_DWORD* this)
+void __thiscall sub_455730(_DWORD* self)
 {
-    *(_BYTE*)this = HIBYTE(this);
+    *(_BYTE*)this = HIBYTE(self);
     this[1] = 0;
     this[2] = 0;
     this[3] = 0;
 }
 
 //----- (00455750) --------------------------------------------------------
-_BYTE* __thiscall sub_455750(_BYTE* this)
+_BYTE* __thiscall sub_455750(_BYTE* self)
 {
     char v3; // [esp+7h] [ebp-1h]
 
-    sub_401270((int)this);
+    sub_401270((int)self);
     this[396] = v3;
     *((_DWORD*)this + 100) = 0;
     *((_DWORD*)this + 101) = 0;
@@ -64752,21 +64753,21 @@ _BYTE* __thiscall sub_455750(_BYTE* this)
 // 499AEC: using guessed type _UNKNOWN *off_499AEC;
 
 //----- (004557B0) --------------------------------------------------------
-int __thiscall sub_4557B0(int this)
+int __thiscall sub_4557B0(int self)
 {
     *(_DWORD*)this = &off_499AEC;
-    sub_411430((_DWORD*)dword_4F5CC4, this);
+    sub_411430((_DWORD*)dword_4F5CC4, self);
     sub_4885A6(*(LPVOID*)(this + 400));
     *(_DWORD*)(this + 400) = 0;
     *(_DWORD*)(this + 404) = 0;
     *(_DWORD*)(this + 408) = 0;
-    return sub_4013F0((_DWORD*)this);
+    return sub_4013F0((_DWORD*)self);
 }
 // 499AEC: using guessed type _UNKNOWN *off_499AEC;
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00455830) --------------------------------------------------------
-char __thiscall sub_455830(void* this)
+char __thiscall sub_455830(void* self)
 {
     sub_4113F0((_DWORD*)dword_4F5CC4, (int)this, 65280, 2304, 0);
     return 1;
@@ -64774,7 +64775,7 @@ char __thiscall sub_455830(void* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00455850) --------------------------------------------------------
-int __thiscall sub_455850(_DWORD* this, int a2, int* a3, int a4)
+int __thiscall sub_455850(_DWORD* self, int a2, int* a3, int a4)
 {
     _DWORD* v4; // esi
     int v5; // edi
@@ -64878,7 +64879,7 @@ int __thiscall sub_455850(_DWORD* this, int a2, int* a3, int a4)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00455AC0) --------------------------------------------------------
-int __thiscall sub_455AC0(_DWORD* this, int a2, int a3, float* a4, float* a5, float a6, float a7)
+int __thiscall sub_455AC0(_DWORD* self, int a2, int a3, float* a4, float* a5, float a6, float a7)
 {
     double v9; // st6
     double v10; // st7
@@ -65013,7 +65014,7 @@ int __thiscall sub_455AC0(_DWORD* this, int a2, int a3, float* a4, float* a5, fl
 // 520970: using guessed type int dword_520970;
 
 //----- (00455DC0) --------------------------------------------------------
-int __thiscall sub_455DC0(_DWORD* this, int a2)
+int __thiscall sub_455DC0(_DWORD* self, int a2)
 {
     unsigned int i; // edi
     int result; // eax
@@ -65040,7 +65041,7 @@ int __thiscall sub_455DC0(_DWORD* this, int a2)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00455E30) --------------------------------------------------------
-int __thiscall sub_455E30(_DWORD* this)
+int __thiscall sub_455E30(_DWORD* self)
 {
     int v2; // eax
     int v3; // ebx
@@ -65068,7 +65069,7 @@ int __thiscall sub_455E30(_DWORD* this)
 }
 
 //----- (00455ED0) --------------------------------------------------------
-char __thiscall sub_455ED0(_DWORD* this)
+char __thiscall sub_455ED0(_DWORD* self)
 {
     int v1; // edx
     int v2; // eax
@@ -65092,7 +65093,7 @@ char __thiscall sub_455ED0(_DWORD* this)
 }
 
 //----- (00455F20) --------------------------------------------------------
-int __thiscall sub_455F20(_DWORD* this, int a2)
+int __thiscall sub_455F20(_DWORD* self, int a2)
 {
     __int16 v2; // ax
     int result; // eax
@@ -65124,11 +65125,11 @@ int __thiscall sub_455F20(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00455FB0) --------------------------------------------------------
-char __thiscall sub_455FB0(float* this, int a2)
+char __thiscall sub_455FB0(float* self, int a2)
 {
-    if ((float*)sub_408F30((_DWORD*)dword_520970) == this)
+    if ((float*)sub_408F30((_DWORD*)dword_520970) == self)
     {
-        sub_401450(this);
+        sub_401450(self);
         sub_4014C0(this, 1.5707964, 0.0, 0.0);
         sub_401480(this, 0.0, 0.0, 9000.0);
     }
@@ -65137,7 +65138,7 @@ char __thiscall sub_455FB0(float* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00456000) --------------------------------------------------------
-int __thiscall sub_456000(_DWORD* this, int a2, int* a3, int a4, int a5)
+int __thiscall sub_456000(_DWORD* self, int a2, int* a3, int a4, int a5)
 {
     int result; // eax
     unsigned int i; // edi
@@ -65159,7 +65160,7 @@ int __thiscall sub_456000(_DWORD* this, int a2, int* a3, int a4, int a5)
 }
 
 //----- (00456050) --------------------------------------------------------
-int __thiscall sub_456050(_DWORD* this, float* a2, int a3, float a4, int a5, int a6)
+int __thiscall sub_456050(_DWORD* self, float* a2, int a3, float a4, int a5, int a6)
 {
     unsigned int i; // esi
     int result; // eax
@@ -65175,7 +65176,7 @@ int __thiscall sub_456050(_DWORD* this, float* a2, int a3, float a4, int a5, int
 }
 
 //----- (004560B0) --------------------------------------------------------
-_DWORD* __thiscall sub_4560B0(_DWORD* this, int a2, _DWORD* a3, int a4, int a5)
+_DWORD* __thiscall sub_4560B0(_DWORD* self, int a2, _DWORD* a3, int a4, int a5)
 {
     int v6; // eax
     int v7; // ecx
@@ -65191,7 +65192,7 @@ _DWORD* __thiscall sub_4560B0(_DWORD* this, int a2, _DWORD* a3, int a4, int a5)
     float v17; // [esp+34h] [ebp+Ch]
     float v18; // [esp+38h] [ebp+10h]
 
-    sub_401270((int)this);
+    sub_401270((int)self);
     Iostream_init::Iostream_init((Iostream_init*)(this + 123));
     this[99] = a4;
     this[100] = a5;
@@ -65232,7 +65233,7 @@ _DWORD* __thiscall sub_4560B0(_DWORD* this, int a2, _DWORD* a3, int a4, int a5)
     *((float*)this + 333) = v13;
     *((float*)this + 334) = *(float*)(v14 + 328) - *(float*)(v14 + 324) + v13;
     this[335] = *(_DWORD*)(v14 + 312);
-    v15 = sub_409960((_DWORD*)dword_520970, (int)this);
+    v15 = sub_409960((_DWORD*)dword_520970, (int)self);
     this[344] = v15;
     v15[3] = 5;
     *(_DWORD*)(this[344] + 48) = *(_DWORD*)(this[98] + 316);
@@ -65248,7 +65249,7 @@ _DWORD* __thiscall sub_4560B0(_DWORD* this, int a2, _DWORD* a3, int a4, int a5)
 // 520970: using guessed type int dword_520970;
 
 //----- (00456370) --------------------------------------------------------
-void __thiscall sub_456370(int this)
+void __thiscall sub_456370(int self)
 {
     _DWORD* v2; // eax
     int v3; // edx
@@ -65339,7 +65340,7 @@ void __thiscall sub_456370(int this)
 }
 
 //----- (004565B0) --------------------------------------------------------
-int __thiscall sub_4565B0(int this)
+int __thiscall sub_4565B0(int self)
 {
     int v2; // eax
     float* v3; // edi
@@ -65439,7 +65440,7 @@ int __stdcall sub_456860(int a1)
 }
 
 //----- (00456870) --------------------------------------------------------
-int __thiscall sub_456870(int this, int a2, int* a3, int a4, int a5)
+int __thiscall sub_456870(int self, int a2, int* a3, int a4, int a5)
 {
     int v6; // eax
     int v7; // edx
@@ -65522,7 +65523,7 @@ int __thiscall sub_456870(int this, int a2, int* a3, int a4, int a5)
 // 5216EC: using guessed type int dword_5216EC[3];
 
 //----- (00456A40) --------------------------------------------------------
-char __thiscall sub_456A40(int this, float* a2, int a3, float a4, int a5, int a6)
+char __thiscall sub_456A40(int self, float* a2, int a3, float a4, int a5, int a6)
 {
     int v7; // eax
     float* v8; // ecx
@@ -65623,7 +65624,7 @@ char __thiscall sub_456A40(int this, float* a2, int a3, float a4, int a5, int a6
 // 5216EC: using guessed type int dword_5216EC[3];
 
 //----- (00456C50) --------------------------------------------------------
-char __thiscall sub_456C50(int this, float* a2, float a3, char a4, _DWORD* a5)
+char __thiscall sub_456C50(int self, float* a2, float a3, char a4, _DWORD* a5)
 {
     double v7; // st7
     char v8; // cl
@@ -65656,7 +65657,7 @@ char __thiscall sub_456C50(int this, float* a2, float a3, char a4, _DWORD* a5)
     *(float*)(this + 1340) = v7;
     if (v7 <= 0.0)
     {
-        sub_458880(this);
+        sub_458880(self);
         if (a4)
         {
             v19 = *(_DWORD*)(this + 392);
@@ -65760,7 +65761,7 @@ char __thiscall sub_456C50(int this, float* a2, float a3, char a4, _DWORD* a5)
 // 520970: using guessed type int dword_520970;
 
 //----- (00456F30) --------------------------------------------------------
-int __thiscall sub_456F30(int this, float a2)
+int __thiscall sub_456F30(int self, float a2)
 {
     int v3; // eax
     __int64 v4; // rax
@@ -65829,7 +65830,7 @@ int __thiscall sub_456F30(int this, float a2)
 // 5216EC: using guessed type int dword_5216EC[3];
 
 //----- (004570A0) --------------------------------------------------------
-char __thiscall sub_4570A0(int this, int a2)
+char __thiscall sub_4570A0(int self, int a2)
 {
     float* v3; // ecx
     double v4; // st7
@@ -66769,14 +66770,14 @@ char __thiscall sub_4570A0(int this, int a2)
             }
         }
     }
-    sub_4565B0(this);
+    sub_4565B0(self);
     return sub_428620((_DWORD*)this, a2);
 }
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 // 520970: using guessed type int dword_520970;
 
 //----- (00458880) --------------------------------------------------------
-char __thiscall sub_458880(int this)
+char __thiscall sub_458880(int self)
 {
     char result; // al
     int v3; // ecx
@@ -66800,7 +66801,7 @@ char __thiscall sub_458880(int this)
 // 5216E8: using guessed type int dword_5216E8;
 
 //----- (004588F0) --------------------------------------------------------
-char __thiscall sub_4588F0(_DWORD* this, int a2)
+char __thiscall sub_4588F0(_DWORD* self, int a2)
 {
     int v3; // esi
     __int16 v4; // ax
@@ -66870,7 +66871,7 @@ char __thiscall sub_4588F0(_DWORD* this, int a2)
 // 5216E8: using guessed type int dword_5216E8;
 
 //----- (004589E0) --------------------------------------------------------
-int __thiscall sub_4589E0(_DWORD* this)
+int __thiscall sub_4589E0(_DWORD* self)
 {
     int v1; // edx
 
@@ -66882,13 +66883,13 @@ int __thiscall sub_4589E0(_DWORD* this)
 }
 
 //----- (00458A00) --------------------------------------------------------
-int __thiscall sub_458A00(_DWORD* this, int a2)
+int __thiscall sub_458A00(_DWORD* self, int a2)
 {
     return this[1] + 8 * a2;
 }
 
 //----- (00458A10) --------------------------------------------------------
-int __thiscall sub_458A10(int* this, _DWORD* a2)
+int __thiscall sub_458A10(int* self, _DWORD* a2)
 {
     _DWORD* v3; // eax
     _DWORD* v4; // edi
@@ -66977,7 +66978,7 @@ int __thiscall sub_458A10(int* this, _DWORD* a2)
 }
 
 //----- (00458BE0) --------------------------------------------------------
-int __thiscall sub_458BE0(_DWORD* this)
+int __thiscall sub_458BE0(_DWORD* self)
 {
     return this[1];
 }
@@ -67086,7 +67087,7 @@ _DWORD* __cdecl sub_458CD0(_DWORD* a1, _DWORD* a2)
 }
 
 //----- (00458CF0) --------------------------------------------------------
-_DWORD* __thiscall sub_458CF0(_DWORD* this)
+_DWORD* __thiscall sub_458CF0(_DWORD* self)
 {
     char v3; // [esp+Bh] [ebp-11h]
 
@@ -67116,7 +67117,7 @@ _DWORD* __thiscall sub_458CF0(_DWORD* this)
 // 499B48: using guessed type _UNKNOWN *off_499B48;
 
 //----- (00458DD0) --------------------------------------------------------
-void __thiscall sub_458DD0(_BYTE* this)
+void __thiscall sub_458DD0(_BYTE* self)
 {
     this[12] = 1;
     *(_DWORD*)this = 0;
@@ -67125,7 +67126,7 @@ void __thiscall sub_458DD0(_BYTE* this)
 }
 
 //----- (00458DE0) --------------------------------------------------------
-void __thiscall sub_458DE0(char* this)
+void __thiscall sub_458DE0(char* self)
 {
     void* v2; // edi
     void* v3; // edi
@@ -67150,7 +67151,7 @@ void __thiscall sub_458DE0(char* this)
         sub_41C700(*((_DWORD*)this + 58));
         sub_4885A6(v4);
     }
-    sub_411430((_DWORD*)dword_4F5CC4, (int)this);
+    sub_411430((_DWORD*)dword_4F5CC4, (int)self);
     sub_4885A6(*((LPVOID*)this + 53));
     *((_DWORD*)this + 53) = 0;
     *((_DWORD*)this + 54) = 0;
@@ -67940,7 +67941,7 @@ char __fastcall sub_458EE0(int a1)
 // 5216F8: using guessed type char byte_5216F8;
 
 //----- (0045A420) --------------------------------------------------------
-int __thiscall sub_45A420(float* this, int a2, int a3, char a4, int a5)
+int __thiscall sub_45A420(float* self, int a2, int a3, char a4, int a5)
 {
     int v5; // edi
     float* v6; // ebx
@@ -68097,7 +68098,7 @@ LABEL_30:
 // 520970: using guessed type int dword_520970;
 
 //----- (0045A7E0) --------------------------------------------------------
-int __thiscall sub_45A7E0(_DWORD* this)
+int __thiscall sub_45A7E0(_DWORD* self)
 {
     sub_4282E0(
         *(_DWORD*)(this[19] + 352) != 0,
@@ -68107,7 +68108,7 @@ int __thiscall sub_45A7E0(_DWORD* this)
 }
 
 //----- (0045A810) --------------------------------------------------------
-int __thiscall sub_45A810(_DWORD* this)
+int __thiscall sub_45A810(_DWORD* self)
 {
     sub_4282E0(
         *(_DWORD*)(this[19] + 356) != 0,
@@ -68117,7 +68118,7 @@ int __thiscall sub_45A810(_DWORD* this)
 }
 
 //----- (0045A840) --------------------------------------------------------
-int __thiscall sub_45A840(_DWORD* this)
+int __thiscall sub_45A840(_DWORD* self)
 {
     sub_4282E0(
         *(_DWORD*)(this[19] + 360) != 0,
@@ -68127,13 +68128,13 @@ int __thiscall sub_45A840(_DWORD* this)
 }
 
 //----- (0045A870) --------------------------------------------------------
-int __thiscall sub_45A870(_DWORD* this, int a2)
+int __thiscall sub_45A870(_DWORD* self, int a2)
 {
     return *(_DWORD*)(this[4 * this[5] + 6] + 4 * a2);
 }
 
 //----- (0045A890) --------------------------------------------------------
-int __thiscall sub_45A890(_DWORD* this, int ArgList, int a3, int a4)
+int __thiscall sub_45A890(_DWORD* self, int ArgList, int a3, int a4)
 {
     unsigned int v5; // eax
 
@@ -68147,7 +68148,7 @@ int __thiscall sub_45A890(_DWORD* this, int ArgList, int a3, int a4)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045A920) --------------------------------------------------------
-int __thiscall sub_45A920(_DWORD* this, int ArgList, int a3, int a4)
+int __thiscall sub_45A920(_DWORD* self, int ArgList, int a3, int a4)
 {
     int v5; // eax
     _DWORD* v6; // eax
@@ -68173,7 +68174,7 @@ int __thiscall sub_45A920(_DWORD* this, int ArgList, int a3, int a4)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045A9D0) --------------------------------------------------------
-void __thiscall sub_45A9D0(_DWORD* this)
+void __thiscall sub_45A9D0(_DWORD* self)
 {
     int v2; // ebx
     int v3; // edi
@@ -68194,7 +68195,7 @@ void __thiscall sub_45A9D0(_DWORD* this)
     {
         if (dword_4AD1B0 <= -1)
         {
-            sub_45ABF0((int)this);
+            sub_45ABF0((int)self);
             v5 = rand() % 10;
             v6 = rand();
             sub_45A920(this, this[18] + 1, v6 % 10, v5);
@@ -68209,7 +68210,7 @@ void __thiscall sub_45A9D0(_DWORD* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0045AA80) --------------------------------------------------------
-char __thiscall sub_45AA80(_DWORD* this)
+char __thiscall sub_45AA80(_DWORD* self)
 {
     char result; // al
     int v3; // edi
@@ -68227,7 +68228,7 @@ char __thiscall sub_45AA80(_DWORD* this)
     }
     else if (!*(_BYTE*)(dword_4F5CC4 + 937))
     {
-        sub_45ABF0((int)this);
+        sub_45ABF0((int)self);
         v5 = rand() % 10;
         v6 = rand();
         return sub_45A920(this, this[18], v6 % 10, v5);
@@ -68247,7 +68248,7 @@ BOOL sub_45AB10()
 // 520970: using guessed type int dword_520970;
 
 //----- (0045AB70) --------------------------------------------------------
-int __thiscall sub_45AB70(_DWORD* this)
+int __thiscall sub_45AB70(_DWORD* self)
 {
     int v1; // edi
     int v2; // edx
@@ -68273,7 +68274,7 @@ int __thiscall sub_45AB70(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045ABF0) --------------------------------------------------------
-int __thiscall sub_45ABF0(int this)
+int __thiscall sub_45ABF0(int self)
 {
     int v2; // ecx
     void* v3; // edi
@@ -68308,7 +68309,7 @@ int __thiscall sub_45ABF0(int this)
     sub_44E870(*(_DWORD**)(dword_520970 + 240));
     sub_4151F0(*(_DWORD*)(dword_520970 + 244));
     sub_436D70(*(_DWORD**)(dword_520970 + 224));
-    sub_45AF60((_DWORD*)this);
+    sub_45AF60((_DWORD*)self);
     sub_4630B0(*(_DWORD**)(dword_520970 + 280));
     *(_BYTE*)(*(_DWORD*)(dword_520970 + 280) + 11796) = 0;
     *(_BYTE*)(*(_DWORD*)(dword_520970 + 224) + 40) = 0;
@@ -68326,7 +68327,7 @@ int __thiscall sub_45ABF0(int this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045ADB0) --------------------------------------------------------
-void __thiscall sub_45ADB0(_DWORD* this)
+void __thiscall sub_45ADB0(_DWORD* self)
 {
     int v2; // esi
     int v3; // ecx
@@ -68414,7 +68415,7 @@ void __thiscall sub_45ADB0(_DWORD* this)
 // 520A10: using guessed type char byte_520A10;
 
 //----- (0045AF60) --------------------------------------------------------
-char __thiscall sub_45AF60(_DWORD* this)
+char __thiscall sub_45AF60(_DWORD* self)
 {
     int v2; // esi
     int v3; // eax
@@ -68527,7 +68528,7 @@ char __thiscall sub_45AF60(_DWORD* this)
 // 520A10: using guessed type char byte_520A10;
 
 //----- (0045B150) --------------------------------------------------------
-char __thiscall sub_45B150(_DWORD* this, int ArgList, int a3, int a4)
+char __thiscall sub_45B150(_DWORD* self, int ArgList, int a3, int a4)
 {
     char result; // al
     int v6; // edx
@@ -68593,7 +68594,7 @@ char __usercall sub_45B200@<al>(int* a1@<ecx>, int a2@<edi>)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045B2B0) --------------------------------------------------------
-char __thiscall sub_45B2B0(int this, const char* a2)
+char __thiscall sub_45B2B0(int self, const char* a2)
 {
     int v3; // eax
     int v4; // eax
@@ -68626,7 +68627,7 @@ char __thiscall sub_45B2B0(int this, const char* a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045B3E0) --------------------------------------------------------
-char __thiscall sub_45B3E0(int this, float* a2)
+char __thiscall sub_45B3E0(int self, float* a2)
 {
     int v2; // ebp
     int v3; // edi
@@ -68675,7 +68676,7 @@ char __thiscall sub_45B3E0(int this, float* a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045B4B0) --------------------------------------------------------
-void __thiscall sub_45B4B0(_DWORD* this, int ArgList)
+void __thiscall sub_45B4B0(_DWORD* self, int ArgList)
 {
     this[25] = 8;
     dword_4AD1B0 = ArgList;
@@ -69440,7 +69441,7 @@ LABEL_158:
 // 5216F8: using guessed type char byte_5216F8;
 
 //----- (0045C640) --------------------------------------------------------
-char __thiscall sub_45C640(int this, int a2)
+char __thiscall sub_45C640(int self, int a2)
 {
     int v2; // edi
     int v3; // eax
@@ -69457,7 +69458,7 @@ char __thiscall sub_45C640(int this, int a2)
     {
     case 0x501:
         v5 = *(_DWORD*)(v2 + 6);
-        sub_45ABF0(this);
+        sub_45ABF0(self);
         *(_DWORD*)(this + 20) = *(_DWORD*)(v2 + 18);
         sub_45A920((_DWORD*)this, v5, *(_DWORD*)(v2 + 10), *(_DWORD*)(v2 + 14));
         *(_BYTE*)(dword_520970 + 20) = 1;
@@ -69512,7 +69513,7 @@ char __thiscall sub_45C640(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045C7E0) --------------------------------------------------------
-void __thiscall sub_45C7E0(int this)
+void __thiscall sub_45C7E0(int self)
 {
     int i; // ebp
     void* v3; // edi
@@ -69539,7 +69540,7 @@ void __thiscall sub_45C7E0(int this)
 }
 
 //----- (0045C860) --------------------------------------------------------
-_DWORD* __thiscall sub_45C860(_DWORD* this, char a2)
+_DWORD* __thiscall sub_45C860(_DWORD* self, char a2)
 {
     _DWORD* result; // eax
 
@@ -69552,7 +69553,7 @@ _DWORD* __thiscall sub_45C860(_DWORD* this, char a2)
 }
 
 //----- (0045C880) --------------------------------------------------------
-void __thiscall sub_45C880(_DWORD* this)
+void __thiscall sub_45C880(_DWORD* self)
 {
     int i; // ebp
     void* v3; // edi
@@ -69579,7 +69580,7 @@ void __thiscall sub_45C880(_DWORD* this)
 }
 
 //----- (0045C900) --------------------------------------------------------
-int __thiscall sub_45C900(_DWORD* this)
+int __thiscall sub_45C900(_DWORD* self)
 {
     int result; // eax
 
@@ -69590,7 +69591,7 @@ int __thiscall sub_45C900(_DWORD* this)
 }
 
 //----- (0045C920) --------------------------------------------------------
-unsigned int __thiscall sub_45C920(_DWORD* this, char* a2, unsigned int a3, _DWORD* a4)
+unsigned int __thiscall sub_45C920(_DWORD* self, char* a2, unsigned int a3, _DWORD* a4)
 {
     _DWORD* v4; // ebx
     char* v5; // ecx
@@ -69816,7 +69817,7 @@ unsigned int __thiscall sub_45C920(_DWORD* this, char* a2, unsigned int a3, _DWO
 }
 
 //----- (0045CC50) --------------------------------------------------------
-_DWORD* __thiscall sub_45CC50(_DWORD* this, _DWORD* a2, _DWORD* a3)
+_DWORD* __thiscall sub_45CC50(_DWORD* self, _DWORD* a2, _DWORD* a3)
 {
     _DWORD* v3; // edx
     _DWORD* v4; // esi
@@ -69847,7 +69848,7 @@ _DWORD* __thiscall sub_45CC50(_DWORD* this, _DWORD* a2, _DWORD* a3)
 }
 
 //----- (0045CCA0) --------------------------------------------------------
-void __thiscall sub_45CCA0(int this)
+void __thiscall sub_45CCA0(int self)
 {
     int i; // edi
     void* v3; // eax
@@ -69879,7 +69880,7 @@ void __thiscall sub_45CCA0(int this)
 }
 
 //----- (0045CD60) --------------------------------------------------------
-void __thiscall sub_45CD60(int this)
+void __thiscall sub_45CD60(int self)
 {
     int i; // edi
     void* v3; // eax
@@ -69937,7 +69938,7 @@ void __thiscall sub_45CD60(int this)
 }
 
 //----- (0045CF30) --------------------------------------------------------
-void __thiscall sub_45CF30(int this, char a2)
+void __thiscall sub_45CF30(int self, char a2)
 {
     int i; // edi
 
@@ -69950,7 +69951,7 @@ void __thiscall sub_45CF30(int this, char a2)
     *(_DWORD*)(this + 4) = 0;
     if (a2)
     {
-        sub_488CEE(*(LPVOID*)this);
+        sub_488CEE(*(LPVOID*)self);
         *(_DWORD*)(this + 8) = 0;
         *(_DWORD*)this = 0;
     }
@@ -69988,10 +69989,10 @@ int __usercall sub_45CFA0@<eax>(int a1@<ecx>, int a2@<ebp>)
 }
 
 //----- (0045D050) --------------------------------------------------------
-int __thiscall sub_45D050(_DWORD* this)
+int __thiscall sub_45D050(_DWORD* self)
 {
-    sub_45D130(this);
-    return sub_469120(this);
+    sub_45D130(self);
+    return sub_469120(self);
 }
 
 //----- (0045D070) --------------------------------------------------------
@@ -70019,7 +70020,7 @@ void __usercall sub_45D070(int a1@<ecx>, int a2@<ebp>)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045D130) --------------------------------------------------------
-void __thiscall sub_45D130(_DWORD* this)
+void __thiscall sub_45D130(_DWORD* self)
 {
     _DWORD* v2; // ecx
     void(__thiscall * **v3)(_DWORD, int); // ecx
@@ -70040,7 +70041,7 @@ void __thiscall sub_45D130(_DWORD* this)
 }
 
 //----- (0045D180) --------------------------------------------------------
-_DWORD* __thiscall sub_45D180(_DWORD* this, int a2)
+_DWORD* __thiscall sub_45D180(_DWORD* self, int a2)
 {
     int v3; // esi
     const char* v4; // eax
@@ -70230,7 +70231,7 @@ LABEL_34:
         this[162] = 0;
         this[163] = 0;
         if (!sub_46A3A0(*(_BYTE**)(dword_520970 + 200), (LPCSTR)this + 388))
-            sub_45D070((int)this, (int)this);
+            sub_45D070((int)this, (int)self);
         sub_40AF00((const char*)a2, aNumbarrels, (char**)this + 164);
         if ((int)this[164] > 0)
         {
@@ -70460,7 +70461,7 @@ LABEL_34:
         sub_40AF60((const char*)a2, aMaxpitchshake, (float*)this + 204);
         sub_40AF60((const char*)a2, aShakevariance, (float*)this + 205);
     }
-    sub_45D130(this);
+    sub_45D130(self);
     sub_4229D0(aFinishedLoadin_4);
     return this;
 }
@@ -70468,11 +70469,11 @@ LABEL_34:
 // 520970: using guessed type int dword_520970;
 
 //----- (0045DF90) --------------------------------------------------------
-_DWORD* __thiscall sub_45DF90(_DWORD* this)
+_DWORD* __thiscall sub_45DF90(_DWORD* self)
 {
     char v3; // [esp+Bh] [ebp-11h]
 
-    sub_401270((int)this);
+    sub_401270((int)self);
     this[98] = 0;
     this[99] = 0;
     this[100] = 0;
@@ -70498,14 +70499,14 @@ _DWORD* __thiscall sub_45DF90(_DWORD* this)
     memset(this + 132, 0xFDu, 0x160u);
     memset(this + 572, 0xFDu, 0x34u);
     *((_BYTE*)this + 472) = 0;
-    sub_462240((int)this);
+    sub_462240((int)self);
     return this;
 }
 // 45DFF7: variable 'v3' is possibly undefined
 // 499B84: using guessed type _UNKNOWN *off_499B84;
 
 //----- (0045E0B0) --------------------------------------------------------
-int __thiscall sub_45E0B0(int this)
+int __thiscall sub_45E0B0(int self)
 {
     int i; // edi
     void* v3; // eax
@@ -70517,7 +70518,7 @@ int __thiscall sub_45E0B0(int this)
     *(_DWORD*)this = &off_499B84;
     sub_403B70(*(_DWORD**)(this + 436));
     sub_403B70(*(_DWORD**)(this + 444));
-    sub_411430((_DWORD*)dword_4F5CC4, this);
+    sub_411430((_DWORD*)dword_4F5CC4, self);
     if (*(_BYTE*)(this + 11792))
     {
         for (i = 0; i < *(_DWORD*)(this + 11784); ++i)
@@ -70555,7 +70556,7 @@ int __thiscall sub_45E0B0(int this)
     sub_488CEE(v7);
     *(_DWORD*)(this + 400) = 0;
     *(_DWORD*)(this + 392) = 0;
-    return sub_4013F0((_DWORD*)this);
+    return sub_4013F0((_DWORD*)self);
 }
 // 499B84: using guessed type _UNKNOWN *off_499B84;
 // 4F5CC4: using guessed type int dword_4F5CC4;
@@ -70700,7 +70701,7 @@ char __userpurge sub_45E2A0@<al>(int a1@<ecx>, int a2@<ebp>, int a3, int a4, int
 // 520970: using guessed type int dword_520970;
 
 //----- (0045E6F0) --------------------------------------------------------
-int __thiscall sub_45E6F0(_DWORD* this, int a2)
+int __thiscall sub_45E6F0(_DWORD* self, int a2)
 {
     int v2; // edx
     int result; // eax
@@ -70719,14 +70720,14 @@ int __thiscall sub_45E6F0(_DWORD* this, int a2)
 }
 
 //----- (0045E720) --------------------------------------------------------
-int __thiscall sub_45E720(int this, const char* a2, int a3)
+int __thiscall sub_45E720(int self, const char* a2, int a3)
 {
     strcpy((char*)(this + 472), a2);
     return sub_45E960((_DWORD*)this, a3);
 }
 
 //----- (0045E760) --------------------------------------------------------
-char __thiscall sub_45E760(int this)
+char __thiscall sub_45E760(int self)
 {
     FILE* v2; // eax
     FILE* v3; // esi
@@ -70770,7 +70771,7 @@ char __thiscall sub_45E760(int this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045E880) --------------------------------------------------------
-char __thiscall sub_45E880(int this)
+char __thiscall sub_45E880(int self)
 {
     FILE* v2; // eax
     FILE* v3; // esi
@@ -70800,7 +70801,7 @@ char __thiscall sub_45E880(int this)
 }
 
 //----- (0045E960) --------------------------------------------------------
-int __thiscall sub_45E960(_DWORD* this, int a2)
+int __thiscall sub_45E960(_DWORD* self, int a2)
 {
     void* v3; // eax
     int result; // eax
@@ -70817,7 +70818,7 @@ int __thiscall sub_45E960(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045E9B0) --------------------------------------------------------
-int __thiscall sub_45E9B0(_DWORD* this, int a2, int a3)
+int __thiscall sub_45E9B0(_DWORD* self, int a2, int a3)
 {
     int v4; // eax
     int v5; // edx
@@ -70829,13 +70830,13 @@ int __thiscall sub_45E9B0(_DWORD* this, int a2, int a3)
     if (a3 > v5)
     {
         *v6 = a3;
-        sub_45E880((int)this);
+        sub_45E880((int)self);
     }
     return *(_DWORD*)(this[127] + 4 * a2);
 }
 
 //----- (0045EA00) --------------------------------------------------------
-char __thiscall sub_45EA00(_DWORD* this, int a2)
+char __thiscall sub_45EA00(_DWORD* self, int a2)
 {
     int v3; // ebx
     int i; // eax
@@ -70850,11 +70851,11 @@ char __thiscall sub_45EA00(_DWORD* this, int a2)
         for (i = v3 + 1; i <= a2; *(_DWORD*)(this[127] + 4 * i - 4) = 0)
             ++i;
     }
-    return sub_45E880((int)this);
+    return sub_45E880((int)self);
 }
 
 //----- (0045EA60) --------------------------------------------------------
-int __thiscall sub_45EA60(_DWORD* this)
+int __thiscall sub_45EA60(_DWORD* self)
 {
     int v1; // edx
     int result; // eax
@@ -70879,7 +70880,7 @@ int __thiscall sub_45EA60(_DWORD* this)
 }
 
 //----- (0045EA80) --------------------------------------------------------
-int __thiscall sub_45EA80(int this, int a2)
+int __thiscall sub_45EA80(int self, int a2)
 {
     int result; // eax
     int v4; // ebp
@@ -70908,7 +70909,7 @@ int __thiscall sub_45EA80(int this, int a2)
     int v27; // [esp+68h] [ebp-44h]
     int v28[16]; // [esp+6Ch] [ebp-40h] BYREF
 
-    sub_462F90((_DWORD*)this);
+    sub_462F90((_DWORD*)self);
     result = a2;
     v4 = 0;
     v12 = -1082130432;
@@ -70976,11 +70977,11 @@ int __thiscall sub_45EA80(int this, int a2)
 }
 
 //----- (0045EC70) --------------------------------------------------------
-int __thiscall sub_45EC70(_DWORD* this)
+int __thiscall sub_45EC70(_DWORD* self)
 {
     int result; // eax
 
-    sub_463020(this);
+    sub_463020(self);
     sub_45EA80((int)this, 1);
     result = 0;
     this[130] = 1;
@@ -70992,14 +70993,14 @@ int __thiscall sub_45EC70(_DWORD* this)
 }
 
 //----- (0045ECB0) --------------------------------------------------------
-_DWORD* __thiscall sub_45ECB0(_DWORD* this)
+_DWORD* __thiscall sub_45ECB0(_DWORD* self)
 {
-    sub_462F90(this);
-    return sub_463020(this);
+    sub_462F90(self);
+    return sub_463020(self);
 }
 
 //----- (0045ECD0) --------------------------------------------------------
-int __thiscall sub_45ECD0(int this)
+int __thiscall sub_45ECD0(int self)
 {
     int result; // eax
     int v3; // eax
@@ -71032,7 +71033,7 @@ int __thiscall sub_45ECD0(int this)
         } while (v3 < 4);
         *(_DWORD*)(this + 512) = 0;
         *(_DWORD*)(this + 516) = *(_DWORD*)(this + 880);
-        return sub_463180((_BYTE*)this);
+        return sub_463180((_BYTE*)self);
     }
     return result;
 }
@@ -71094,7 +71095,7 @@ void __userpurge sub_45ED50(int a1@<ecx>, int a2@<edi>, _DWORD* a3, _DWORD* a4)
 }
 
 //----- (0045EE50) --------------------------------------------------------
-int __thiscall sub_45EE50(int this, int a2)
+int __thiscall sub_45EE50(int self, int a2)
 {
     int result; // eax
     unsigned int i; // edi
@@ -71158,7 +71159,7 @@ int __thiscall sub_45EE50(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045EFA0) --------------------------------------------------------
-int __thiscall sub_45EFA0(_DWORD* this)
+int __thiscall sub_45EFA0(_DWORD* self)
 {
     unsigned int v2; // edi
     int v3; // eax
@@ -71181,7 +71182,7 @@ int __thiscall sub_45EFA0(_DWORD* this)
 }
 
 //----- (0045F000) --------------------------------------------------------
-int __thiscall sub_45F000(_DWORD* this)
+int __thiscall sub_45F000(_DWORD* self)
 {
     int v1; // edx
     int v2; // eax
@@ -71205,7 +71206,7 @@ int __thiscall sub_45F000(_DWORD* this)
 }
 
 //----- (0045F050) --------------------------------------------------------
-int __thiscall sub_45F050(_DWORD* this)
+int __thiscall sub_45F050(_DWORD* self)
 {
     int v1; // eax
     int v2; // edx
@@ -71222,7 +71223,7 @@ int __thiscall sub_45F050(_DWORD* this)
 }
 
 //----- (0045F080) --------------------------------------------------------
-int __thiscall sub_45F080(_DWORD* this)
+int __thiscall sub_45F080(_DWORD* self)
 {
     int v2; // eax
     int v3; // ebp
@@ -71267,7 +71268,7 @@ int __thiscall sub_45F080(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045F160) --------------------------------------------------------
-void __thiscall sub_45F160(float* this, float* a2)
+void __thiscall sub_45F160(float* self, float* a2)
 {
     int v3; // eax
     int v4; // ecx
@@ -71344,7 +71345,7 @@ void __thiscall sub_45F160(float* this, float* a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (0045F2E0) --------------------------------------------------------
-float* __thiscall sub_45F2E0(float* this, int a2, int a3, int a4, int a5, float a6)
+float* __thiscall sub_45F2E0(float* self, int a2, int a3, int a4, int a5, float a6)
 {
     float* result; // eax
 
@@ -71363,7 +71364,7 @@ float* __thiscall sub_45F2E0(float* this, int a2, int a3, int a4, int a5, float 
 }
 
 //----- (0045F350) --------------------------------------------------------
-_DWORD* __thiscall sub_45F350(_DWORD* this, int a2, char a3)
+_DWORD* __thiscall sub_45F350(_DWORD* self, int a2, char a3)
 {
     _DWORD* result; // eax
 
@@ -71375,7 +71376,7 @@ _DWORD* __thiscall sub_45F350(_DWORD* this, int a2, char a3)
 }
 
 //----- (0045F3A0) --------------------------------------------------------
-int __thiscall sub_45F3A0(char* this, int a2, bool* a3, bool* a4, _DWORD* a5)
+int __thiscall sub_45F3A0(char* self, int a2, bool* a3, bool* a4, _DWORD* a5)
 {
     char* v5; // edx
     int v6; // eax
@@ -71427,7 +71428,7 @@ LABEL_5:
 }
 
 //----- (0045F480) --------------------------------------------------------
-double __thiscall sub_45F480(int this)
+double __thiscall sub_45F480(int self)
 {
     if (*(_DWORD*)(this + 11520))
         return *(float*)(this + 11544);
@@ -71436,7 +71437,7 @@ double __thiscall sub_45F480(int this)
 }
 
 //----- (0045F4A0) --------------------------------------------------------
-double __thiscall sub_45F4A0(_DWORD* this)
+double __thiscall sub_45F4A0(_DWORD* self)
 {
     int v1; // eax
     int v2; // edx
@@ -71471,7 +71472,7 @@ LABEL_8:
 }
 
 //----- (0045F520) --------------------------------------------------------
-double __thiscall sub_45F520(int this)
+double __thiscall sub_45F520(int self)
 {
     int v1; // eax
     int v2; // esi
@@ -71515,7 +71516,7 @@ double __thiscall sub_45F520(int this)
 }
 
 //----- (0045F5C0) --------------------------------------------------------
-char __thiscall sub_45F5C0(int this, int a2, int a3)
+char __thiscall sub_45F5C0(int self, int a2, int a3)
 {
     bool v4; // zf
 
@@ -71544,7 +71545,7 @@ char __thiscall sub_45F5C0(int this, int a2, int a3)
 }
 
 //----- (0045F620) --------------------------------------------------------
-void __thiscall sub_45F620(int this, int a2, char a3)
+void __thiscall sub_45F620(int self, int a2, char a3)
 {
     char v4; // al
     char v5; // dl
@@ -71561,7 +71562,7 @@ void __thiscall sub_45F620(int this, int a2, char a3)
     int v16; // [esp+18h] [ebp-8h]
     int v17; // [esp+1Ch] [ebp-4h]
 
-    if (*(_BYTE*)(dword_520970 + 296) || sub_408F30((_DWORD*)dword_520970) != this)
+    if (*(_BYTE*)(dword_520970 + 296) || sub_408F30((_DWORD*)dword_520970) != self)
         return;
     if (a2 == 59)
     {
@@ -71588,7 +71589,7 @@ void __thiscall sub_45F620(int this, int a2, char a3)
         switch (a2)
         {
         case 15:
-            sub_45EFA0((_DWORD*)this);
+            sub_45EFA0((_DWORD*)self);
             break;
         case 2:
             sub_45EE50(this, 0);
@@ -71609,10 +71610,10 @@ void __thiscall sub_45F620(int this, int a2, char a3)
             sub_45EE50(this, 5);
             break;
         case 26:
-            sub_45F050((_DWORD*)this);
+            sub_45F050((_DWORD*)self);
             break;
         case 27:
-            sub_45F000((_DWORD*)this);
+            sub_45F000((_DWORD*)self);
             break;
         }
         v5 = 0;
@@ -72994,7 +72995,7 @@ LABEL_298:
 // 520970: using guessed type int dword_520970;
 
 //----- (00461D40) --------------------------------------------------------
-int __thiscall sub_461D40(int this, int* a2, int* a3, int a4, _DWORD* a5)
+int __thiscall sub_461D40(int self, int* a2, int* a3, int a4, _DWORD* a5)
 {
     int v5; // eax
     int v6; // ebp
@@ -73112,7 +73113,7 @@ LABEL_12:
 // 520970: using guessed type int dword_520970;
 
 //----- (00461FD0) --------------------------------------------------------
-void __thiscall sub_461FD0(_DWORD* this, float* a2, float a3, float a4, int a5, int a6)
+void __thiscall sub_461FD0(_DWORD* self, float* a2, float a3, float a4, int a5, int a6)
 {
     int v6; // eax
     float* v7; // edx
@@ -73150,7 +73151,7 @@ void __thiscall sub_461FD0(_DWORD* this, float* a2, float a3, float a4, int a5, 
 }
 
 //----- (00462090) --------------------------------------------------------
-void __thiscall sub_462090(int this, float a2)
+void __thiscall sub_462090(int self, float a2)
 {
     int v3; // edx
     double v4; // st7
@@ -73192,7 +73193,7 @@ LABEL_10:
         *(_BYTE*)(this + 11796) = 1;
         sub_4261C0(*(_DWORD**)(dword_520970 + 232), aTelegram, 1);
         if (*(_BYTE*)(dword_4F5CC4 + 936) || *(_BYTE*)(dword_4F5CC4 + 937))
-            sub_463110((_DWORD*)this);
+            sub_463110((_DWORD*)self);
         else
             ++ * (_DWORD*)(this + 504);
     }
@@ -73201,7 +73202,7 @@ LABEL_10:
 // 520970: using guessed type int dword_520970;
 
 //----- (004621B0) --------------------------------------------------------
-void __thiscall sub_4621B0(int* this)
+void __thiscall sub_4621B0(int* self)
 {
     int v1; // ebx
     int* v2; // edi
@@ -73263,7 +73264,7 @@ void __thiscall sub_4621B0(int* this)
 // 499B78: using guessed type _UNKNOWN *off_499B78;
 
 //----- (00462240) --------------------------------------------------------
-int __thiscall sub_462240(int this)
+int __thiscall sub_462240(int self)
 {
     int i; // esi
     void* v3; // eax
@@ -73327,7 +73328,7 @@ int __thiscall sub_462240(int this)
 }
 
 //----- (00462480) --------------------------------------------------------
-const char* __thiscall sub_462480(_DWORD* this, char* String1)
+const char* __thiscall sub_462480(_DWORD* self, char* String1)
 {
     int v3; // ebp
     int v4; // esi
@@ -73349,7 +73350,7 @@ const char* __thiscall sub_462480(_DWORD* this, char* String1)
 }
 
 //----- (004624D0) --------------------------------------------------------
-unsigned int __thiscall sub_4624D0(_DWORD* this, int a2)
+unsigned int __thiscall sub_4624D0(_DWORD* self, int a2)
 {
     int v2; // eax
     unsigned int result; // eax
@@ -73361,13 +73362,13 @@ unsigned int __thiscall sub_4624D0(_DWORD* this, int a2)
     }
     result = dword_4F5CC4;
     if (*(_BYTE*)(dword_4F5CC4 + 936) || *(_BYTE*)(dword_4F5CC4 + 937))
-        return sub_463780(this);
+        return sub_463780(self);
     return result;
 }
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00462520) --------------------------------------------------------
-char __thiscall sub_462520(_DWORD* this, int a2, int a3)
+char __thiscall sub_462520(_DWORD* self, int a2, int a3)
 {
     int v3; // eax
     int v5; // ebx
@@ -73443,7 +73444,7 @@ LABEL_14:
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00462660) --------------------------------------------------------
-_DWORD* __thiscall sub_462660(_DWORD* this)
+_DWORD* __thiscall sub_462660(_DWORD* self)
 {
     int v1; // eax
     int v2; // edx
@@ -73583,7 +73584,7 @@ INT __usercall sub_4626F0@<eax>(int a1@<ecx>, int a2@<edi>)
 // 520970: using guessed type int dword_520970;
 
 //----- (004629B0) --------------------------------------------------------
-int __thiscall sub_4629B0(int this, int a2)
+int __thiscall sub_4629B0(int self, int a2)
 {
     int result; // eax
 
@@ -73597,7 +73598,7 @@ int __thiscall sub_4629B0(int this, int a2)
 }
 
 //----- (004629F0) --------------------------------------------------------
-int __thiscall sub_4629F0(int this, int a2)
+int __thiscall sub_4629F0(int self, int a2)
 {
     int v2; // edx
     int result; // eax
@@ -73632,7 +73633,7 @@ int __thiscall sub_4629F0(int this, int a2)
 }
 
 //----- (00462A80) --------------------------------------------------------
-int __thiscall sub_462A80(_DWORD* this, _BYTE* a2, _BYTE* a3)
+int __thiscall sub_462A80(_DWORD* self, _BYTE* a2, _BYTE* a3)
 {
     int i; // esi
     int result; // eax
@@ -73663,7 +73664,7 @@ int __thiscall sub_462A80(_DWORD* this, _BYTE* a2, _BYTE* a3)
 }
 
 //----- (00462B20) --------------------------------------------------------
-_DWORD* __thiscall sub_462B20(_DWORD* this)
+_DWORD* __thiscall sub_462B20(_DWORD* self)
 {
     _DWORD* result; // eax
     int v3; // ebp
@@ -73744,7 +73745,7 @@ _DWORD* __thiscall sub_462B20(_DWORD* this)
         v26[13] = v18;
         v26[14] = v19;
         qmemcpy(v16 + 681, v26, 0x40u);
-        v10 = sub_409960((_DWORD*)dword_520970, (int)this);
+        v10 = sub_409960((_DWORD*)dword_520970, (int)self);
         v11 = v20;
         v16[701] = v10;
         v10[10] = v11;
@@ -73757,7 +73758,7 @@ _DWORD* __thiscall sub_462B20(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00462DD0) --------------------------------------------------------
-_DWORD* __thiscall sub_462DD0(_DWORD* this, int a2)
+_DWORD* __thiscall sub_462DD0(_DWORD* self, int a2)
 {
     int v3; // eax
     int v4; // ecx
@@ -73798,7 +73799,7 @@ _DWORD* __thiscall sub_462DD0(_DWORD* this, int a2)
 }
 
 //----- (00462F00) --------------------------------------------------------
-int __thiscall sub_462F00(int this, int a2)
+int __thiscall sub_462F00(int self, int a2)
 {
     int v3; // eax
     char v5; // [esp+0h] [ebp-4h]
@@ -73820,7 +73821,7 @@ int __thiscall sub_462F00(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00462F90) --------------------------------------------------------
-_DWORD* __thiscall sub_462F90(_DWORD* this)
+_DWORD* __thiscall sub_462F90(_DWORD* self)
 {
     _DWORD* v1; // esi
     int v2; // ebp
@@ -73861,7 +73862,7 @@ _DWORD* __thiscall sub_462F90(_DWORD* this)
 }
 
 //----- (00463020) --------------------------------------------------------
-_DWORD* __thiscall sub_463020(_DWORD* this)
+_DWORD* __thiscall sub_463020(_DWORD* self)
 {
     _DWORD* v2; // ecx
     _DWORD* result; // eax
@@ -73885,7 +73886,7 @@ _DWORD* __thiscall sub_463020(_DWORD* this)
 }
 
 //----- (00463070) --------------------------------------------------------
-int __thiscall sub_463070(_DWORD* this)
+int __thiscall sub_463070(_DWORD* self)
 {
     _DWORD* v1; // edx
     int v2; // esi
@@ -73909,7 +73910,7 @@ int __thiscall sub_463070(_DWORD* this)
 }
 
 //----- (004630B0) --------------------------------------------------------
-_DWORD* __thiscall sub_4630B0(_DWORD* this)
+_DWORD* __thiscall sub_4630B0(_DWORD* self)
 {
     _DWORD* result; // eax
     int v2; // ecx
@@ -73927,7 +73928,7 @@ _DWORD* __thiscall sub_4630B0(_DWORD* this)
 }
 
 //----- (004630D0) --------------------------------------------------------
-int __thiscall sub_4630D0(char* this)
+int __thiscall sub_4630D0(char* self)
 {
     int v1; // edx
     int result; // eax
@@ -73950,7 +73951,7 @@ int __thiscall sub_4630D0(char* this)
 }
 
 //----- (00463110) --------------------------------------------------------
-int __thiscall sub_463110(_DWORD* this)
+int __thiscall sub_463110(_DWORD* self)
 {
     int result; // eax
     int v2; // edx
@@ -73967,7 +73968,7 @@ int __thiscall sub_463110(_DWORD* this)
 }
 
 //----- (00463150) --------------------------------------------------------
-int __thiscall sub_463150(_DWORD* this)
+int __thiscall sub_463150(_DWORD* self)
 {
     int result; // eax
     _DWORD* v2; // edx
@@ -73987,7 +73988,7 @@ int __thiscall sub_463150(_DWORD* this)
 }
 
 //----- (00463180) --------------------------------------------------------
-int __thiscall sub_463180(_BYTE* this)
+int __thiscall sub_463180(_BYTE* self)
 {
     char v2; // al
     char v3; // cl
@@ -74057,7 +74058,7 @@ int __thiscall sub_463180(_BYTE* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (004632B0) --------------------------------------------------------
-char __thiscall sub_4632B0(int this, int ArgList)
+char __thiscall sub_4632B0(int self, int ArgList)
 {
     int v3; // eax
     int v4; // esi
@@ -74134,7 +74135,7 @@ char __thiscall sub_4632B0(int this, int ArgList)
                                 } while (v26 < *(_DWORD*)(this + 520) - 1);
                             }
                             -- * (_DWORD*)(this + 520);
-                            LOBYTE(v7) = sub_463180((_BYTE*)this);
+                            LOBYTE(v7) = sub_463180((_BYTE*)self);
                         }
                     }
                 }
@@ -74152,8 +74153,8 @@ char __thiscall sub_4632B0(int this, int ArgList)
                 *(_DWORD*)(352 * v28 + this + 924) = 0;
                 *(_DWORD*)(352 * v28 + this + 928) = 0;
                 *(_DWORD*)(352 * v28 + this + 1228) = 0;
-                sub_4621B0((int*)this);
-                LOBYTE(v7) = sub_463180((_BYTE*)this);
+                sub_4621B0((int*)self);
+                LOBYTE(v7) = sub_463180((_BYTE*)self);
             }
         }
     }
@@ -74229,7 +74230,7 @@ char __thiscall sub_4632B0(int this, int ArgList)
                 if ((_BYTE)v14)
                     sub_45EA80(this, (char)v14);
                 else
-                    sub_462F90((_DWORD*)this);
+                    sub_462F90((_DWORD*)self);
             }
             ArgLista = 0;
             if (*(char*)(v4 + 6) > 0)
@@ -74303,7 +74304,7 @@ char __stdcall sub_463710(const char* a1)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00463780) --------------------------------------------------------
-unsigned int __thiscall sub_463780(_DWORD* this)
+unsigned int __thiscall sub_463780(_DWORD* self)
 {
     int v2; // eax
     double v3; // st7
@@ -74356,7 +74357,7 @@ unsigned int __thiscall sub_463780(_DWORD* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (004638A0) --------------------------------------------------------
-char* __thiscall sub_4638A0(int this, char* a2, unsigned int a3, _DWORD* a4)
+char* __thiscall sub_4638A0(int self, char* a2, unsigned int a3, _DWORD* a4)
 {
     int v5; // edi
     char* result; // eax
@@ -74544,7 +74545,7 @@ char* __thiscall sub_4638A0(int this, char* a2, unsigned int a3, _DWORD* a4)
 }
 
 //----- (00463AF0) --------------------------------------------------------
-_DWORD* __thiscall sub_463AF0(_DWORD* this, _DWORD* a2, int* a3)
+_DWORD* __thiscall sub_463AF0(_DWORD* self, _DWORD* a2, int* a3)
 {
     int* v3; // edx
     _DWORD* result; // eax
@@ -74573,7 +74574,7 @@ _DWORD* __thiscall sub_463AF0(_DWORD* this, _DWORD* a2, int* a3)
 
 //----- (00463B30) --------------------------------------------------------
 _DWORD* __thiscall sub_463B30(
-    _DWORD* this,
+    _DWORD* self,
     _DWORD* a2,
     int a3,
     int a4,
@@ -74676,7 +74677,7 @@ _DWORD* __thiscall sub_463B30(
     this[24] = operator new(4 * (v26 / 2));
     for (i = 0; i < this[30]; ++i)
     {
-        *(_DWORD*)(this[24] + 4 * i) = sub_409960((_DWORD*)dword_520970, (int)this);
+        *(_DWORD*)(this[24] + 4 * i) = sub_409960((_DWORD*)dword_520970, (int)self);
         if (*((_BYTE*)this + 48))
             *(_DWORD*)(*(_DWORD*)(this[24] + 4 * i) + 12) = 4;
         else
@@ -74736,7 +74737,7 @@ _DWORD* __thiscall sub_463B30(
 // 520970: using guessed type int dword_520970;
 
 //----- (00463E00) --------------------------------------------------------
-int __thiscall sub_463E00(void* this)
+int __thiscall sub_463E00(void* self)
 {
     int i; // edi
     int* v3; // ecx
@@ -74774,7 +74775,7 @@ int __thiscall sub_463E00(void* this)
 // 520970: using guessed type int dword_520970;
 
 //----- (00463EB0) --------------------------------------------------------
-_DWORD* __thiscall sub_463EB0(_DWORD* this, float a2, _DWORD* a3)
+_DWORD* __thiscall sub_463EB0(_DWORD* self, float a2, _DWORD* a3)
 {
     int v3; // edi
     _DWORD* v4; // eax
@@ -75113,7 +75114,7 @@ void __userpurge sub_463F60(int a1@<ecx>, int a2@<edi>, float a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (004645D0) --------------------------------------------------------
-int __thiscall sub_4645D0(int* this, int a2)
+int __thiscall sub_4645D0(int* self, int a2)
 {
     int v2; // edi
     int v4; // ecx
@@ -75161,7 +75162,7 @@ int __thiscall sub_4645D0(int* this, int a2)
 // 520A50: using guessed type int dword_520A50;
 
 //----- (00464730) --------------------------------------------------------
-_DWORD* __thiscall sub_464730(_DWORD* this)
+_DWORD* __thiscall sub_464730(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -75180,7 +75181,7 @@ _DWORD* __thiscall sub_464730(_DWORD* this)
 // 499C4C: using guessed type _UNKNOWN *off_499C4C;
 
 //----- (00464780) --------------------------------------------------------
-void __thiscall sub_464780(_DWORD* this)
+void __thiscall sub_464780(_DWORD* self)
 {
     _DWORD* v2; // ecx
 
@@ -75197,7 +75198,7 @@ void __thiscall sub_464780(_DWORD* this)
 // 499C4C: using guessed type _UNKNOWN *off_499C4C;
 
 //----- (004647E0) --------------------------------------------------------
-BOOL __thiscall sub_4647E0(_DWORD* this)
+BOOL __thiscall sub_4647E0(_DWORD* self)
 {
     return this[5] < 8;
 }
@@ -75274,7 +75275,7 @@ char __userpurge sub_464810@<al>(_DWORD* a1@<ecx>, int a2@<ebp>, int a3, int a4)
 // 520970: using guessed type int dword_520970;
 
 //----- (004649C0) --------------------------------------------------------
-char __thiscall sub_4649C0(int this, int a2)
+char __thiscall sub_4649C0(int self, int a2)
 {
     int v3; // eax
     int* v4; // eax
@@ -75308,7 +75309,7 @@ char __thiscall sub_4649C0(int this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00464A40) --------------------------------------------------------
-int __thiscall sub_464A40(int this, int a2)
+int __thiscall sub_464A40(int self, int a2)
 {
     if ((_BYTE)a2)
     {
@@ -75336,10 +75337,10 @@ int __usercall sub_464AA0@<eax>(_DWORD* a1@<ecx>, int a2@<ebp>)
 }
 
 //----- (00464AC0) --------------------------------------------------------
-int __thiscall sub_464AC0(_DWORD* this)
+int __thiscall sub_464AC0(_DWORD* self)
 {
-    sub_464BB0(this);
-    return sub_469120(this);
+    sub_464BB0(self);
+    return sub_469120(self);
 }
 
 //----- (00464AE0) --------------------------------------------------------
@@ -75379,7 +75380,7 @@ char __usercall sub_464AE0@<al>(int a1@<ecx>, int a2@<ebp>)
 // 520970: using guessed type int dword_520970;
 
 //----- (00464BB0) --------------------------------------------------------
-void __thiscall sub_464BB0(_DWORD* this)
+void __thiscall sub_464BB0(_DWORD* self)
 {
     _DWORD* v2; // ecx
     int* v3; // ecx
@@ -75406,19 +75407,19 @@ void __thiscall sub_464BB0(_DWORD* this)
 }
 
 //----- (00464C00) --------------------------------------------------------
-int __thiscall sub_464C00(_DWORD* this)
+int __thiscall sub_464C00(_DWORD* self)
 {
     *this = &off_499C6C;
-    sub_464BB0(this);
+    sub_464BB0(self);
     nullsub_1(this + 318);
     nullsub_1(this + 315);
-    return sub_4690A0(this);
+    return sub_4690A0(self);
 }
 // 415760: using guessed type int __thiscall nullsub_1(_DWORD);
 // 499C6C: using guessed type _UNKNOWN *off_499C6C;
 
 //----- (00464C90) --------------------------------------------------------
-_DWORD* __thiscall sub_464C90(_DWORD* this, int a2)
+_DWORD* __thiscall sub_464C90(_DWORD* self, int a2)
 {
     const char* v3; // eax
     const char* v4; // eax
@@ -75520,7 +75521,7 @@ _DWORD* __thiscall sub_464C90(_DWORD* this, int a2)
     this[271] = 0;
     this[272] = 0;
     if (!sub_46A3A0(*(_BYTE**)(dword_520970 + 200), (LPCSTR)this + 300))
-        sub_464AE0((int)this, (int)this);
+        sub_464AE0((int)this, (int)self);
     v6 = 0;
     String1 = 0;
     if (!sub_46A490(*(_BYTE**)(dword_520970 + 200)))
@@ -75899,7 +75900,7 @@ LABEL_12:
         sub_40AFC0((void*)a2, aFireeffect, &String1);
         sub_469160((int)this, this + 322, String1, aEffect);
     }
-    sub_464BB0(this);
+    sub_464BB0(self);
     sub_4229D0("Finished loading %s in %s", (const char*)this[1], v70);
     return this;
 }
@@ -75927,12 +75928,12 @@ int __fastcall sub_465C10(int a1)
 // 499C78: using guessed type _UNKNOWN *off_499C78;
 
 //----- (00465C60) --------------------------------------------------------
-int __thiscall sub_465C60(LPVOID* this)
+int __thiscall sub_465C60(LPVOID* self)
 {
     int result; // eax
 
     *this = &off_499C78;
-    sub_411430((_DWORD*)dword_4F5CC4, (int)this);
+    sub_411430((_DWORD*)dword_4F5CC4, (int)self);
     sub_4885A6(this[6]);
     result = 0;
     this[6] = 0;
@@ -75946,7 +75947,7 @@ int __thiscall sub_465C60(LPVOID* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00465CD0) --------------------------------------------------------
-char __thiscall sub_465CD0(void* this)
+char __thiscall sub_465CD0(void* self)
 {
     sub_4113F0((_DWORD*)dword_4F5CC4, (int)this, 65280, 2048, 0);
     return 1;
@@ -75954,7 +75955,7 @@ char __thiscall sub_465CD0(void* this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00465CF0) --------------------------------------------------------
-int __thiscall sub_465CF0(_DWORD* this, int* a2, int* a3, int a4, float* a5)
+int __thiscall sub_465CF0(_DWORD* self, int* a2, int* a3, int a4, float* a5)
 {
     int result; // eax
     unsigned int i; // esi
@@ -75979,7 +75980,7 @@ int __thiscall sub_465CF0(_DWORD* this, int* a2, int* a3, int a4, float* a5)
 }
 
 //----- (00465D40) --------------------------------------------------------
-int __thiscall sub_465D40(_DWORD* this, int* a2, float a3, float a4, char a5, int a6)
+int __thiscall sub_465D40(_DWORD* self, int* a2, float a3, float a4, char a5, int a6)
 {
     unsigned int i; // edi
     int result; // eax
@@ -75998,7 +75999,7 @@ int __thiscall sub_465D40(_DWORD* this, int* a2, float a3, float a4, char a5, in
 }
 
 //----- (00465D90) --------------------------------------------------------
-int __thiscall sub_465D90(_DWORD* this, int a2)
+int __thiscall sub_465D90(_DWORD* self, int a2)
 {
     int result; // eax
     int v3; // edx
@@ -76025,7 +76026,7 @@ int __thiscall sub_465D90(_DWORD* this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00465E00) --------------------------------------------------------
-int __thiscall sub_465E00(_DWORD* this, int a2, int a3)
+int __thiscall sub_465E00(_DWORD* self, int a2, int a3)
 {
     _DWORD* v4; // eax
     int v5; // edi
@@ -76079,7 +76080,7 @@ int __thiscall sub_465E00(_DWORD* this, int a2, int a3)
 // 520970: using guessed type int dword_520970;
 
 //----- (00465F20) --------------------------------------------------------
-int __thiscall sub_465F20(_DWORD* this)
+int __thiscall sub_465F20(_DWORD* self)
 {
     int v2; // eax
     int v3; // ebx
@@ -76106,7 +76107,7 @@ int __thiscall sub_465F20(_DWORD* this)
 }
 
 //----- (00465FB0) --------------------------------------------------------
-char __thiscall sub_465FB0(_DWORD* this)
+char __thiscall sub_465FB0(_DWORD* self)
 {
     int v1; // edx
     int v2; // eax
@@ -76130,7 +76131,7 @@ char __thiscall sub_465FB0(_DWORD* this)
 }
 
 //----- (00465FF0) --------------------------------------------------------
-_DWORD* __thiscall sub_465FF0(_DWORD* this, int a2, int a3)
+_DWORD* __thiscall sub_465FF0(_DWORD* self, int a2, int a3)
 {
     _DWORD* v4; // eax
     _DWORD* v5; // eax
@@ -76154,7 +76155,7 @@ _DWORD* __thiscall sub_465FF0(_DWORD* this, int a2, int a3)
     int v24; // [esp+28h] [ebp-4h]
 
     v20[1] = (int)this;
-    sub_401270((int)this);
+    sub_401270((int)self);
     v24 = 0;
     Iostream_init::Iostream_init((Iostream_init*)(this + 129));
     *this = &off_499C98;
@@ -76246,14 +76247,14 @@ _DWORD* __thiscall sub_465FF0(_DWORD* this, int a2, int a3)
             }
         }
     }
-    sub_466AA0((int)this);
+    sub_466AA0((int)self);
     return this;
 }
 // 499C98: using guessed type _UNKNOWN *off_499C98;
 // 520970: using guessed type int dword_520970;
 
 //----- (00466370) --------------------------------------------------------
-int __thiscall sub_466370(_DWORD* this)
+int __thiscall sub_466370(_DWORD* self)
 {
     void* v2; // ecx
     int v3; // ecx
@@ -76279,13 +76280,13 @@ int __thiscall sub_466370(_DWORD* this)
         this[339] = 0;
     }
     nullsub_1(this + 129);
-    return sub_4013F0(this);
+    return sub_4013F0(self);
 }
 // 415760: using guessed type int __thiscall nullsub_1(_DWORD);
 // 499C98: using guessed type _UNKNOWN *off_499C98;
 
 //----- (00466410) --------------------------------------------------------
-int __thiscall sub_466410(int this, int* a2, int* a3, int a4, float* a5)
+int __thiscall sub_466410(int self, int* a2, int* a3, int a4, float* a5)
 {
     int v6; // edi
     int v7; // eax
@@ -76351,7 +76352,7 @@ int __thiscall sub_466410(int this, int* a2, int* a3, int a4, float* a5)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (004665E0) --------------------------------------------------------
-bool __thiscall sub_4665E0(int this, int* a2, float a3, float a4, char a5, int a6)
+bool __thiscall sub_4665E0(int self, int* a2, float a3, float a4, char a5, int a6)
 {
     int v7; // edi
     int i; // ebp
@@ -76402,7 +76403,7 @@ bool __thiscall sub_4665E0(int this, int* a2, float a3, float a4, char a5, int a
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (004666E0) --------------------------------------------------------
-bool __thiscall sub_4666E0(char* this, int a2, int a3, float a4, char a5)
+bool __thiscall sub_4666E0(char* self, int a2, int a3, float a4, char a5)
 {
     double v6; // st7
     double v7; // st7
@@ -76548,7 +76549,7 @@ LABEL_22:
 // 520970: using guessed type int dword_520970;
 
 //----- (00466AA0) --------------------------------------------------------
-int __thiscall sub_466AA0(int this)
+int __thiscall sub_466AA0(int self)
 {
     _DWORD* v2; // ecx
     int v3; // eax
@@ -76607,7 +76608,7 @@ int __thiscall sub_466AA0(int this)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00466D00) --------------------------------------------------------
-char __thiscall sub_466D00(int this, int a2)
+char __thiscall sub_466D00(int self, int a2)
 {
     double v4; // st7
     int v5; // ecx
@@ -77028,10 +77029,10 @@ LABEL_13:
         v85 = v47;
         sub_41D960(v42, &v83, &v86);
     }
-    if (sub_408F30((_DWORD*)dword_520970) == this)
+    if (sub_408F30((_DWORD*)dword_520970) == self)
     {
         sub_407430(*(_DWORD**)(this + 416), 0, (char*)&v102);
-        sub_401450((_DWORD*)this);
+        sub_401450((_DWORD*)self);
         v73 = 0.0;
         v74 = -4000.0;
         v75 = 0.0;
@@ -77091,7 +77092,7 @@ LABEL_13:
 // 520970: using guessed type int dword_520970;
 
 //----- (00467A00) --------------------------------------------------------
-int __thiscall sub_467A00(int this, int a2)
+int __thiscall sub_467A00(int self, int a2)
 {
     int* v3; // ecx
     int result; // eax
@@ -77114,7 +77115,7 @@ int __thiscall sub_467A00(int this, int a2)
 }
 
 //----- (00467A50) --------------------------------------------------------
-char __thiscall sub_467A50(int this, char a2)
+char __thiscall sub_467A50(int self, char a2)
 {
     int v3; // ecx
     int v4; // edx
@@ -77152,7 +77153,7 @@ char __thiscall sub_467A50(int this, char a2)
 // 5216E8: using guessed type int dword_5216E8;
 
 //----- (00467B60) --------------------------------------------------------
-char __thiscall sub_467B60(int this, int a2)
+char __thiscall sub_467B60(int self, int a2)
 {
     char result; // al
     int v4; // ecx
@@ -77172,7 +77173,7 @@ char __thiscall sub_467B60(int this, int a2)
 }
 
 //----- (00467BA0) --------------------------------------------------------
-void __thiscall sub_467BA0(int this, float a2)
+void __thiscall sub_467BA0(int self, float a2)
 {
     int v3; // esi
     int v4; // ecx
@@ -77504,7 +77505,7 @@ int __usercall sub_468000@<eax>(int a1@<ecx>, int a2@<ebp>)
 // 520970: using guessed type int dword_520970;
 
 //----- (00468370) --------------------------------------------------------
-void __thiscall sub_468370(int this)
+void __thiscall sub_468370(int self)
 {
     int i; // edi
     void* v3; // eax
@@ -77522,12 +77523,12 @@ void __thiscall sub_468370(int this)
     sub_488CEE(v3);
     *(_DWORD*)(this + 624) = 0;
     *(_DWORD*)(this + 616) = 0;
-    sub_403B60((_DWORD*)this);
+    sub_403B60((_DWORD*)self);
 }
 // 499CD4: using guessed type int (__stdcall *off_499CD4)(int, int, int);
 
 //----- (00468400) --------------------------------------------------------
-int __thiscall sub_468400(int this, float a2)
+int __thiscall sub_468400(int self, float a2)
 {
     double v3; // st7
     int v4; // edx
@@ -77733,7 +77734,7 @@ int __stdcall sub_468750(_DWORD* a1, float a2)
 }
 
 //----- (004687D0) --------------------------------------------------------
-int __thiscall sub_4687D0(int* this, int a2, int a3)
+int __thiscall sub_4687D0(int* self, int a2, int a3)
 {
     int result; // eax
     double v6; // st7
@@ -77746,13 +77747,13 @@ int __thiscall sub_4687D0(int* this, int a2, int a3)
 
     if (!_strnicmp(*(const char**)(a2 + 8), aWater, strlen(aWater)))
     {
-        (*(void(__thiscall**)(int*, int, _DWORD, _DWORD)) * this)(this, a2, 0, 0);
+        (*(void(__thiscall**)(int*, int, _DWORD, _DWORD)) * self)(this, a2, 0, 0);
         sub_41BEF0((_DWORD*)dword_520A50, 0, this[this[151] + 147], 1, 0);
         result = sub_406000((_DWORD*)a2, a3);
         v11 = result;
         if (byte_520974)
         {
-            (*(void(__thiscall**)(int*, int, _DWORD, _DWORD)) * this)(this, a2, 0, 0);
+            (*(void(__thiscall**)(int*, int, _DWORD, _DWORD)) * self)(this, a2, 0, 0);
             v6 = (2.0 - *((float*)this + 153)) * 0.5;
             qmemcpy(v10, (const void*)(*(_DWORD*)(a2 + 52) + 4), sizeof(v10));
             v10[3] = v6;
@@ -77784,7 +77785,7 @@ int __thiscall sub_4687D0(int* this, int a2, int a3)
                 v12 = *(_DWORD*)(this[154] + 4 * v8);
             }
         LABEL_13:
-            (*(void(__thiscall**)(int*, int, _DWORD, _DWORD)) * this)(this, a2, 0, 0);
+            (*(void(__thiscall**)(int*, int, _DWORD, _DWORD)) * self)(this, a2, 0, 0);
             if (v12)
             {
                 qmemcpy(v10, (const void*)(*(_DWORD*)(a2 + 52) + 4), sizeof(v10));
@@ -77798,7 +77799,7 @@ int __thiscall sub_4687D0(int* this, int a2, int a3)
         }
         else
         {
-            (*(void(__thiscall**)(int*, int, _DWORD, _DWORD)) * this)(this, a2, 0, 0);
+            (*(void(__thiscall**)(int*, int, _DWORD, _DWORD)) * self)(this, a2, 0, 0);
         }
         return sub_406000((_DWORD*)a2, a3);
     }
@@ -77881,7 +77882,7 @@ int __usercall sub_468A00@<eax>(int a1@<ecx>, int a2@<ebp>)
 // 4AE740: using guessed type int dword_4AE740;
 
 //----- (00468BE0) --------------------------------------------------------
-double __thiscall sub_468BE0(int* this, int a2, int a3, int* a4)
+double __thiscall sub_468BE0(int* self, int a2, int a3, int* a4)
 {
     float* v6; // ecx
     int* v7; // esi
@@ -77929,7 +77930,7 @@ double __thiscall sub_468BE0(int* this, int a2, int a3, int* a4)
 // 4AE740: using guessed type int dword_4AE740;
 
 //----- (00468CA0) --------------------------------------------------------
-char __thiscall sub_468CA0(int* this, float* a2, int* a3, float* a4, int* a5)
+char __thiscall sub_468CA0(int* self, float* a2, int* a3, float* a4, int* a5)
 {
     int v6; // ecx
     int* v10; // eax
@@ -78028,7 +78029,7 @@ char __thiscall sub_468CA0(int* this, float* a2, int* a3, float* a4, int* a5)
 // 4AE740: using guessed type int dword_4AE740;
 
 //----- (00468E90) --------------------------------------------------------
-_DWORD* __thiscall sub_468E90(_DWORD** this, int a2)
+_DWORD* __thiscall sub_468E90(_DWORD** self, int a2)
 {
     int i; // esi
     int v4; // eax
@@ -78064,14 +78065,14 @@ _DWORD* __thiscall sub_468E90(_DWORD** this, int a2)
 // 520970: using guessed type int dword_520970;
 
 //----- (00468F60) --------------------------------------------------------
-char __thiscall sub_468F60(int this, int a2)
+char __thiscall sub_468F60(int self, int a2)
 {
     (*(void(__thiscall**)(_DWORD, int))(**(_DWORD**)(this + 20) + 8))(*(_DWORD*)(this + 20), a2);
     return sub_428620((_DWORD*)this, a2);
 }
 
 //----- (00468F80) --------------------------------------------------------
-int __thiscall sub_468F80(int this, int a2)
+int __thiscall sub_468F80(int self, int a2)
 {
     int result; // eax
 
@@ -78096,7 +78097,7 @@ int __fastcall sub_468FA0(int a1)
 // 499D18: using guessed type _UNKNOWN *off_499D18;
 
 //----- (00468FF0) --------------------------------------------------------
-void* __thiscall sub_468FF0(void* this, char* a2)
+void* __thiscall sub_468FF0(void* self, char* a2)
 {
     *((_BYTE*)this + 276) = (_BYTE)a2;
     *((_DWORD*)this + 70) = 0;
@@ -78111,7 +78112,7 @@ void* __thiscall sub_468FF0(void* this, char* a2)
 // 499D18: using guessed type _UNKNOWN *off_499D18;
 
 //----- (004690A0) --------------------------------------------------------
-int __thiscall sub_4690A0(void* this)
+int __thiscall sub_4690A0(void* self)
 {
     void* v2; // eax
     int result; // eax
@@ -78129,7 +78130,7 @@ int __thiscall sub_4690A0(void* this)
 // 499D18: using guessed type _UNKNOWN *off_499D18;
 
 //----- (004690E0) --------------------------------------------------------
-int __thiscall sub_4690E0(_DWORD* this)
+int __thiscall sub_4690E0(_DWORD* self)
 {
     unsigned int v1; // ebx
     int i; // edi
@@ -78148,7 +78149,7 @@ int __thiscall sub_4690E0(_DWORD* this)
 }
 
 //----- (00469120) --------------------------------------------------------
-int __thiscall sub_469120(_DWORD* this)
+int __thiscall sub_469120(_DWORD* self)
 {
     unsigned int v1; // ebx
     int i; // edi
@@ -78167,7 +78168,7 @@ int __thiscall sub_469120(_DWORD* this)
 }
 
 //----- (00469160) --------------------------------------------------------
-unsigned int __thiscall sub_469160(int this, _DWORD* a2, const char* a3, const char* a4)
+unsigned int __thiscall sub_469160(int self, _DWORD* a2, const char* a3, const char* a4)
 {
     int v5; // eax
     int v6; // ebx
@@ -78258,7 +78259,7 @@ unsigned int __thiscall sub_469160(int this, _DWORD* a2, const char* a3, const c
 }
 
 //----- (00469370) --------------------------------------------------------
-unsigned int __thiscall sub_469370(int this, _DWORD* a2)
+unsigned int __thiscall sub_469370(int self, _DWORD* a2)
 {
     int v2; // esi
     unsigned int result; // eax
@@ -78317,7 +78318,7 @@ unsigned int __thiscall sub_469370(int this, _DWORD* a2)
 }
 
 //----- (004694A0) --------------------------------------------------------
-void* __thiscall sub_4694A0(void* this)
+void* __thiscall sub_4694A0(void* self)
 {
     int i; // edi
     void(__thiscall * **v3)(_DWORD, int); // ecx
@@ -78353,7 +78354,7 @@ void* __thiscall sub_4694A0(void* this)
 // 499D24: using guessed type _UNKNOWN *off_499D24;
 
 //----- (00469580) --------------------------------------------------------
-void __thiscall sub_469580(void* this)
+void __thiscall sub_469580(void* self)
 {
     int i; // edi
     int v3; // ecx
@@ -78392,7 +78393,7 @@ void __thiscall sub_469580(void* this)
 // 520A10: using guessed type char byte_520A10;
 
 //----- (00469650) --------------------------------------------------------
-int __thiscall sub_469650(_DWORD* this, char* String2, char* a3, char a4)
+int __thiscall sub_469650(_DWORD* self, char* String2, char* a3, char a4)
 {
     int v5; // edi
 
@@ -78424,7 +78425,7 @@ BOOL __stdcall sub_4696E0(int a1, char* String2)
 }
 
 //----- (00469700) --------------------------------------------------------
-int __thiscall sub_469700(_DWORD* this, int a2, const char* a3)
+int __thiscall sub_469700(_DWORD* self, int a2, const char* a3)
 {
     char* v4; // eax
     int v5; // eax
@@ -78463,7 +78464,7 @@ int __thiscall sub_469700(_DWORD* this, int a2, const char* a3)
 }
 
 //----- (004697A0) --------------------------------------------------------
-char __thiscall sub_4697A0(int this)
+char __thiscall sub_4697A0(int self)
 {
     void* v2; // ebp
     unsigned int v3; // ebx
@@ -78907,11 +78908,11 @@ char __thiscall sub_4697A0(int this)
         sub_40A830((int)String1);
     }
     for (k = 0; k < *(_DWORD*)(this + 24); ++k)
-        sub_469370(*(_DWORD*)(*(_DWORD*)(this + 20) + 4 * k), (_DWORD*)this);
+        sub_469370(*(_DWORD*)(*(_DWORD*)(this + 20) + 4 * k), (_DWORD*)self);
     qsort(*(void**)(this + 20), *(_DWORD*)(this + 24), 4u, sub_46A230);
     for (m = 0; m < *(_DWORD*)(this + 24); ++m)
         *(_DWORD*)(*(_DWORD*)(*(_DWORD*)(this + 20) + 4 * m) + 8) = m;
-    sub_46A340(this);
+    sub_46A340(self);
     if (byte_520A10)
     {
         for (n = 0; n < *(_DWORD*)(this + 24); ++n)
@@ -78934,7 +78935,7 @@ int __cdecl sub_46A230(const void* a1, const void* a2)
 }
 
 //----- (0046A280) --------------------------------------------------------
-int __thiscall sub_46A280(int this, const char* a2)
+int __thiscall sub_46A280(int self, const char* a2)
 {
     FILE* v3; // eax
     FILE* v4; // esi
@@ -78964,7 +78965,7 @@ int __thiscall sub_46A280(int this, const char* a2)
 }
 
 //----- (0046A340) --------------------------------------------------------
-char __thiscall sub_46A340(int this)
+char __thiscall sub_46A340(int self)
 {
     char result; // al
     FILE* v3; // esi
@@ -78982,7 +78983,7 @@ char __thiscall sub_46A340(int this)
 }
 
 //----- (0046A3A0) --------------------------------------------------------
-char __thiscall sub_46A3A0(_BYTE* this, LPCSTR lpFileName)
+char __thiscall sub_46A3A0(_BYTE* self, LPCSTR lpFileName)
 {
     int v4; // [esp+Ch] [ebp-118h] BYREF
     _BYTE v5[8]; // [esp+10h] [ebp-114h] BYREF
@@ -78998,7 +78999,7 @@ char __thiscall sub_46A3A0(_BYTE* this, LPCSTR lpFileName)
 }
 
 //----- (0046A410) --------------------------------------------------------
-int __thiscall sub_46A410(int this, const void* a2, unsigned int a3)
+int __thiscall sub_46A410(int self, const void* a2, unsigned int a3)
 {
     int result; // eax
     int v4; // edx
@@ -79017,13 +79018,13 @@ int __thiscall sub_46A410(int this, const void* a2, unsigned int a3)
 }
 
 //----- (0046A490) --------------------------------------------------------
-char __thiscall sub_46A490(_BYTE* this)
+char __thiscall sub_46A490(_BYTE* self)
 {
     return this[300];
 }
 
 //----- (0046A4A0) --------------------------------------------------------
-int __thiscall sub_46A4A0(_DWORD* this, int a2)
+int __thiscall sub_46A4A0(_DWORD* self, int a2)
 {
     int v2; // edx
     int result; // eax
@@ -79035,7 +79036,7 @@ int __thiscall sub_46A4A0(_DWORD* this, int a2)
 }
 
 //----- (0046A4C0) --------------------------------------------------------
-int __thiscall sub_46A4C0(int this, const void* a2, unsigned int a3)
+int __thiscall sub_46A4C0(int self, const void* a2, unsigned int a3)
 {
     unsigned int v3; // edx
     int v5; // ebp
@@ -79066,7 +79067,7 @@ int __thiscall sub_46A4C0(int this, const void* a2, unsigned int a3)
 }
 
 //----- (0046A570) --------------------------------------------------------
-int __thiscall sub_46A570(_DWORD* this, char* a2, unsigned int a3, const void* a4)
+int __thiscall sub_46A570(_DWORD* self, char* a2, unsigned int a3, const void* a4)
 {
     _DWORD* v4; // esi
     char* v6; // ebx
@@ -80027,13 +80028,13 @@ float* __stdcall sub_46C6DE(float* a1, float* a2, float* a3, float* a4)
 // 46B970: using guessed type _DWORD __stdcall sub_46B970(_DWORD, _DWORD);
 
 //----- (0046C80E) --------------------------------------------------------
-void* __thiscall sub_46C80E(void* this)
+void* __thiscall sub_46C80E(void* self)
 {
     return this;
 }
 
 //----- (0046C811) --------------------------------------------------------
-float* __thiscall sub_46C811(float* this, unsigned int a2)
+float* __thiscall sub_46C811(float* self, unsigned int a2)
 {
     float* result; // eax
 
@@ -80066,7 +80067,7 @@ int __stdcall sub_46C866(int a1, int a2, int a3, int(__thiscall* a4)(int))
 }
 
 //----- (0046C888) --------------------------------------------------------
-unsigned int* __thiscall sub_46C888(unsigned int* this, unsigned int a2)
+unsigned int* __thiscall sub_46C888(unsigned int* self, unsigned int a2)
 {
     unsigned int v3; // ecx
     unsigned int v4; // ebx
@@ -81255,7 +81256,7 @@ BOOL __stdcall sub_46D957(const char* ArgList, int a2, const char* a3)
 // 521724: using guessed type int dword_521724;
 
 //----- (0046DA95) --------------------------------------------------------
-_DWORD* __thiscall sub_46DA95(_DWORD* this)
+_DWORD* __thiscall sub_46DA95(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -81266,7 +81267,7 @@ _DWORD* __thiscall sub_46DA95(_DWORD* this)
 }
 
 //----- (0046DA9F) --------------------------------------------------------
-int __thiscall sub_46DA9F(_DWORD* this)
+int __thiscall sub_46DA9F(_DWORD* self)
 {
     int(__thiscall * **v2)(_DWORD, int); // ecx
     int result; // eax
@@ -81274,17 +81275,17 @@ int __thiscall sub_46DA9F(_DWORD* this)
     v2 = (int(__thiscall***)(_DWORD, int))this[1];
     if (v2)
         result = (**v2)(v2, 1);
-    if (*this)
-        return (**(int(__thiscall***)(_DWORD, int)) * this)(*this, 1);
+    if (*self)
+        return (**(int(__thiscall***)(_DWORD, int)) * self)(*this, 1);
     return result;
 }
 
 //----- (0046DABD) --------------------------------------------------------
-void __thiscall sub_46DABD(int this)
+void __thiscall sub_46DABD(int self)
 {
     void* v2; // esi
 
-    sub_4885A6(*(LPVOID*)this);
+    sub_4885A6(*(LPVOID*)self);
     v2 = *(void**)(this + 8);
     if (v2)
     {
@@ -81294,11 +81295,11 @@ void __thiscall sub_46DABD(int this)
 }
 
 //----- (0046DADF) --------------------------------------------------------
-void* __thiscall sub_46DADF(void* this, char a2)
+void* __thiscall sub_46DADF(void* self, char a2)
 {
-    sub_46DABD((int)this);
+    sub_46DABD((int)self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
@@ -81509,7 +81510,7 @@ unsigned int* __cdecl sub_46DAFE(unsigned int a1, signed int a2, int a3)
 // 46DBE8: conditional instruction was optimized away because %arg_0.4!=0
 
 //----- (0046DE48) --------------------------------------------------------
-int __thiscall sub_46DE48(_DWORD* this)
+int __thiscall sub_46DE48(_DWORD* self)
 {
     _DWORD* v2; // edx
     int v3; // edi
@@ -81767,7 +81768,7 @@ int __thiscall sub_46DE48(_DWORD* this)
 }
 
 //----- (0046E258) --------------------------------------------------------
-int __thiscall sub_46E258(_DWORD* this)
+int __thiscall sub_46E258(_DWORD* self)
 {
     int v2; // edx
     int v3; // eax
@@ -82079,7 +82080,7 @@ int __thiscall sub_46E258(_DWORD* this)
 }
 
 //----- (0046E785) --------------------------------------------------------
-float* __thiscall sub_46E785(float* this, float* a2, float* a3)
+float* __thiscall sub_46E785(float* self, float* a2, float* a3)
 {
     double v3; // st7
     double v4; // st6
@@ -82098,7 +82099,7 @@ float* __thiscall sub_46E785(float* this, float* a2, float* a3)
 }
 
 //----- (0046E7B3) --------------------------------------------------------
-float* __thiscall sub_46E7B3(float* this, float* a2, float a3)
+float* __thiscall sub_46E7B3(float* self, float* a2, float a3)
 {
     float* result; // eax
     double v4; // st7
@@ -82117,7 +82118,7 @@ float* __thiscall sub_46E7B3(float* this, float* a2, float a3)
 }
 
 //----- (0046E7DF) --------------------------------------------------------
-int __thiscall sub_46E7DF(_DWORD* this)
+int __thiscall sub_46E7DF(_DWORD* self)
 {
     _DWORD* v1; // edi
     unsigned int v2; // esi
@@ -82194,7 +82195,7 @@ int __thiscall sub_46E7DF(_DWORD* this)
 }
 
 //----- (0046E96A) --------------------------------------------------------
-int __thiscall sub_46E96A(_DWORD* this)
+int __thiscall sub_46E96A(_DWORD* self)
 {
     unsigned int* v1; // ebx
     int v2; // esi
@@ -82265,7 +82266,7 @@ int __thiscall sub_46E96A(_DWORD* this)
 }
 
 //----- (0046EAAE) --------------------------------------------------------
-int __thiscall sub_46EAAE(_DWORD* this)
+int __thiscall sub_46EAAE(_DWORD* self)
 {
     unsigned int* v1; // ebx
     int v2; // eax
@@ -82334,7 +82335,7 @@ int __thiscall sub_46EAAE(_DWORD* this)
 }
 
 //----- (0046EBB4) --------------------------------------------------------
-int __thiscall sub_46EBB4(_DWORD* this)
+int __thiscall sub_46EBB4(_DWORD* self)
 {
     _DWORD* v2; // edx
     _WORD* v3; // ecx
@@ -82405,7 +82406,7 @@ int __thiscall sub_46EBB4(_DWORD* this)
 }
 
 //----- (0046ECF4) --------------------------------------------------------
-int __thiscall sub_46ECF4(_DWORD* this)
+int __thiscall sub_46ECF4(_DWORD* self)
 {
     int v1; // edx
     _WORD* v2; // eax
@@ -82468,7 +82469,7 @@ int __thiscall sub_46ECF4(_DWORD* this)
 }
 
 //----- (0046EE09) --------------------------------------------------------
-int __thiscall sub_46EE09(_DWORD* this)
+int __thiscall sub_46EE09(_DWORD* self)
 {
     _WORD* v1; // ebx
     int v2; // esi
@@ -82533,7 +82534,7 @@ int __thiscall sub_46EE09(_DWORD* this)
 }
 
 //----- (0046EF3E) --------------------------------------------------------
-int __thiscall sub_46EF3E(_DWORD* this)
+int __thiscall sub_46EF3E(_DWORD* self)
 {
     _DWORD* v2; // edx
     _WORD* v3; // ecx
@@ -82604,7 +82605,7 @@ int __thiscall sub_46EF3E(_DWORD* this)
 }
 
 //----- (0046F081) --------------------------------------------------------
-int __thiscall sub_46F081(_DWORD* this)
+int __thiscall sub_46F081(_DWORD* self)
 {
     _BYTE* v2; // ecx
     _DWORD* v3; // eax
@@ -82669,7 +82670,7 @@ int __thiscall sub_46F081(_DWORD* this)
 }
 
 //----- (0046F1AB) --------------------------------------------------------
-int __thiscall sub_46F1AB(_DWORD* this)
+int __thiscall sub_46F1AB(_DWORD* self)
 {
     _BYTE* v1; // ebx
     int v2; // eax
@@ -82724,7 +82725,7 @@ int __thiscall sub_46F1AB(_DWORD* this)
 }
 
 //----- (0046F246) --------------------------------------------------------
-int __thiscall sub_46F246(_DWORD* this)
+int __thiscall sub_46F246(_DWORD* self)
 {
     int v1; // edx
     int v2; // eax
@@ -82805,7 +82806,7 @@ int __thiscall sub_46F246(_DWORD* this)
 }
 
 //----- (0046F37E) --------------------------------------------------------
-int __thiscall sub_46F37E(_DWORD* this)
+int __thiscall sub_46F37E(_DWORD* self)
 {
     _WORD* v2; // ecx
     _DWORD* v3; // eax
@@ -82876,7 +82877,7 @@ int __thiscall sub_46F37E(_DWORD* this)
 }
 
 //----- (0046F497) --------------------------------------------------------
-int __thiscall sub_46F497(_DWORD* this)
+int __thiscall sub_46F497(_DWORD* self)
 {
     int v1; // edx
     int v2; // eax
@@ -82955,7 +82956,7 @@ int __thiscall sub_46F497(_DWORD* this)
 }
 
 //----- (0046F5CF) --------------------------------------------------------
-int __thiscall sub_46F5CF(_DWORD* this)
+int __thiscall sub_46F5CF(_DWORD* self)
 {
     _BYTE* v2; // ecx
     _DWORD* v3; // eax
@@ -83020,7 +83021,7 @@ int __thiscall sub_46F5CF(_DWORD* this)
 }
 
 //----- (0046F6F9) --------------------------------------------------------
-int __thiscall sub_46F6F9(_DWORD* this)
+int __thiscall sub_46F6F9(_DWORD* self)
 {
     _DWORD* v1; // ebx
     _DWORD* v2; // eax
@@ -83075,7 +83076,7 @@ int __thiscall sub_46F6F9(_DWORD* this)
 }
 
 //----- (0046F82B) --------------------------------------------------------
-int __thiscall sub_46F82B(_DWORD* this)
+int __thiscall sub_46F82B(_DWORD* self)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // ecx
@@ -83131,7 +83132,7 @@ int __thiscall sub_46F82B(_DWORD* this)
 }
 
 //----- (0046F91C) --------------------------------------------------------
-int __thiscall sub_46F91C(_DWORD* this)
+int __thiscall sub_46F91C(_DWORD* self)
 {
     _DWORD* v3; // eax
     _DWORD* v4; // ecx
@@ -83257,7 +83258,7 @@ int __thiscall sub_46F91C(_DWORD* this)
 }
 
 //----- (0046FB1E) --------------------------------------------------------
-int __thiscall sub_46FB1E(_DWORD* this)
+int __thiscall sub_46FB1E(_DWORD* self)
 {
     int v3; // edi
     char* v4; // eax
@@ -83382,7 +83383,7 @@ int __thiscall sub_46FB1E(_DWORD* this)
 // 46FC32: conditional instruction was optimized away because esi.4!=0
 
 //----- (0046FD22) --------------------------------------------------------
-int __thiscall sub_46FD22(_DWORD* this)
+int __thiscall sub_46FD22(_DWORD* self)
 {
     _DWORD* v2; // edx
     _DWORD* v3; // ecx
@@ -83475,25 +83476,25 @@ int __thiscall sub_46FD22(_DWORD* this)
             switch (v9)
             {
             case 21:
-                v10 = sub_46E96A(this);
+                v10 = sub_46E96A(self);
                 goto LABEL_43;
             case 22:
-                v10 = sub_46EAAE(this);
+                v10 = sub_46EAAE(self);
                 goto LABEL_43;
             case 23:
-                v10 = sub_46EBB4(this);
+                v10 = sub_46EBB4(self);
                 goto LABEL_43;
             case 24:
-                v10 = sub_46ECF4(this);
+                v10 = sub_46ECF4(self);
                 goto LABEL_43;
             case 25:
-                v10 = sub_46EE09(this);
+                v10 = sub_46EE09(self);
                 goto LABEL_43;
             case 26:
-                v10 = sub_46EF3E(this);
+                v10 = sub_46EF3E(self);
                 goto LABEL_43;
             case 27:
-                v10 = sub_46F081(this);
+                v10 = sub_46F081(self);
                 goto LABEL_43;
             default:
                 goto LABEL_45;
@@ -83504,7 +83505,7 @@ int __thiscall sub_46FD22(_DWORD* this)
     v11 = v9 - 29;
     if (!v11)
     {
-        v10 = sub_46F246(this);
+        v10 = sub_46F246(self);
     LABEL_43:
         if (v10 >= 0)
             return 0;
@@ -83513,7 +83514,7 @@ int __thiscall sub_46FD22(_DWORD* this)
     v12 = v11 - 1;
     if (!v12)
     {
-        v10 = sub_46F37E(this);
+        v10 = sub_46F37E(self);
         goto LABEL_43;
     }
     v13 = v12 - 10;
@@ -83526,18 +83527,18 @@ int __thiscall sub_46FD22(_DWORD* this)
             if (!v15)
             {
             LABEL_40:
-                v10 = sub_46F1AB(this);
+                v10 = sub_46F1AB(self);
                 goto LABEL_43;
             }
             v16 = v15 - 1;
             if (!v16)
             {
-                v10 = sub_46F497(this);
+                v10 = sub_46F497(self);
                 goto LABEL_43;
             }
             if (v16 == 1)
             {
-                v10 = sub_46F5CF(this);
+                v10 = sub_46F5CF(self);
                 goto LABEL_43;
             }
         }
@@ -83663,7 +83664,7 @@ LABEL_45:
 }
 
 //----- (00470113) --------------------------------------------------------
-int __thiscall sub_470113(_DWORD* this)
+int __thiscall sub_470113(_DWORD* self)
 {
     _DWORD* v2; // edx
     _DWORD* v3; // ecx
@@ -83983,7 +83984,7 @@ int* __usercall sub_470516@<eax>(unsigned int a1@<ebx>, unsigned int a2@<edi>, i
 // 521728: using guessed type int dword_521728;
 
 //----- (00470616) --------------------------------------------------------
-int __thiscall sub_470616(int** this)
+int __thiscall sub_470616(int** self)
 {
     int** v1; // esi
     int* v2; // edx
@@ -84065,12 +84066,12 @@ int __thiscall sub_470616(int** this)
     v58 = this;
     if (!v3)
         return -2147467259;
-    if ((*this)[2] != 1)
+    if ((*self)[2] != 1)
         return -2147467259;
     v4 = (unsigned int)this[2];
     if ((_BYTE)v4 != 3)
         return -2147467259;
-    v5 = (*this)[1044];
+    v5 = (*self)[1044];
     v6 = v2[1044];
     v69 = ((v4 >> 17) & 1) == 0;
     v7 = sub_470516(v6, v5, (v4 & 0x10000) == 0);
@@ -84216,7 +84217,7 @@ int __thiscall sub_470616(int** this)
 }
 
 //----- (00470947) --------------------------------------------------------
-int __thiscall sub_470947(_DWORD* this)
+int __thiscall sub_470947(_DWORD* self)
 {
     _DWORD* v1; // esi
     int v2; // ebx
@@ -84531,7 +84532,7 @@ int __thiscall sub_470947(_DWORD* this)
 }
 
 //----- (00470E39) --------------------------------------------------------
-int __thiscall sub_470E39(int** this, int a2, int a3, int* a4)
+int __thiscall sub_470E39(int** self, int a2, int a3, int* a4)
 {
     float* v5; // eax
     float* v6; // eax
@@ -84561,16 +84562,16 @@ int __thiscall sub_470E39(int** this, int a2, int a3, int* a4)
         v7 = -2147467259;
         goto LABEL_22;
     }
-    if (sub_46F6F9(this) < 0
-        && sub_46F82B(this) < 0
-        && sub_46F91C(this) < 0
-        && sub_46FB1E(this) < 0
-        && sub_46FD22(this) < 0
-        && sub_470113(this) < 0
-        && sub_470616(this) < 0
-        && sub_470947(this) < 0
-        && sub_46DE48(this) < 0
-        && sub_46E258(this) < 0)
+    if (sub_46F6F9(self) < 0
+        && sub_46F82B(self) < 0
+        && sub_46F91C(self) < 0
+        && sub_46FB1E(self) < 0
+        && sub_46FD22(self) < 0
+        && sub_470113(self) < 0
+        && sub_470616(self) < 0
+        && sub_470947(self) < 0
+        && sub_46DE48(self) < 0
+        && sub_46E258(self) < 0)
     {
         sub_46D8FD(0, "No suitable image filter found");
         goto LABEL_21;
@@ -84583,16 +84584,16 @@ LABEL_22:
         (*(void(__thiscall**)(int*, int)) * v8)(v8, 1);
         this[1] = 0;
     }
-    if (*this)
+    if (*self)
     {
-        (*(void(__thiscall**)(int*, int)) * *this)(*this, 1);
+        (*(void(__thiscall**)(int*, int)) * *self)(*this, 1);
         *this = 0;
     }
     return v7;
 }
 
 //----- (00470F78) --------------------------------------------------------
-_DWORD* __thiscall sub_470F78(_DWORD* this)
+_DWORD* __thiscall sub_470F78(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -84608,7 +84609,7 @@ _DWORD* __thiscall sub_470F78(_DWORD* this)
 }
 
 //----- (00470F91) --------------------------------------------------------
-void __thiscall sub_470F91(int this)
+void __thiscall sub_470F91(int self)
 {
     void* v2; // edi
     void* v3; // esi
@@ -84632,16 +84633,16 @@ void __thiscall sub_470F91(int this)
 }
 
 //----- (00470FEA) --------------------------------------------------------
-void* __thiscall sub_470FEA(void* this, char a2)
+void* __thiscall sub_470FEA(void* self, char a2)
 {
-    sub_470F91((int)this);
+    sub_470F91((int)self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
 //----- (00471009) --------------------------------------------------------
-int __thiscall sub_471009(int* this, int a2, unsigned int a3)
+int __thiscall sub_471009(int* self, int a2, unsigned int a3)
 {
     int* v3; // esi
     unsigned int v6; // edx
@@ -85138,7 +85139,7 @@ _DWORD* __cdecl sub_47175E(int a1, int a2)
 }
 
 //----- (00471771) --------------------------------------------------------
-int __thiscall sub_471771(_DWORD* this, int a2, int a3)
+int __thiscall sub_471771(_DWORD* self, int a2, int a3)
 {
     int v3; // esi
     _DWORD* v4; // eax
@@ -85278,7 +85279,7 @@ LABEL_22:
 // 48B798: using guessed type int _setjmp3();
 
 //----- (004719C6) --------------------------------------------------------
-int __thiscall sub_4719C6(int* this, unsigned __int8* a2, unsigned int a3)
+int __thiscall sub_4719C6(int* self, unsigned __int8* a2, unsigned int a3)
 {
     int* v3; // esi
     unsigned __int8 v5; // cl
@@ -85605,7 +85606,7 @@ LABEL_50:
 // 471C8D: variable 'v40' is possibly undefined
 
 //----- (00471E3C) --------------------------------------------------------
-unsigned int __thiscall sub_471E3C(_DWORD* this, _BYTE* a2, unsigned int a3)
+unsigned int __thiscall sub_471E3C(_DWORD* self, _BYTE* a2, unsigned int a3)
 {
     _BYTE* v4; // edi
     bool v5; // zf
@@ -85795,7 +85796,7 @@ void __cdecl sub_472121(int a1, const char* ArgList)
 }
 
 //----- (00472138) --------------------------------------------------------
-int __thiscall sub_472138(_DWORD* this, int a2, unsigned int a3)
+int __thiscall sub_472138(_DWORD* self, int a2, unsigned int a3)
 {
     int* v4; // eax
     _DWORD* v5; // esi
@@ -86056,7 +86057,7 @@ LABEL_78:
 // 48B798: using guessed type int __cdecl _setjmp3(_DWORD, _DWORD);
 
 //----- (0047264E) --------------------------------------------------------
-int __thiscall sub_47264E(_DWORD* this, _DWORD* a2, unsigned int a3)
+int __thiscall sub_47264E(_DWORD* self, _DWORD* a2, unsigned int a3)
 {
     _DWORD* v3; // edx
     int v5; // ecx
@@ -86276,7 +86277,7 @@ int __thiscall sub_47264E(_DWORD* this, _DWORD* a2, unsigned int a3)
 // 47285D: variable 'v24' is possibly undefined
 
 //----- (00472972) --------------------------------------------------------
-int __thiscall sub_472972(int* this, int a2, unsigned int a3)
+int __thiscall sub_472972(int* self, int a2, unsigned int a3)
 {
     if (a3 >= 0xE && *(_WORD*)a2 == 19778 && *(_DWORD*)(a2 + 2) <= a3)
         return sub_471009(this, a2 + 14, a3 - 14);
@@ -86285,7 +86286,7 @@ int __thiscall sub_472972(int* this, int a2, unsigned int a3)
 }
 
 //----- (004729A4) --------------------------------------------------------
-int __thiscall sub_4729A4(int this, unsigned __int8* a2, unsigned int a3, _DWORD* a4)
+int __thiscall sub_4729A4(int self, unsigned __int8* a2, unsigned int a3, _DWORD* a4)
 {
     int v4; // edi
     unsigned int v6; // eax
@@ -86371,7 +86372,7 @@ int __thiscall sub_4729A4(int this, unsigned __int8* a2, unsigned int a3, _DWORD
 }
 
 //----- (00472AF9) --------------------------------------------------------
-_DWORD* __thiscall sub_472AF9(_DWORD* this)
+_DWORD* __thiscall sub_472AF9(_DWORD* self)
 {
     _DWORD* result; // eax
 
@@ -86384,7 +86385,7 @@ _DWORD* __thiscall sub_472AF9(_DWORD* this)
 }
 
 //----- (00472B0B) --------------------------------------------------------
-int __thiscall sub_472B0B(int this, const WCHAR* lpWideCharStr, LPSTR lpMultiByteStr)
+int __thiscall sub_472B0B(int self, const WCHAR* lpWideCharStr, LPSTR lpMultiByteStr)
 {
     void* v5; // esp
     HANDLE FileW; // eax
@@ -86443,7 +86444,7 @@ int __thiscall sub_472B0B(int this, const WCHAR* lpWideCharStr, LPSTR lpMultiByt
 }
 
 //----- (00472C9E) --------------------------------------------------------
-void __thiscall sub_472C9E(int this)
+void __thiscall sub_472C9E(int self)
 {
     const void* v2; // eax
 
@@ -86463,7 +86464,7 @@ void __thiscall sub_472C9E(int this)
         }
         if (*(_DWORD*)this != -1)
         {
-            CloseHandle(*(HANDLE*)this);
+            CloseHandle(*(HANDLE*)self);
             *(_DWORD*)this = -1;
         }
     }
@@ -86673,13 +86674,13 @@ _BYTE* __stdcall sub_472F4B(_BYTE* a1, _BYTE* a2, _BYTE* a3)
 // 472F90: inconsistent fpu stack
 
 //----- (0047304C) --------------------------------------------------------
-BOOL __thiscall sub_47304C(float* this, float* a2)
+BOOL __thiscall sub_47304C(float* self, float* a2)
 {
     return *this == *a2 && this[1] == a2[1] && this[2] == a2[2] && this[3] == a2[3];
 }
 
 //----- (00473099) --------------------------------------------------------
-char* __thiscall sub_473099(_DWORD* this, int a2, int a3, float* a4)
+char* __thiscall sub_473099(_DWORD* self, int a2, int a3, float* a4)
 {
     char* result; // eax
     char* i; // edx
@@ -86699,7 +86700,7 @@ char* __thiscall sub_473099(_DWORD* this, int a2, int a3, float* a4)
 }
 
 //----- (00473102) --------------------------------------------------------
-_BYTE* __thiscall sub_473102(_DWORD* this, int a2, int a3, float* a4)
+_BYTE* __thiscall sub_473102(_DWORD* self, int a2, int a3, float* a4)
 {
     _BYTE* result; // eax
     _BYTE* i; // esi
@@ -86721,7 +86722,7 @@ _BYTE* __thiscall sub_473102(_DWORD* this, int a2, int a3, float* a4)
 }
 
 //----- (00473198) --------------------------------------------------------
-char* __thiscall sub_473198(_DWORD* this, int a2, int a3, float* a4)
+char* __thiscall sub_473198(_DWORD* self, int a2, int a3, float* a4)
 {
     char* result; // eax
     char* i; // edx
@@ -86741,7 +86742,7 @@ char* __thiscall sub_473198(_DWORD* this, int a2, int a3, float* a4)
 }
 
 //----- (00473210) --------------------------------------------------------
-char* __thiscall sub_473210(_DWORD* this, int a2, int a3, float* a4)
+char* __thiscall sub_473210(_DWORD* self, int a2, int a3, float* a4)
 {
     char* result; // eax
     char* i; // edx
@@ -86761,7 +86762,7 @@ char* __thiscall sub_473210(_DWORD* this, int a2, int a3, float* a4)
 }
 
 //----- (0047328E) --------------------------------------------------------
-__int16* __thiscall sub_47328E(_DWORD* this, int a2, int a3, float* a4)
+__int16* __thiscall sub_47328E(_DWORD* self, int a2, int a3, float* a4)
 {
     __int16* result; // eax
     __int16* i; // edx
@@ -86781,7 +86782,7 @@ __int16* __thiscall sub_47328E(_DWORD* this, int a2, int a3, float* a4)
 }
 
 //----- (004732F8) --------------------------------------------------------
-unsigned int* __thiscall sub_4732F8(_DWORD* this, int a2, int a3, float* a4)
+unsigned int* __thiscall sub_4732F8(_DWORD* self, int a2, int a3, float* a4)
 {
     unsigned int* result; // eax
     unsigned int* i; // edi
@@ -86802,7 +86803,7 @@ unsigned int* __thiscall sub_4732F8(_DWORD* this, int a2, int a3, float* a4)
 }
 
 //----- (00473397) --------------------------------------------------------
-float* __thiscall sub_473397(float* this, float* a2, float* a3)
+float* __thiscall sub_473397(float* self, float* a2, float* a3)
 {
     double v3; // st7
     double v4; // st6
@@ -86821,7 +86822,7 @@ float* __thiscall sub_473397(float* this, float* a2, float* a3)
 }
 
 //----- (004733C5) --------------------------------------------------------
-float* __thiscall sub_4733C5(float* this, float* a2, unsigned int a3, int a4)
+float* __thiscall sub_4733C5(float* self, float* a2, unsigned int a3, int a4)
 {
     void* v6; // ecx
     unsigned int v7; // edx
@@ -86922,17 +86923,17 @@ float* __thiscall sub_4733C5(float* this, float* a2, unsigned int a3, int a4)
 // 49A774: using guessed type int (__stdcall *off_49A774)(char);
 
 //----- (004735C3) --------------------------------------------------------
-_DWORD* __thiscall sub_4735C3(_DWORD* this, char a2)
+_DWORD* __thiscall sub_4735C3(_DWORD* self, char a2)
 {
     *this = &off_49A774;
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 // 49A774: using guessed type int (__stdcall *off_49A774)(char);
 
 //----- (004735E3) --------------------------------------------------------
-void __thiscall sub_4735E3(float* this, float* a2)
+void __thiscall sub_4735E3(float* self, float* a2)
 {
     float* v2; // edi
     unsigned int v3; // esi
@@ -86958,7 +86959,7 @@ void __thiscall sub_4735E3(float* this, float* a2)
 }
 
 //----- (0047362B) --------------------------------------------------------
-int __thiscall sub_47362B(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_47362B(_DWORD* self, int a2, int a3, int a4)
 {
     _BYTE* v4; // edx
     int v5; // ebx
@@ -86997,7 +86998,7 @@ int __thiscall sub_47362B(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00473703) --------------------------------------------------------
-int __thiscall sub_473703(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_473703(_DWORD* self, int a2, int a3, int a4)
 {
     int* v4; // edx
     unsigned int v5; // edi
@@ -87039,7 +87040,7 @@ int __thiscall sub_473703(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00473812) --------------------------------------------------------
-int __thiscall sub_473812(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_473812(_DWORD* self, int a2, int a3, int a4)
 {
     int* v4; // edx
     unsigned int v5; // edi
@@ -87077,7 +87078,7 @@ int __thiscall sub_473812(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (004738FF) --------------------------------------------------------
-int __thiscall sub_4738FF(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_4738FF(_DWORD* self, int a2, int a3, int a4)
 {
     _WORD* v4; // edx
     unsigned int v5; // edi
@@ -87115,7 +87116,7 @@ int __thiscall sub_4738FF(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (004739EC) --------------------------------------------------------
-int __thiscall sub_4739EC(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_4739EC(_DWORD* self, int a2, int a3, int a4)
 {
     _WORD* v4; // edx
     unsigned int v5; // edi
@@ -87153,7 +87154,7 @@ int __thiscall sub_4739EC(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00473AD9) --------------------------------------------------------
-int __thiscall sub_473AD9(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_473AD9(_DWORD* self, int a2, int a3, int a4)
 {
     _WORD* v4; // edx
     unsigned int v5; // edi
@@ -87195,7 +87196,7 @@ int __thiscall sub_473AD9(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00473BE2) --------------------------------------------------------
-int __thiscall sub_473BE2(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_473BE2(_DWORD* self, int a2, int a3, int a4)
 {
     _WORD* v4; // edx
     unsigned int v5; // edi
@@ -87237,7 +87238,7 @@ int __thiscall sub_473BE2(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00473CF1) --------------------------------------------------------
-int __thiscall sub_473CF1(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_473CF1(_DWORD* self, int a2, int a3, int a4)
 {
     _BYTE* v5; // edx
     unsigned int v6; // ecx
@@ -87275,7 +87276,7 @@ int __thiscall sub_473CF1(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00473DDA) --------------------------------------------------------
-int __thiscall sub_473DDA(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_473DDA(_DWORD* self, int a2, int a3, int a4)
 {
     _BYTE* v4; // edx
     int v5; // esi
@@ -87305,7 +87306,7 @@ int __thiscall sub_473DDA(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00473E72) --------------------------------------------------------
-int __thiscall sub_473E72(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_473E72(_DWORD* self, int a2, int a3, int a4)
 {
     _WORD* v4; // edx
     unsigned int v5; // edi
@@ -87347,7 +87348,7 @@ int __thiscall sub_473E72(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00473F81) --------------------------------------------------------
-int __thiscall sub_473F81(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_473F81(_DWORD* self, int a2, int a3, int a4)
 {
     _WORD* v4; // edx
     unsigned int v5; // edi
@@ -87385,7 +87386,7 @@ int __thiscall sub_473F81(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (0047406E) --------------------------------------------------------
-int __thiscall sub_47406E(float* this, int a2, int a3, float* a4)
+int __thiscall sub_47406E(float* self, int a2, int a3, float* a4)
 {
     _WORD* v5; // edi
     unsigned int v6; // ebx
@@ -87440,7 +87441,7 @@ int __thiscall sub_47406E(float* this, int a2, int a3, float* a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00474183) --------------------------------------------------------
-int __thiscall sub_474183(float* this, int a2, int a3, float* a4)
+int __thiscall sub_474183(float* self, int a2, int a3, float* a4)
 {
     int result; // eax
     _BYTE* i; // esi
@@ -87485,7 +87486,7 @@ int __thiscall sub_474183(float* this, int a2, int a3, float* a4)
 }
 
 //----- (0047423D) --------------------------------------------------------
-int __thiscall sub_47423D(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_47423D(_DWORD* self, int a2, int a3, int a4)
 {
     _BYTE* v4; // edx
     int v5; // edi
@@ -87515,7 +87516,7 @@ int __thiscall sub_47423D(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (004742F1) --------------------------------------------------------
-int __thiscall sub_4742F1(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_4742F1(_DWORD* self, int a2, int a3, int a4)
 {
     _WORD* v5; // edx
     int v6; // ecx
@@ -87552,7 +87553,7 @@ int __thiscall sub_4742F1(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (004743E0) --------------------------------------------------------
-int __thiscall sub_4743E0(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_4743E0(_DWORD* self, int a2, int a3, int a4)
 {
     _BYTE* v5; // edx
     int v6; // ecx
@@ -87586,7 +87587,7 @@ int __thiscall sub_4743E0(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (004744C4) --------------------------------------------------------
-int __thiscall sub_4744C4(_DWORD* this, int a2, int a3, float* a4)
+int __thiscall sub_4744C4(_DWORD* self, int a2, int a3, float* a4)
 {
     _WORD* v5; // edx
     int v6; // ecx
@@ -87619,7 +87620,7 @@ int __thiscall sub_4744C4(_DWORD* this, int a2, int a3, float* a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (0047458F) --------------------------------------------------------
-int __thiscall sub_47458F(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_47458F(_DWORD* self, int a2, int a3, int a4)
 {
     _WORD* v5; // edx
     bool v6; // zf
@@ -87657,7 +87658,7 @@ int __thiscall sub_47458F(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00474686) --------------------------------------------------------
-int __thiscall sub_474686(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_474686(_DWORD* self, int a2, int a3, int a4)
 {
     int* v4; // edx
     bool v5; // zf
@@ -87698,7 +87699,7 @@ int __thiscall sub_474686(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00474785) --------------------------------------------------------
-int __thiscall sub_474785(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_474785(_DWORD* self, int a2, int a3, int a4)
 {
     int* v4; // edx
     bool v5; // zf
@@ -87742,7 +87743,7 @@ int __thiscall sub_474785(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (004748AC) --------------------------------------------------------
-int __thiscall sub_4748AC(_DWORD* this, int a2, int a3, float* a4)
+int __thiscall sub_4748AC(_DWORD* self, int a2, int a3, float* a4)
 {
     int* v4; // edx
     int v5; // ebx
@@ -87774,7 +87775,7 @@ int __thiscall sub_4748AC(_DWORD* this, int a2, int a3, float* a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00474977) --------------------------------------------------------
-int __thiscall sub_474977(_DWORD* this, int a2, int a3, int a4)
+int __thiscall sub_474977(_DWORD* self, int a2, int a3, int a4)
 {
     unsigned int* v4; // edx
     bool v5; // zf
@@ -87812,7 +87813,7 @@ int __thiscall sub_474977(_DWORD* this, int a2, int a3, int a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00474A79) --------------------------------------------------------
-int __thiscall sub_474A79(_DWORD* this, int a2, int a3, float* a4)
+int __thiscall sub_474A79(_DWORD* self, int a2, int a3, float* a4)
 {
     _WORD* v4; // edx
     int v5; // esi
@@ -87833,7 +87834,7 @@ int __thiscall sub_474A79(_DWORD* this, int a2, int a3, float* a4)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00474B10) --------------------------------------------------------
-void __thiscall sub_474B10(int this, int a2, int a3, float* a4)
+void __thiscall sub_474B10(int self, int a2, int a3, float* a4)
 {
     unsigned __int8* v4; // eax
     unsigned __int8* i; // esi
@@ -87854,7 +87855,7 @@ void __thiscall sub_474B10(int this, int a2, int a3, float* a4)
 }
 
 //----- (00474B9C) --------------------------------------------------------
-void __thiscall sub_474B9C(int this, int a2, int a3, float* a4)
+void __thiscall sub_474B9C(int self, int a2, int a3, float* a4)
 {
     unsigned int v4; // eax
     unsigned int i; // esi
@@ -87875,7 +87876,7 @@ void __thiscall sub_474B9C(int this, int a2, int a3, float* a4)
 }
 
 //----- (00474C42) --------------------------------------------------------
-void __thiscall sub_474C42(int this, int a2, int a3, float* a4)
+void __thiscall sub_474C42(int self, int a2, int a3, float* a4)
 {
     unsigned int v4; // eax
     unsigned int i; // esi
@@ -87896,7 +87897,7 @@ void __thiscall sub_474C42(int this, int a2, int a3, float* a4)
 }
 
 //----- (00474CDE) --------------------------------------------------------
-void __thiscall sub_474CDE(int this, int a2, int a3, float* a4)
+void __thiscall sub_474CDE(int self, int a2, int a3, float* a4)
 {
     _WORD* v5; // eax
     _WORD* i; // edi
@@ -87916,7 +87917,7 @@ void __thiscall sub_474CDE(int this, int a2, int a3, float* a4)
 }
 
 //----- (00474D83) --------------------------------------------------------
-void __thiscall sub_474D83(int this, int a2, int a3, float* a4)
+void __thiscall sub_474D83(int self, int a2, int a3, float* a4)
 {
     _BYTE* v5; // eax
     _BYTE* i; // edi
@@ -87937,7 +87938,7 @@ void __thiscall sub_474D83(int this, int a2, int a3, float* a4)
 }
 
 //----- (00474E25) --------------------------------------------------------
-void __thiscall sub_474E25(int this, int a2, int a3, float* a4)
+void __thiscall sub_474E25(int self, int a2, int a3, float* a4)
 {
     _BYTE* v5; // eax
     _BYTE* i; // edi
@@ -87958,7 +87959,7 @@ void __thiscall sub_474E25(int this, int a2, int a3, float* a4)
 }
 
 //----- (00474ED5) --------------------------------------------------------
-void __thiscall sub_474ED5(int this, int a2, int a3, float* a4)
+void __thiscall sub_474ED5(int self, int a2, int a3, float* a4)
 {
     _BYTE* v5; // eax
     _BYTE* i; // edi
@@ -87979,7 +87980,7 @@ void __thiscall sub_474ED5(int this, int a2, int a3, float* a4)
 }
 
 //----- (00474F84) --------------------------------------------------------
-void __thiscall sub_474F84(int this, int a2, int a3, float* a4)
+void __thiscall sub_474F84(int self, int a2, int a3, float* a4)
 {
     _BYTE* v5; // eax
     _BYTE* i; // edi
@@ -87999,7 +88000,7 @@ void __thiscall sub_474F84(int this, int a2, int a3, float* a4)
 }
 
 //----- (00475026) --------------------------------------------------------
-void __thiscall sub_475026(int this, int a2, int a3, float* a4)
+void __thiscall sub_475026(int self, int a2, int a3, float* a4)
 {
     unsigned __int8* v4; // eax
     unsigned __int8* i; // esi
@@ -88019,7 +88020,7 @@ void __thiscall sub_475026(int this, int a2, int a3, float* a4)
 }
 
 //----- (00475098) --------------------------------------------------------
-void __thiscall sub_475098(int this, int a2, int a3, float* a4)
+void __thiscall sub_475098(int self, int a2, int a3, float* a4)
 {
     _BYTE* v5; // eax
     _BYTE* i; // edi
@@ -88040,7 +88041,7 @@ void __thiscall sub_475098(int this, int a2, int a3, float* a4)
 }
 
 //----- (0047514A) --------------------------------------------------------
-void __thiscall sub_47514A(int this, int a2, int a3, float* a4)
+void __thiscall sub_47514A(int self, int a2, int a3, float* a4)
 {
     _BYTE* v5; // eax
     _BYTE* i; // edi
@@ -88061,7 +88062,7 @@ void __thiscall sub_47514A(int this, int a2, int a3, float* a4)
 }
 
 //----- (004751E9) --------------------------------------------------------
-void __thiscall sub_4751E9(int this, int a2, int a3, float* a4)
+void __thiscall sub_4751E9(int self, int a2, int a3, float* a4)
 {
     unsigned __int8* v4; // eax
     float* v6; // edi
@@ -88087,7 +88088,7 @@ void __thiscall sub_4751E9(int this, int a2, int a3, float* a4)
 }
 
 //----- (00475270) --------------------------------------------------------
-void __thiscall sub_475270(int this, int a2, int a3, _DWORD* a4)
+void __thiscall sub_475270(int self, int a2, int a3, _DWORD* a4)
 {
     unsigned __int8* v4; // eax
     unsigned __int8* i; // edx
@@ -88110,7 +88111,7 @@ void __thiscall sub_475270(int this, int a2, int a3, _DWORD* a4)
 }
 
 //----- (004752D5) --------------------------------------------------------
-void __thiscall sub_4752D5(int this, int a2, int a3, float* a4)
+void __thiscall sub_4752D5(int self, int a2, int a3, float* a4)
 {
     unsigned __int8* v4; // eax
     unsigned __int8* i; // esi
@@ -88132,7 +88133,7 @@ void __thiscall sub_4752D5(int this, int a2, int a3, float* a4)
 }
 
 //----- (00475343) --------------------------------------------------------
-void __thiscall sub_475343(int this, int a2, int a3, float* a4)
+void __thiscall sub_475343(int self, int a2, int a3, float* a4)
 {
     unsigned __int8* v5; // eax
     unsigned __int8* i; // edi
@@ -88155,7 +88156,7 @@ void __thiscall sub_475343(int this, int a2, int a3, float* a4)
 }
 
 //----- (004753CC) --------------------------------------------------------
-void __thiscall sub_4753CC(int this, int a2, int a3, float* a4)
+void __thiscall sub_4753CC(int self, int a2, int a3, float* a4)
 {
     _BYTE* v5; // eax
     _BYTE* i; // edi
@@ -88177,7 +88178,7 @@ void __thiscall sub_4753CC(int this, int a2, int a3, float* a4)
 }
 
 //----- (00475455) --------------------------------------------------------
-void __thiscall sub_475455(int this, int a2, int a3, float* a4)
+void __thiscall sub_475455(int self, int a2, int a3, float* a4)
 {
     unsigned __int16* v4; // eax
     unsigned __int16* i; // esi
@@ -88199,7 +88200,7 @@ void __thiscall sub_475455(int this, int a2, int a3, float* a4)
 }
 
 //----- (004754C5) --------------------------------------------------------
-int __thiscall sub_4754C5(int this, int a2)
+int __thiscall sub_4754C5(int self, int a2)
 {
     unsigned int v3; // ecx
     int v4; // ebx
@@ -88249,7 +88250,7 @@ int __thiscall sub_4754C5(int this, int a2)
 // 49A7D8: using guessed type int (__stdcall *off_49A7D8)(char);
 
 //----- (004755BD) --------------------------------------------------------
-int __thiscall sub_4755BD(_DWORD* this)
+int __thiscall sub_4755BD(_DWORD* self)
 {
     int v2; // eax
     unsigned int v3; // ecx
@@ -88334,7 +88335,7 @@ int __thiscall sub_4755BD(_DWORD* this)
 }
 
 //----- (004757B0) --------------------------------------------------------
-int __thiscall sub_4757B0(int this, unsigned int a2, unsigned int a3, int a4)
+int __thiscall sub_4757B0(int self, unsigned int a2, unsigned int a3, int a4)
 {
     int result; // eax
     unsigned int v6; // eax
@@ -88380,7 +88381,7 @@ int __thiscall sub_4757B0(int this, unsigned int a2, unsigned int a3, int a4)
         || a3 < *(_DWORD*)(this + 4216)
         || a3 >= *(_DWORD*)(this + 4220))
     {
-        result = sub_4755BD((_DWORD*)this);
+        result = sub_4755BD((_DWORD*)self);
         if (result < 0)
             return result;
         *(_DWORD*)(this + 4212) = a2 + 1;
@@ -88507,7 +88508,7 @@ int __thiscall sub_4757B0(int this, unsigned int a2, unsigned int a3, int a4)
 }
 
 //----- (00475A81) --------------------------------------------------------
-signed int __thiscall sub_475A81(_DWORD* this, int a2, int a3, const void* a4)
+signed int __thiscall sub_475A81(_DWORD* self, int a2, int a3, const void* a4)
 {
     signed int result; // eax
 
@@ -88522,7 +88523,7 @@ signed int __thiscall sub_475A81(_DWORD* this, int a2, int a3, const void* a4)
 }
 
 //----- (00475AFA) --------------------------------------------------------
-void __thiscall sub_475AFA(int this, int a2, int a3, void* a4)
+void __thiscall sub_475AFA(int self, int a2, int a3, void* a4)
 {
     if (sub_4757B0(this, *(_DWORD*)(this + 4148) + a2, *(_DWORD*)(this + 4160) + a3, 1) >= 0)
     {
@@ -88536,7 +88537,7 @@ void __thiscall sub_475AFA(int this, int a2, int a3, void* a4)
 }
 
 //----- (00475B69) --------------------------------------------------------
-int __thiscall sub_475B69(int this, int a2)
+int __thiscall sub_475B69(int self, int a2)
 {
     unsigned int v3; // eax
     unsigned int v4; // ecx
@@ -88618,7 +88619,7 @@ LABEL_13:
 // 49A818: using guessed type int (__stdcall *off_49A818)(char);
 
 //----- (00475CAA) --------------------------------------------------------
-int __thiscall sub_475CAA(_DWORD* this)
+int __thiscall sub_475CAA(_DWORD* self)
 {
     int v2; // eax
     bool v3; // cf
@@ -88762,7 +88763,7 @@ int __thiscall sub_475CAA(_DWORD* this)
 // 52230C: using guessed type int dword_52230C;
 
 //----- (00476004) --------------------------------------------------------
-int __thiscall sub_476004(_DWORD* this, unsigned int a2, unsigned int a3, int a4)
+int __thiscall sub_476004(_DWORD* self, unsigned int a2, unsigned int a3, int a4)
 {
     int result; // eax
     unsigned int v6; // edi
@@ -88795,7 +88796,7 @@ int __thiscall sub_476004(_DWORD* this, unsigned int a2, unsigned int a3, int a4
         if (a3 >= this[1057] && a3 < this[1058])
             return 0;
     }
-    result = sub_475CAA(this);
+    result = sub_475CAA(self);
     if (result >= 0)
     {
         this[1056] = (a2 & 0xFFFFFFFC) + 4;
@@ -88898,7 +88899,7 @@ int __thiscall sub_476004(_DWORD* this, unsigned int a2, unsigned int a3, int a4
 }
 
 //----- (004762B1) --------------------------------------------------------
-signed int __thiscall sub_4762B1(_DWORD* this, int a2, int a3, const void* a4)
+signed int __thiscall sub_4762B1(_DWORD* self, int a2, int a3, const void* a4)
 {
     unsigned int v5; // edi
     signed int result; // eax
@@ -88915,7 +88916,7 @@ signed int __thiscall sub_4762B1(_DWORD* this, int a2, int a3, const void* a4)
 }
 
 //----- (00476337) --------------------------------------------------------
-void __thiscall sub_476337(int this, int a2, int a3, void* a4)
+void __thiscall sub_476337(int self, int a2, int a3, void* a4)
 {
     unsigned int v5; // edi
 
@@ -88933,26 +88934,26 @@ void __thiscall sub_476337(int this, int a2, int a3, void* a4)
 }
 
 //----- (004763AB) --------------------------------------------------------
-void __thiscall sub_4763AB(_DWORD* this)
+void __thiscall sub_4763AB(_DWORD* self)
 {
     *this = &off_49A774;
 }
 // 49A774: using guessed type int (__stdcall *off_49A774)(char);
 
 //----- (004763B2) --------------------------------------------------------
-_DWORD* __thiscall sub_4763B2(_DWORD* this, char a2)
+_DWORD* __thiscall sub_4763B2(_DWORD* self, char a2)
 {
-    sub_4763AB(this);
+    sub_4763AB(self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
 //----- (004763D1) --------------------------------------------------------
-void __thiscall sub_4763D1(int this)
+void __thiscall sub_4763D1(int self)
 {
     *(_DWORD*)this = &off_49A7D8;
-    sub_4755BD((_DWORD*)this);
+    sub_4755BD((_DWORD*)self);
     if (*(_DWORD*)(this + 4196))
         sub_4885A6(*(LPVOID*)(this + 4196));
     *(_DWORD*)this = &off_49A774;
@@ -88961,13 +88962,13 @@ void __thiscall sub_4763D1(int this)
 // 49A7D8: using guessed type int (__stdcall *off_49A7D8)(char);
 
 //----- (00476415) --------------------------------------------------------
-void __thiscall sub_476415(LPVOID* this)
+void __thiscall sub_476415(LPVOID* self)
 {
     LPVOID* v2; // edi
     int v3; // ebx
 
     *this = &off_49A818;
-    sub_475CAA(this);
+    sub_475CAA(self);
     v2 = this + 1049;
     v3 = 4;
     do
@@ -89396,38 +89397,38 @@ float* __cdecl sub_476468(int a1)
 // 49A980: using guessed type int (__stdcall *off_49A980)(char);
 
 //----- (00476B8B) --------------------------------------------------------
-void* __thiscall sub_476B8B(void* this, char a2)
+void* __thiscall sub_476B8B(void* self, char a2)
 {
-    sub_4763D1((int)this);
+    sub_4763D1((int)self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
 //----- (00476BAA) --------------------------------------------------------
-LPVOID* __thiscall sub_476BAA(LPVOID* this, char a2)
+LPVOID* __thiscall sub_476BAA(LPvoid* self, char a2)
 {
-    sub_476415(this);
+    sub_476415(self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
 //----- (00476BC9) --------------------------------------------------------
-void* __thiscall sub_476BC9(void* this, char a2)
+void* __thiscall sub_476BC9(void* self, char a2)
 {
-    sub_476BE8((int)this);
+    sub_476BE8((int)self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
 //----- (00476BED) --------------------------------------------------------
-LPVOID* __thiscall sub_476BED(LPVOID* this, char a2)
+LPVOID* __thiscall sub_476BED(LPvoid* self, char a2)
 {
-    sub_476C0C(this);
+    sub_476C0C(self);
     if ((a2 & 1) != 0)
-        sub_4885A6(this);
+        sub_4885A6(self);
     return this;
 }
 
@@ -99358,7 +99359,7 @@ int __cdecl sub_47F357(int a1, char a2)
 }
 
 //----- (0047F42A) --------------------------------------------------------
-_DWORD* __thiscall sub_47F42A(_DWORD* this)
+_DWORD* __thiscall sub_47F42A(_DWORD* self)
 {
     _DWORD* result; // eax
     bool v2; // cf
@@ -109988,7 +109989,7 @@ int __cdecl sub_48B813(int a1, int a2)
 // 523A84: using guessed type int dword_523A84;
 
 //----- (0048CB2B) --------------------------------------------------------
-void __thiscall __noreturn sub_48CB2B(EXCEPTION_POINTERS* this)
+void __thiscall __noreturn sub_48CB2B(EXCEPTION_POINTERS* self)
 {
     int v1; // [esp-Ch] [ebp-24h] BYREF
     CPPEH_RECORD ms_exc; // [esp+0h] [ebp-18h]
