@@ -13,6 +13,8 @@
 #include <time.h>
 #include <CommCtrl.h>
 #include <float.h>
+#include <setjmp.h>
+#include <stdint.h>
 #pragma comment(lib, "Comctl32.lib")
 #include <WinDef.h>
 #define snwprintf _snwprintf
@@ -26,6 +28,10 @@
 // Function declarations
 
 #define __thiscall __cdecl // Test compile in C mode
+
+// 类型定义
+typedef unsigned int _DWORD;
+typedef unsigned char _BYTE;
 
 float* __cdecl sub_401000(float* a1, float a2);
 int __cdecl sub_401040(int a1, float a2); // idb
