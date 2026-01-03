@@ -29,7 +29,7 @@
 
 #define __thiscall __cdecl // Test compile in C mode
 
-// ÀàÐÍ¶¨Òå
+// ï¿½ï¿½ï¿½Í¶ï¿½ï¿½ï¿½
 typedef unsigned int _DWORD;
 typedef unsigned char _BYTE;
 
@@ -1331,7 +1331,7 @@ _DWORD* __thiscall sub_470F78(_DWORD* self);
 void __thiscall sub_470F91(int self);
 void* __thiscall sub_470FEA(void* self, char a2);
 int __thiscall sub_471009(int* self, int a2, unsigned int a3);
-void __cdecl __noreturn sub_4716F6(int a1);
+__noreturn void __cdecl sub_4716F6(int a1);
 //int sub_471714(); // weak
 //int nullsub_2(); // weak
 char __cdecl sub_471746(int a1);
@@ -1340,7 +1340,7 @@ int __thiscall sub_471771(_DWORD* self, int a2, int a3);
 int __thiscall sub_4719C6(int* self, unsigned __int8* a2, unsigned int a3);
 unsigned int __thiscall sub_471E3C(_DWORD* self, _BYTE* a2, unsigned int a3);
 unsigned int __cdecl sub_4720BE(jmp_buf Buf, void* a2, unsigned int a3);
-void __cdecl __noreturn sub_472101(jmp_buf Buf, const char* ArgList);
+__noreturn void __cdecl sub_472101(jmp_buf Buf, const char* ArgList);
 void __cdecl sub_472121(int a1, const char* ArgList);
 int __thiscall sub_472138(_DWORD* self, int a2, unsigned int a3);
 int __thiscall sub_47264E(_DWORD* self, _DWORD* a2, unsigned int a3);
@@ -1453,23 +1453,24 @@ char __cdecl sub_4786C6(_DWORD* a1);
 char __cdecl sub_478747(_DWORD* a1, int a2);
 int __cdecl sub_478834(_DWORD* a1);
 int __cdecl sub_478861(int a1);
-void __cdecl __noreturn sub_4788E1(int a1);
+__noreturn void __cdecl sub_4788E1(int a1);
 int sub_4788FE(); // weak
 int __cdecl sub_47891B(int* a1, int a2);
 int __cdecl sub_47894E(int a1, char* Buffer); // idb
 int __cdecl sub_4789E6(int* a1);
-void(__cdecl __noreturn** __cdecl sub_4789FA(void(__cdecl __noreturn** a1)(int a1)))(int a1);
+typedef void(__cdecl *noreturn_func_ptr)(int);
+noreturn_func_ptr* __cdecl sub_4789FA(noreturn_func_ptr* a1);
 _BYTE* __cdecl sub_478A49(int a1, const void* a2);
 _DWORD* __cdecl sub_478AD1(_DWORD* a1, int a2, int a3, int a4);
-void __cdecl __noreturn sub_478AEB(jmp_buf Buf, int a2); // idb
+__noreturn void __cdecl sub_478AEB(jmp_buf Buf, int a2); // idb
 int(__cdecl* __cdecl sub_478B0A(int a1, int a2))(int, int);
-void __cdecl __noreturn sub_478B21(jmp_buf Buf, const void* a2);
+__noreturn void __cdecl sub_478B21(jmp_buf Buf, const void* a2);
 int(__cdecl* __cdecl sub_478B46(int a1, const void* a2))(int, _BYTE*);
-jmp_buf __cdecl sub_478B71(_BYTE* a1, int a2, int a3, int a4);
+jmp_buf* __cdecl sub_478B71(_BYTE* a1, int a2, int a3, int a4);
 int __cdecl sub_478C74(jmp_buf Buf, int a2); // idb
 unsigned int __cdecl sub_478DE7(jmp_buf Buf, int a2);
 // int (__cdecl *__usercall sub_478E09@<eax>(int a1@<ebx>, jmp_buf Buf, char *a3, char *a4))(jmp_buf, int, _DWORD);
-int(__cdecl* __cdecl sub_4791B0(jmp_buf Buf, char** a2)),(jmp_buf, int, _DWORD);
+int(__cdecl* __cdecl sub_4791B0(jmp_buf Buf, char** a2))(int, int, _DWORD);
 int __cdecl sub_4791FD(int a1, void* a2, void* a3);
 void __cdecl sub_479320(void** a1, void** a2, void** a3);
 int __cdecl sub_4793A1(int a1, int a2, int a3);
@@ -1791,7 +1792,7 @@ int __cdecl sub_48B813(int a1, int a2);
 // double __fastcall _startOneArgErrorHandling(_DWORD, _DWORD); weak
 // double _load_CW(void); weak
 // double _convertTOStoQNaN(void); weak
-void __thiscall __noreturn sub_48CB2B(EXCEPTION_POINTERS* self);
+__noreturn void __thiscall sub_48CB2B(EXCEPTION_POINTERS* self);
 // int __cdecl _output(FILE *File, int, int); idb
 char __cdecl sub_48D4A3(int a1);
 int sub_48D4D0();
