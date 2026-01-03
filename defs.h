@@ -114,12 +114,24 @@ typedef int bool;       // we want to use bool in our C programs
 #define WORDn(x, n)   (*((_WORD*)&(x)+n))
 #define DWORDn(x, n)  (*((_DWORD*)&(x)+n))
 
+#ifndef LOBYTE
 #define LOBYTE(x)  BYTEn(x,LOW_IND(x,_BYTE))
+#endif
+#ifndef LOWORD
 #define LOWORD(x)  WORDn(x,LOW_IND(x,_WORD))
+#endif
+#ifndef LODWORD
 #define LODWORD(x) DWORDn(x,LOW_IND(x,_DWORD))
+#endif
+#ifndef HIBYTE
 #define HIBYTE(x)  BYTEn(x,HIGH_IND(x,_BYTE))
+#endif
+#ifndef HIWORD
 #define HIWORD(x)  WORDn(x,HIGH_IND(x,_WORD))
+#endif
+#ifndef HIDWORD
 #define HIDWORD(x) DWORDn(x,HIGH_IND(x,_DWORD))
+#endif
 #define BYTE1(x)   BYTEn(x,  1)         // byte 1 (counting from 0)
 #define BYTE2(x)   BYTEn(x,  2)
 #define BYTE3(x)   BYTEn(x,  3)
@@ -424,8 +436,8 @@ void __noreturn __break(uint16 code, uint16 subcode);
 #define _UNKNOWN char
 
 #ifdef _MSC_VER
-#define snprintf _snprintf
-#define vsnprintf _vsnprintf
+// 在现代MSVC版本中，snprintf和vsnprintf都是标准函数
+// 不再需要映射到旧的非标准版本
 #endif
 
 // The ADJ() macro is used for shifted pointers.
