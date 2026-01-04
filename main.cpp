@@ -10,6 +10,8 @@
 #include "defs.h"
 #include "OperationBlockade.h"
 #include <stdarg.h>
+#include <DSound.h>
+#pragma comment(lib, "Dsound.lib")
 
 //-------------------------------------------------------------------------
 // Function declarations
@@ -1174,7 +1176,7 @@ char aSoundsWarmapWa[] = "Sounds\\WarMap.wav"; // weak
 char aLevelselect[] = "LevelSelect"; // idb
 CHAR aShowintro[] = "ShowIntro"; // idb
 char aLoadingMap[12] = "Loading Map"; // weak
-const char off_4AAEC8[12] =
+const char* off_4AAEC8[12] =
 {
   "Special Mission 01",
   "Special Mission 02",
@@ -4572,7 +4574,7 @@ bool __stdcall sub_404510(int self)
         {
             v5 = v4 + 1;
             *v4 = v2;
-            `eh vector constructor iterator'(v4 + 1, 0xACu, v2, sub_4046A0, sub_403A90);
+            `eh vector constructor iterator`(v4 + 1, 0xACu, v2, sub_4046A0, sub_403A90);
                 v6 = v5;
         }
         else
@@ -4591,7 +4593,7 @@ bool __stdcall sub_404510(int self)
         if (v8)
         {
             v9 = v8 - 4;
-            `eh vector destructor iterator'(v8, 0xACu, *((_DWORD *)v8 - 1), sub_403A90);
+            `eh vector destructor iterator`(v8, 0xACu, *((_DWORD *)v8 - 1), sub_403A90);
                 SafeFreeGameMemory(v9);
         }
     }

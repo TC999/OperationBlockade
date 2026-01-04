@@ -1231,7 +1231,6 @@ void* sub_470FEA(void* self, char a2);
 int sub_471009(int* self, int a2, unsigned int a3);
 void __cdecl __noreturn sub_4716F6(int a1);
 int sub_471714(); // weak
-int nullsub_2(); // weak
 char __cdecl sub_471746(int a1);
 _DWORD* __cdecl sub_47175E(int a1, int a2);
 int sub_471771(_DWORD* self, int a2, int a3);
