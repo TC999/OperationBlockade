@@ -2338,15 +2338,15 @@ int __stdcall sub_4013C0(int a1, int a2, int a3, int(__thiscall* a4)(int))
 }
 
 //----- (004013F0) --------------------------------------------------------
-int __thiscall sub_4013F0(_DWORD* this)
+int __stdcall sub_4013F0(_DWORD* self)
 {
     int result; // eax
 
-    *this = &off_49901C;
+    *self = &off_49901C;
     result = sub_408F30((_DWORD*)g_pGameLogic);
-    if ((_DWORD*)result == this)
+    if ((_DWORD*)result == self)
         result = sub_408EF0(g_pGameLogic, 0);
-    *this = &off_499040;
+    *self = &off_499040;
     return result;
 }
 // 49901C: using guessed type _UNKNOWN *off_49901C;
@@ -2354,56 +2354,56 @@ int __thiscall sub_4013F0(_DWORD* this)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (00401450) --------------------------------------------------------
-int __thiscall sub_401450(_DWORD* this)
+int __stdcall sub_401450(_DWORD* self)
 {
     int result; // eax
 
     result = 0;
-    this[10] = 0;
-    this[9] = 0;
-    this[8] = 0;
-    this[11] = 0;
-    this[12] = 1065353216;
-    this[13] = 0;
-    this[14] = 0;
-    this[15] = 0;
-    this[16] = 1065353216;
+    self[10] = 0;
+    self[9] = 0;
+    self[8] = 0;
+    self[11] = 0;
+    self[12] = 1065353216;
+    self[13] = 0;
+    self[14] = 0;
+    self[15] = 0;
+    self[16] = 1065353216;
     return result;
 }
 
 //----- (00401480) --------------------------------------------------------
-void __thiscall sub_401480(float* this, float a2, float a3, float a4)
+void __stdcall sub_401480(float* self, float a2, float a3, float a4)
 {
-    this[8] = a2 + this[8];
-    this[9] = a3 + this[9];
-    this[10] = a4 + this[10];
-    this[11] = a2 + this[11];
-    this[12] = a3 + this[12];
-    this[13] = a4 + this[13];
+    self[8] = a2 + self[8];
+    self[9] = a3 + self[9];
+    self[10] = a4 + self[10];
+    self[11] = a2 + self[11];
+    self[12] = a3 + self[12];
+    self[13] = a4 + self[13];
 }
 
 //----- (004014C0) --------------------------------------------------------
-void __thiscall sub_4014C0(float* this, float a2, float a3, float a4)
+void __stdcall sub_4014C0(float* self, float a2, float a3, float a4)
 {
     if (a2 != 0.0)
     {
-        sub_401040((int)(this + 11), a2);
-        sub_401040((int)(this + 14), a2);
+        sub_401040((int)(self + 11), a2);
+        sub_401040((int)(self + 14), a2);
     }
     if (a4 != 0.0)
     {
-        sub_401080(this + 11, a4);
-        sub_401080(this + 14, a4);
+        sub_401080(self + 11, a4);
+        sub_401080(self + 14, a4);
     }
     if (a3 != 0.0)
     {
-        sub_401000(this + 11, a3);
-        sub_401000(this + 14, a3);
+        sub_401000(self + 11, a3);
+        sub_401000(self + 14, a3);
     }
 }
 
 //----- (00401550) --------------------------------------------------------
-int __thiscall sub_401550(float* this)
+int __stdcall sub_401550(float* self)
 {
     double v2; // st7
     float v4; // [esp+8h] [ebp-8h]
@@ -2413,16 +2413,16 @@ int __thiscall sub_401550(float* this)
         v4 = 1.0;
     else
         v4 = (double)(unsigned int)dword_5209F4 / v2;
-    sub_46C1FD((int)(this + 66), this[7], v4, this[5], this[6]);
-    (*(void(__stdcall**)(_DWORD, int, float*))(**(_DWORD**)ArgList + 148))(*(_DWORD*)ArgList, 3, this + 66);
-    sub_46C6DE(this + 82, this + 8, this + 11, this + 14);
-    return (*(int(__stdcall**)(_DWORD, int, float*))(**(_DWORD**)ArgList + 148))(*(_DWORD*)ArgList, 2, this + 82);
+    sub_46C1FD((int)(self + 66), self[7], v4, self[5], self[6]);
+    (*(void(__stdcall**)(_DWORD, int, float*))(**(_DWORD**)ArgList + 148))(*(_DWORD*)ArgList, 3, self + 66);
+    sub_46C6DE(self + 82, self + 8, self + 11, self + 14);
+    return (*(int(__stdcall**)(_DWORD, int, float*))(**(_DWORD**)ArgList + 148))(*(_DWORD*)ArgList, 2, self + 82);
 }
 // 5209D8: using guessed type int dword_5209D8;
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00401600) --------------------------------------------------------
-float* __thiscall sub_401600(float* this)
+float* __stdcall sub_401600(float* self)
 {
     double v2; // st7
     double v3; // st7
@@ -2514,41 +2514,41 @@ float* __thiscall sub_401600(float* this)
         v79 = (unsigned int)dword_5209F4;
         v23 = (double)(unsigned int)dword_5209F4 / v2;
     }
-    v48 = this[11];
-    v3 = v48 - this[8];
-    v49 = this[12];
-    v4 = this[13];
+    v48 = self[11];
+    v3 = v48 - self[8];
+    v49 = self[12];
+    v4 = self[13];
     v48 = v3;
-    v5 = v49 - this[9];
+    v5 = v49 - self[9];
     v50 = v4;
     v49 = v5;
-    v50 = v4 - this[10];
+    v50 = v4 - self[10];
     sub_46B970((int)&v48, (int)&v48);
-    v6 = v49 * this[16];
-    v7 = v50 * this[15];
+    v6 = v49 * self[16];
+    v7 = v50 * self[15];
     v52 = v48;
     v53 = v49;
     v55 = v6 - v7;
-    v8 = v50 * this[14];
-    v9 = v48 * this[16];
+    v8 = v50 * self[14];
+    v9 = v48 * self[16];
     v54 = v50;
-    v10 = this[15];
-    v76 = this[14];
+    v10 = self[15];
+    v76 = self[14];
     v77 = v10;
     v56 = v8 - v9;
-    v57 = v48 * this[15] - v49 * this[14];
-    v11 = this[5];
+    v57 = v48 * self[15] - v49 * self[14];
+    v11 = self[5];
     v25 = v11 * v48;
     v27 = v49 * v11;
     v31 = v50 * v11;
-    v12 = this[6];
+    v12 = self[6];
     v52 = v12 * v48;
     v53 = v49 * v12;
     v54 = v50 * v12;
-    v13 = tan(this[7] * 0.5);
+    v13 = tan(self[7] * 0.5);
     v51 = v13;
     v24 = v13 * v23;
-    v78 = this[16];
+    v78 = self[16];
     sub_46B970((int)&v76, (int)&v76);
     v76 = v76 * v51;
     v58 = v76;
@@ -2576,7 +2576,7 @@ float* __thiscall sub_401600(float* this)
     v57 = v47 * -1.0;
     v15 = v55 + v76;
     v59 = v14 + v77;
-    v16 = this[5];
+    v16 = self[5];
     v60 = v57 + v78;
     v59 = v16 * v59;
     v60 = v16 * v60;
@@ -2615,7 +2615,7 @@ float* __thiscall sub_401600(float* this)
     v75 = v41;
     v70 = v25 + v19 * v16;
     v71 = v27 + v71;
-    v20 = this[6];
+    v20 = self[6];
     v72 = v31 + v72;
     v28 = v14 + v77;
     v32 = v57 + v78;
@@ -2644,42 +2644,42 @@ float* __thiscall sub_401600(float* this)
     v36 = v52 + *(float*)&v79 * v20;
     v40 = v53 + v39;
     v44 = v54 + v43;
-    this[42] = v58 + this[8];
-    this[43] = v59 + this[9];
-    this[44] = v60 + this[10];
-    this[45] = v64 + this[8];
-    this[46] = v65 + this[9];
-    this[47] = v66 + this[10];
-    this[48] = v67 + this[8];
-    this[49] = v68 + this[9];
-    this[50] = v69 + this[10];
-    this[51] = v70 + this[8];
-    this[52] = v71 + this[9];
-    this[53] = v72 + this[10];
-    this[54] = v26 + this[8];
-    this[55] = v30 + this[9];
-    this[56] = v34 + this[10];
-    this[57] = v61 + this[8];
-    this[58] = v62 + this[9];
-    this[59] = v63 + this[10];
-    this[60] = v73 + this[8];
-    this[61] = v21 + this[9];
-    this[62] = v75 + this[10];
-    this[63] = v36 + this[8];
-    this[64] = v40 + this[9];
-    this[65] = v44 + this[10];
-    sub_46C4AC(this + 18, this + 48, this + 42, this + 45);
-    sub_46C4AC(this + 22, this + 54, this + 60, this + 57);
-    sub_46C4AC(this + 26, this + 45, this + 42, this + 54);
-    sub_46C4AC(this + 30, this + 48, this + 51, this + 63);
-    sub_46C4AC(this + 34, this + 42, this + 48, this + 60);
-    return sub_46C4AC(this + 38, this + 45, this + 57, this + 63);
+    self[42] = v58 + self[8];
+    self[43] = v59 + self[9];
+    self[44] = v60 + self[10];
+    self[45] = v64 + self[8];
+    self[46] = v65 + self[9];
+    self[47] = v66 + self[10];
+    self[48] = v67 + self[8];
+    self[49] = v68 + self[9];
+    self[50] = v69 + self[10];
+    self[51] = v70 + self[8];
+    self[52] = v71 + self[9];
+    self[53] = v72 + self[10];
+    self[54] = v26 + self[8];
+    self[55] = v30 + self[9];
+    self[56] = v34 + self[10];
+    self[57] = v61 + self[8];
+    self[58] = v62 + self[9];
+    self[59] = v63 + self[10];
+    self[60] = v73 + self[8];
+    self[61] = v21 + self[9];
+    self[62] = v75 + self[10];
+    self[63] = v36 + self[8];
+    self[64] = v40 + self[9];
+    self[65] = v44 + self[10];
+    sub_46C4AC(self + 18, self + 48, self + 42, self + 45);
+    sub_46C4AC(self + 22, self + 54, self + 60, self + 57);
+    sub_46C4AC(self + 26, self + 45, self + 42, self + 54);
+    sub_46C4AC(self + 30, self + 48, self + 51, self + 63);
+    sub_46C4AC(self + 34, self + 42, self + 48, self + 60);
+    return sub_46C4AC(self + 38, self + 45, self + 57, self + 63);
 }
 // 5209D8: using guessed type int dword_5209D8;
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00401EC0) --------------------------------------------------------
-int __thiscall sub_401EC0(float* this)
+int __stdcall sub_401EC0(float* self)
 {
     _DWORD v3[16]; // [esp+4h] [ebp-40h] BYREF
 
@@ -2691,25 +2691,25 @@ int __thiscall sub_401EC0(float* this)
     v3[5] = 1065353216;
     v3[0] = 1065353216;
     (*(void(__stdcall**)(_DWORD, int, _DWORD*))(**(_DWORD**)ArgList + 148))(*(_DWORD*)ArgList, 256, v3);
-    sub_41F3D0(this[42], this[43], this[44], 0.050000001, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
-    sub_41F3D0(this[45], this[46], this[47], 0.050000001, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
-    sub_41F3D0(this[48], this[49], this[50], 0.050000001, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
-    sub_41F3D0(this[51], this[52], this[53], 0.050000001, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
-    sub_41F3D0(this[54], this[55], this[56], 500.0, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
-    sub_41F3D0(this[57], this[58], this[59], 500.0, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
-    sub_41F3D0(this[60], this[61], this[62], 500.0, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
-    return sub_41F3D0(this[63], this[64], this[65], 500.0, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
+    sub_41F3D0(self[42], self[43], self[44], 0.050000001, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
+    sub_41F3D0(self[45], self[46], self[47], 0.050000001, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
+    sub_41F3D0(self[48], self[49], self[50], 0.050000001, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
+    sub_41F3D0(self[51], self[52], self[53], 0.050000001, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
+    sub_41F3D0(self[54], self[55], self[56], 500.0, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
+    sub_41F3D0(self[57], self[58], self[59], 500.0, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
+    sub_41F3D0(self[60], self[61], self[62], 500.0, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
+    return sub_41F3D0(self[63], self[64], self[65], 500.0, COERCE_FLOAT(200), COERCE_FLOAT(200), COERCE_FLOAT(200), 255);
 }
 
 //----- (00402110) --------------------------------------------------------
-char __thiscall sub_402110(float* this, float* a2, float a3)
+char __stdcall sub_402110(float* self, float* a2, float a3)
 {
     int v3; // edx
     float* i; // ecx
     double v5; // st7
 
     v3 = 0;
-    for (i = this + 19; ; i += 4)
+    for (i = self + 19; ; i += 4)
     {
         v5 = *(i - 1) * *a2 + i[1] * a2[2] + *i * a2[1] + i[2];
         if (v5 < 0.0 && v5 * v5 > a3)
@@ -2721,7 +2721,7 @@ char __thiscall sub_402110(float* this, float* a2, float a3)
 }
 
 //----- (00402170) --------------------------------------------------------
-char __thiscall sub_402170(float* this, float a2, float a3, float a4, float a5, float a6, float a7)
+char __stdcall sub_402170(float* self, float a2, float a3, float a4, float a5, float a6, float a7)
 {
     int v7; // edx
     float* v8; // ecx
@@ -2741,7 +2741,7 @@ char __thiscall sub_402170(float* this, float a2, float a3, float a4, float a5, 
     float v23; // [esp+10h] [ebp-4h]
 
     v7 = 0;
-    v8 = this + 19;
+    v8 = self + 19;
     do
     {
         v18 = a4 * v8[1];
@@ -2782,7 +2782,7 @@ char __thiscall sub_402170(float* this, float a2, float a3, float a4, float a5, 
 }
 
 //----- (004022C0) --------------------------------------------------------
-double __thiscall sub_4022C0(float* this, float a2, float a3, float a4)
+double __stdcall sub_4022C0(float* self, float a2, float a3, float a4)
 {
     float v5[3]; // [esp+0h] [ebp-18h] BYREF
     float v6[3]; // [esp+Ch] [ebp-Ch] BYREF
@@ -2790,12 +2790,12 @@ double __thiscall sub_4022C0(float* this, float a2, float a3, float a4)
     v5[1] = a3;
     v5[0] = a2;
     v5[2] = a4;
-    sub_46C5C5(v6, v5, this + 82);
+    sub_46C5C5(v6, v5, self + 82);
     return v6[2];
 }
 
 //----- (00402300) --------------------------------------------------------
-char __thiscall sub_402300(float* this, float* a2, int* a3, int* a4)
+char __stdcall sub_402300(float* self, float* a2, int* a3, int* a4)
 {
     double v5; // st7
     int v6; // ecx
@@ -2806,8 +2806,8 @@ char __thiscall sub_402300(float* this, float* a2, int* a3, int* a4)
     v8 = 0.0;
     v9 = 0.0;
     v10 = 0.0;
-    sub_46C5C5(&v8, a2, this + 82);
-    sub_46C5C5(&v8, &v8, this + 66);
+    sub_46C5C5(&v8, a2, self + 82);
+    sub_46C5C5(&v8, &v8, self + 66);
     if (v10 <= 0.0 || v10 >= 1.0)
     {
         *a4 = 0;
@@ -2829,10 +2829,10 @@ char __thiscall sub_402300(float* this, float* a2, int* a3, int* a4)
 // 5209F4: using guessed type int dword_5209F4;
 
 //----- (00402430) --------------------------------------------------------
-float* __thiscall sub_402430(float* this, float* a2, float* a3)
+float* __stdcall sub_402430(float* self, float* a2, float* a3)
 {
-    sub_46C5C5(a3, a2, this + 82);
-    return sub_46C5C5(a3, a3, this + 66);
+    sub_46C5C5(a3, a2, self + 82);
+    return sub_46C5C5(a3, a3, self + 66);
 }
 
 //----- (00402470) --------------------------------------------------------
@@ -2842,21 +2842,21 @@ int __stdcall sub_402470(int a1)
 }
 
 //----- (00402480) --------------------------------------------------------
-char __thiscall sub_402480(_BYTE* this, char a2)
+char __stdcall sub_402480(_BYTE* self, char a2)
 {
     char result; // al
 
     result = a2;
-    this[16] = a2;
+    self[16] = a2;
     return result;
 }
 
 //----- (004024C0) --------------------------------------------------------
-_DWORD* __thiscall sub_4024C0(_DWORD* this)
+_DWORD* __stdcall sub_4024C0(_DWORD* self)
 {
-    sub_401270((int)this);
-    *this = &off_499064;
-    this[98] = 0;
+    sub_401270((int)self);
+    *self = &off_499064;
+    self[98] = 0;
     this[99] = 0;
     this[100] = 0;
     this[101] = 0;
