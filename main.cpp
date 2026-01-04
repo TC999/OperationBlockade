@@ -9,8 +9,6 @@
 #include "defs.h"
 #include "OperationBlockade.h"
 #include <stdarg.h>
-#include <iostream>
-
 
 //-------------------------------------------------------------------------
 // Function declarations
@@ -4220,7 +4218,7 @@ void __stdcall sub_403CE0(_DWORD* self)
     if (v8)
     {
         v9 = v8 - 4;
-        `eh vector destructor iterator'(v8, 0x58u, *((_DWORD *)v8 - 1), sub_403AE0);
+        `eh vector destructor iterator`(v8, 0x58u, *((_DWORD *)v8 - 1), sub_403AE0);
             SafeFreeGameMemory(v9);
     }
     self[3] = 0;
@@ -4251,7 +4249,7 @@ char* __stdcall sub_403D90(char* self, const char* a2)
 }
 
 //----- (00403E30) --------------------------------------------------------
-char __usercall sub_403E30@<al>(int a1@<ecx>, int a2@<ebp>)
+char __usercall sub_403E30(int a1, int a2)
 {
     sub_403CE0((_DWORD*)a1);
     WriteDebugLog("-Loading '%s'", (const char*)(a1 + 60));
@@ -4262,7 +4260,7 @@ char __usercall sub_403E30@<al>(int a1@<ecx>, int a2@<ebp>)
 }
 
 //----- (00403E80) --------------------------------------------------------
-int __userpurge sub_403E80@<eax>(int a1@<ecx>, int a2@<ebp>, char* ArgList)
+int __userpurge sub_403E80(int a1, int a2, char* ArgList)
 {
     int result; // eax
 
@@ -4274,7 +4272,7 @@ int __userpurge sub_403E80@<eax>(int a1@<ecx>, int a2@<ebp>, char* ArgList)
 }
 
 //----- (00403EC0) --------------------------------------------------------
-char __userpurge sub_403EC0@<al>(int a1@<ecx>, int a2@<ebp>, int a3@<edi>, char* FileName)
+char __userpurge sub_403EC0(int a1, int a2, int a3, char* FileName)
 {
     FILE* v5; // eax
     char result; // al
@@ -5150,7 +5148,7 @@ int __stdcall sub_4050B0(_DWORD* self)
 }
 
 //----- (004051C0) --------------------------------------------------------
-int __usercall sub_4051C0@<eax>(_DWORD* a1@<ecx>, int a2@<ebp>, int a3@<edi>)
+int __usercall sub_4051C0(_DWORD* a1, int a2, int a3)
 {
     float v3; // esi
     int result; // eax
@@ -5795,7 +5793,7 @@ int __stdcall sub_406000(_DWORD* a1, int a2)
 // 520A50: using guessed type int dword_520A50;
 
 //----- (00406110) --------------------------------------------------------
-int __userpurge sub_406110@<eax>(_DWORD* a1@<ecx>, int a2@<esi>, int a3, float* a4, int a5, char a6)
+int __userpurge sub_406110(_DWORD* a1, int a2, int a3, float* a4, int a5, char a6)
 {
     int v7; // edi
     int v8; // ebx
@@ -6065,9 +6063,9 @@ int __stdcall sub_406620(_DWORD* self, int a2, _BYTE* a3, float* a4, float a5, i
 }
 
 //----- (004066C0) --------------------------------------------------------
-float* __userpurge sub_4066C0@<eax>(
-    _DWORD* a1@<ecx>,
-    int a2@<esi>,
+float* __userpurge sub_4066C0(
+    _DWORD* a1,
+    int a2,
     _DWORD* a3,
     float* a4,
     float* a5,
@@ -6236,7 +6234,7 @@ int __stdcall sub_406980(_DWORD* self)
 // 4990C8: using guessed type _UNKNOWN *off_4990C8;
 
 //----- (004069C0) --------------------------------------------------------
-char* __userpurge sub_4069C0@<eax>(int a1@<ecx>, int a2@<ebp>, char* String1)
+char* __userpurge sub_4069C0(int a1, int a2, char* String1)
 {
     int v4; // esi
     _DWORD* v5; // eax
@@ -7185,10 +7183,10 @@ LABEL_9:
 // 520A58: using guessed type int dword_520A58;
 
 //----- (00407A90) --------------------------------------------------------
-BOOL __userpurge sub_407A90@<eax>(
-    int a1@<ecx>,
-    int a2@<ebx>,
-    int a3@<esi>,
+BOOL __userpurge sub_407A90(
+    int a1,
+    int a2,
+    int a3,
     int a4,
     int a5,
     int a6,
@@ -8917,12 +8915,12 @@ int __stdcall sub_409B70(_DWORD* self)
 
 //----- (00409BE0) --------------------------------------------------------
 // positive sp value has been detected, the output may be wrong!
-char __userpurge sub_409BE0@<al>(
-    int a1@<ecx>,
-    int a2@<ebx>,
-    int a3@<ebp>,
-    int a4@<edi>,
-    int a5@<esi>,
+char __userpurge sub_409BE0(
+    int a1,
+    int a2,
+    int a3,
+    int a4,
+    int a5,
     float a6,
     float a7,
     float a8,
@@ -15733,7 +15731,7 @@ int __stdcall sub_412CC0(int self, int a2)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (00412DB0) --------------------------------------------------------
-int __userpurge sub_412DB0@<eax>(int a1@<ecx>, int a2@<edi>, int a3)
+int __userpurge sub_412DB0(int a1, int a2, int a3)
 {
     int result; // eax
     int v5; // edi
@@ -23033,7 +23031,7 @@ char __stdcall sub_41CD90(int self)
 }
 
 //----- (0041CE60) --------------------------------------------------------
-char __usercall sub_41CE60@<al>(int a1@<ebx>, unsigned int a2)
+char __usercall sub_41CE60(int a1, unsigned int a2)
 {
     unsigned int v2; // esi
     char v3; // dl
@@ -23186,7 +23184,7 @@ char __fastcall sub_41D090(int a1)
 }
 
 //----- (0041D0C0) --------------------------------------------------------
-char __userpurge sub_41D0C0@<al>(int a1@<ecx>, int a2@<ebp>, float a3)
+char __userpurge sub_41D0C0(int a1, int a2, float a3)
 {
     char v4; // bl
     double v5; // st7
@@ -23408,7 +23406,7 @@ char __stdcall sub_41D1A0(char* self)
 // 5200DC: using guessed type int dword_5200DC;
 
 //----- (0041D4F0) --------------------------------------------------------
-char __usercall sub_41D4F0@<al>(int a1@<ecx>, int a2@<ebp>)
+char __usercall sub_41D4F0(int a1, int a2)
 {
     char v3; // bl
     int v4; // eax
@@ -25140,7 +25138,7 @@ int __stdcall sub_41F2A0(void** self)
 }
 
 //----- (0041F2F0) --------------------------------------------------------
-char __usercall sub_41F2F0@<al>(int a1@<ecx>, void* a2@<esi>)
+char __usercall sub_41F2F0(int a1, void* a2)
 {
     _UNKNOWN* retaddr; // [esp+48h] [ebp+0h] BYREF
 
@@ -25400,7 +25398,7 @@ int __stdcall sub_41F860(void** self)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (0041F8F0) --------------------------------------------------------
-char __usercall sub_41F8F0@<al>(int a1@<ecx>, int a2@<edi>)
+char __usercall sub_41F8F0(int a1, int a2)
 {
     int v2; // edi
     int i; // eax
@@ -31494,7 +31492,7 @@ int __cdecl sub_4278F0(int a1, int a2, int a3)
 // 5209F0: using guessed type int g_WindowEventState;
 
 //----- (00427950) --------------------------------------------------------
-int __usercall GameSoundAndInputInit@<eax>(int a1@<edi>, void* a2@<esi>)
+int __usercall GameSoundAndInputInit(int a1, void* a2)
 {
     _DWORD* v2; // eax
     _DWORD* v3; // eax
@@ -33808,7 +33806,7 @@ int __stdcall sub_42A770(void* self)
 // 499400: using guessed type _UNKNOWN *off_499400;
 
 //----- (0042A780) --------------------------------------------------------
-int __usercall sub_42A780@<eax>(_DWORD* a1@<ecx>, int a2@<ebp>)
+int __usercall sub_42A780(_DWORD* a1, int a2)
 {
     sub_42A7C0((int)a1, a2);
     return sub_4690E0(a1);
@@ -33822,7 +33820,7 @@ int __stdcall sub_42A7A0(_DWORD* self)
 }
 
 //----- (0042A7C0) --------------------------------------------------------
-int __usercall sub_42A7C0@<eax>(int a1@<ecx>, int a2@<ebp>)
+int __usercall sub_42A7C0(int a1, int a2)
 {
     int result; // eax
     char* v4; // eax
@@ -42475,7 +42473,7 @@ int __stdcall sub_437B40(_DWORD* self)
 }
 
 //----- (00437B70) --------------------------------------------------------
-void __userpurge sub_437B70(int a1@<ecx>, int a2@<ebp>, float a3)
+void __userpurge sub_437B70(int a1, int a2, float a3)
 {
     int v4; // ecx
     int v5; // esi
@@ -44123,7 +44121,7 @@ int __stdcall sub_43A520(int* self)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (0043A540) --------------------------------------------------------
-char __userpurge sub_43A540@<al>(int a1@<ecx>, int a2@<ebp>, int a3)
+char __userpurge sub_43A540(int a1, int a2, int a3)
 {
     int v4; // ecx
     int v5; // eax
@@ -45527,7 +45525,7 @@ char __stdcall sub_43C8A0(int self, int a2, int a3)
 }
 
 //----- (0043C8E0) --------------------------------------------------------
-char __userpurge sub_43C8E0@<al>(int a1@<ecx>, int a2@<ebp>, int a3)
+char __userpurge sub_43C8E0(int a1, int a2, int a3)
 {
     int v4; // ecx
     double v5; // st7
@@ -45722,7 +45720,7 @@ int __stdcall sub_43CB00(_DWORD* self)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (0043CDB0) --------------------------------------------------------
-char __userpurge sub_43CDB0@<al>(_DWORD* a1@<ecx>, int a2@<ebp>, int a3)
+char __userpurge sub_43CDB0(_DWORD* a1, int a2, int a3)
 {
     int v4; // ecx
 
@@ -46193,7 +46191,7 @@ const char** __stdcall sub_43D7C0(const char** self, int a2)
 // 499940: using guessed type _UNKNOWN *off_499940;
 
 //----- (0043D8A0) --------------------------------------------------------
-char __userpurge sub_43D8A0@<al>(_DWORD* a1@<ecx>, int a2@<ebp>, int a3)
+char __userpurge sub_43D8A0(_DWORD* a1, int a2, int a3)
 {
     int v4; // ecx
 
@@ -47299,14 +47297,14 @@ int __stdcall sub_43F320(void* self)
 // 4999B0: using guessed type _UNKNOWN *off_4999B0;
 
 //----- (0043F330) --------------------------------------------------------
-int __usercall sub_43F330@<eax>(_DWORD* a1@<ecx>, int a2@<ebp>)
+int __usercall sub_43F330(_DWORD* a1, int a2)
 {
     sub_43F350((int)a1, a2);
     return sub_4690E0(a1);
 }
 
 //----- (0043F350) --------------------------------------------------------
-unsigned int __usercall sub_43F350@<eax>(int a1@<ecx>, int a2@<ebp>)
+unsigned int __usercall sub_43F350(int a1, int a2)
 {
     unsigned int result; // eax
     char* v4; // eax
@@ -49957,7 +49955,7 @@ char __stdcall sub_443910(float** self, int* a2, int* a3)
 }
 
 //----- (00443950) --------------------------------------------------------
-int __userpurge sub_443950@<eax>(_DWORD* a1@<ecx>, int a2@<ebx>, int* a3, int* a4, int a5, _DWORD* a6)
+int __userpurge sub_443950(_DWORD* a1, int a2, int* a3, int* a4, int a5, _DWORD* a6)
 {
     int v6; // edi
     int result; // eax
@@ -56164,7 +56162,7 @@ _DWORD* __stdcall sub_44CD90(_DWORD* self, float* a2)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (0044CDD0) --------------------------------------------------------
-char __userpurge sub_44CDD0@<al>(int a1@<ecx>, int a2@<ebp>, int a3)
+char __userpurge sub_44CDD0(int a1, int a2, int a3)
 {
     bool v4; // zf
     char v5; // al
@@ -59231,7 +59229,7 @@ void __stdcall sub_450C70(_DWORD* self, int a2)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (00450D30) --------------------------------------------------------
-int __usercall sub_450D30@<eax>(_DWORD* a1@<ecx>, int a2@<ebp>)
+int __usercall sub_450D30(_DWORD* a1, int a2)
 {
     int v3; // eax
     _DWORD* v4; // ecx
@@ -66172,7 +66170,7 @@ char __stdcall sub_45B150(_DWORD* self, int ArgList, int a3, int a4)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (0045B200) --------------------------------------------------------
-char __usercall sub_45B200@<al>(int* a1@<ecx>, int a2@<edi>)
+char __usercall sub_45B200(int* a1, int a2)
 {
     int v3; // ecx
     LPVOID* v4; // eax
@@ -66286,7 +66284,7 @@ void __stdcall sub_45B4B0(_DWORD* self, int ArgList)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (0045B4E0) --------------------------------------------------------
-char __usercall sub_45B4E0@<al>(int* a1@<ecx>, int a2@<edi>)
+char __usercall sub_45B4E0(int* a1, int a2)
 {
     if (a1[25] != 6)
         return 0;
@@ -66297,7 +66295,7 @@ char __usercall sub_45B4E0@<al>(int* a1@<ecx>, int a2@<edi>)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (0045B510) --------------------------------------------------------
-char __userpurge sub_45B510@<al>(int a1@<ecx>, int a2@<edi>, int a3)
+char __userpurge sub_45B510(int a1, int a2, int a3)
 {
     int v4; // ecx
     int v5; // ecx
@@ -67558,7 +67556,7 @@ void __stdcall sub_45CF30(int self, char a2)
 }
 
 //----- (0045CFA0) --------------------------------------------------------
-int __usercall sub_45CFA0@<eax>(int a1@<ecx>, int a2@<ebp>)
+int __usercall sub_45CFA0(int a1, int a2)
 {
     int v3; // ebx
     int* v4; // edi
@@ -67596,7 +67594,7 @@ int __stdcall sub_45D050(_DWORD* self)
 }
 
 //----- (0045D070) --------------------------------------------------------
-void __usercall sub_45D070(int a1@<ecx>, int a2@<ebp>)
+void __usercall sub_45D070(int a1, int a2)
 {
     char* v3; // eax
     _DWORD* v4; // eax
@@ -68162,7 +68160,7 @@ int __stdcall sub_45E0B0(int self)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0045E2A0) --------------------------------------------------------
-char __userpurge sub_45E2A0@<al>(int a1@<ecx>, int a2@<ebp>, int a3, int a4, int a5, int a6)
+char __userpurge sub_45E2A0(int a1, int a2, int a3, int a4, int a5, int a6)
 {
     char* v7; // eax
     int v8; // eax
@@ -68640,7 +68638,7 @@ int __stdcall sub_45ECD0(int self)
 // 4F5CC4: using guessed type int dword_4F5CC4;
 
 //----- (0045ED50) --------------------------------------------------------
-void __userpurge sub_45ED50(int a1@<ecx>, int a2@<edi>, _DWORD* a3, _DWORD* a4)
+void __userpurge sub_45ED50(int a1, int a2, _DWORD* a3, _DWORD* a4)
 {
     _DWORD* v4; // ebp
     int v6; // eax
@@ -69278,7 +69276,7 @@ void __stdcall sub_45F620(int self, int a2, char a3)
 // 520970: using guessed type int g_pGameLogic;
 
 //----- (0045F9E0) --------------------------------------------------------
-char __userpurge sub_45F9E0@<al>(int a1@<ecx>, int a2@<edi>, int a3)
+char __userpurge sub_45F9E0(int a1, int a2, int a3)
 {
     double v4; // st7
     double v5; // st7
@@ -71073,7 +71071,7 @@ _DWORD* __stdcall sub_462660(_DWORD* self)
 }
 
 //----- (004626F0) --------------------------------------------------------
-INT __usercall sub_4626F0@<eax>(int a1@<ecx>, int a2@<edi>)
+INT __usercall sub_4626F0(int a1, int a2)
 {
     INT result; // eax
     FILE* v4; // esi
@@ -72427,7 +72425,7 @@ _DWORD* __stdcall sub_463EB0(_DWORD* self, float a2, _DWORD* a3)
 }
 
 //----- (00463F60) --------------------------------------------------------
-void __userpurge sub_463F60(int a1@<ecx>, int a2@<edi>, float a3)
+void __userpurge sub_463F60(int a1, int a2, float a3)
 {
     double v4; // st7
     int v5; // ecx
@@ -72815,7 +72813,7 @@ char* __stdcall sub_464800(int a1)
 // 4AE3F8: using guessed type char *off_4AE3F8[10];
 
 //----- (00464810) --------------------------------------------------------
-char __userpurge sub_464810@<al>(_DWORD* a1@<ecx>, int a2@<ebp>, int a3, int a4)
+char __userpurge sub_464810(_DWORD* a1, int a2, int a3, int a4)
 {
     void(__stdcall * **v6)(_DWORD, int); // ecx
     int v7; // ebp
@@ -72928,7 +72926,7 @@ int __stdcall sub_464A40(int self, int a2)
 // 4AE424: using guessed type float flt_4AE424[19];
 
 //----- (00464AA0) --------------------------------------------------------
-int __usercall sub_464AA0@<eax>(_DWORD* a1@<ecx>, int a2@<ebp>)
+int __usercall sub_464AA0(_DWORD* a1, int a2)
 {
     sub_464AE0((int)a1, a2);
     return sub_4690E0(a1);
@@ -72942,7 +72940,7 @@ int __stdcall sub_464AC0(_DWORD* self)
 }
 
 //----- (00464AE0) --------------------------------------------------------
-char __usercall sub_464AE0@<al>(int a1@<ecx>, int a2@<ebp>)
+char __usercall sub_464AE0(int a1, int a2)
 {
     int v3; // eax
     char* v4; // eax
@@ -74991,7 +74989,7 @@ char __cdecl sub_467E30(int a1)
 }
 
 //----- (00468000) --------------------------------------------------------
-int __usercall sub_468000@<eax>(int a1@<ecx>, int a2@<ebp>)
+int __usercall sub_468000(int a1, int a2)
 {
     int v3; // edi
     int v4; // eax
@@ -75232,7 +75230,7 @@ int __stdcall sub_468400(int self, float a2)
 // 520974: using guessed type char byte_520974;
 
 //----- (004685D0) --------------------------------------------------------
-void __userpurge sub_4685D0(int a1@<ecx>, int a2@<edi>, char* String2, int a4, float a5, float a6, float a7)
+void __userpurge sub_4685D0(int a1, int a2, char* String2, int a4, float a5, float a6, float a7)
 {
     int v8; // ebx
     int v9; // esi
@@ -75410,7 +75408,7 @@ int __stdcall sub_4687D0(int* self, int a2, int a3)
 // 520A50: using guessed type int dword_520A50;
 
 //----- (00468A00) --------------------------------------------------------
-int __usercall sub_468A00@<eax>(int a1@<ecx>, int a2@<ebp>)
+int __usercall sub_468A00(int a1, int a2)
 {
     void* v3; // eax
     int v4; // eax
@@ -77850,7 +77848,7 @@ _DWORD* __cdecl sub_46CAA2(int a1)
 // 4AEFB8: using guessed type _UNKNOWN *off_4AEFB8;
 
 //----- (0046CAC9) --------------------------------------------------------
-int __usercall sub_46CAC9@<eax>(int a1@<eax>, _DWORD* a2@<ecx>)
+int __usercall sub_46CAC9(int a1, _DWORD* a2)
 {
     int v3; // edx
     unsigned int v4; // eax
@@ -77903,9 +77901,9 @@ int __usercall sub_46CAC9@<eax>(int a1@<eax>, _DWORD* a2@<ecx>)
 }
 
 //----- (0046CB5B) --------------------------------------------------------
-int __usercall sub_46CB5B@<eax>(
-    int a1@<eax>,
-    int a2@<edi>,
+int __usercall sub_46CB5B(
+    int a1,
+    int a2,
     unsigned int* a3,
     unsigned int* a4,
     unsigned int* a5,
@@ -81532,7 +81530,7 @@ int __stdcall sub_470113(_DWORD* self)
 }
 
 //----- (00470516) --------------------------------------------------------
-int* __usercall sub_470516@<eax>(unsigned int a1@<ebx>, unsigned int a2@<edi>, int a3)
+int* __usercall sub_470516(unsigned int a1, unsigned int a2, int a3)
 {
     int* result; // eax
     int* v4; // esi
@@ -87091,7 +87089,7 @@ int __cdecl sub_476CD2(int a1)
 }
 
 //----- (00476CDB) --------------------------------------------------------
-int __usercall sub_476CDB@<eax>(int a1@<esi>)
+int __usercall sub_476CDB(int a1)
 {
     int* v1; // eax
     int v2; // ecx
@@ -87297,7 +87295,7 @@ int __cdecl sub_476F95(_DWORD* a1, char a2)
 }
 
 //----- (00476FFA) --------------------------------------------------------
-char __usercall sub_476FFA@<al>(int a1@<esi>)
+char __usercall sub_476FFA(int a1)
 {
     unsigned int* v1; // edi
     unsigned int v2; // eax
@@ -87452,7 +87450,7 @@ char __cdecl sub_477129(int a1)
 }
 
 //----- (004771F0) --------------------------------------------------------
-char __usercall sub_4771F0@<al>(int a1@<esi>)
+char __usercall sub_4771F0(int a1)
 {
     _BYTE* v1; // eax
     int v2; // ecx
@@ -87490,7 +87488,7 @@ char __usercall sub_4771F0@<al>(int a1@<esi>)
 }
 
 //----- (0047727E) --------------------------------------------------------
-char __usercall sub_47727E@<al>(char a1@<cl>, int a2@<esi>, char a3)
+char __usercall sub_47727E(char a1, int a2, char a3)
 {
     unsigned __int8** v3; // ebx
     unsigned __int8* v4; // eax
@@ -87722,7 +87720,7 @@ LABEL_25:
 }
 
 //----- (00477579) --------------------------------------------------------
-char __usercall sub_477579@<al>(_DWORD* a1@<esi>)
+char __usercall sub_477579(_DWORD* a1)
 {
     unsigned __int8** v1; // ebx
     unsigned __int8* v2; // edi
@@ -88175,7 +88173,7 @@ LABEL_23:
 }
 
 //----- (00477BE1) --------------------------------------------------------
-char __usercall sub_477BE1@<al>(_DWORD* a1@<esi>)
+char __usercall sub_477BE1(_DWORD* a1)
 {
     unsigned __int8** v1; // ebx
     unsigned __int8* v2; // edi
@@ -88282,7 +88280,7 @@ LABEL_7:
 // 477CB9: conditional instruction was optimized away because %var_C.4<100u
 
 //----- (00477D38) --------------------------------------------------------
-char __usercall sub_477D38@<al>(_DWORD* a1@<ebx>)
+char __usercall sub_477D38(_DWORD* a1)
 {
     int v1; // esi
     int v2; // eax
@@ -88470,7 +88468,7 @@ LABEL_7:
 }
 
 //----- (00477FCC) --------------------------------------------------------
-char __usercall sub_477FCC@<al>(_DWORD* a1@<ebx>)
+char __usercall sub_477FCC(_DWORD* a1)
 {
     unsigned __int8** v1; // edi
     unsigned __int8* v2; // esi
@@ -89509,7 +89507,7 @@ unsigned int __cdecl sub_478DE7(jmp_buf Buf, int a2)
 }
 
 //----- (00478E09) --------------------------------------------------------
-int(__cdecl* __usercall sub_478E09@<eax>(int a1@<ebx>, jmp_buf Buf, char* a3, char* a4))(jmp_buf, int, _DWORD)
+int(__cdecl* __usercall sub_478E09(int a1, jmp_buf Buf, char* a3, char* a4))(jmp_buf, int, _DWORD)
 {
     int* __attribute__((__org_typedef(jmp_buf))) v4; // esi
     int(__cdecl * result)(int* __attribute__((__org_typedef(jmp_buf))), int, _DWORD); // eax
@@ -92149,7 +92147,7 @@ int __cdecl sub_47B039(unsigned __int16* a1, char* a2)
 }
 
 //----- (0047B061) --------------------------------------------------------
-float* __usercall sub_47B061@<eax>(float* result@<eax>, int a2)
+float* __usercall sub_47B061(float* result, int a2)
 {
     int v2; // ecx
     char* v3; // edx
@@ -92169,7 +92167,7 @@ float* __usercall sub_47B061@<eax>(float* result@<eax>, int a2)
 // 4B1580: using guessed type float flt_4B1580;
 
 //----- (0047B093) --------------------------------------------------------
-_WORD* __usercall sub_47B093@<eax>(_BYTE* a1@<eax>, _WORD* a2)
+_WORD* __usercall sub_47B093(_BYTE* a1, _WORD* a2)
 {
     __int16 v2; // cx
     _WORD* result; // eax
@@ -92181,7 +92179,7 @@ _WORD* __usercall sub_47B093@<eax>(_BYTE* a1@<eax>, _WORD* a2)
 }
 
 //----- (0047B0C6) --------------------------------------------------------
-unsigned int __usercall sub_47B0C6@<eax>(unsigned __int16* a1@<eax>, unsigned int* a2)
+unsigned int __usercall sub_47B0C6(unsigned __int16* a1, unsigned int* a2)
 {
     int v2; // eax
     unsigned __int8 v3; // dl
@@ -92205,7 +92203,7 @@ unsigned int __usercall sub_47B0C6@<eax>(unsigned __int16* a1@<eax>, unsigned in
 }
 
 //----- (0047B113) --------------------------------------------------------
-float* __usercall sub_47B113@<eax>(float* result@<eax>, float* a2@<ecx>)
+float* __usercall sub_47B113(float* result, float* a2)
 {
     *a2 = *result * *result + result[1] * result[1] + result[2] * result[2];
     a2[1] = (result[4] + *result) * result[1] + result[5] * result[2];
@@ -92217,7 +92215,7 @@ float* __usercall sub_47B113@<eax>(float* result@<eax>, float* a2@<ecx>)
 }
 
 //----- (0047B1B2) --------------------------------------------------------
-float* __usercall sub_47B1B2@<eax>(unsigned __int16* a1@<edi>, float* a2, float* a3, int a4)
+float* __usercall sub_47B1B2(unsigned __int16* a1, float* a2, float* a3, int a4)
 {
     int v4; // ebx
     int i; // eax
@@ -92256,7 +92254,7 @@ float* __usercall sub_47B1B2@<eax>(unsigned __int16* a1@<edi>, float* a2, float*
 // 4B1580: using guessed type float flt_4B1580[3];
 
 //----- (0047B28E) --------------------------------------------------------
-float* __usercall sub_47B28E@<eax>(float* a1@<edx>, float* a2@<edi>)
+float* __usercall sub_47B28E(float* a1, float* a2)
 {
     int v2; // ebx
     float* v3; // ecx
@@ -92318,7 +92316,7 @@ float* __usercall sub_47B28E@<eax>(float* a1@<edx>, float* a2@<edi>)
 // 4B1580: using guessed type float flt_4B1580;
 
 //----- (0047B3C0) --------------------------------------------------------
-__int16 __usercall sub_47B3C0@<ax>(_BYTE* a1@<edi>, int a2@<esi>, unsigned __int16 a3)
+__int16 __usercall sub_47B3C0(_BYTE* a1, int a2, unsigned __int16 a3)
 {
     int v3; // eax
     int v4; // ecx
@@ -93187,7 +93185,7 @@ unsigned int sub_47BD85()
 }
 
 //----- (0047BDB7) --------------------------------------------------------
-int __usercall sub_47BDB7@<eax>(int a1@<esi>)
+int __usercall sub_47BDB7(int a1)
 {
     int v1; // ebx
     bool v2; // cc
@@ -93285,7 +93283,7 @@ int __usercall sub_47BDB7@<eax>(int a1@<esi>)
 }
 
 //----- (0047BF72) --------------------------------------------------------
-int __usercall sub_47BF72@<eax>(int* a1@<esi>)
+int __usercall sub_47BF72(int* a1)
 {
     int v1; // eax
     _DWORD* v2; // ecx
@@ -93384,7 +93382,7 @@ int __usercall sub_47BF72@<eax>(int* a1@<esi>)
 }
 
 //----- (0047C0E8) --------------------------------------------------------
-void __usercall sub_47C0E8(int a1@<ebx>)
+void __usercall sub_47C0E8(int a1)
 {
     unsigned int v1; // esi
     void* v2; // eax
@@ -93898,7 +93896,7 @@ int __cdecl sub_47C69E(_DWORD* a1)
 // 47EDF4: using guessed type int std::_Unchecked<std::_Vector_val<std::_Simple_types<void *>>>();
 
 //----- (0047C81D) --------------------------------------------------------
-int __usercall sub_47C81D@<eax>(int a1@<esi>, int a2, char a3)
+int __usercall sub_47C81D(int a1, int a2, char a3)
 {
     int v3; // ebx
     int result; // eax
@@ -93946,7 +93944,7 @@ int __usercall sub_47C81D@<eax>(int a1@<esi>, int a2, char a3)
 }
 
 //----- (0047C8A5) --------------------------------------------------------
-int __usercall sub_47C8A5@<eax>(int a1@<esi>, int a2, char a3)
+int __usercall sub_47C8A5(int a1, int a2, char a3)
 {
     int v3; // ebx
     int result; // eax
@@ -94534,7 +94532,7 @@ LABEL_27:
 }
 
 //----- (0047D01D) --------------------------------------------------------
-int __usercall sub_47D01D@<eax>(int a1@<ebx>)
+int __usercall sub_47D01D(int a1)
 {
     int v1; // edx
     int v2; // eax
@@ -95195,7 +95193,7 @@ void* __cdecl sub_47D96D(int a1, void* a2, const void* a3, unsigned int a4)
 }
 
 //----- (0047D991) --------------------------------------------------------
-char* __usercall sub_47D991@<eax>(int a1@<ebx>, int a2, char* a3, char a4, unsigned int a5)
+char* __usercall sub_47D991(int a1, int a2, char* a3, char a4, unsigned int a5)
 {
     int v5; // eax
 
@@ -96309,7 +96307,7 @@ int __cdecl sub_47EA58(jmp_buf Buf, int a2, unsigned int a3)
 }
 
 //----- (0047EAA3) --------------------------------------------------------
-int __usercall sub_47EAA3@<eax>(int a1@<ebx>, jmp_buf Buf)
+int __usercall sub_47EAA3(int a1, jmp_buf Buf)
 {
     int* __attribute__((__org_typedef(jmp_buf))) v2; // esi
     int result; // eax
@@ -96483,7 +96481,7 @@ int sub_47EE13()
 }
 
 //----- (0047EE17) --------------------------------------------------------
-int __usercall sub_47EE17@<eax>(int a1@<esi>)
+int __usercall sub_47EE17(int a1)
 {
     int v1; // ebx
     int v2; // edi
@@ -96528,7 +96526,7 @@ int __usercall sub_47EE17@<eax>(int a1@<esi>)
 }
 
 //----- (0047EEBF) --------------------------------------------------------
-int __usercall sub_47EEBF@<eax>(_DWORD* a1@<edi>)
+int __usercall sub_47EEBF(_DWORD* a1)
 {
     _DWORD* v1; // ebx
     int result; // eax
@@ -96630,7 +96628,7 @@ int __usercall sub_47EEBF@<eax>(_DWORD* a1@<edi>)
 }
 
 //----- (0047EFF0) --------------------------------------------------------
-int __usercall sub_47EFF0@<eax>(_DWORD* a1@<edi>)
+int __usercall sub_47EFF0(_DWORD* a1)
 {
     int v1; // ecx
     int result; // eax
@@ -96697,7 +96695,7 @@ int __usercall sub_47EFF0@<eax>(_DWORD* a1@<edi>)
 }
 
 //----- (0047F0C4) --------------------------------------------------------
-int __usercall sub_47F0C4@<eax>(_DWORD* a1@<esi>)
+int __usercall sub_47F0C4(_DWORD* a1)
 {
     int result; // eax
     int v2; // ebx
@@ -97344,7 +97342,7 @@ int __cdecl sub_47F7F8(int a1, int a2)
 }
 
 //----- (0047F95E) --------------------------------------------------------
-char __usercall sub_47F95E@<al>(int a1@<esi>)
+char __usercall sub_47F95E(int a1)
 {
     int v1; // edi
     _WORD** v2; // eax
@@ -98528,7 +98526,7 @@ _DWORD* __cdecl sub_48097A(int a1)
 }
 
 //----- (004809B7) --------------------------------------------------------
-char __usercall sub_4809B7@<al>(_DWORD* a1@<edi>)
+char __usercall sub_4809B7(_DWORD* a1)
 {
     int v1; // esi
     char result; // al
@@ -100238,7 +100236,7 @@ int __cdecl sub_481EA9(int a1)
 }
 
 //----- (0048206A) --------------------------------------------------------
-int __usercall sub_48206A@<eax>(int a1@<eax>)
+int __usercall sub_48206A(int a1)
 {
     _DWORD* v2; // esi
     int result; // eax
@@ -100757,7 +100755,7 @@ LABEL_32:
 // 471745: using guessed type int nullsub_2();
 
 //----- (00482740) --------------------------------------------------------
-int __usercall sub_482740@<eax>(int a1@<eax>)
+int __usercall sub_482740(int a1)
 {
     _DWORD* v2; // esi
     int result; // eax
@@ -101136,7 +101134,7 @@ _WORD* __cdecl sub_482C93(int a1, _WORD* a2, int a3, int a4)
 }
 
 //----- (00482CFF) --------------------------------------------------------
-int __usercall sub_482CFF@<eax>(int a1@<eax>, int* a2@<esi>)
+int __usercall sub_482CFF(int a1, int* a2)
 {
     int v2; // ecx
     int v3; // edi
@@ -101562,7 +101560,7 @@ int __cdecl sub_483037(int a1, int a2, int a3, int a4)
 }
 
 //----- (0048318A) --------------------------------------------------------
-int __usercall sub_48318A@<eax>(int* a1@<eax>, int a2@<esi>, int a3)
+int __usercall sub_48318A(int* a1, int a2, int a3)
 {
     int v3; // ebx
     int v4; // ecx
@@ -101648,7 +101646,7 @@ int __usercall sub_48318A@<eax>(int* a1@<eax>, int a2@<esi>, int a3)
 }
 
 //----- (004832C2) --------------------------------------------------------
-int __usercall sub_4832C2@<eax>(int a1@<edi>, int a2)
+int __usercall sub_4832C2(int a1, int a2)
 {
     int* v2; // esi
     int v3; // eax
@@ -101685,7 +101683,7 @@ int __usercall sub_4832C2@<eax>(int a1@<edi>, int a2)
 }
 
 //----- (0048334F) --------------------------------------------------------
-int __usercall sub_48334F@<eax>(int a1@<eax>, int a2@<edi>, int a3, int a4, int a5)
+int __usercall sub_48334F(int a1, int a2, int a3, int a4, int a5)
 {
     int v5; // edx
     int v6; // ebx
@@ -101912,7 +101910,7 @@ int __cdecl sub_4834CF(int a1, int a2, int a3, int a4, int a5, int a6, _BYTE* a7
 }
 
 //----- (004835E9) --------------------------------------------------------
-_WORD* __usercall sub_4835E9@<eax>(int a1@<eax>, int a2, int a3, int a4)
+_WORD* __usercall sub_4835E9(int a1, int a2, int a3, int a4)
 {
     int v4; // esi
     int v5; // eax
@@ -102205,7 +102203,7 @@ __int16 __cdecl sub_483762(_DWORD* a1, int a2, _DWORD* a3, int a4)
 }
 
 //----- (004839D0) --------------------------------------------------------
-int __usercall sub_4839D0@<eax>(int a1@<eax>)
+int __usercall sub_4839D0(int a1)
 {
     int v1; // esi
     int result; // eax
@@ -102499,7 +102497,7 @@ int __cdecl sub_483CB6(_DWORD* a1, char* a2)
 // 49CF48: using guessed type int dword_49CF48[];
 
 //----- (00483D81) --------------------------------------------------------
-int __usercall sub_483D81@<eax>(_DWORD* a1@<esi>)
+int __usercall sub_483D81(_DWORD* a1)
 {
     int v1; // ebx
     int v2; // eax
@@ -102668,7 +102666,7 @@ int __cdecl sub_483EAE(_DWORD* a1)
 }
 
 //----- (00483FD9) --------------------------------------------------------
-void __usercall sub_483FD9(int a1@<edi>)
+void __usercall sub_483FD9(int a1)
 {
     int v1; // edx
     int* v2; // ecx
@@ -103124,7 +103122,7 @@ char __cdecl sub_48439D(_DWORD* a1, int a2, void** a3, int a4)
 }
 
 //----- (00484521) --------------------------------------------------------
-int __usercall sub_484521@<eax>(_DWORD* a1@<esi>)
+int __usercall sub_484521(_DWORD* a1)
 {
     int result; // eax
     int v2; // ebx
@@ -104910,8 +104908,8 @@ int __cdecl sub_485FE8(int a1, int a2)
 }
 
 //----- (00485FFB) --------------------------------------------------------
-int __usercall sub_485FFB@<eax>(
-    unsigned int* a1@<eax>,
+int __usercall sub_485FFB(
+    unsigned int* a1,
     _DWORD* a2,
     unsigned int a3,
     unsigned int a4,
@@ -107061,11 +107059,11 @@ void __cdecl SafeFreeGameMemory(LPVOID lpMem)
 }
 
 //----- (0048861D) --------------------------------------------------------
-double __usercall sub_48861D@<st0>(
-    char a1@<zf>,
-    unsigned int a2@<eax>,
-    __int16 a3@<dx>,
-    double result@<st0>,
+double __usercall sub_48861D(
+    char a1,
+    unsigned int a2,
+    __int16 a3,
+    double result,
     int a5,
     int a6)
 {
@@ -107113,11 +107111,11 @@ LABEL_6:
 // 522320: using guessed type int dword_522320;
 
 //----- (004886ED) --------------------------------------------------------
-double __usercall sub_4886ED@<st0>(
-    char a1@<zf>,
-    unsigned int a2@<eax>,
-    __int16 a3@<dx>,
-    double result@<st0>,
+double __usercall sub_4886ED(
+    char a1,
+    unsigned int a2,
+    __int16 a3,
+    double result,
     int a5,
     int a6)
 {

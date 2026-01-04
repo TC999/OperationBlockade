@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="defs.h" />
+    <ClInclude Include="OperationBlockade.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
