@@ -1,4 +1,7 @@
 #pragma once
+#include <setjmp.h>
+#include <immintrin.h>
+#include <stdio.h>
 float* __cdecl sub_401000(float* a1, float a2);
 int __cdecl sub_401040(int a1, float a2); // idb
 float* __cdecl sub_401080(float* a1, float a2);

@@ -7,7 +7,7 @@
 #include <windows.h>
 #include <math.h>
 #include "defs.h"
-#include "OperationBlockade.h"
+
 
 #include <stdarg.h>
 
@@ -17,7 +17,7 @@
 
 #define __thiscall __cdecl // Test compile in C mode
 
-char* off_49A990[120] =
+const char* off_49A990[120] =
 {
   "Bogus message code %d",
   "Sorry, there are legal restrictions on arithmetic coding",
@@ -2535,7 +2535,7 @@ BOOL __cdecl sub_401200(float* a1)
 }
 
 //----- (00401270) --------------------------------------------------------
-int __thiscall sub_401270(int this)
+int __thiscall sub_401270(int self)
 {
     *(_DWORD*)(this + 4) = 0;
     *(_DWORD*)(this + 8) = 0;
