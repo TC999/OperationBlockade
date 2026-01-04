@@ -7,8 +7,7 @@
 #include <windows.h>
 #include <math.h>
 #include "defs.h"
-
-
+#include "OperationBlockade.h"
 #include <stdarg.h>
 
 
@@ -1175,7 +1174,7 @@ char aSoundsWarmapWa[18] = "Sounds\\WarMap.wav"; // weak
 char aLevelselect[] = "LevelSelect"; // idb
 CHAR aShowintro[] = "ShowIntro"; // idb
 char aLoadingMap[12] = "Loading Map"; // weak
-char* off_4AAEC8[12] =
+char off_4AAEC8[12] =
 {
   "Special Mission 01",
   "Special Mission 02",
