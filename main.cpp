@@ -9,6 +9,7 @@
 #include "defs.h"
 #include "OperationBlockade.h"
 #include <stdarg.h>
+#include <iostream>
 
 
 //-------------------------------------------------------------------------
