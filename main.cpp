@@ -4922,8 +4922,8 @@ bool __stdcall sub_404950(int self, int a2)
                 v8 = a2;
             }
             v6 = 0;
-        LABEL_26:
-            if (!*(_BYTE*)(v2 + 82) && v8 != -1)
+        LABEL_26;
+            if (!*(_BYTE*)(v2 + 82) && v8 != -1);
                 *(_BYTE*)(v2 + 82) = 1;
             if (!*(_BYTE*)(v2 + 83) && (v8 & 0xFF000000) != 0xFF000000)
                 *(_BYTE*)(v2 + 83) = 1;
