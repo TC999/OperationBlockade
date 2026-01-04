@@ -623,8 +623,8 @@ _UNKNOWN unk_49D248; // weak
 _SCOPETABLE_ENTRY stru_49D698[2] = { { -1, NULL, &loc_48CB7C }, { 0, &loc_48CB68, &loc_48CB6C } }; // weak
 int dword_4A00AC = 1; // weak
 CHAR ClassName[] = "Cutscene Player Sample"; // idb
-char off_4A03E0[] = { "DebugFont.tga", "DebugFont.tga" }; // weak
-char off_4A03E4 = "DebugFont.tga"; // weak
+const char* off_4A03E0[] = { "DebugFont.tga", "DebugFont.tga" }; // weak
+const char* off_4A03E4 = "DebugFont.tga"; // weak
 _UNKNOWN unk_4A03E8; // weak
 _UNKNOWN unk_4A0E68; // weak
 _UNKNOWN unk_4A18E8; // weak
@@ -1100,8 +1100,8 @@ char aSayUncle[] = "say uncle"; // idb
 char aEatYourSpinach[] = "eat your spinach"; // idb
 int dword_4AA1E0 = -150199; // weak
 int dword_4AA1E4 = -5077693; // weak
-char off_4AA1E8 = "United Sovereign Territories 1st Division"; // weak
-char off_4AA5F0[13] =
+const char* off_4AA1E8 = "United Sovereign Territories 1st Division"; // weak
+const char* off_4AA5F0[13] =
 {
   "Littleton",
   "Paulsburg",
@@ -1117,7 +1117,7 @@ char off_4AA5F0[13] =
   "Jespersonian Territory",
   "Enemy Island"
 }; // weak
-char* off_4AA620 = "Enemy Island"; // weak
+const char* off_4AA620 = "Enemy Island"; // weak
 const char* dword_4AA624 = NULL; // weak
 int dword_4AA628[] = { 1064178811 }; // weak
 int dword_4AA62C[23] =
@@ -1174,7 +1174,7 @@ char aSoundsWarmapWa[] = "Sounds\\WarMap.wav"; // weak
 char aLevelselect[] = "LevelSelect"; // idb
 CHAR aShowintro[] = "ShowIntro"; // idb
 char aLoadingMap[12] = "Loading Map"; // weak
-char off_4AAEC8[12] =
+const char off_4AAEC8[12] =
 {
   "Special Mission 01",
   "Special Mission 02",
@@ -1611,14 +1611,14 @@ char aMissionsSpecia[36] = "Missions/SpecialMissionsRecruit.ini"; // weak
 char aMissionsMissio[] = "Missions/MissionsRecruit.ini"; // idb
 CHAR aShowmissionwav[] = "ShowMissionWaveHealth"; // idb
 char aStartedLoading[] = "Started loading mission manager"; // idb
-char aSoundsMissionc[27] = "Sounds\\MissionComplete.wav"; // weak
+char aSoundsMissionc[] = "Sounds\\MissionComplete.wav"; // weak
 char aYouSalvagedAmm[] = "You salvaged ammo and medical supplies."; // idb
 char aCancelmission[] = "CancelMission()"; // idb
 char aHostIsAborting[] = "Host is aborting multiplayer mission; send everyone a msg"; // idb
 char aMissionComplet[39] = "Mission Completed; Press N to Continue"; // weak
-char aSoundsDatespla_1[23] = "Sounds\\DateSplash3.wav"; // weak
-char aSoundsDatespla_0[23] = "Sounds\\DateSplash2.wav"; // weak
-char aSoundsDatespla[23] = "Sounds\\DateSplash1.wav"; // weak
+char aSoundsDatespla_1[] = "Sounds\\DateSplash3.wav"; // weak
+char aSoundsDatespla_0[] = "Sounds\\DateSplash2.wav"; // weak
+char aSoundsDatespla[] = "Sounds\\DateSplash1.wav"; // weak
 char aWaitingForPlay[23] = "Waiting for Players..."; // weak
 char aLoadingMission[16] = "Loading Mission"; // weak
 char aMissionComplet_0[18] = "Mission Completed"; // weak
@@ -1700,25 +1700,25 @@ char aIcon[] = "icon"; // idb
 char aScoringgroup_0[] = "ScoringGroup"; // idb
 char aScoringIni[] = "Scoring.ini"; // idb
 char aChatterenemyki[] = "ChatterEnemyKill"; // idb
-char asc_4AE234[4] = "\n\n\n"; // weak
-char aAmmoUsedD[23] = "Ammo Used        = %d\n"; // weak
-char aAmmoResupplied[23] = "Ammo Resupplied  = %d\n"; // weak
-char aAmmoLowD[23] = "Ammo Low         = %d\n"; // weak
-char aAmmoEndingD[23] = "Ammo Ending      = %d\n"; // weak
-char aAmmoStartingD[23] = "Ammo Starting    = %d\n"; // weak
-char aAmmoNameS[23] = "Ammo Name        = %s\n"; // weak
-char aHealthLost02f[29] = "Health Lost         = %0.2f\n"; // weak
-char aHealthResuppli[29] = "Health Resupplied   = %0.2f\n"; // weak
-char aHealthLow02f[29] = "Health Low          = %0.2f\n"; // weak
-char aHealthEnding02[29] = "Health Ending       = %0.2f\n"; // weak
-char aHealthStarting[29] = "Health Starting     = %0.2f\n"; // weak
-char aDifficultyD[17] = "Difficulty = %d\n"; // weak
-char aPlayerS[13] = "Player = %s\n"; // weak
-char aMissionS[14] = "Mission = %s\n"; // weak
+char asc_4AE234[] = "\n\n\n"; // weak
+char aAmmoUsedD[] = "Ammo Used        = %d\n"; // weak
+char aAmmoResupplied[] = "Ammo Resupplied  = %d\n"; // weak
+char aAmmoLowD[] = "Ammo Low         = %d\n"; // weak
+char aAmmoEndingD[] = "Ammo Ending      = %d\n"; // weak
+char aAmmoStartingD[] = "Ammo Starting    = %d\n"; // weak
+char aAmmoNameS[] = "Ammo Name        = %s\n"; // weak
+char aHealthLost02f[] = "Health Lost         = %0.2f\n"; // weak
+char aHealthResuppli[] = "Health Resupplied   = %0.2f\n"; // weak
+char aHealthLow02f[] = "Health Low          = %0.2f\n"; // weak
+char aHealthEnding02[] = "Health Ending       = %0.2f\n"; // weak
+char aHealthStarting[] = "Health Starting     = %0.2f\n"; // weak
+char aDifficultyD[] = "Difficulty = %d\n"; // weak
+char aPlayerS[] = "Player = %s\n"; // weak
+char aMissionS[] = "Mission = %s\n"; // weak
 char aMissionTxt[] = "mission.txt"; // idb
 CHAR aWritemissionst[] = "WriteMissionStats"; // idb
 char aHostSendingLis[] = "Host sending list of players:"; // idb
-char* off_4AE3F8[10] =
+const char* off_4AE3F8[10] =
 {
   "Day 1",
   "Day 2",
