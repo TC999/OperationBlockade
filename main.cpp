@@ -7,11 +7,22 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <windows.h>
 #include <math.h>
+#include <cmath>
 #include "defs.h"
+#include <stdio.h>
+#include <wchar.h>
+#include <time.h>
 #include "OperationBlockade.h"
 #include <stdarg.h>
 #include <DSound.h>
+#include <dsound.h>
 #pragma comment(lib, "Dsound.lib")
+#include <CommCtrl.h>
+#include <float.h>
+#pragma comment(lib, "Comctl32.lib")
+#define snwprintf _snwprintf
+#define wtol _wtol
+#define __usercall
 
 //-------------------------------------------------------------------------
 // Function declarations
@@ -622,7 +633,7 @@ _UNKNOWN unk_49D0D0; // weak
 _UNKNOWN unk_49D150; // weak
 _UNKNOWN unk_49D1D0; // weak
 _UNKNOWN unk_49D248; // weak
-_SCOPETABLE_ENTRY stru_49D698[2] = { { -1, NULL, &loc_48CB7C }, { 0, &loc_48CB68, &loc_48CB6C } }; // weak
+//_SCOPETABLE_ENTRY stru_49D698[2] = { { -1, NULL, &loc_48CB7C }, { 0, &loc_48CB68, &loc_48CB6C } }; // weak
 int dword_4A00AC = 1; // weak
 CHAR ClassName[] = "Cutscene Player Sample"; // idb
 const char* off_4A03E0[] = { "DebugFont.tga", "DebugFont.tga" }; // weak
@@ -1057,9 +1068,9 @@ char aBomber[7] = "BOMBER"; // weak
 char aTransport[10] = "TRANSPORT"; // weak
 char aFighter[8] = "FIGHTER"; // weak
 char aType_0[] = "type"; // idb
-char off_4A70F0 = "TypewriterFont.tga"; // weak
+const char* off_4A70F0 = "TypewriterFont.tga"; // weak
 _UNKNOWN unk_4A70F8; // weak
-char off_4A7B78 = "ArialBlackFont.tga"; // weak
+const char* off_4A7B78 = "ArialBlackFont.tga"; // weak
 _UNKNOWN unk_4A7B80; // weak
 _UNKNOWN unk_4A8600; // weak
 char off_4A90B8[] = "ArialSmallFont.tga"; // weak
@@ -1293,7 +1304,7 @@ char aHealth_0[] = "Health"; // idb
 char aNone[] = "None"; // idb
 char aIcondown[] = "IconDown"; // idb
 char aIconup[] = "IconUp"; // idb
-char aSoundsScorescr[28] = "Sounds\\ScoreScreenMusic.wav"; // weak
+char aSoundsScorescr[] = "Sounds\\ScoreScreenMusic.wav"; // weak
 char aSoldier[8] = "Soldier"; // weak
 char aDifficulty[] = "difficulty"; // idb
 char aChattext[] = "ChatText"; // idb
@@ -1788,7 +1799,9 @@ char aAB[] = "a+b"; // idb
 _UNKNOWN unk_4AE9F0; // weak
 _UNKNOWN unk_4AEF90; // weak
 _UNKNOWN* off_4AEFB8 = &unk_4AEF90; // weak
-int(__stdcall* off_4AEFBC[6])(int, int, int) = { &sub_472CA9, &sub_472D71, &sub_472E91, &sub_472F4B, &sub_472D27, &sub_472E1D }; // weak
+float* (__stdcall* off_4AEFBC[6])(float*, float*, float*) = {
+    &sub_472CA9, &sub_472D71, &sub_472E91, &sub_472F4B, &sub_472D27, &sub_472E1D
+}; // weak
 _UNKNOWN unk_4B1460; // weak
 _UNKNOWN unk_4B14E0; // weak
 _DWORD dword_4B1560[8] = { 16, 33, 66, 132, 272, 584, 1360, 4080 }; // weak
@@ -4198,7 +4211,7 @@ void __stdcall sub_403CE0(_DWORD* self)
     if (v2)
     {
         v3 = v2 - 4;
-        `eh vector destructor iterator'(v2, 0xACu, *((_DWORD *)v2 - 1), sub_403A90);
+        `eh vector destructor iterator`(v2, 0xACu, *((_DWORD *)v2 - 1), sub_403A90);
             SafeFreeGameMemory(v3);
     }
     v4 = (char*)self[8];
@@ -4207,7 +4220,7 @@ void __stdcall sub_403CE0(_DWORD* self)
     if (v4)
     {
         v5 = v4 - 4;
-        `eh vector destructor iterator'(v4, 0xACu, *((_DWORD *)v4 - 1), sub_403A90);
+        `eh vector destructor iterator`(v4, 0xACu, *((_DWORD *)v4 - 1), sub_403A90);
             SafeFreeGameMemory(v5);
     }
     v6 = (void*)self[11];
@@ -4501,7 +4514,7 @@ char __stdcall sub_403FE0(FILE** self)
                     goto LABEL_71;
             }
             v29[21] = 0;
-        LABEL_64:
+        LABEL_64;
             WriteDebugLog("***FAILED to load texture '%s'", (const char*)v20);
             v20 = (void*)v29[19];
             goto LABEL_67;
@@ -4725,7 +4738,7 @@ bool __stdcall sub_4046C0(FILE** self, int a2, int ArgList)
     }
     v3 = (int)self;
     v10 = 1;
-LABEL_38:
+LABEL_38;
     if (**(_BYTE**)(v5 + 8) == 42)
     {
         *(_BYTE*)(v5 + 80) = 1;

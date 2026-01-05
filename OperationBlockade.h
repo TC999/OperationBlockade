@@ -2,6 +2,7 @@
 #include <setjmp.h>
 #include <immintrin.h>
 #include <stdio.h>
+#include <dsound.h>
 float* __cdecl sub_401000(float* a1, float a2);
 int __cdecl sub_401040(int a1, float a2); // idb
 float* __cdecl sub_401080(float* a1, float a2);
@@ -392,7 +393,7 @@ BOOL sub_41C380(float* self, float a2);
 void sub_41C3C0(int self, float, float, int);
 void sub_41C4E0(float* self);
 char __cdecl sub_41C550(HWND a1, int a2, LPCGUID pcGuidDevice);
-LPDIRECTSOUND ReleaseDirectSound();
+int ReleaseDirectSound(LPDIRECTSOUND pDS);
 _DWORD* sub_41C6A0(_DWORD* self);
 FILE* sub_41C700(int self);
 char sub_41C740(int self);
@@ -1710,14 +1711,14 @@ int dword_499C24[10] =
   -12566388,
   -14869158
 }; // weak
-_UNKNOWN* off_499C4C = &loc_464760; // weak
-_UNKNOWN* off_499C6C = &loc_464C70; // weak
-_UNKNOWN* off_499C78 = &loc_465C40; // weak
-_UNKNOWN* off_499C98 = &loc_466350; // weak
+//_UNKNOWN* off_499C4C = &loc_464760; // weak
+//_UNKNOWN* off_499C6C = &loc_464C70; // weak
+//_UNKNOWN* off_499C78 = &loc_465C40; // weak
+//_UNKNOWN* off_499C98 = &loc_466350; // weak
 int(__stdcall* off_499CD4)(int, int, int) = &sub_405C40; // weak
-_UNKNOWN* off_499CF8 = &loc_468B60; // weak
-_UNKNOWN* off_499D18 = &loc_468FD0; // weak
-_UNKNOWN* off_499D24 = &loc_469560; // weak
+//_UNKNOWN* off_499CF8 = &loc_468B60; // weak
+//_UNKNOWN* off_499D18 = &loc_468FD0; // weak
+//_UNKNOWN* off_499D24 = &loc_469560; // weak
 const IID riid = { 1453877417u, 2772u, 4558u, { 176u, 58u, 0u, 32u, 175u, 11u, 167u, 112u } }; // idb
 _UNKNOWN unk_499D54; // weak
 _UNKNOWN unk_499D64; // weak
@@ -1774,36 +1775,36 @@ int dword_499ED8[28] =
   -1598689907,
   1051772663
 }; // weak
-int(__stdcall* off_49A774)(char) = &sub_4735C3; // weak
-int(__stdcall* off_49A7D8)(char) = &sub_476B8B; // weak
-int(__stdcall* off_49A818)(char) = &sub_476BAA; // weak
-int(__stdcall* off_49A824)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A830)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A83C)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A848)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A854)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A860)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A86C)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A878)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A884)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A890)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A89C)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A8A8)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A8B4)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A8C0)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A8CC)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A8D8)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A8E4)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A8F0)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A8FC)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A908)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A914)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A920)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A92C)(char) = &sub_4763B2; // weak
-int(__stdcall* off_49A938)(char) = &sub_476BC9; // weak
-int(__stdcall* off_49A944)(char) = &sub_476BC9; // weak
-int(__stdcall* off_49A950)(char) = &sub_476BED; // weak
-int(__stdcall* off_49A95C)(char) = &sub_476BED; // weak
-int(__stdcall* off_49A968)(char) = &sub_476BED; // weak
-int(__stdcall* off_49A974)(char) = &sub_476BED; // weak
-int(__stdcall* off_49A980)(char) = &sub_476BED; // weak
+int(__stdcall* off_49A774)(char) = sub_4735C3; // weak
+int(__stdcall* off_49A7D8)(char) = sub_476B8B; // weak
+int(__stdcall* off_49A818)(char) = sub_476BAA; // weak
+int(__stdcall* off_49A824)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A830)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A83C)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A848)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A854)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A860)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A86C)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A878)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A884)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A890)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A89C)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A8A8)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A8B4)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A8C0)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A8CC)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A8D8)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A8E4)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A8F0)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A8FC)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A908)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A914)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A920)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A92C)(char) = sub_4763B2; // weak
+int(__stdcall* off_49A938)(char) = sub_476BC9; // weak
+int(__stdcall* off_49A944)(char) = sub_476BC9; // weak
+int(__stdcall* off_49A950)(char) = sub_476BED; // weak
+int(__stdcall* off_49A95C)(char) = sub_476BED; // weak
+int(__stdcall* off_49A968)(char) = sub_476BED; // weak
+int(__stdcall* off_49A974)(char) = sub_476BED; // weak
+int(__stdcall* off_49A980)(char) = sub_476BED; // weak
