@@ -48,6 +48,17 @@ typedef          int    int32;
 typedef   signed int    sint32;
 typedef unsigned int    uint32;
 typedef ll              int64;
+
+// Define _UNKNOWN type for Hex-Rays decompiler output
+struct _UNKNOWN {
+    unsigned char data[1];
+};
+
+// Define Hex-Rays calling conventions
+#if defined(_MSC_VER)
+#define __usercall __fastcall
+#define __userpurge __fastcall
+#endif
 typedef ll              sint64;
 typedef ull             uint64;
 

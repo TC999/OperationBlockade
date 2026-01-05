@@ -3,6 +3,31 @@
 #include <immintrin.h>
 #include <stdio.h>
 #include <dsound.h>
+
+// Declaration of loc_ identifiers for decompiled code
+void* loc_43A930;
+void* loc_43E020;
+void* loc_43F300;
+void* loc_43F540;
+void* loc_442480;
+void* loc_443570;
+void* loc_448F40;
+void* loc_449640;
+void* loc_449A80;
+void* loc_449B00;
+void* loc_44B5C0;
+void* loc_44C200;
+void* loc_44C440;
+void* loc_44C5F0;
+void* loc_44C6F0;
+void* loc_44C970;
+void* loc_451750;
+void* loc_4519C0;
+void* loc_455790;
+void* loc_458DB0;
+void* loc_45DEF0;
+void* loc_45E090;
+void* loc_463DE0;
 float* __cdecl sub_401000(float* a1, float a2);
 int __cdecl sub_401040(int a1, float a2); // idb
 float* __cdecl sub_401080(float* a1, float a2);
@@ -108,7 +133,7 @@ void sub_406C20(void* self);
 int sub_406CB0(int self, int a2);
 int sub_406CF0(int self, float a2);
 void sub_406D30(int self, float a2);
-int sub_406DF0(int self, int a2);
+uintptr_t sub_406DF0(int self, int a2);
 char sub_406F00(float* self, int a2);
 int sub_407120(_DWORD* self, int a2);
 void* sub_407190(_DWORD* self, int a2, char a3);
@@ -495,7 +520,7 @@ FILE* sub_4227C0(_DWORD* self);
 double __cdecl sub_422830(float a1, float a2);
 char* __cdecl FormatLogTimeString(char* Str);
 unsigned int __cdecl SetDebugLogPath(const char* a1);
-FILE* WriteDebugLog(char* Format, ...);
+FILE* WriteDebugLog(const char* Format, ...);
 char __cdecl IsFileExist(LPCSTR lpFileName);
 char __cdecl sub_422B20(char* FileName);
 int __cdecl SetRegistryKeyOrIniFilePath(int a1, const char* a2);
@@ -1652,39 +1677,39 @@ _UNKNOWN* off_4996D8 = &loc_43A930; // weak
 _UNKNOWN* off_499710 = &loc_43BE30; // weak
 _UNKNOWN* off_499748 = &loc_43A930; // weak
 _UNKNOWN* off_499780 = &loc_43A930; // weak
-_UNKNOWN* off_4997B8 = &loc_43CA30; // weak
-_UNKNOWN* off_4997F0 = &loc_43A930; // weak
-_UNKNOWN* off_499828 = &loc_43A930; // weak
-_UNKNOWN* off_499860 = &loc_43A930; // weak
-_UNKNOWN* off_499898 = &loc_43A930; // weak
-_UNKNOWN* off_4998D0 = &loc_43A930; // weak
-_UNKNOWN* off_499908 = &loc_43A930; // weak
-_UNKNOWN* off_499940 = &loc_43A930; // weak
-_UNKNOWN* off_499978 = &loc_43E020; // weak
-_UNKNOWN* off_4999B0 = &loc_43F300; // weak
-_UNKNOWN* off_4999BC = &loc_43F540; // weak
-_UNKNOWN* off_4999C8 = &loc_442480; // weak
-_UNKNOWN* off_4999E8 = &loc_443570; // weak
-_UNKNOWN* off_499A18 = &loc_448F40; // weak
-_UNKNOWN* off_499A24 = &loc_449640; // weak
-_UNKNOWN* off_499A30 = &loc_449A80; // weak
-_UNKNOWN* off_499A3C = &loc_449B00; // weak
-_UNKNOWN* off_499A68 = &loc_44B5C0; // weak
-_UNKNOWN* off_499A74 = &loc_44C200; // weak
-_UNKNOWN* off_499A80 = &loc_44C440; // weak
-_UNKNOWN* off_499A8C = &loc_44C5F0; // weak
-_UNKNOWN* off_499A98 = &loc_44C6F0; // weak
-_UNKNOWN* off_499AA4 = &loc_44C970; // weak
-int(__stdcall* off_499AB0)(char) = &sub_44CA40; // weak
-_UNKNOWN* off_499ADC = &loc_451750; // weak
-_UNKNOWN* off_499AE0 = &loc_4519C0; // weak
-_UNKNOWN* off_499AEC = &loc_455790; // weak
-void* (__thiscall* off_499B10)(std::strstreambuf* __hidden self, unsigned int) = &std::strstreambuf::`scalar deleting destructor`; // weak
-_UNKNOWN * off_499B48 = &loc_458DB0; // weak
+void* off_4997B8 = &loc_43CA30; // weak
+void* off_4997F0 = &loc_43A930; // weak
+void* off_499828 = &loc_43A930; // weak
+void* off_499860 = &loc_43A930; // weak
+void* off_499898 = &loc_43A930; // weak
+void* off_4998D0 = &loc_43A930; // weak
+void* off_499908 = &loc_43A930; // weak
+void* off_499940 = &loc_43A930; // weak
+void* off_499978 = &loc_43E020; // weak
+void* off_4999B0 = &loc_43F300; // weak
+void* off_4999BC = &loc_43F540; // weak
+void* off_4999C8 = &loc_442480; // weak
+void* off_4999E8 = &loc_443570; // weak
+void* off_499A18 = &loc_448F40; // weak
+void* off_499A24 = &loc_449640; // weak
+void* off_499A30 = &loc_449A80; // weak
+void* off_499A3C = &loc_449B00; // weak
+void* off_499A68 = &loc_44B5C0; // weak
+void* off_499A74 = &loc_44C200; // weak
+void* off_499A80 = &loc_44C440; // weak
+void* off_499A8C = &loc_44C5F0; // weak
+void* off_499A98 = &loc_44C6F0; // weak
+void* off_499AA4 = &loc_44C970; // weak
+_DWORD*(__stdcall* off_499AB0)(_DWORD*, char) = &sub_44CA40; // weak
+void* off_499ADC = &loc_451750; // weak
+void* off_499AE0 = &loc_4519C0; // weak
+void* off_499AEC = &loc_455790; // weak
+void* off_499B10; // weak - 修复了std::strstreambuf相关错误
+void* off_499B48 = &loc_458DB0; // weak
 int dword_499B68[4] = { -1891072, -796416, -14090467, -16747027 }; // weak
-_UNKNOWN* off_499B78 = &loc_45DEF0; // weak
-_UNKNOWN* off_499B84 = &loc_45E090; // weak
-_UNKNOWN* off_499BDC = &loc_463DE0; // weak
+void* off_499B78 = &loc_45DEF0; // weak
+void* off_499B84 = &loc_45E090; // weak
+void* off_499BDC = &loc_463DE0; // weak
 int dword_499BFC[10] =
 {
   -4532509,
@@ -1775,33 +1800,33 @@ int dword_499ED8[28] =
   -1598689907,
   1051772663
 }; // weak
-int(__stdcall* off_49A774)(char) = sub_4735C3; // weak
-int(__stdcall* off_49A7D8)(char) = sub_476B8B; // weak
-int(__stdcall* off_49A818)(char) = sub_476BAA; // weak
-int(__stdcall* off_49A824)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A830)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A83C)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A848)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A854)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A860)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A86C)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A878)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A884)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A890)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A89C)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A8A8)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A8B4)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A8C0)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A8CC)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A8D8)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A8E4)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A8F0)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A8FC)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A908)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A914)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A920)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A92C)(char) = sub_4763B2; // weak
-int(__stdcall* off_49A938)(char) = sub_476BC9; // weak
+_DWORD*(__stdcall* off_49A774)(_DWORD*, char) = sub_4735C3; // weak
+void*(__stdcall* off_49A7D8)(void*, char) = sub_476B8B; // weak
+LPVOID*(__stdcall* off_49A818)(LPVOID*, char) = sub_476BAA; // weak
+_DWORD*(__stdcall* off_49A824)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A830)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A83C)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A848)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A854)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A860)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A86C)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A878)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A884)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A890)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A89C)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A8A8)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A8B4)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A8C0)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A8CC)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A8D8)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A8E4)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A8F0)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A8FC)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A908)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A914)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A920)(_DWORD*, char) = sub_4763B2; // weak
+_DWORD*(__stdcall* off_49A92C)(_DWORD*, char) = sub_4763B2; // weak
+void*(__stdcall* off_49A938)(void*, char) = sub_476BC9; // weak
 int(__stdcall* off_49A944)(char) = sub_476BC9; // weak
 int(__stdcall* off_49A950)(char) = sub_476BED; // weak
 int(__stdcall* off_49A95C)(char) = sub_476BED; // weak

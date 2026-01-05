@@ -2157,7 +2157,7 @@ float* __cdecl sub_401000(float* a1, float a2)
 int __cdecl sub_401040(int a1, float a2)
 {
     long double v2; // st7
-    int result; // eax
+    uintptr_t result; // rax
     long double v4; // st6
     long double v5; // st7
     float v6; // [esp+8h] [ebp+8h]
@@ -2358,7 +2358,7 @@ int __stdcall sub_4013F0(_DWORD* self)
     result = sub_408F30((_DWORD*)g_pGameLogic);
     if ((_DWORD*)result == self)
         result = sub_408EF0(g_pGameLogic, 0);
-    *self = &off_499040;
+    *(_QWORD*)self = (uintptr_t)&off_499040;
     return result;
 }
 // 49901C: using guessed type _UNKNOWN *off_49901C;
@@ -3512,7 +3512,7 @@ int __stdcall sub_402FC0(int self)
             {
                 v14 = *(_DWORD*)(self + 92);
                 v15 = *(_DWORD*)(self + 96) - v14;
-                *(_DWORD*)(self + 88) = v13;
+                *(_DWORD*)(self + 88) = (DWORD)v13;
                 memset(&v13[4 * v14], 0, 4 * v15);
             }
         }
@@ -3540,7 +3540,7 @@ int __stdcall sub_4030B0(_DWORD* self, int a2, char* String2, int a4)
     v5 = self[23];
     if (v5 <= 0)
     {
-        v7 = operator new(0x14u);
+        v7 = (_DWORD*)operator new(0x14u);
     }
     else
     {
@@ -3551,7 +3551,7 @@ int __stdcall sub_4030B0(_DWORD* self, int a2, char* String2, int a4)
     v7[1] = a2;
     v8 = sub_403710((_DWORD*)dword_4B5AB0, String2);
     v7[3] = v8;
-    FatalCondition(v8 != 0, "Dialogue group '%s' not found", String2);
+    FatalCondition(v8 != 0, (char*)"Dialogue group '%s' not found", String2);
     v7[4] = a4;
     v7[2] = self[16];
     *(_BYTE*)v7 = 0;
@@ -3568,11 +3568,11 @@ int __stdcall sub_4030B0(_DWORD* self, int a2, char* String2, int a4)
         {
             v14 = self[19];
             v15 = self[20] - v14;
-            self[18] = v13;
+            self[18] = (DWORD)v13;
             memset(&v13[4 * v14], 0, 4 * v15);
         }
     }
-    *(_DWORD*)(self[18] + 4 * self[19] - 4) = v7;
+    *(_DWORD*)(self[18] + 4 * self[19] - 4) = (DWORD)v7;
     result = self[16];
     self[16] = result + 1;
     return result;
@@ -3594,7 +3594,7 @@ _DWORD* __stdcall sub_403180(_DWORD* self)
     self[10] = 0;
     self[11] = 0;
     *((_BYTE*)self + 48) = 1;
-    *self = &off_499098;
+    *self = (DWORD)&off_499098;
     dword_4B5AB0 = (int)self;
     sub_4033A0((int)self);
     return self;
@@ -3617,7 +3617,7 @@ void __stdcall sub_403220(void* self)
     void* v11; // eax
     int j; // [esp+10h] [ebp-14h]
 
-    *(_DWORD*)self = &off_499098;
+    *(_DWORD*)self = (DWORD)&off_499098;
     dword_4B5AB0 = 0;
     if (*((_BYTE*)self + 48))
     {
@@ -3673,7 +3673,7 @@ void __stdcall sub_403220(void* self)
     GameSafeFree(v11);
     *((_DWORD*)self + 7) = 0;
     *((_DWORD*)self + 5) = 0;
-    *(_DWORD*)self = &off_499040;
+    *(_DWORD*)self = (DWORD)&off_499040;
 }
 // 499040: using guessed type void *(__stdcall *off_499040)(std::locale::facet *__hidden self, unsigned int);
 // 499098: using guessed type _UNKNOWN *off_499098;
@@ -3699,7 +3699,7 @@ int __stdcall sub_4033A0(int self)
     char* v16; // eax
     int v17; // esi
     int v18; // ecx
-    char ArgList[4]; // [esp+8h] [ebp-174h] BYREF
+    _DWORD ArgList; // [esp+8h] [ebp-174h] BYREF
     int v21; // [esp+Ch] [ebp-170h]
     char Buffer[64]; // [esp+10h] [ebp-16Ch] BYREF
     _DWORD v23[72]; // [esp+50h] [ebp-12Ch] BYREF
@@ -3712,7 +3712,7 @@ int __stdcall sub_4033A0(int self)
     {
         while (1)
         {
-            v3 = operator new(0x50u);
+            v3 = (_DWORD*)operator new(0x50u);
             if (v3)
             {
                 v3[16] = 0;
@@ -3722,8 +3722,8 @@ int __stdcall sub_4033A0(int self)
                 v2 = (char*)v3;
             }
             sub_40AA40((int)v23, aDialoguegroup);
-            sub_40AFC0(v23, aName, ArgList);
-            WriteDebugLog("Loading Dialogue Group %s", *(const char**)ArgList);
+            sub_40AFC0(v23, aName, &ArgList);
+            WriteDebugLog((char*)"Loading Dialogue Group %s", *(const char**)ArgList);
             v4 = strlen(*(const char**)ArgList) + 1;
             v5 = *(_DWORD*)ArgList + v4;
             v21 = 1;
@@ -3734,13 +3734,13 @@ int __stdcall sub_4033A0(int self)
                 sprintf(Buffer, "Sound%d", v21);
                 if (!sub_40ABC0(v23, Buffer, 0))
                     break;
-                sub_40AFC0(v23, Buffer, ArgList);
-                WriteDebugLog("  Loading Dialogue Line '%s'", *(const char**)ArgList);
+                sub_40AFC0(v23, Buffer, &ArgList);
+                WriteDebugLog((char*)"  Loading Dialogue Line '%s'", *(const char**)ArgList);
                 v6 = (char*)sub_41E250(*(_DWORD**)(g_pGameLogic + 120), *(char**)ArgList);
                 if (!v6)
                 {
                     v6 = sub_41DE10(*(_DWORD**)(g_pGameLogic + 120), *(char**)ArgList, 1, 0, 0, 1, 0);
-                    FatalCondition(v6 != 0, "Couldn't load dialogue sound '%s' for group '%s'", *(const char**)ArgList, v2);
+                    FatalCondition(v6 != 0, (char*)"Couldn't load dialogue sound '%s' for group '%s'", *(const char**)ArgList, v2);
                 }
                 v7 = *((_DWORD*)v2 + 18);
                 v8 = *((_DWORD*)v2 + 17) + 1;
@@ -3754,11 +3754,11 @@ int __stdcall sub_4033A0(int self)
                     {
                         v11 = *((_DWORD*)v2 + 17);
                         v12 = *((_DWORD*)v2 + 18) - v11;
-                        *((_DWORD*)v2 + 16) = v10;
+                        *((_DWORD*)v2 + 16) = (DWORD)v10;
                         memset(&v10[4 * v11], 0, 4 * v12);
                     }
                 }
-                *(_DWORD*)(*((_DWORD*)v2 + 16) + 4 * *((_DWORD*)v2 + 17) - 4) = v6;
+                *(_DWORD*)(*((_DWORD*)v2 + 16) + 4 * *((_DWORD*)v2 + 17) - 4) = (DWORD)v6;
                 ++v21;
             }
             v13 = *(_DWORD*)(self + 28);
@@ -3773,11 +3773,11 @@ int __stdcall sub_4033A0(int self)
                 {
                     v17 = *(_DWORD*)(self + 24);
                     v18 = *(_DWORD*)(self + 28) - v17;
-                    *(_DWORD*)(self + 20) = v16;
+                    *(_DWORD*)(self + 20) = (DWORD)v16;
                     memset(&v16[4 * v17], 0, 4 * v18);
                 }
             }
-            *(_DWORD*)(*(_DWORD*)(self + 20) + 4 * *(_DWORD*)(self + 24) - 4) = v2;
+            *(_DWORD*)(*(_DWORD*)(self + 20) + 4 * *(_DWORD*)(self + 24) - 4) = (DWORD)v2;
             if (!sub_40AAF0(v23, aDialoguegroup, 0))
                 break;
             v2 = 0;
@@ -3824,11 +3824,11 @@ char* __stdcall sub_403620(_DWORD* self, char* String2)
             {
                 v11 = self[10];
                 v12 = self[11] - v11;
-                self[9] = v10;
+                self[9] = (DWORD)v10;
                 memset(&v10[4 * v11], 0, 4 * v12);
             }
         }
-        *(_DWORD*)(self[9] + 4 * self[10] - 4) = v4;
+        *(_DWORD*)(self[9] + 4 * self[10] - 4) = (DWORD)v4;
     }
     else
     {
@@ -3886,7 +3886,7 @@ void __stdcall sub_403760(int self)
             if (v3)
             {
                 sub_403920(*(_DWORD*)(*(_DWORD*)self + 4 * i));
-                SafeFreeGameMemory(v3);
+            SafeFreeGameMemory(v3);
             }
         }
     }
@@ -4031,7 +4031,7 @@ _DWORD* sub_403A30(_DWORD* a1, int a2, char* Format, ...)
     va_start(va, Format);
     *a1 = a2;
     v3 = (char*)malloc(0x100u);
-    a1[1] = v3;
+    a1[1] = (DWORD)v3;
     _vsnprintf(v3, 0xFFu, Format, va);
     return a1;
 }
@@ -4084,7 +4084,7 @@ _DWORD* __stdcall sub_403B10(_DWORD* self)
     _DWORD* result; // eax
 
     result = self;
-    *self = &off_4990BC;
+    *self = (DWORD)&off_4990BC;
     self[1] = 0;
     self[2] = 0;
     self[3] = 0;
@@ -4109,7 +4109,7 @@ _DWORD* __stdcall sub_403B10(_DWORD* self)
 //----- (00403B60) --------------------------------------------------------
 void __stdcall sub_403B60(_DWORD* self)
 {
-    *self = &off_4990BC;
+    *self = (DWORD)&off_4990BC;
     sub_403CE0(self);
 }
 // 4990BC: using guessed type int (__stdcall *off_4990BC)(int, int, int);
@@ -4149,7 +4149,7 @@ bool __stdcall sub_403BB0(_DWORD* self, int a2, const char* a3)
     if (*(_DWORD*)(v3 + 76))
         SafeFreeGameMemory(*(LPVOID*)(v3 + 76));
     v4 = (char*)operator new(strlen(a3) + 1);
-    *(_DWORD*)(v3 + 76) = v4;
+    *(_DWORD*)(v3 + 76) = (DWORD)v4;
     strcpy(v4, a3);
     v5 = *(int**)(v3 + 84);
     if (v5)
@@ -4160,7 +4160,7 @@ bool __stdcall sub_403BB0(_DWORD* self, int a2, const char* a3)
     if (byte_4A1D44)
     {
         v6 = sub_422400(*(_DWORD**)(g_pGameLogic + 124), *(char**)(v3 + 76), 0);
-        *(_DWORD*)(v3 + 84) = v6;
+        *(_DWORD*)(v3 + 84) = (DWORD)v6;
         return v6 != 0;
     }
     else
@@ -4211,8 +4211,7 @@ void __stdcall sub_403CE0(_DWORD* self)
     if (v2)
     {
         v3 = v2 - 4;
-        `eh vector destructor iterator`(v2, 0xACu, *((_DWORD *)v2 - 1), sub_403A90);
-            SafeFreeGameMemory(v3);
+        SafeFreeGameMemory(v3);
     }
     v4 = (char*)self[8];
     self[1] = 0;
@@ -4220,8 +4219,7 @@ void __stdcall sub_403CE0(_DWORD* self)
     if (v4)
     {
         v5 = v4 - 4;
-        `eh vector destructor iterator`(v4, 0xACu, *((_DWORD *)v4 - 1), sub_403A90);
-            SafeFreeGameMemory(v5);
+        SafeFreeGameMemory(v5);
     }
     v6 = (void*)self[11];
     self[8] = 0;
@@ -4232,11 +4230,10 @@ void __stdcall sub_403CE0(_DWORD* self)
     v8 = (char*)self[3];
     self[12] = 0;
     if (v8)
-    {
-        v9 = v8 - 4;
-        `eh vector destructor iterator`(v8, 0x58u, *((_DWORD *)v8 - 1), sub_403AE0);
+        {
+            v9 = v8 - 4;
             SafeFreeGameMemory(v9);
-    }
+        }
     self[3] = 0;
     self[4] = 0;
     self[13] = 0;
@@ -4258,19 +4255,24 @@ char* __stdcall sub_403D90(char* self, const char* a2)
     }
     else
     {
-        result = (char*)(strlen(".\\") + 1);
-        qmemcpy(v2, ".\\", (unsigned int)result);
+        size_t len = strlen(".\\") + 1;
+        qmemcpy(v2, ".\\", len);
+        result = v2;
     }
     return result;
 }
+
+// Forward declarations
+int __usercall sub_4051C0(_DWORD* a1, int a2, int a3);
+char __userpurge sub_403EC0(int a1, int a2, void* a3, char* FileName);
 
 //----- (00403E30) --------------------------------------------------------
 char __usercall sub_403E30(int a1, int a2)
 {
     sub_403CE0((_DWORD*)a1);
-    WriteDebugLog("-Loading '%s'", (const char*)(a1 + 60));
-    if (!sub_403EC0(a1, a2, a1 + 60, (char*)(a1 + 60)))
-        FatalError("Failed to load model file '%s'", (const char*)(a1 + 60));
+    WriteDebugLog((char*)"-Loading '%s'", (const char*)(a1 + 60));
+    if (!sub_403EC0(a1, a2, (void*)(a1 + 60), (char*)(a1 + 60)))
+        FatalError((char*)"Failed to load model file '%s'", (const char*)(a1 + 60));
     ++*(_DWORD*)(a1 + 52);
     return 1;
 }
@@ -4280,22 +4282,22 @@ int __userpurge sub_403E80(int a1, int a2, char* ArgList)
 {
     int result; // eax
 
-    if (!sub_403EC0(a1, a2, (int)ArgList, ArgList))
-        FatalError("Failed to load animation file '%s'", ArgList);
+    if (!sub_403EC0(a1, a2, ArgList, ArgList))
+        FatalError((char*)"Failed to load animation file '%s'", ArgList);
     result = *(_DWORD*)(a1 + 52);
     *(_DWORD*)(a1 + 52) = result + 1;
     return result;
 }
 
 //----- (00403EC0) --------------------------------------------------------
-char __userpurge sub_403EC0(int a1, int a2, int a3, char* FileName)
+char __userpurge sub_403EC0(int a1, int a2, void* a3, char* FileName)
 {
     FILE* v5; // eax
     char result; // al
     char v7; // bl
 
     v5 = fopen(FileName, Mode);
-    *(_DWORD*)(a1 + 20) = v5;
+    *(_QWORD*)(a1 + 20) = (uint64_t)v5;
     if (!v5)
         return 0;
     if (sub_403F50(a1) && sub_403FE0((FILE**)a1) && sub_404510(a1))
@@ -4304,7 +4306,7 @@ char __userpurge sub_403EC0(int a1, int a2, int a3, char* FileName)
         if (!*(_DWORD*)(a1 + 52))
         {
             if (byte_4A1D45)
-                sub_4051C0((_DWORD*)a1, a2, a3);
+                sub_4051C0((_DWORD*)a1, a2, (int)a3);
         }
     }
     else
@@ -4313,7 +4315,7 @@ char __userpurge sub_403EC0(int a1, int a2, int a3, char* FileName)
     }
     fclose(*(FILE**)(a1 + 20));
     result = v7;
-    *(_DWORD*)(a1 + 20) = 0;
+    *(_QWORD*)(a1 + 20) = 0;
     return result;
 }
 // 4A1D45: using guessed type char byte_4A1D45;
@@ -4474,7 +4476,7 @@ char __stdcall sub_403FE0(FILE** self)
                         qmemcpy(v17, v18, v19 & 3);
                     }
                     strcat(v31, v12);
-                    v29[19] = operator new(strlen(v31) + 1);
+                    v29[19] = (intptr_t)operator new(strlen(v31) + 1);
                     strcpy((char*)v29[19], v31);
                     v12 = (char*)v28;
                 }
@@ -4496,7 +4498,7 @@ char __stdcall sub_403FE0(FILE** self)
                 }
                 if (!byte_4A1D44)
                     break;
-                v29[21] = sub_422400(*(_DWORD**)(g_pGameLogic + 124), (char*)v29[19], 0);
+                v29[21] = (intptr_t)sub_422400(*(_DWORD**)(g_pGameLogic + 124), (char*)v29[19], 0);
                 v20 = (void*)v29[19];
                 if (!v29[21])
                     goto LABEL_64;
@@ -4514,7 +4516,7 @@ char __stdcall sub_403FE0(FILE** self)
                     goto LABEL_71;
             }
             v29[21] = 0;
-        LABEL_64;
+        LABEL_64:
             WriteDebugLog("***FAILED to load texture '%s'", (const char*)v20);
             v20 = (void*)v29[19];
             goto LABEL_67;
@@ -4585,10 +4587,9 @@ bool __stdcall sub_404510(int self)
         v4 = (int*)operator new(172 * v2 + 4);
         if (v4)
         {
-            v5 = v4 + 1;
+            v5 = (_DWORD*)(v4 + 1);
             *v4 = v2;
-            `eh vector constructor iterator`(v4 + 1, 0xACu, v2, sub_4046A0, sub_403A90);
-                v6 = v5;
+            v6 = v5;
         }
         else
         {
@@ -4606,8 +4607,8 @@ bool __stdcall sub_404510(int self)
         if (v8)
         {
             v9 = v8 - 4;
-            `eh vector destructor iterator`(v8, 0xACu, *((_DWORD *)v8 - 1), sub_403A90);
-                SafeFreeGameMemory(v9);
+
+            SafeFreeGameMemory(v9);
         }
     }
     else
@@ -4688,7 +4689,7 @@ bool __stdcall sub_4046C0(FILE** self, int a2, int ArgList)
     v22 = 0;
     if (*v7 > 0)
     {
-        v9 = 0;
+        v9 = NULL;
         do
         {
             v8 = v8 && sub_405850((int)self, v9 + *(_DWORD*)(v5 + 16));
@@ -5004,7 +5005,7 @@ LABEL_50:
         return 0;
     v21 = (float*)sub_4044D0((_DWORD*)v16, v35);
     v22 = v21;
-    *(_DWORD*)(v2 + 52) = v21;
+    *(_DWORD*)(v2 + 52) = (_DWORD)v21;
     if (v21 && (v23 = *((_DWORD*)v21 + 21)) != 0 && *(_BYTE*)(v23 + 24) || *(_BYTE*)(v2 + 83))
         *(_DWORD*)(v2 + 76) = 4;
     if (!*(_BYTE*)(v2 + 80) && !*(_BYTE*)(v2 + 82))
@@ -5072,18 +5073,18 @@ _BYTE* __stdcall sub_404F60(_DWORD* self, int a2, void* a3, float* a4)
     {
         v5 = *(_DWORD*)(v4 + 28);
         if (v5 >= 0)
-            sub_404F60(v5, v11, &v9);
+            sub_404F60((_DWORD*)v5, v11, &v9, a4);
     }
     v6 = *(_DWORD*)(v4 + 16);
     sub_46C107(v18, (float*)(v6 + 20));
     sub_46BE02((int)v16, *(_DWORD*)(v6 + 8), *(_DWORD*)(v6 + 12), *(_DWORD*)(v6 + 16));
     v10 = *(_DWORD*)(v6 + 36);
     sub_46BDA2((int)v14, v10, v10, v10);
-    sub_46B97C(v12, v14, v18);
+    sub_46B97C(v12, v14, (_BYTE*)v18);
     qmemcpy(v13, v12, sizeof(v13));
     sub_46B97C(v15, v13, v16);
     qmemcpy(v17, v15, sizeof(v17));
-    result = sub_46B97C(v19, v17, v11);
+    result = sub_46B97C(v19, v17, (_BYTE*)v11);
     v8 = v9;
     qmemcpy(a3, v19, 0x40u);
     *a4 = v8 * *(float*)(v6 + 36);
@@ -5137,10 +5138,10 @@ int __stdcall sub_4050B0(_DWORD* self)
                 v7 = *v3 + v6;
                 *(_DWORD*)(v4 + 12) = v7;
                 v8 = sub_488DD7(*(LPVOID*)(v4 + 16), 40 * v7);
-                v9 = 0;
+                v9 = NULL;
                 if (v8)
                 {
-                    *(_DWORD*)(v4 + 16) = v8;
+                    *(void**)(v4 + 16) = v8;
                     v11 = 0;
                     if (*v3 > 0)
                     {
@@ -5227,10 +5228,10 @@ int __usercall sub_4051C0(_DWORD* a1, int a2, int a3)
 
     v3 = *(float*)&a1;
     v48 = *(float*)&a1;
-    sub_406BE0(v59);
-    sub_406BE0(v60);
-    sub_406BE0(v61);
-    sub_406BE0(v62);
+    sub_406BE0((_DWORD*)v59);
+    sub_406BE0((_DWORD*)v60);
+    sub_406BE0((_DWORD*)v61);
+    sub_406BE0((_DWORD*)v62);
     result = *(_DWORD*)(LODWORD(v3) + 8);
     v5 = 0;
     v38 = 0;
@@ -5260,10 +5261,10 @@ int __usercall sub_4051C0(_DWORD* a1, int a2, int a3)
                             sub_46B9FD(v61, 0, v61);
                             qmemcpy(v62, v60, sizeof(v62));
                             sub_46B9FD(v62, 0, v62);
-                            sub_408A30(v55, (_DWORD*)(v7 + 60));
+                            sub_408A30((_DWORD*)v55, (_DWORD*)(v7 + 60));
                             sub_46C5C5(v55, v55, v59);
                             v58 = v57 * *(float*)(v7 + 72);
-                            sub_408A30(v56, (_DWORD*)(v10 + 60));
+                            sub_408A30((_DWORD*)v56, (_DWORD*)(v10 + 60));
                             sub_46C5C5(v56, v56, v60);
                             v11 = v54 * *(float*)(v10 + 72);
                             v34 = v56[0] - v55[0];
@@ -5423,7 +5424,7 @@ bool __stdcall sub_405770(FILE** self, unsigned int Buffer)
         return 0;
     v5 = operator new(Buffer);
     v6 = Buffer;
-    *v2 = v5;
+    *v2 = (_DWORD)v5;
     return sub_4898CA(v5, v6, 1u, self[5]) == 1;
 }
 
@@ -6047,7 +6048,7 @@ LABEL_18:
     sub_46C107(v27, (float*)v26);
     sub_46BE02((int)v28, v23, v24, v25);
     sub_46BDA2((int)v29, v22, v22, v22);
-    sub_46B97C(v31, v29, v27);
+    sub_46B97C(v31, v29, (_BYTE*)v27);
     qmemcpy(v30, v31, sizeof(v30));
     sub_46B97C(v32, v30, v28);
     result = a4;
@@ -6130,9 +6131,9 @@ float* __userpurge sub_4066C0(
             v12 = (char*)v34 + a1[1];
             if (*((int*)v12 + 10) > 0)
             {
-                sub_406620(a1, v11, &v32, v26, 0.0, 0);
+                sub_406620(a1, v11, (_BYTE*)&v32, v26, 0.0, 0);
                 v31 = 0;
-                LODWORD(v29) = v12 + 84;
+                v29 = (float)(uintptr_t)(v12 + 84);
                 (*(void(__stdcall**)(_DWORD, _DWORD, _DWORD, int*, _DWORD, int))(**((_DWORD**)v12 + 9) + 44))(
                     *((_DWORD*)v12 + 9),
                     0,
@@ -6214,7 +6215,7 @@ _DWORD* __stdcall sub_4068D0(_DWORD* self)
     self[2] = 0;
     self[3] = 0;
     *((_BYTE*)self + 16) = 1;
-    *self = &off_4990C8;
+    *(_QWORD*)self = (uintptr_t)&off_4990C8;
     self[5] = 0;
     byte_4A1D44 = GetConfigInt(AppName, KeyName, 1) != 0;
     byte_4A1D45 = GetConfigInt(AppName, aWeldnormals, 1) != 0;
@@ -6231,7 +6232,7 @@ int __stdcall sub_406980(_DWORD* self)
     int v2; // edx
 
     result = self[5];
-    *self = &off_4990C8;
+    *(_QWORD*)self = (uintptr_t)&off_4990C8;
     if (result)
     {
         do
@@ -6243,7 +6244,7 @@ int __stdcall sub_406980(_DWORD* self)
         } while (v2);
     }
     self[5] = 0;
-    *self = &off_499040;
+    *(_QWORD*)self = (uintptr_t)&off_499040;
     return result;
 }
 // 499040: using guessed type void *(__stdcall *off_499040)(std::locale::facet *__hidden self, unsigned int);
@@ -6271,14 +6272,14 @@ char* __userpurge sub_4069C0(int a1, int a2, char* String1)
     else
     {
     LABEL_4:
-        v5 = operator new(0x24Cu);
+        v5 = (_DWORD*)operator new(0x24Cu);
         if (v5)
             v6 = (char*)sub_403B10(v5);
         else
             v6 = 0;
         *((_DWORD*)v6 + 146) = a1;
         *((_DWORD*)v6 + 145) = *(_DWORD*)(a1 + 20);
-        *(_DWORD*)(a1 + 20) = v6;
+        *(_QWORD*)(a1 + 20) = (uintptr_t)v6;
         sub_403D90(v6, String1);
         sub_403E30((int)v6, a2);
         return v6;
@@ -6319,7 +6320,7 @@ _DWORD* __cdecl sub_406A90(int a1, char a2)
 {
     _DWORD* v2; // eax
 
-    v2 = operator new(0x34u);
+    v2 = (_DWORD*)operator new(0x34u);
     if (v2)
         return sub_406B00(v2, a1, a2);
     else
@@ -6339,7 +6340,7 @@ _DWORD* __stdcall sub_406B00(_DWORD* self, int a2, char a3)
     self[2] = 0;
     self[3] = 0;
     *((_BYTE*)self + 16) = 1;
-    *self = &off_499040;
+    *(_QWORD*)self = (uintptr_t)&off_499040;
     v4 = *(_DWORD*)(a2 + 8);
     self[6] = 0;
     self[5] = v4;
@@ -6349,7 +6350,7 @@ _DWORD* __stdcall sub_406B00(_DWORD* self, int a2, char a3)
     *((_BYTE*)self + 40) = a3;
     self[11] = 0;
     *((_BYTE*)self + 48) = 0;
-    *self = &off_4990E8;
+    *(_QWORD*)self = (uintptr_t)&off_4990E8;
     self[8] = **(_DWORD**)(a2 + 44);
     v6 = operator new(96 * v5);
     if (v6)
@@ -6357,7 +6358,7 @@ _DWORD* __stdcall sub_406B00(_DWORD* self, int a2, char a3)
     else
         v7 = 0;
     v8 = self[5];
-    self[6] = v7;
+    *(_QWORD*)(self + 6) = (uintptr_t)v7;
     memset(v7, 0, 4 * ((unsigned int)(96 * v8) >> 2));
     return self;
 }
@@ -6395,7 +6396,7 @@ void __stdcall sub_406C20(void* self)
     int v2; // ebx
     int v3; // edi
 
-    *(_DWORD*)self = &off_4990E8;
+    *(_QWORD*)self = (uintptr_t)&off_4990E8;
     v2 = 0;
     if (*((int*)self + 5) > 0)
     {
@@ -6410,7 +6411,7 @@ void __stdcall sub_406C20(void* self)
     }
     SafeFreeGameMemory(*((LPVOID*)self + 6));
     *((_DWORD*)self + 6) = 0;
-    *(_DWORD*)self = &off_499040;
+    *(_DWORD*)self = (_DWORD)&off_499040;
 }
 // 499040: using guessed type void *(__stdcall *off_499040)(std::locale::facet *__hidden self, unsigned int);
 // 4990E8: using guessed type _UNKNOWN *off_4990E8;
@@ -6427,7 +6428,7 @@ int __stdcall sub_406CB0(int self, int a2)
     v6 = *(_DWORD*)(a2 + 40);
     v3 = (float*)(*(_DWORD*)(self + 24) + 96 * v6);
     sub_406F00((float*)self, v6);
-    LOBYTE(v4) = *(_BYTE*)(self + 40);
+    v4 = (*(_BYTE*)(self + 40)) & 0xFF;
     return sub_406110(*(_DWORD**)(self + 28), self, *(_DWORD*)(a2 + 40), v3, v4, v7);
 }
 // 406CD9: variable 'v4' is possibly undefined
@@ -6507,7 +6508,7 @@ void __stdcall sub_406D30(int self, float a2)
 }
 
 //----- (00406DF0) --------------------------------------------------------
-int __stdcall sub_406DF0(int self, int a2)
+uintptr_t __stdcall sub_406DF0(int self, int a2)
 {
     int v3; // esi
     int v4; // ebx
@@ -6524,37 +6525,37 @@ int __stdcall sub_406DF0(int self, int a2)
     if (v5 && *(_DWORD*)(v3 + 88))
     {
         sub_409A00(g_pGameLogic, *(void**)(v3 + 88));
-        *(_DWORD*)(v3 + 88) = 0;
+        *(_QWORD*)(v3 + 88) = 0;
         goto LABEL_11;
     }
     if (!*(_BYTE*)(v4 + 81) || v5)
     {
     LABEL_11:
-        result = *(_DWORD*)(v3 + 88);
+        result = *(_QWORD*)(v3 + 88);
         if (!result)
             return result;
         goto LABEL_12;
     }
-    if (!*(_DWORD*)(v3 + 88))
+    if (!*(_QWORD*)(v3 + 88))
     {
         v6 = sub_409960((_DWORD*)g_pGameLogic, self);
-        *(_DWORD*)(v3 + 88) = v6;
+        *(_QWORD*)(v3 + 88) = (uintptr_t)v6;
         v7 = *(_DWORD*)(v4 + 52);
         if (v7)
             v8 = *(_DWORD*)(v7 + 84);
         else
             v8 = 0;
         v6[9] = v8;
-        *(_DWORD*)(*(_DWORD*)(v3 + 88) + 12) = *(_DWORD*)(v4 + 76);
-        *(float*)(*(_DWORD*)(v3 + 88) + 40) = *(float*)&a2;
+        *(_DWORD*)(*(_QWORD*)(v3 + 88) + 12) = *(_DWORD*)(v4 + 76);
+        *(float*)(*(_QWORD*)(v3 + 88) + 40) = *(float*)&a2;
         goto LABEL_11;
     }
 LABEL_12:
     sub_406F00((float*)self, a2);
     if (*(_DWORD*)(v4 + 76) == 1)
     {
-        sub_4085B0(self, a2, *(_DWORD*)(v3 + 88) + 16);
-        *(_DWORD*)(*(_DWORD*)(v3 + 88) + 28) = 0;
+        sub_4085B0(self, a2, *(_QWORD*)(v3 + 88) + 16);
+        *(_DWORD*)(*(_QWORD*)(v3 + 88) + 28) = 0;
     }
     else
     {
@@ -6597,9 +6598,9 @@ char __stdcall sub_406F00(float* self, int a2)
         if (!*(_BYTE*)(96 * v6 + *((_DWORD*)self + 6) + 85))
             break;
         if (v7 && *(_BYTE*)v7)
-            LOBYTE(v6) = *(_BYTE*)(v7 + 1);
+            v6 = (v6 & 0xFFFFFF00) | *(_BYTE*)(v7 + 1);
         else
-            LOBYTE(v6) = *(_BYTE*)v13;
+            v6 = (v6 & 0xFFFFFF00) | *(_BYTE*)v13;
         if ((_BYTE)v6)
         {
             v6 = *(_DWORD*)(v13 + 28);
@@ -6654,7 +6655,7 @@ char __stdcall sub_406F00(float* self, int a2)
     }
 LABEL_19:
     if (*(_BYTE*)(v7 + 2))
-        sub_46B97C(v8, (_BYTE*)(v7 + 4), v8);
+        sub_46B97C((_BYTE*)v8, (_BYTE*)(v7 + 4), (_BYTE*)v8);
     if (*(_BYTE*)v7)
     {
         v9 = *(_BYTE*)(v7 + 1);
@@ -6667,15 +6668,15 @@ LABEL_23:
 LABEL_24:
     if (v9 && *((int*)v10 + 7) >= 0)
     {
-        sub_406F00(*((float*)v10 + 7));
-        sub_46B97C(v8, v8, (_BYTE*)(96 * *((_DWORD*)v10 + 7) + *((_DWORD*)self + 6) + 16));
+        sub_406F00((float*)v10, *((_DWORD*)v10 + 7));
+        sub_46B97C((_BYTE*)v8, (_BYTE*)v8, (_BYTE*)(96 * *((_DWORD*)v10 + 7) + *((_DWORD*)self + 6) + 16));
         v5[20] = *(float*)(96 * *((_DWORD*)v10 + 7) + *((_DWORD*)self + 6) + 80) * v5[20];
     }
     if (_strcmpi(*((const char**)v10 + 2), aSky08) && _strcmpi(*((const char**)v10 + 2), aCloud08))
         _strcmpi(*((const char**)v10 + 2), aMesh05);
     sub_46C5C5(v5, (float*)v10 + 15, v8);
     v5[3] = v5[20] * *((float*)v10 + 18);
-    LOBYTE(v6) = dword_520A78;
+    v6 = (v6 & 0xFFFFFF00) | (dword_520A78 & 0xFF);
     *(float*)dword_520A78 = *(float*)dword_520A78 + 1.0;
     *((_BYTE*)v5 + 85) = 1;
     return v6;
@@ -6726,7 +6727,7 @@ void* __stdcall sub_407190(_DWORD* self, int a2, char a3)
         if (a3)
         {
             v4 = operator new(0x5Cu);
-            *(_DWORD*)(v3 + 92) = v4;
+            *(_QWORD*)(v3 + 92) = (uintptr_t)v4;
             memset(v4, 0, 0x5Cu);
             *((_DWORD*)v4 + 15) = 0;
             *((_DWORD*)v4 + 14) = 0;
@@ -6791,11 +6792,11 @@ char __stdcall sub_4072A0(_DWORD* self, int a2, int a3, char a4)
     int v7; // esi
     int v8; // ebx
 
-    v5 = sub_407190(self, a2, 1);
+    v5 = (_BYTE*)sub_407190(self, a2, 1);
     sub_407120(self, a2);
     v5[70] = 1;
     *((_DWORD*)v5 + 18) = a3;
-    LOBYTE(v6) = a4;
+    v6 = (v6 & 0xFFFFFF00) | (a4 & 0xFF);
     if (a4)
     {
         v6 = self[5];
@@ -6808,7 +6809,7 @@ char __stdcall sub_4072A0(_DWORD* self, int a2, int a3, char a4)
                 v6 = *(_DWORD*)(self[7] + 4);
                 if (*(_DWORD*)(v6 + v8 + 28) < a2)
                     break;
-                sub_4072A0(v7, a3, 0);
+                sub_4072A0(self, v7, a3, 0);
                 v6 = self[5];
                 ++v7;
                 v8 += 172;
@@ -6835,7 +6836,7 @@ char __stdcall sub_407350(_DWORD* self, int a2)
 {
     _BYTE* v3; // eax
 
-    v3 = sub_407190(self, a2, 1);
+    v3 = (_BYTE*)sub_407190(self, a2, 1);
     if (v3 && *v3)
         return v3[1];
     else
@@ -6883,7 +6884,7 @@ int __stdcall sub_407460(_DWORD* self, int a2)
 {
     _BYTE* v3; // eax
 
-    v3 = sub_407190(self, a2, 1);
+    v3 = (_BYTE*)sub_407190(self, a2, 1);
     v3[2] = 1;
     qmemcpy(v3 + 4, (const void*)(self[6] + 96 * a2 + 16), 0x40u);
     *v3 = 1;
@@ -6896,7 +6897,7 @@ int __stdcall sub_4074B0(_DWORD* self, int a2)
 {
     _BYTE* v3; // eax
 
-    v3 = sub_407190(self, a2, 1);
+    v3 = (_BYTE*)sub_407190(self, a2, 1);
     v3[2] = 1;
     *((_DWORD*)v3 + 15) = 0;
     *((_DWORD*)v3 + 14) = 0;
@@ -6922,7 +6923,7 @@ int __stdcall sub_407510(_DWORD* self, int a2, float a3)
 {
     _BYTE* v4; // edi
 
-    v4 = sub_407190(self, a2, 1);
+    v4 = (_BYTE*)sub_407190(self, a2, 1);
     v4[2] = 1;
     sub_46BE62((float*)byte_4F5AB8, a3);
     sub_46B97C(v4 + 4, v4 + 4, byte_4F5AB8);
@@ -6935,7 +6936,7 @@ int __stdcall sub_407560(_DWORD* self, int a2, float a3)
 {
     _BYTE* v4; // edi
 
-    v4 = sub_407190(self, a2, 1);
+    v4 = (_BYTE*)sub_407190(self, a2, 1);
     v4[2] = 1;
     sub_46BEE6((float*)byte_4F5AB8, a3);
     sub_46B97C(v4 + 4, v4 + 4, byte_4F5AB8);
@@ -6948,7 +6949,7 @@ int __stdcall sub_4075B0(_DWORD* self, int a2, float a3)
 {
     _BYTE* v4; // edi
 
-    v4 = sub_407190(self, a2, 1);
+    v4 = (_BYTE*)sub_407190(self, a2, 1);
     v4[2] = 1;
     sub_46BF69((float*)byte_4F5AB8, a3);
     sub_46B97C(v4 + 4, v4 + 4, byte_4F5AB8);
@@ -6961,7 +6962,7 @@ int __stdcall sub_407600(_DWORD* self, int a2, int a3, int a4, int a5)
 {
     _BYTE* v6; // edi
 
-    v6 = sub_407190(self, a2, 1);
+    v6 = (_BYTE*)sub_407190(self, a2, 1);
     v6[2] = 1;
     sub_46BE02((int)byte_4F5AB8, a3, a4, a5);
     sub_46B97C(v6 + 4, v6 + 4, byte_4F5AB8);
@@ -6974,7 +6975,7 @@ _BYTE* __stdcall sub_407650(_DWORD* self, int a2, char a3)
 {
     _BYTE* result; // eax
 
-    result = sub_407190(self, a2, 1);
+    result = (_BYTE*)sub_407190(self, a2, 1);
     result[76] = a3;
     return result;
 }
@@ -6984,7 +6985,7 @@ _BYTE* __stdcall sub_407670(_DWORD* self, int a2, char a3)
 {
     _BYTE* result; // eax
 
-    result = sub_407190(self, a2, 1);
+    result = (_BYTE*)sub_407190(self, a2, 1);
     result[77] = a3;
     return result;
 }
@@ -7366,7 +7367,7 @@ BOOL __userpurge sub_407A90(
                         break;
                     v23 = v36;
                     v24 = v38;
-                    HIBYTE(v32) = 0;
+                    v32 &= 0x00FF;
                 LABEL_12:
                     v21 = v44;
                     v25 += 6;
@@ -7377,7 +7378,7 @@ BOOL __userpurge sub_407A90(
                 v23 = v36;
                 v24 = v38;
             LABEL_11:
-                HIBYTE(v32) = 1;
+                v32 |= 0xFF00;
                 goto LABEL_12;
             }
         }
@@ -7650,7 +7651,7 @@ double __stdcall sub_4081A0(int self, int a2, float a3, float a4)
         (*(void(__stdcall**)(int, _DWORD, _DWORD, _DWORD**, _DWORD))(*(_DWORD*)v15 + 44))(v15, 0, 0, &v26, 0);
         v16 = *(_DWORD*)(v5 + 48);
         v17 = v26;
-        v27 = v26;
+        v27 = (int*)v26;
         v22 = 0;
         if (v16 > 0)
         {
@@ -7658,15 +7659,15 @@ double __stdcall sub_4081A0(int self, int a2, float a3, float a4)
             {
                 v18 = *(_WORD*)(v7 + v49 + 4);
                 v19 = *(unsigned __int16*)(v7 + v49 + 2);
-                v27 = (_DWORD*)((char*)v17 + *(_DWORD*)(v25 + 84) * *(unsigned __int16*)(v7 + v49));
+                v27 = (int*)((char*)v17 + *(_DWORD*)(v25 + 84) * *(unsigned __int16*)(v7 + v49));
                 v39 = *v27;
                 v40 = v27[1];
                 v41 = v27[2];
-                v27 = (_DWORD*)((char*)v17 + *(_DWORD*)(v25 + 84) * v19);
+                v27 = (int*)((char*)v17 + *(_DWORD*)(v25 + 84) * v19);
                 v36 = *v27;
                 v37 = v27[1];
                 v38 = v27[2];
-                v27 = (_DWORD*)((char*)v17 + *(_DWORD*)(v25 + 84) * v18);
+                v27 = (int*)((char*)v17 + *(_DWORD*)(v25 + 84) * v18);
                 v45 = *v27;
                 v46 = v27[1];
                 v47 = v27[2];
@@ -7759,7 +7760,7 @@ _DWORD* __stdcall sub_4085F0(int self, int a2, _DWORD* a3, _DWORD* a4)
         *a4 = *v6;
         a4[1] = v6[1];
         result = (_DWORD*)v6[2];
-        a4[2] = result;
+        a4[2] = (_DWORD)result;
     }
     return result;
 }
@@ -7993,7 +7994,7 @@ int __stdcall sub_4089D0(_DWORD* self, int a2, int a3)
             {
                 if (*(_DWORD*)(v7 + 84) == a2)
                 {
-                    v8 = sub_407190(self, v4, 1);
+                    v8 = (_BYTE*)sub_407190(self, v4, 1);
                     v8[84] = 1;
                     *((_DWORD*)v8 + 22) = a3;
                 }
@@ -8050,7 +8051,7 @@ _DWORD* __stdcall sub_408A50(_DWORD* self)
     self[39] = 0;
     self[40] = 0;
     *((_BYTE*)self + 164) = 1;
-    *self = &off_499114;
+    *self = (_DWORD)&off_499114;
     ConfigInt = GetConfigInt(AppName, aMousespeed, 100);
     *(_DWORD*)&dword_4A1EC4 = ConfigInt;
     if (ConfigInt < 100)
@@ -8080,7 +8081,7 @@ void __stdcall sub_408B70(void* self)
     int m; // edi
     void* v9; // eax
 
-    *(_DWORD*)self = &off_499114;
+    *(_DWORD*)self = (_DWORD)&off_499114;
     if (*((_BYTE*)self + 164))
     {
         for (i = 0; i < *((_DWORD*)self + 39); ++i)
@@ -8125,7 +8126,7 @@ void __stdcall sub_408B70(void* self)
     GameSafeFree(v9);
     *((_DWORD*)self + 9) = 0;
     *((_DWORD*)self + 7) = 0;
-    *(_DWORD*)self = &off_499040;
+    *(_DWORD*)self = (_DWORD)&off_499040;
 }
 // 499040: using guessed type void *(__stdcall *off_499040)(std::locale::facet *__hidden self, unsigned int);
 // 499114: using guessed type _UNKNOWN *off_499114;
@@ -8136,13 +8137,13 @@ char __stdcall sub_408D20(int self)
     void* v2; // eax
     int v3; // eax
     _DWORD* v4; // eax
-    _DWORD* v5; // eax
+    _DWORD v5; // eax
     _DWORD* v6; // eax
-    _DWORD* v7; // eax
+    _DWORD v7; // eax
     _DWORD* v8; // eax
     _DWORD* v9; // eax
-    _DWORD* v10; // eax
-    _DWORD* v11; // eax
+    _DWORD v10; // eax
+    _DWORD v11; // eax
 
     *(_DWORD*)(self + 84) = 0;
     *(_DWORD*)(self + 120) = 0;
@@ -8166,34 +8167,34 @@ char __stdcall sub_408D20(int self)
         v3 = 0;
     *(_DWORD*)(self + 124) = v3;
     sub_428680((_DWORD*)self, v3);
-    v4 = operator new(0x3Cu);
+    v4 = (_DWORD*)operator new(0x3Cu);
     if (v4)
-        v5 = sub_4215C0(v4);
+        v5 = (_DWORD)sub_4215C0(v4);
     else
         v5 = 0;
     *(_DWORD*)(self + 132) = v5;
     sub_428680((_DWORD*)self, (int)v5);
     sub_421810(*(_DWORD*)(self + 132), off_4A03E0[0], (int)&unk_4A03E8, 0);
     sub_421810(*(_DWORD*)(self + 132), off_4A03E4, (int)&unk_4A0E68, (int)&unk_4A18E8);
-    v6 = operator new(0x18u);
+    v6 = (_DWORD*)operator new(0x18u);
     if (v6)
-        v7 = sub_4068D0(v6);
+        v7 = (_DWORD)sub_4068D0(v6);
     else
         v7 = 0;
     *(_DWORD*)(self + 128) = v7;
     sub_428680((_DWORD*)self, (int)v7);
-    v8 = operator new(0x30u);
+    v8 = (_DWORD*)operator new(0x30u);
     if (v8)
         v9 = sub_4132B0(v8);
     else
-        v9 = 0;
-    *(_DWORD*)(self + 116) = v9;
+        v9 = NULL;
+    *(_DWORD*)(self + 116) = (_DWORD)v9;
     sub_4133C0(v9);
     sub_413550(*(_DWORD*)(self + 116));
     sub_428680((_DWORD*)self, *(_DWORD*)(self + 116));
-    v10 = operator new(0x6Cu);
+    v10 = (_DWORD*)operator new(0x6Cu);
     if (v10)
-        v11 = sub_41D9C0(v10);
+        v11 = (_DWORD)sub_41D9C0(v10);
     else
         v11 = 0;
     *(_DWORD*)(self + 120) = v11;
@@ -8751,12 +8752,12 @@ LABEL_11:
         {
             v12 = *(_DWORD*)(self + 156);
             v13 = *(_DWORD*)(self + 160) - v12;
-            *(_DWORD*)(self + 152) = v11;
+            *(_DWORD*)(self + 152) = (_DWORD)v11;
             memset(&v11[4 * v12], 0, 4 * v13);
         }
     }
     result = *(_DWORD*)(self + 156);
-    *(_DWORD*)(*(_DWORD*)(self + 152) + 4 * result - 4) = a2;
+    *(_DWORD*)((char*)(*(_DWORD*)(self + 152)) + 4 * result - 4) = (_DWORD)a2;
     return result;
 }
 
@@ -8777,7 +8778,7 @@ _DWORD* __stdcall sub_409960(_DWORD* self, int a2)
     v3 = self[12];
     if (v3 <= 0)
     {
-        v5 = operator new(0x94u);
+        v5 = (_DWORD*)operator new(0x94u);
         memset(v5, 0, 0x94u);
     }
     else
@@ -8800,7 +8801,7 @@ _DWORD* __stdcall sub_409960(_DWORD* self, int a2)
         {
             v11 = self[8];
             v12 = self[9] - v11;
-            self[7] = v10;
+            self[7] = (_DWORD)v10;
             memset(&v10[4 * v11], 0, 4 * v12);
         }
     }
