@@ -17,6 +17,9 @@
 #include <DSound.h>
 #include <dsound.h>
 #pragma comment(lib, "Dsound.lib")
+#include <dinput.h>
+#pragma comment(lib, "dinput8.lib")
+#pragma comment(lib, "dxguid.lib")
 #include <CommCtrl.h>
 #include <float.h>
 #pragma comment(lib, "Comctl32.lib")
@@ -6800,7 +6803,7 @@ char __stdcall sub_4072A0(_DWORD* self, int a2, int a3, char a4)
     if (a4)
     {
         v6 = self[5];
-        v7 = a2 + 1;
+        v7 = (int*)(a2 + 1);
         if (a2 + 1 < v6)
         {
             v8 = 172 * v7;
@@ -8924,7 +8927,7 @@ int __stdcall sub_409B70(_DWORD* self)
         result = (*(int(__stdcall**)(_DWORD))(*(_DWORD*)result + 8))(self[13]);
         self[13] = 0;
     }
-    *self = &off_499040;
+    *self = (_DWORD)&off_499040;
     return result;
 }
 // 499040: using guessed type void *(__stdcall *off_499040)(std::locale::facet *__hidden self, unsigned int);
@@ -10023,6 +10026,7 @@ char __stdcall sub_40B130(const char* self, char* ArgList, _BYTE* a3)
     const char* v4; // eax
     const char* v5; // esi
     char v6; // al
+    char temp_result = 0;
 
     v4 = (const char*)sub_40B6E0((int)self, ArgList, 1);
     v5 = v4;
@@ -10030,7 +10034,7 @@ char __stdcall sub_40B130(const char* self, char* ArgList, _BYTE* a3)
     {
         v6 = !_strcmpi(v4, aTrue) || !_strcmpi(v5, aFalse);
         sub_40A120(v6, (char*)"%s = %s, expected true/false, see %s", ArgList, v5, (const char*)(self + 16));
-        char temp_result = _strcmpi(v5, aTrue) == 0;
+        temp_result = _strcmpi(v5, aTrue) == 0;
         *a3 = temp_result;
     }
     return temp_result;
@@ -10073,7 +10077,7 @@ void __stdcall sub_40B1F0(const char* self, char* ArgList, float* a3, float* a4)
                 break;
         }
         v8 = self + 16;
-        sub_40A120(v5[i] != 0, "%s = %s, expected [integer, integer], see %s", ArgList, v5, self + 16);
+        sub_40A120(v5[i] != 0, (char*)"%s = %s, expected [integer, integer], see %s", ArgList, v5, (const char*)(self + 16));
         if (v5[i])
         {
             *a3 = atof(&v5[i]);
@@ -10084,7 +10088,7 @@ void __stdcall sub_40B1F0(const char* self, char* ArgList, float* a3, float* a4)
                     break;
                 ++i;
             }
-            sub_40A120(v5[i] != 0, "%s = %s, expected [integer, integer], see %s", ArgList, v5, v8);
+            sub_40A120(v5[i] != 0, (char*)"%s = %s, expected [integer, integer], see %s", ArgList, v5, (const char*)v8);
             if (v5[i])
             {
                 while (1)
@@ -10097,7 +10101,7 @@ void __stdcall sub_40B1F0(const char* self, char* ArgList, float* a3, float* a4)
                     ++i;
                 }
                 v11 = &v5[i];
-                sub_40A120(*v11 != 0, "%s = %s, expected [integer, integer], see %s", ArgList, v5, v8);
+                sub_40A120(*v11 != 0, (char*)"%s = %s, expected [integer, integer], see %s", ArgList, v5, (const char*)v8);
                 if (*v11)
                     *a4 = atof(v11);
             }
@@ -10132,9 +10136,8 @@ char __stdcall sub_40B310(const char* self, char* ArgList, _DWORD* a3, const cha
                 break;
         }
         v9 = self + 16;
-        sub_40A120(v6[i] != 0, "%s = %s, expected [integer, string], see %s", ArgList, v6, self + 16);
-        LOBYTE(v5) = v6[i];
-        if ((_BYTE)v5)
+        sub_40A120(v6[i] != 0, (char*)"%s = %s, expected [integer, string], see %s", ArgList, v6, (const char*)(self + 16));
+        if (v6[i])
         {
             *a3 = sub_48A1BB((char*)&v6[i]);
             while (1)
@@ -10144,9 +10147,8 @@ char __stdcall sub_40B310(const char* self, char* ArgList, _DWORD* a3, const cha
                     break;
                 ++i;
             }
-            sub_40A120(v6[i] != 0, "%s = %s, expected [integer, string], see %s", ArgList, v6, v9);
-            LOBYTE(v5) = v6[i];
-            if ((_BYTE)v5)
+            sub_40A120(v6[i] != 0, (char*)"%s = %s, expected [integer, string], see %s", ArgList, v6, (const char*)v9);
+            if (v6[i])
             {
                 while (1)
                 {
@@ -10156,8 +10158,7 @@ char __stdcall sub_40B310(const char* self, char* ArgList, _DWORD* a3, const cha
                     ++i;
                 }
                 v12 = &v6[i];
-                sub_40A120(*v12 != 0, "%s = %s, expected [integer, string], see %s", ArgList, v6, v9);
-                LOBYTE(v5) = *v12;
+                sub_40A120(*v12 != 0, (char*)"%s = %s, expected [integer, string], see %s", ArgList, v6, v9);
                 if (*v12)
                     *a4 = v12;
             }
@@ -10194,9 +10195,8 @@ char __stdcall sub_40B420(const char* self, char* ArgList, float* a3, const char
                 break;
         }
         v9 = self + 16;
-        sub_40A120(v6[i] != 0, "%s = %s, expected [float, string], see %s", ArgList, v6, self + 16);
-        LOBYTE(v5) = v6[i];
-        if ((_BYTE)v5)
+        sub_40A120(v6[i] != 0, (char*)"%s = %s, expected [float, string], see %s", ArgList, v6, self + 16);
+        if (v6[i])
         {
             *a3 = atof(&v6[i]);
             while (1)
@@ -10206,9 +10206,8 @@ char __stdcall sub_40B420(const char* self, char* ArgList, float* a3, const char
                     break;
                 ++i;
             }
-            sub_40A120(v6[i] != 0, "%s = %s, expected [float, string], see %s", ArgList, v6, v9);
-            LOBYTE(v5) = v6[i];
-            if ((_BYTE)v5)
+            sub_40A120(v6[i] != 0, (char*)"%s = %s, expected [float, string], see %s", ArgList, v6, v9);
+            if (v6[i])
             {
                 while (1)
                 {
@@ -10218,8 +10217,7 @@ char __stdcall sub_40B420(const char* self, char* ArgList, float* a3, const char
                     ++i;
                 }
                 v12 = &v6[i];
-                sub_40A120(*v12 != 0, "%s = %s, expected [float, string], see %s", ArgList, v6, v9);
-                LOBYTE(v5) = *v12;
+                sub_40A120(*v12 != 0, (char*)"%s = %s, expected [float, string], see %s", ArgList, v6, v9);
                 if (*v12)
                     *a4 = v12;
             }
@@ -10259,7 +10257,7 @@ char __stdcall sub_40B530(const char* self, char* ArgList, _DWORD* a3, _DWORD* a
                 break;
         }
         v10 = self + 16;
-        sub_40A120(v6[i] != 0, "%s = %s, expected [integer, integer, string], see %s", ArgList, v6, self + 16);
+        sub_40A120(v6[i] != 0, (char*)"%s = %s, expected [integer, integer, string], see %s", ArgList, v6, self + 16);
         result = v6[i];
         if (result)
         {
@@ -10271,7 +10269,7 @@ char __stdcall sub_40B530(const char* self, char* ArgList, _DWORD* a3, _DWORD* a
                     break;
                 ++i;
             }
-            sub_40A120(v6[i] != 0, "%s = %s, expected [integer, integer, string], see %s", ArgList, v6, v10);
+            sub_40A120(v6[i] != 0, (char*)"%s = %s, expected [integer, integer, string], see %s", ArgList, v6, v10);
             result = v6[i];
             if (result)
             {
@@ -10284,7 +10282,7 @@ char __stdcall sub_40B530(const char* self, char* ArgList, _DWORD* a3, _DWORD* a
                         break;
                     ++i;
                 }
-                sub_40A120(v6[i] != 0, "%s = %s, expected [integer, integer, string], see %s", ArgList, v6, v10);
+                sub_40A120(v6[i] != 0, (char*)"%s = %s, expected [integer, integer, string], see %s", ArgList, v6, v10);
                 result = v6[i];
                 if (result)
                 {
@@ -10296,7 +10294,7 @@ char __stdcall sub_40B530(const char* self, char* ArgList, _DWORD* a3, _DWORD* a
                             break;
                         ++i;
                     }
-                    sub_40A120(v6[i] != 0, "%s = %s, expected [integer, integer, string], see %s", ArgList, v6, v10);
+                    sub_40A120(v6[i] != 0, (char*)"%s = %s, expected [integer, integer, string], see %s", ArgList, v6, v10);
                     result = v6[i];
                     if (result)
                     {
@@ -10308,7 +10306,7 @@ char __stdcall sub_40B530(const char* self, char* ArgList, _DWORD* a3, _DWORD* a
                             ++i;
                         }
                         v15 = &v6[i];
-                        sub_40A120(*v15 != 0, "%s = %s, expected [integer, integer, string], see %s", ArgList, v6, v10);
+                        sub_40A120(*v15 != 0, (char*)"%s = %s, expected [integer, integer, string], see %s", ArgList, v6, v10);
                         result = *v15;
                         if (*v15)
                             *a5 = v15;
@@ -10349,7 +10347,7 @@ int __stdcall sub_40B6E0(int self, char* String2, char a3)
         {
             sub_40A120(
                 0,
-                "entry \"%s\" not found, see %s : %s",
+                (char*)"entry \"%s\" not found, see %s : %s",
                 String2,
                 *(const char**)(*(_DWORD*)(self + 4) + 24 * *(_DWORD*)(self + 280)),
                 (const char*)(self + 16));
@@ -10565,20 +10563,20 @@ unsigned int __stdcall sub_40B840(_DWORD* self, int a2, unsigned int a3, int a4)
             sub_40A800(m);
         SafeFreeGameMemory((LPVOID)v34[1]);
         result = v34[1];
-        v34[3] = &v36[24 * v35];
+        *(_QWORD*)(&v34[3]) = (_QWORD)&v36[24 * v35];
         if (result)
         {
             v19 = v34[2];
-            v34[1] = v36;
+            *(_QWORD*)(&v34[1]) = (_QWORD)v36;
             v20 = v19 - result;
             result = (unsigned int)((unsigned __int64)(715827883LL * (int)(v19 - result)) >> 32) >> 31;
             v5 += v20 / 24;
         }
         else
         {
-            v34[1] = v36;
+            *(_QWORD*)(&v34[1]) = (_QWORD)v36;
         }
-        v34[2] = &v36[24 * v5];
+        *(_QWORD*)(&v34[2]) = (_QWORD)&v36[24 * v5];
     }
     return result;
 }
@@ -10605,7 +10603,7 @@ _DWORD* __stdcall sub_40BB60(_DWORD* self, _DWORD* a2, int a3)
     v6 = a2;
     if (a3 != v4)
     {
-        v7 = a2 + 1;
+        v7 = (int*)(a2 + 1);
         v8 = a3 - (_DWORD)a2;
         for (i = a3 - (_DWORD)a2; ; v8 = i)
         {
@@ -10626,7 +10624,7 @@ _DWORD* __stdcall sub_40BB60(_DWORD* self, _DWORD* a2, int a3)
     v11 = (int)v6;
     if (v6 == v10)
     {
-        self[2] = v6;
+        *(_QWORD*)(&self[2]) = (_QWORD)v6;
     }
     else
     {
@@ -10636,7 +10634,7 @@ _DWORD* __stdcall sub_40BB60(_DWORD* self, _DWORD* a2, int a3)
             v11 += 24;
         } while ((_DWORD*)v11 != v10);
         result = a2;
-        v12[2] = v6;
+        *(_QWORD*)(&v12[2]) = (_QWORD)v6;
     }
     return result;
 }
@@ -10666,8 +10664,8 @@ void __cdecl sub_40BBF0(int a1, int a2)
         v5 = v4;
         if (v4 < 0)
             v5 = 0;
-        v6 = operator new(12 * v5);
-        *(_DWORD*)(a1 + 8) = v6;
+        v6 = (uint32*)operator new(12 * v5);
+        *(_QWORD*)(a1 + 8) = (_QWORD)v6;
         v7 = *(_DWORD**)(a2 + 12);
         v8 = v6;
         for (i = *(_DWORD**)(a2 + 8); i != v7; v8 += 3)
@@ -10681,8 +10679,8 @@ void __cdecl sub_40BBF0(int a1, int a2)
             }
             i += 3;
         }
-        *(_DWORD*)(v2 + 12) = v8;
-        *(_DWORD*)(v2 + 16) = v8;
+        *(_QWORD*)(v2 + 12) = (_QWORD)v8;
+        *(_QWORD*)(v2 + 16) = (_QWORD)v8;
         *(_BYTE*)(v2 + 20) = *(_BYTE*)(a2 + 20);
     }
 }
@@ -10780,8 +10778,8 @@ int* __stdcall sub_40BCC0(int* self, int* a2)
         v27 = v26;
         if (v26 < 0)
             v27 = 0;
-        v28 = operator new(12 * v27);
-        v2[1] = (int)v28;
+        v28 = (uint32*)operator new(12 * v27);
+        v2[1] = (_QWORD)v28;
         v29 = (_DWORD*)a2[2];
         v30 = v28;
         for (i = (_DWORD*)a2[1]; i != v29; v30 += 3)
@@ -10889,10 +10887,10 @@ _DWORD* __stdcall sub_40BFE0(int self, _DWORD* a2, int a3, int a4, char a5)
     int v16; // [esp+24h] [ebp-4h]
 
     v12 = 0;
-    v6 = DirectInputCreateA(a3, 768, self + 8, 0);
+    v6 = DirectInput8Create((HINSTANCE)a3, DIRECTINPUT_VERSION, IID_IDirectInput8A, (LPVOID*)(self + 8), NULL);
     if (v6 >= 0)
     {
-        sub_40C130((_DWORD**)self, &v12, a4, a5);
+        sub_40C130((_DWORD**)self, (uint32*)&v12, a4, a5);
         v16 = 0;
         if (v12)
         {
@@ -10901,7 +10899,7 @@ _DWORD* __stdcall sub_40BFE0(int self, _DWORD* a2, int a3, int a4, char a5)
             v8 = Source;
             if (Source)
             {
-                a2[1] = _strdup(Source);
+                *(_QWORD*)(a2 + 1) = (_QWORD)_strdup(Source);
                 v8 = Source;
             }
             GameSafeFree(v8);
@@ -10909,8 +10907,8 @@ _DWORD* __stdcall sub_40BFE0(int self, _DWORD* a2, int a3, int a4, char a5)
         else
         {
             WriteDebugLog(aInitializedKey);
-            sub_40C1F0(self, &v14, a4, a5);
-            LOBYTE(v16) = 1;
+            sub_40C1F0(self, (uint32*)&v14, a4, a5);
+            v16 = (v16 & 0xFFFFFF00) | 1;
             if (v14)
             {
                 v7 = a2;
@@ -10918,7 +10916,7 @@ _DWORD* __stdcall sub_40BFE0(int self, _DWORD* a2, int a3, int a4, char a5)
                 v9 = v15;
                 if (v15)
                 {
-                    a2[1] = _strdup(v15);
+                    *(_QWORD*)(a2 + 1) = (_QWORD)_strdup(v15);
                     v9 = v15;
                 }
                 GameSafeFree(v9);
@@ -10947,7 +10945,7 @@ _DWORD* __stdcall sub_40BFE0(int self, _DWORD* a2, int a3, int a4, char a5)
 // 46A8C8: using guessed type int __stdcall DirectInputCreateA(_DWORD, _DWORD, _DWORD, _DWORD);
 
 //----- (0040C130) --------------------------------------------------------
-_DWORD* __stdcall sub_40C130(_DWORD** self, _DWORD* a2, int a3, char a4)
+_DWORD* __stdcall sub_40C130(_DWORD* self, _DWORD* a2, int a3, char a4)
 {
     _DWORD* v4; // esi
     int v5; // eax
@@ -10957,7 +10955,7 @@ _DWORD* __stdcall sub_40C130(_DWORD** self, _DWORD* a2, int a3, char a4)
     _DWORD v9[5]; // [esp+24h] [ebp-14h] BYREF
 
     v4 = self + 3;
-    v5 = (*(int(__stdcall**)(_DWORD*, void*, _DWORD**, _DWORD))(*self[2] + 12))(self[2], &unk_499E24, self + 3, 0);
+    v5 = (*(int(__stdcall**)(_DWORD*, void*, _DWORD**, _DWORD))(*(_DWORD*)self[2] + 12))((_DWORD*)self[2], &unk_499E24, (_DWORD**)(self + 3), 0);
     if (v5 < 0)
     {
         v8 = aCanTObtainKeyb;
@@ -11041,9 +11039,9 @@ _DWORD* __stdcall ResetGameParams(_BYTE* self, _DWORD* a2)
     LPVOID lpMem; // [esp+8h] [ebp-4h]
 
     v4 = 0;
-    sub_40C310(self, &v4);
+    sub_40C310((_DWORD*)self, (uint32*)&v4);
     GameSafeFree(lpMem);
-    sub_40C4C0(self, &v4);
+    sub_40C4C0((_DWORD*)self, (uint32*)&v4);
     GameSafeFree(lpMem);
     result = a2;
     self[292] = 0;
@@ -11118,7 +11116,7 @@ _DWORD* __stdcall sub_40C310(_DWORD* self, _DWORD* a2)
                             v11 = *self;
                             v12 = *v10;
                             v13 = *self == 0;
-                            LOBYTE(v16) = (v10[1] & 0x80) != 0;
+                            v16 = (v16 & 0xFFFFFF00) | ((v10[1] & 0x80) != 0);
                             if (!v13)
                             {
                                 do
@@ -11194,14 +11192,14 @@ _DWORD* __stdcall sub_40C4C0(_DWORD* self, _DWORD* a2)
                 return a2;
             }
             WriteDebugLog(aReacquiredMous);
-            sub_40C4C0(v14);
+            sub_40C4C0(self, v14);
             GameSafeFree((LPVOID)v14[1]);
         }
         do
         {
             v8 = *((_BYTE*)self + v3 + 288);
-            LOBYTE(v14[0]) = *((_BYTE*)&v16[3] + v3) >> 7;
-            if (LOBYTE(v14[0]) != v8)
+            v14[0] = (v14[0] & 0xFFFFFF00) | (*((_BYTE*)&v16[3] + v3) >> 7);
+            if ((v14[0] & 0xFF) != v8)
             {
                 *((_BYTE*)self + v3 + 288) = v14[0];
                 v9 = self[1];
@@ -11241,11 +11239,11 @@ _DWORD* __stdcall sub_40C630(_DWORD* self, int a2, int a3)
 {
     _DWORD* result; // eax
 
-    result = operator new(0xCu);
+    result = (_DWORD*)operator new(0xCu);
     *result = a2;
     result[1] = a3;
     result[2] = *self;
-    *self = result;
+    *self = (_DWORD)(_QWORD)result;
     return result;
 }
 
@@ -11254,11 +11252,11 @@ _DWORD* __stdcall sub_40C660(_DWORD* self, int a2, int a3)
 {
     _DWORD* result; // eax
 
-    result = operator new(0xCu);
+    result = (_DWORD*)operator new(0xCu);
     *result = a2;
     result[1] = a3;
     result[2] = self[1];
-    self[1] = result;
+    self[1] = (_DWORD)(_QWORD)result;
     return result;
 }
 
@@ -12297,8 +12295,8 @@ void __stdcall sub_40E5F0(_DWORD* self)
     _DWORD* v2; // eax
 
     *self = 1;
-    v2 = malloc(8u);
-    self[1] = v2;
+    v2 = (_DWORD*)malloc(8u);
+    self[1] = (_DWORD)(_QWORD)v2;
     *v2 = 0;
     *(_DWORD*)(self[1] + 4) = 0;
     *((_BYTE*)self + 8) = 1;
@@ -12391,7 +12389,7 @@ char __stdcall sub_40E780(LPVOID* self, FILE* Stream)
 _BYTE* __stdcall sub_40E850(_BYTE* self, float a2)
 {
     sub_46BF69(flt_4F5C48, a2);
-    return sub_46B97C(self, self, flt_4F5C48);
+    return sub_46B97C(self, self, (uint8*)flt_4F5C48);
 }
 // 4F5C48: using guessed type float flt_4F5C48[16];
 
@@ -12399,7 +12397,7 @@ _BYTE* __stdcall sub_40E850(_BYTE* self, float a2)
 _BYTE* __stdcall sub_40E880(_BYTE* self, int a2, int a3, int a4)
 {
     sub_46BE02((int)flt_4F5C48, a2, a3, a4);
-    return sub_46B97C(self, self, flt_4F5C48);
+    return sub_46B97C(self, self, (uint8*)flt_4F5C48);
 }
 // 4F5C48: using guessed type float flt_4F5C48[16];
 
@@ -12407,7 +12405,7 @@ _BYTE* __stdcall sub_40E880(_BYTE* self, int a2, int a3, int a4)
 _BYTE* __stdcall sub_40E8B0(_BYTE* self, int a2, int a3, int a4)
 {
     sub_46BDA2((int)flt_4F5C48, a2, a3, a4);
-    return sub_46B97C(self, self, flt_4F5C48);
+    return sub_46B97C(self, self, (uint8*)flt_4F5C48);
 }
 // 4F5C48: using guessed type float flt_4F5C48[16];
 
@@ -12461,7 +12459,7 @@ int* __cdecl sub_40E910(int a1)
     else
     {
         v3 = *(_BYTE*)v1;
-        v4 = (int*)((char*)v1 + v2 + 4);
+        v4 = (_DWORD*)((char*)v1 + v2 + 4);
         dword_4F5C88 = (int)v4;
         v5 = (*v1 & 0xFFFFFFFC) - v2;
         *v4 &= 3u;
@@ -12509,7 +12507,7 @@ unsigned int* __cdecl sub_40EA70(unsigned int* a1)
         dword_4F5C98 += *(a1 - 1) & 0xFFFFFFFC;
         if ((*(_BYTE*)(a1 - 1) & 2) == 0)
         {
-            v2 = (char*)result + (*result & 0xFFFFFFFC);
+            v2 = (_BYTE*)((char*)result + (*result & 0xFFFFFFFC));
             if ((*v2 & 1) == 0)
             {
                 if ((*v2 & 2) != 0)
@@ -12535,7 +12533,7 @@ unsigned int* __cdecl sub_40EA70(unsigned int* a1)
                 if ((*(_BYTE*)result & 2) != 0)
                     *(_BYTE*)v3 |= 2u;
                 v5 = *result;
-                LOBYTE(v5) = v5 & 0xFC;
+                v5 = v5 & 0xFFFFFFFC;
                 *v3 = *v3 & 3 | ((*v3 & 0xFFFFFFFC) + v5);
                 result = v3;
                 --dword_4F5C94;
@@ -12568,7 +12566,7 @@ int InitCriticalMemoryBlock()
     v0 = (struct _RTL_CRITICAL_SECTION*)operator new(0x18u);
     InitializeCriticalSection(v0);
     lpCriticalSection = v0;
-    v1 = malloc(0x200000u);
+    v1 = (_DWORD*)malloc(0x200000u);
     dword_4F5C8C = v1;
     if (!v1)
         return -1;
@@ -12612,7 +12610,7 @@ int __stdcall sub_40EC60(int self)
     *(_DWORD*)(self + 408) = 0;
     *(_DWORD*)(self + 412) = 1128792064;
     *(_BYTE*)(self + 416) = 0;
-    *(_DWORD*)self = &off_499184;
+    *(_DWORD*)self = (_DWORD)(_QWORD)&off_499184;
     v2 = operator new(0x40u);
     if (v2)
         v3 = sub_41F5B0((int)v2, 0, 0, 0, 0, 200, 200, 200, 255);
