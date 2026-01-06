@@ -27,7 +27,7 @@
 //-------------------------------------------------------------------------
 // Function declarations
 
-#define __stdcall __cdecl // Test compile in C mode
+// #define __stdcall __cdecl // Test compile in C mode
 
 const char* off_49A990[120] =
 {
@@ -8805,7 +8805,7 @@ _DWORD* __stdcall sub_409960(_DWORD* self, int a2)
             memset(&v10[4 * v11], 0, 4 * v12);
         }
     }
-    *(_DWORD*)(self[7] + 4 * self[8] - 4) = v5;
+    *(_DWORD*)((char*)(self[7]) + 4 * self[8] - 4) = (_DWORD)v5;
     return v5;
 }
 
@@ -8860,12 +8860,12 @@ LABEL_8:
         {
             v12 = *(_DWORD*)(self + 48);
             v13 = *(_DWORD*)(self + 52) - v12;
-            *(_DWORD*)(self + 44) = v11;
+            *(_DWORD*)(self + 44) = (_DWORD)v11;
             memset(&v11[4 * v12], 0, 4 * v13);
         }
     }
     result = *(_DWORD*)(self + 48);
-    *(_DWORD*)(*(_DWORD*)(self + 44) + 4 * result - 4) = a2;
+    *(_DWORD*)(*(_DWORD*)(self + 44) + 4 * result - 4) = (_DWORD)a2;
     return result;
 }
 
@@ -8900,7 +8900,7 @@ _DWORD* __stdcall sub_409B10(_DWORD* self)
     self[13] = 0;
     self[14] = 0;
     self[15] = 0;
-    *self = &off_49914C;
+    *self = (_DWORD)&off_49914C;
     return result;
 }
 // 49914C: using guessed type _UNKNOWN *off_49914C;
@@ -8911,7 +8911,7 @@ int __stdcall sub_409B70(_DWORD* self)
     int v2; // eax
     int result; // eax
 
-    *self = &off_49914C;
+    *self = (_DWORD)&off_49914C;
     v2 = self[12];
     if (v2)
     {
@@ -9018,7 +9018,7 @@ char __userpurge sub_409BE0(
         a5,
         a3,
         a2);
-    for (i = 0; i < *(_DWORD*)(a1 + 40); LODWORD(a9) = v37 + 1)
+    for (i = 0; i < *(_DWORD*)(a1 + 40); LODWORD(a9) = (_DWORD)(v37 + 1))
     {
         *(_WORD*)LODWORD(a9) = i;
         v37 = (_WORD*)(LODWORD(a9) + 2);
@@ -9032,7 +9032,7 @@ char __userpurge sub_409BE0(
             *(_WORD*)LODWORD(a9) = v23;
             v38 = (_WORD*)(LODWORD(a9) + 2);
             *v38 = *(_WORD*)(a1 + 44) + v23;
-            LODWORD(a9) = v38 + 1;
+            LODWORD(a9) = (_DWORD)(v38 + 1);
             ++v23;
         } while (v23 < *(_DWORD*)(a1 + 44) + 2 * *(_DWORD*)(a1 + 40));
     }
@@ -9127,7 +9127,7 @@ int __stdcall sub_409EF0(_DWORD* self, int a2)
 void sub_40A050()
 {
     sub_40A060();
-    JUMPOUT(0x40A070);
+    return;
 }
 // 40A055: control flows out of bounds to 40A070
 
@@ -9136,7 +9136,7 @@ char* sub_40A060()
 {
     byte_4F5B00 = 0;
     dword_4F5B04 = fopen(File, aW);
-    FatalCondition(dword_4F5B04 != 0, "failed to open error log file %s", File);
+    FatalCondition(dword_4F5B04 != 0, (char*)"failed to open error log file %s", File);
     return &byte_4F5B00;
 }
 // 4F5B00: using guessed type char byte_4F5B00;
@@ -9262,13 +9262,13 @@ int __stdcall sub_40A1D0(int self, char* FileName)
     v3 = fopen(FileName, Mode);
     v4 = v3;
     if (!v3)
-        FatalError("Can't open ini file '%s'", FileName);
+        FatalError((char*)"Can't open ini file '%s'", FileName);
     fseek(v3, 0, 2);
     v6 = ftell(v4);
     fseek(v4, 0, 0);
     v7 = v6 + 1;
     v8 = operator new(v7);
-    *(_DWORD*)(self + 276) = v8;
+    *(_DWORD*)(self + 276) = (_DWORD)v8;
     sub_4898CA(v8, 1u, v7 - 1, v4);
     *(_BYTE*)(*(_DWORD*)(self + 276) + v7 - 1) = 0;
     fclose(v4);
@@ -9375,7 +9375,7 @@ LABEL_26:
                 v67[4] = v24 == 0;
                 v69 = 0;
                 v70 = 0;
-                LOBYTE(v71) = 1;
+                *((_BYTE*)&v71) = 1;
                 v27 = v26 + 1;
                 if (v25)
                     v17 = (*(_DWORD*)(self + 8) - v25) / 24;
@@ -9396,7 +9396,7 @@ LABEL_26:
                         v28 = 0;
                     sub_40B840((_DWORD*)self, *(_DWORD*)(self + 8), v27 - v28, (int)v67);
                 }
-                LOBYTE(v71) = 0;
+                *((_BYTE*)&v71) = 0;
                 SafeFreeGameMemory(v68);
                 v29 = k + *(_DWORD*)(self + 276);
                 v30 = *(_DWORD*)(self + 4);
@@ -9486,7 +9486,7 @@ LABEL_26:
                     {
                         v57 = v55 ? (*(_DWORD*)(*(_DWORD*)(self + 4) + 24 * *(_DWORD*)(self + 280) + 12) - v55) / 12 : 0;
                         v52 = *(_DWORD*)(self + 4) + 24 * *(_DWORD*)(self + 280) + 4;
-                        sub_45C920((_DWORD*)v52, *(char**)(v52 + 8), v62 - v57, v66);
+                        sub_45C920((_DWORD*)v52, *(char**)(v52 + 8), v62 - v57, (uint32*)v66);
                     }
                     v58 = 12 * v54;
                     *(_DWORD*)(*(_DWORD*)(*(_DWORD*)(self + 4) + 24 * *(_DWORD*)(self + 280) + 8) + v58) = v63 + *(_DWORD*)(self + 276);
@@ -9567,7 +9567,7 @@ int __stdcall sub_40A830(int self)
                     break;
                 sub_40A120(
                     *(_BYTE*)(*(_DWORD*)(v6 + 8) + j + 8),
-                    "entry %s=%s is not used by %s, see %s",
+                    (char*)"entry %s=%s is not used by %s, see %s",
                     *(const char**)(*(_DWORD*)(v6 + 8) + j),
                     *(const char**)(*(_DWORD*)(v6 + 8) + j + 4),
                     *(const char**)v6,
@@ -9632,7 +9632,7 @@ char __stdcall sub_40A9B0(int self, unsigned int a2)
         v4 = (*(_DWORD*)(self + 8) - v3) / 24;
     else
         v4 = 0;
-    result = sub_40A120(a2 < v4, "category not found, see %s", (const char*)(self + 16));
+    result = sub_40A120(a2 < v4, (char*)"category not found, see %s", (const char*)(self + 16));
     *(_DWORD*)(self + 280) = a2;
     return result;
 }
@@ -9681,7 +9681,7 @@ int __stdcall sub_40AA40(int self, char* String2)
         v7 = (*(_DWORD*)(self + 8) - v6) / 24;
     else
         v7 = 0;
-    sub_40A120(v2 < v7, "could not find category %s, see file %s", String2, (const char*)(self + 16));
+    sub_40A120(v2 < v7, (char*)"could not find category %s, see file %s", String2, (const char*)(self + 16));
     result = 3 * *(_DWORD*)(self + 280);
     *(_BYTE*)(*(_DWORD*)(self + 4) + 24 * *(_DWORD*)(self + 280) + 20) = 1;
     return result;
@@ -9893,7 +9893,7 @@ char* __stdcall sub_40AF00(const char* self, char* ArgList, char** a3)
     {
         v6 = *result;
         v7 = *v5 >= 48 && v6 <= 57 || v6 == 45 || v6 == 43;
-        sub_40A120(v7, "%s = %s, integer expected, see %s", ArgList, v5, self + 16);
+        sub_40A120(v7, (char*)"%s = %s, integer expected, see %s", ArgList, v5, (const char*)(self + 16));
         result = (char*)sub_48A1BB(v5);
         *a3 = result;
     }
@@ -9915,7 +9915,7 @@ float* __stdcall sub_40AF60(const char* self, char* ArgList, float* a3)
     {
         v6 = *(_BYTE*)result;
         v7 = *v5 >= 48 && v6 <= 57 || v6 == 45 || v6 == 43 || v6 == 46;
-        sub_40A120(v7, "%s = %s, float expected, see %s", ArgList, v5, self + 16);
+        sub_40A120(v7, (char*)"%s = %s, float expected, see %s", ArgList, v5, (const char*)(self + 16));
         v8 = atof(v5);
         result = a3;
         *a3 = v8;
@@ -9990,7 +9990,7 @@ char __stdcall sub_40B030(char* self, char* ArgList, float* a3)
                 ++v6;
             }
             v9 = v3 + 16;
-            sub_40A120(v7 != 0, "failed to get Vector element, see entry %s, in file %s", ArgList, v9);
+            sub_40A120(v7 != 0, (char*)"failed to get Vector element, see entry %s, in file %s", ArgList, v9);
             result = *v8;
             if (!*v8)
                 break;
@@ -10002,7 +10002,7 @@ char __stdcall sub_40B030(char* self, char* ArgList, float* a3)
                     break;
                 ++v6;
             }
-            sub_40A120(*(_BYTE*)(v6 + v4) != 0, "failed to get Vector element, see entry %s, in file %s", ArgList, v9);
+            sub_40A120(*(_BYTE*)(v6 + v4) != 0, (char*)"failed to get Vector element, see entry %s, in file %s", ArgList, v9);
             result = *(_BYTE*)(v6 + v4);
             if (!result)
                 break;
@@ -10029,11 +10029,11 @@ char __stdcall sub_40B130(const char* self, char* ArgList, _BYTE* a3)
     if (v4)
     {
         v6 = !_strcmpi(v4, aTrue) || !_strcmpi(v5, aFalse);
-        sub_40A120(v6, "%s = %s, expected true/false, see %s", ArgList, v5, self + 16);
-        LOBYTE(v4) = _strcmpi(v5, aTrue) == 0;
-        *a3 = (_BYTE)v4;
+        sub_40A120(v6, (char*)"%s = %s, expected true/false, see %s", ArgList, v5, (const char*)(self + 16));
+        char temp_result = _strcmpi(v5, aTrue) == 0;
+        *a3 = temp_result;
     }
-    return (char)v4;
+    return temp_result;
 }
 
 //----- (0040B1B0) --------------------------------------------------------
