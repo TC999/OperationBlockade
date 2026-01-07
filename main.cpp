@@ -12630,7 +12630,7 @@ int __stdcall sub_40EC60(int self)
 //----- (0040ED60) --------------------------------------------------------
 int __stdcall sub_40ED60(_DWORD* self)
 {
-    *self = &off_499184;
+    *self = (_DWORD)(_QWORD)&off_499184;
     return sub_4013F0(self);
 }
 // 499184: using guessed type _UNKNOWN *off_499184;
@@ -12840,16 +12840,16 @@ char __stdcall sub_40EDB0(int self, int a2)
             *(float*)&v34 = v56 * v40;
             *(float*)&v28 = v55 * v40;
             *(float*)&v24 = *(float*)&v54 * v40;
-            sub_40F4A0(&v51, v24, v28, v34);
+            sub_40F4A0((_DWORD*)&v51, v24, v28, v34);
             v17 = *(float*)(self + 412);
             *(float*)&v35 = v53 * v17;
             *(float*)&v29 = v52 * v17;
             *(float*)&v25 = v51 * v17;
-            sub_40F4A0(&v45, v25, v29, v35);
+            sub_40F4A0((_DWORD*)&v45, v25, v29, v35);
             *(float*)&v36 = v47 * *(float*)&v62;
             *(float*)&v30 = v46 * *(float*)&v62;
             *(float*)&v26 = v45 * *(float*)&v62;
-            sub_40F4A0(&v58, v26, v30, v36);
+            sub_40F4A0((_DWORD*)&v58, v26, v30, v36);
             *v6 = v58 + *v6;
             *(float*)(self + 36) = v59 + *(float*)(self + 36);
             *(float*)(self + 40) = v60 + *(float*)(self + 40);
@@ -12862,7 +12862,7 @@ char __stdcall sub_40EDB0(int self, int a2)
     *(float*)&v37 = v50 + *(float*)(self + 40);
     *(float*)&v31 = v49 + *(float*)(self + 36);
     *(float*)&v27 = *(float*)&v48 + *v6;
-    sub_40F4A0(&v58, v27, v31, v37);
+    sub_40F4A0((_DWORD*)&v58, v27, v31, v37);
     v18 = v59;
     v19 = v60;
     *(float*)(self + 44) = v58;
@@ -12921,7 +12921,7 @@ int* __stdcall sub_40F4C0(_DWORD* self, int a2, unsigned int a3, _WORD* a4)
     self[1] = a2;
     self[2] = a3;
     result = sub_40E8E0(a3);
-    self[4] = result;
+    self[4] = (_DWORD)(_QWORD)result;
     *((_WORD*)self + 6) = *a4;
     qmemcpy(result, a4, a3);
     return result;
@@ -12934,7 +12934,7 @@ char* __stdcall sub_40F510(char* self)
     *((_DWORD*)self + 2) = 0;
     *((_DWORD*)self + 3) = 0;
     self[16] = 1;
-    *(_DWORD*)self = &off_499040;
+    *(_DWORD*)self = (_DWORD)(_QWORD)&off_499040;
     *((_DWORD*)self + 7) = 0;
     *((_DWORD*)self + 8) = 0;
     *((_DWORD*)self + 9) = 0;
@@ -12946,7 +12946,7 @@ char* __stdcall sub_40F510(char* self)
     self[80] = 0;
     *((_DWORD*)self + 235) = 0;
     *((_DWORD*)self + 236) = 0;
-    *(_DWORD*)self = &off_4991B0;
+    *(_DWORD*)self = (_DWORD)(_QWORD)&off_4991B0;
     dword_4F5CC4 = (int)self;
     *((_DWORD*)self + 6) = 0;
     *((_DWORD*)self + 23) = 0;
@@ -12995,7 +12995,7 @@ void __stdcall sub_40F620(char* self)
     _DWORD* v10; // eax
     _DWORD* v11; // edi
 
-    *(_DWORD*)self = &off_4991B0;
+    *(_DWORD*)self = (_DWORD)(_QWORD)&off_4991B0;
     sub_411C50((int)self);
     if (*((_DWORD*)self + 246))
         CloseHandle(*((HANDLE*)self + 246));
@@ -13063,7 +13063,7 @@ void __stdcall sub_40F620(char* self)
         } while (v11);
     }
     v2((LPCRITICAL_SECTION)(self + 44));
-    *(_DWORD*)self = &off_499040;
+    *(_DWORD*)self = (_DWORD)(_QWORD)&off_499040;
 }
 // 499040: using guessed type void *(__stdcall *off_499040)(std::locale::facet *__hidden self, unsigned int);
 // 4991B0: using guessed type _UNKNOWN *off_4991B0;
@@ -13117,7 +13117,7 @@ _DWORD* __stdcall sub_40F7B0(int self, _DWORD* a2)
         } while (v4);
     }
     *(_DWORD*)(self + 956) = 0;
-    *(_DWORD*)(self + 984) = CreateEventA(0, 0, 0, 0);
+    *(_DWORD*)(self + 984) = (_DWORD)(_QWORD)CreateEventA(0, 0, 0, 0);
     LeaveCriticalSection((LPCRITICAL_SECTION)(self + 960));
     v14[0] = 1402159760;
     v14[1] = 299000461;
@@ -13125,7 +13125,7 @@ _DWORD* __stdcall sub_40F7B0(int self, _DWORD* a2)
     v14[3] = 286568599;
     WriteDebugLog(aMpCreatingPeer);
     v7 = (_DWORD*)(self + 24);
-    if (CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID*)(self + 24)) < 0)
+    if (CoCreateInstance(stru_499DF4, 0, 1u, stru_499DE4, (LPVOID*)(self + 24)) < 0)
     {
         WriteDebugLog(aCouldnTCreateD);
         sub_403A30(a2, 1, aCouldnTCreateD_0);
@@ -13145,7 +13145,7 @@ _DWORD* __stdcall sub_40F7B0(int self, _DWORD* a2)
     }
     WriteDebugLog(aMpInitPeerDone);
     WriteDebugLog(aMpCreatingHost);
-    if (CoCreateInstance(&stru_499E14, 0, 1u, &stru_499E04, (LPVOID*)(self + 92)) < 0)
+    if (CoCreateInstance(stru_499E14, 0, 1u, stru_499E04, (LPVOID*)(self + 92)) < 0)
     {
         sub_403A30(a2, 3, aCouldnTCreateH);
         return a2;
@@ -13428,7 +13428,7 @@ _DWORD* __stdcall sub_40FEE0(int self, _DWORD* a2)
     v10[3] = 286568599;
     WriteDebugLog(aMpCreatingPeer);
     v3 = (_DWORD*)(self + 24);
-    if (CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID*)(self + 24)) < 0)
+    if (CoCreateInstance(stru_499DF4, 0, 1u, stru_499DE4, (LPVOID*)(self + 24)) < 0)
     {
         WriteDebugLog(aCouldnTCreateD);
         v9 = aCouldnTCreateD_0;
@@ -13593,7 +13593,7 @@ _DWORD* __stdcall sub_4102F0(int self, _DWORD* a2, const CHAR* lpMultiByteStr, i
     v18[3] = 286568599;
     WriteDebugLog(aMpCreatingPeer);
     v5 = (_DWORD*)(self + 24);
-    if (CoCreateInstance(&stru_499DF4, 0, 1u, &stru_499DE4, (LPVOID*)(self + 24)) < 0)
+    if (CoCreateInstance(stru_499DF4, 0, 1u, stru_499DE4, (LPVOID*)(self + 24)) < 0)
     {
         WriteDebugLog(aCouldnTCreateD);
         sub_403A30(a2, 1, aCouldnTCreateD_0);
